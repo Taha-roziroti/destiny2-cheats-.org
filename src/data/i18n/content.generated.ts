@@ -15305,14 +15305,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "ทำไมเลือก Destiny 2 Cheats ปี 2026",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC เหมาะสำหรับอ่าน squad ศัตรูใน Crucible และ PvE",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC เหมาะสำหรับอ่าน squad ศัตรูใน Crucible และ PvE",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
 						{
 							h2: "ESP wallhack, radar, Aimbot ในใบอนุญาตเดียว",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC ใบอนุญาตเดียวแทนเครื่องมือแยก",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC ใบอนุญาตเดียวแทนเครื่องมือแยก",
 								"ตรวจ Updates หลังแพตช์ BattlEye anti-cheat ไม่มี cheat รับประกัน ถาวร",
 							],
 						},
@@ -15322,7 +15322,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Destiny 2 ESP | Player Boxes & Wallhack",
 					description: "Destiny 2 ESP: player boxes, loot markers, and wallhack overlays. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Destiny 2 ESP",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Destiny 2 ESP.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Destiny 2 ESP.",
 					imageAlt: "Destiny 2 ESP player boxes and distance readouts in a raid",
 					galleryTitle: "Destiny 2 ESP",
 					heroImage: "/images/destiny-2-cheats-radar.webp",
@@ -15333,7 +15333,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Destiny 2 ESP",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC player boxes, loot markers, and wallhack overlays.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC player boxes, loot markers, and wallhack overlays.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15357,7 +15357,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Destiny 2 Aimbot | Soft Aim Controls",
 					description: "Destiny 2 Aimbot: soft aim, FOV, and per-weapon Aimbot profiles. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Destiny 2 Aimbot",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Destiny 2 Aimbot.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Destiny 2 Aimbot.",
 					imageAlt: "Destiny 2 aimbot and soft aim controls on Windows PC",
 					galleryTitle: "Destiny 2 Aimbot",
 					heroImage: "/images/destiny-2-cheats-aimbot.webp",
@@ -15368,7 +15368,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Destiny 2 Aimbot",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC soft aim, FOV, and per-weapon Aimbot profiles.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC soft aim, FOV, and per-weapon Aimbot profiles.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15392,7 +15392,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "ฟีเจอร์ | Full Feature List",
 					description: "ฟีเจอร์: ESP, soft aim, radar controls. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "ฟีเจอร์",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC ฟีเจอร์.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC ฟีเจอร์.",
 					imageAlt: "Destiny 2 Cheats features — ESP, soft aim, and radar screenshots",
 					galleryTitle: "ฟีเจอร์",
 					heroImage: "/images/destiny-2-cheats-aimbot-view.webp",
@@ -15403,7 +15403,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "ฟีเจอร์",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC ESP, soft aim, radar controls.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC ESP, soft aim, radar controls.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15427,7 +15427,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "ราคา | Monthly & Lifetime",
 					description: "ราคา: $35 monthly or $150 lifetime licenses. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "ราคา",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC ราคา.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC ราคา.",
 					imageAlt: "Destiny 2 Cheats store plans for monthly and lifetime licenses",
 					galleryTitle: "ราคา",
 					heroImage: "/images/destiny-2-cheats-raid.webp",
@@ -15438,7 +15438,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "ราคา",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC $35 monthly or $150 lifetime licenses.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC $35 monthly or $150 lifetime licenses.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15462,7 +15462,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "ติดตั้ง | PC Setup Guide",
 					description: "ติดตั้ง: Windows PC activation and first-launch setup. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "ติดตั้ง",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC ติดตั้ง.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC ติดตั้ง.",
 					imageAlt: "Destiny 2 Cheats setup guide screenshot for Windows PC",
 					galleryTitle: "ติดตั้ง",
 					heroImage: "/images/destiny-2-cheats-radar.webp",
@@ -15473,7 +15473,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "ติดตั้ง",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Windows PC activation and first-launch setup.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Windows PC activation and first-launch setup.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15497,7 +15497,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "อัปเดต | BattlEye Maintenance Log",
 					description: "อัปเดต: BattlEye patch status and rebuild notes. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "อัปเดต",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC อัปเดต.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC อัปเดต.",
 					imageAlt: "Destiny 2 Cheats live status after BattlEye and game patches",
 					galleryTitle: "อัปเดต",
 					heroImage: "/images/destiny-2-cheats-esp.webp",
@@ -15508,7 +15508,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "อัปเดต",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC BattlEye patch status and rebuild notes.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC BattlEye patch status and rebuild notes.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15532,7 +15532,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "FAQ | คำถามที่พบบ่อย",
 					description: "FAQ: ESP, soft aim, delivery, and BattlEye questions. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "FAQ",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC FAQ.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC FAQ.",
 					imageAlt: "Destiny 2 Cheats FAQ — delivery, setup, and update answers",
 					galleryTitle: "FAQ",
 					heroImage: "/images/destiny-2-cheats-aimbot-view.webp",
@@ -15543,7 +15543,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "FAQ",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC ESP, soft aim, delivery, and BattlEye questions.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC ESP, soft aim, delivery, and BattlEye questions.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15567,7 +15567,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "สนับสนุน | ความช่วยเหลือและติดต่อ",
 					description: "สนับสนุน: order help and license support contact. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "สนับสนุน",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC สนับสนุน.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC สนับสนุน.",
 					imageAlt: "Destiny 2 Cheats support page for license and setup help",
 					galleryTitle: "สนับสนุน",
 					heroImage: "/images/destiny-2-cheats-raid.webp",
@@ -15578,7 +15578,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "สนับสนุน",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC order help and license support contact.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC order help and license support contact.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15602,7 +15602,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "สถานะ BattlEye | สถานะ BattlEye",
 					description: "สถานะ BattlEye: patch maintenance after BattlEye anti-cheat updates. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "สถานะ BattlEye",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC สถานะ BattlEye.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC สถานะ BattlEye.",
 					imageAlt: "Destiny 2 Cheats patch status overview for Windows PC",
 					galleryTitle: "สถานะ BattlEye",
 					heroImage: "/images/destiny-2-cheats-wallhack.webp",
@@ -15613,7 +15613,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "สถานะ BattlEye",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC patch maintenance after BattlEye anti-cheat updates.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC patch maintenance after BattlEye anti-cheat updates.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15637,7 +15637,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Destiny 2 Wallhack | ESP Visibility",
 					description: "Destiny 2 Wallhack: wallhack ESP for players, loot, and distance. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Destiny 2 Wallhack",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Destiny 2 Wallhack.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Destiny 2 Wallhack.",
 					imageAlt: "Destiny 2 wallhack visibility through walls in a raid",
 					galleryTitle: "Destiny 2 Wallhack",
 					heroImage: "/images/destiny-2-cheats-wallhack.webp",
@@ -15648,7 +15648,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Destiny 2 Wallhack",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC wallhack ESP for players, loot, and distance.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC wallhack ESP for players, loot, and distance.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15672,7 +15672,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Radar Hack | 2D Threat Overlay",
 					description: "Radar Hack: 2D radar cues for flanks and rotations. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Radar Hack",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Radar Hack.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Radar Hack.",
 					imageAlt: "Destiny 2 2D radar overlay showing nearby threats",
 					galleryTitle: "Radar Hack",
 					heroImage: "/images/destiny-2-cheats-radar.webp",
@@ -15683,7 +15683,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Radar Hack",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC 2D radar cues for flanks and rotations.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC 2D radar cues for flanks and rotations.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15707,7 +15707,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "BattlEye Bypass | Patch Maintenance",
 					description: "BattlEye Bypass: how BattlEye updates are handled for Destiny 2 cheats. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "BattlEye Bypass",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC BattlEye Bypass.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC BattlEye Bypass.",
 					imageAlt: "BattlEye Bypass — Destiny 2 Cheats screenshot",
 					galleryTitle: "BattlEye Bypass",
 					heroImage: "/images/destiny-2-cheats-aimbot.webp",
@@ -15718,7 +15718,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "BattlEye Bypass",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC how BattlEye updates are handled for Destiny 2 cheats.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC how BattlEye updates are handled for Destiny 2 cheats.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15742,7 +15742,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Destiny 2 Cheats 2026 | Buyer Guide",
 					description: "Destiny 2 Cheats 2026: 2026 Destiny 2 cheats checklist before checkout. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Destiny 2 Cheats 2026",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Destiny 2 Cheats 2026.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Destiny 2 Cheats 2026.",
 					imageAlt: "Destiny 2 Cheats product overview for Destiny 2",
 					galleryTitle: "Destiny 2 Cheats 2026",
 					heroImage: "/images/destiny-2-cheats-esp.webp",
@@ -15753,7 +15753,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Destiny 2 Cheats 2026",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC 2026 Destiny 2 cheats checklist before checkout.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC 2026 Destiny 2 cheats checklist before checkout.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15777,7 +15777,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Destiny 2 Cheats | ESP Aimbot Guide",
 					description: "Destiny 2 Cheats: the Destiny 2 hacks pillar for ESP and Aimbot. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Destiny 2 Cheats",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Destiny 2 Cheats.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Destiny 2 Cheats.",
 					imageAlt: "Destiny 2 Cheats product page — ESP, aimbot, and radar",
 					galleryTitle: "Destiny 2 Cheats",
 					heroImage: "/images/destiny-2-cheats-raid.webp",
@@ -15788,7 +15788,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Destiny 2 Cheats",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC the Destiny 2 hacks pillar for ESP and Aimbot.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC the Destiny 2 hacks pillar for ESP and Aimbot.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15812,7 +15812,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "ดาวน์โหลด Destiny 2 Cheats | Instant Access",
 					description: "ดาวน์โหลด Destiny 2 Cheats: digital license download after payment. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "ดาวน์โหลด Destiny 2 Cheats",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC ดาวน์โหลด Destiny 2 Cheats.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC ดาวน์โหลด Destiny 2 Cheats.",
 					imageAlt: "Destiny 2 Cheats download and install delivery flow",
 					galleryTitle: "ดาวน์โหลด Destiny 2 Cheats",
 					heroImage: "/images/destiny-2-cheats-raid.webp",
@@ -15823,7 +15823,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "ดาวน์โหลด Destiny 2 Cheats",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC digital license download after payment.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC digital license download after payment.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15847,7 +15847,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "เมนูมอด Destiny 2 | In-Game Toggles",
 					description: "เมนูมอด Destiny 2: in-client ESP and soft aim toggles. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "เมนูมอด Destiny 2",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC เมนูมอด Destiny 2.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC เมนูมอด Destiny 2.",
 					imageAlt: "Destiny 2 Cheats in-game menu controls",
 					galleryTitle: "เมนูมอด Destiny 2",
 					heroImage: "/images/destiny-2-cheats-radar.webp",
@@ -15858,7 +15858,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "เมนูมอด Destiny 2",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC in-client ESP and soft aim toggles.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC in-client ESP and soft aim toggles.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15882,7 +15882,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Destiny 2 Soft Aim | Smooth Aim Settings",
 					description: "Destiny 2 Soft Aim: smooth soft aim settings for Windows PC. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Destiny 2 Soft Aim",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Destiny 2 Soft Aim.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Destiny 2 Soft Aim.",
 					imageAlt: "Destiny 2 soft aim FOV and smoothness settings",
 					galleryTitle: "Destiny 2 Soft Aim",
 					heroImage: "/images/destiny-2-cheats-aimbot-view.webp",
@@ -15893,7 +15893,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Destiny 2 Soft Aim",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC smooth soft aim settings for Windows PC.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC smooth soft aim settings for Windows PC.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15917,7 +15917,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Cheat Destiny 2 ที่ดีที่สุด | Buyer Checklist",
 					description: "Cheat Destiny 2 ที่ดีที่สุด: what to compare before buying Destiny 2 cheats. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Cheat Destiny 2 ที่ดีที่สุด",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Cheat Destiny 2 ที่ดีที่สุด.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Cheat Destiny 2 ที่ดีที่สุด.",
 					imageAlt: "Destiny 2 Cheats overview for Destiny 2 on PC",
 					galleryTitle: "Cheat Destiny 2 ที่ดีที่สุด",
 					heroImage: "/images/destiny-2-cheats-esp.webp",
@@ -15928,7 +15928,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Cheat Destiny 2 ที่ดีที่สุด",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC what to compare before buying Destiny 2 cheats.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC what to compare before buying Destiny 2 cheats.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15952,7 +15952,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Hack Aimbot Destiny 2 | Soft Aim Assist",
 					description: "Hack Aimbot Destiny 2: soft aim assist controls for Destiny 2. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Hack Aimbot Destiny 2",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Hack Aimbot Destiny 2.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Hack Aimbot Destiny 2.",
 					imageAlt: "Destiny 2 aimbot hack controls and bone priority",
 					galleryTitle: "Hack Aimbot Destiny 2",
 					heroImage: "/images/destiny-2-cheats-aimbot-view.webp",
@@ -15963,7 +15963,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Hack Aimbot Destiny 2",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC soft aim assist controls for Destiny 2.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC soft aim assist controls for Destiny 2.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -15987,7 +15987,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Hack ESP Destiny 2 | Boxes & Loot",
 					description: "Hack ESP Destiny 2: ESP hack boxes, loot pins, and distance. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Hack ESP Destiny 2",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Hack ESP Destiny 2.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Hack ESP Destiny 2.",
 					imageAlt: "Destiny 2 ESP hack boxes and loot markers",
 					galleryTitle: "Hack ESP Destiny 2",
 					heroImage: "/images/destiny-2-cheats-wallhack.webp",
@@ -15998,7 +15998,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Hack ESP Destiny 2",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC ESP hack boxes, loot pins, and distance.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC ESP hack boxes, loot pins, and distance.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -16022,7 +16022,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Destiny 2 Unlock All | What It Means",
 					description: "Destiny 2 Unlock All: pve-cheats searches vs real ESP and Aimbot tools. จัดส่งดิจิทัลทันที. การดูแลแพตช์ — Windows PC.",
 					h1: "Destiny 2 Unlock All",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Destiny 2 Unlock All.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Destiny 2 Unlock All.",
 					imageAlt: "Destiny 2 Cheats license features overview",
 					galleryTitle: "Destiny 2 Unlock All",
 					heroImage: "/images/destiny-2-cheats-radar.webp",
@@ -16033,7 +16033,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Destiny 2 Unlock All",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC pve-cheats searches vs real ESP and Aimbot tools.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC pve-cheats searches vs real ESP and Aimbot tools.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
@@ -16057,7 +16057,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "นโยบายความเป็นส่วนตัว | Destiny 2 Cheats",
 					description: "นโยบายความเป็นส่วนตัว for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
 					h1: "นโยบายความเป็นส่วนตัว",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC นโยบายความเป็นส่วนตัว for destiny2cheats.org and Destiny 2 licenses.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC นโยบายความเป็นส่วนตัว for destiny2cheats.org and Destiny 2 licenses.",
 					imageAlt: "Destiny 2 cheats",
 					galleryTitle: "Destiny 2 cheats",
 					heroImage: "/images/destiny-2-cheats-aimbot.webp",
@@ -16068,14 +16068,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Information we collect",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Contact email, order references, and basic site security data.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Contact email, order references, and basic site security data.",
 								"Payment details are processed at checkout — not stored on destiny2cheats.org.",
 							],
 						},
 						{
 							h2: "How we use data",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Support responses, order resolution, and legal compliance when required.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Support responses, order resolution, and legal compliance when required.",
 								"ตรวจ Updates หลังแพตช์ BattlEye anti-cheat ไม่มี cheat รับประกัน ถาวร",
 							],
 						},
@@ -16092,7 +16092,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "นโยบายการคืนเงิน | Destiny 2 Cheats",
 					description: "นโยบายการคืนเงิน for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
 					h1: "นโยบายการคืนเงิน",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC นโยบายการคืนเงิน for destiny2cheats.org and Destiny 2 licenses.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC นโยบายการคืนเงิน for destiny2cheats.org and Destiny 2 licenses.",
 					imageAlt: "Destiny 2 cheats",
 					galleryTitle: "Destiny 2 cheats",
 					heroImage: "/images/destiny-2-cheats-raid.webp",
@@ -16103,14 +16103,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Digital delivery",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Contact email, order references, and basic site security data.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Contact email, order references, and basic site security data.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
 						{
 							h2: "Refund approval",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Support responses, order resolution, and legal compliance when required.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Support responses, order resolution, and legal compliance when required.",
 								"ตรวจ Updates หลังแพตช์ BattlEye anti-cheat ไม่มี cheat รับประกัน ถาวร",
 							],
 						},
@@ -16127,7 +16127,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "ข้อกำหนดการใช้งาน | Destiny 2 Cheats",
 					description: "ข้อกำหนดการใช้งาน for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
 					h1: "ข้อกำหนดการใช้งาน",
-					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC ข้อกำหนดการใช้งาน for destiny2cheats.org and Destiny 2 licenses.",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC ข้อกำหนดการใช้งาน for destiny2cheats.org and Destiny 2 licenses.",
 					imageAlt: "Destiny 2 cheats",
 					galleryTitle: "Destiny 2 cheats",
 					heroImage: "/images/destiny-2-cheats-aimbot-view.webp",
@@ -16138,14 +16138,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Acceptance of terms",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Contact email, order references, and basic site security data.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Contact email, order references, and basic site security data.",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
 							],
 						},
 						{
 							h2: "Risk disclaimer",
 							paragraphs: [
-								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot แบบ สำหรับ Destiny 2 บน Windows PC Support responses, order resolution, and legal compliance when required.",
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
 							],
 						},

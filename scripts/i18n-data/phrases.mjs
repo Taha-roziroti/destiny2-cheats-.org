@@ -143,7 +143,7 @@ export const phrases = {
 	th: {
 		buy: 'ซื้อ Destiny 2 Cheats', maps: 'Crucible, Trials, and raid encounters',
 		win: 'Windows PC', maintenance: 'การดูแลแพตช์', delivery: 'จัดส่งดิจิทัลทันที', monthly: '$35/เดือน', lifetime: '$150 ตลอดชีพ',
-		s1: (topic) => `${KW.product} รวม ${KW.wallhack}, ${KW.radar} และ ${KW.aimbot} แบบ สำหรับ ${KW.game} บน ${phrases.th.win} ${topic}`,
+		s1: (topic) => `${KW.product} รวม ${KW.wallhack}, ${KW.radar} และ ${KW.aimbot} สำหรับ ${KW.game} บน ${phrases.th.win} ${topic}`,
 		s2: () => `${phrases.th.delivery} ผ่าน checkout ${KW.checkout} แพ็ก ${phrases.th.monthly} และ ${phrases.th.lifetime} รวมการดูแล ${KW.battleye}`,
 		s3: () => `ตรวจ Updates หลังแพตช์ ${KW.battleye} ไม่มี cheat รับประกัน ถาวร`,
 		legal: () => 'support@destiny2cheats.org สำหรับการสนับสนุน',
