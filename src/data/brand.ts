@@ -39,15 +39,15 @@ export const brand = {
 	platforms: ['Windows PC'] as const,
 
 	/**
-	 * Site color tones — #FAFBFD canvas, #B10FF6 brand accent, derived soft/deep/hover.
+	 * Dark UI palette — #0D0A14 canvas, #B10FF6 accent, panel #0F0C18.
 	 */
 	theme: {
 		accent: '#B10FF6',
-		bg: '#FAFBFD',
+		bg: '#0D0A14',
 		soft: '#d085f1',
 		deep: '#7602a7',
 		hover: '#bf45f3',
-		panel: '#FFFFFF',
+		panel: '#0F0C18',
 	},
 
 	keywords: {
@@ -59,27 +59,27 @@ export const brand = {
 			'Destiny 2 ESP',
 			'Destiny 2 wallhack',
 			'Destiny 2 PvP cheats',
-			'undetected Destiny 2 cheats',
+			'Destiny 2 radar hack',
 			'best Destiny 2 cheats',
 		] as const,
 	},
 
 	seo: {
-		homeTitle: 'Destiny 2 Cheats | Undetected PC Hacks',
+		homeTitle: 'Destiny 2 ESP, Aimbot & Wallhack',
 		homeDescription:
-			'Official Destiny 2 cheats for Windows PC — aimbot, ESP, wallhack, radar, no recoil, and stream-proof overlays. Compare plans and buy with instant delivery.',
-		featuresTitle: '{game} Cheat Features | {brand}',
+			'Destiny 2 cheats with ESP, aimbot, and wallhack for Windows PC. Radar, recoil control, and stream-safe overlays in one license — compare plans and get instant delivery.',
+		featuresTitle: 'Destiny 2 ESP, Aimbot & Wallhack Features',
 		featuresDescription:
-			'Aimbot, ESP, wallhack, radar, recoil control, triggerbot, no spread, movement tools, and stream-proof overlays in one {game} license for Windows PC.',
-		storeTitle: '{game} Cheats Store | {brand}',
+			'Destiny 2 cheats include aimbot, ESP, wallhack, radar, recoil control, and stream-safe overlays in one Windows PC license.',
+		storeTitle: 'Destiny 2 Cheats — Monthly & Lifetime Plans',
 		storeDescription:
-			'Monthly and lifetime Destiny 2 cheat plans for Windows PC. Same aimbot, ESP, wallhack, and radar on both. Instant delivery after checkout.',
-		statusTitle: '{game} Cheat Status | {brand}',
+			'Destiny 2 cheats pricing for Windows PC. Same ESP, aimbot, wallhack, and radar on monthly and lifetime plans with instant delivery.',
+		statusTitle: 'Destiny 2 Cheat Status — Live Updates',
 		statusDescription:
-			'Live undetected status for {brand} after {game} or {antiCheat} patches. Check here before Crucible, Trials, or raids on Windows PC.',
-		previewTitle: 'Buy Destiny 2 Cheats | Windows PC License',
+			'Destiny 2 cheat status after {game} and {antiCheat} patches. Check before Crucible, Trials, or raids on Windows PC.',
+		previewTitle: 'Destiny 2 Cheats — ESP, Aimbot & Wallhack',
 		previewDescription:
-			'Purchase undetected Destiny 2 cheats for Windows PC — ESP, aimbot, radar, and BattlEye rebuilds. Monthly and lifetime plans with instant delivery.',
+			'Destiny 2 cheats for Windows PC with ESP, aimbot, radar, and wallhack. Monthly and lifetime plans with patch-day rebuilds.',
 		setupTitle: '{game} Cheat Setup | {brand}',
 		setupDescription:
 			'Install and launch {brand} on Windows PC after checkout. Short setup steps for Crucible, Trials, and PvE — follow each step before your first match.',
@@ -92,17 +92,21 @@ export const brand = {
 		reviewsTitle: '{brand} Reviews | Buyer Feedback',
 		reviewsDescription:
 			'Buyer reviews for {brand} — aimbot, ESP, wallhack, radar, and patch updates for Destiny 2 on Windows PC. Real feedback from license holders.',
-		blogTitle: '{game} Intel | {brand}',
+		forumsTitle: 'Destiny 2 Cheats Forum — ESP & Aimbot',
+		forumsDescription:
+			'Destiny 2 cheats forum with setup threads, aimbot tuning, ESP presets, and license questions from PC players.',
+		blogTitle: 'Destiny 2 Cheats Forum — ESP & Aimbot',
 		blogDescription:
-			'Guides and notes for {game} — Crucible tips, Trials, raids, ESP, aimbot, and {antiCheat} update coverage for Windows PC players.',
+			'Destiny 2 cheats forum — Crucible tips, aimbot settings, ESP walkthroughs, and patch-day notes for Windows PC.',
 	},
 
 	copy: {
-		tagline: 'Undetected {primaryKeyword} — aimbot, ESP, wallhack, and radar for PC',
+		tagline: '{primaryKeyword} with aimbot, ESP, wallhack, and radar for PC',
 		summary:
-			'{brand} is an undetected {game} cheat package for Windows PC. Includes aimbot, ESP, wallhack, radar, recoil control, and stream-proof overlays with {antiCheat} maintenance.',
-		heroLede: 'Aimbot, ESP, wallhack, radar, no recoil, and stream-proof overlays for Destiny 2 on Windows PC.',
-		blogLabel: 'Destiny 2 Intel',
+			'{brand} is a {game} cheat package for Windows PC with aimbot, ESP, wallhack, radar, recoil control, and stream-safe overlays plus {antiCheat} maintenance.',
+		heroLede: 'ESP, aimbot, wallhack, and radar for Crucible, Trials, and raids — built for Windows PC.',
+		blogLabel: 'Forums',
+		forumsLabel: 'Forums',
 		ctaBuy: 'Get Access',
 		ctaBuyShort: 'Buy',
 		featuresIntro: 'Everything included in one license for {game} on Windows PC.',
@@ -117,18 +121,19 @@ export const brand = {
 		chipEsp: 'ESP / wallhack',
 		chipAim: 'Aimbot',
 		chipRadar: 'Radar',
-		chipUpdates: 'Stream-proof',
+		chipUpdates: 'Stream-safe',
 		navPreview: 'Cheats',
 		navFeatures: 'Features',
 		navStore: 'Store',
 		navStatus: 'Status',
 		navReviews: 'Reviews',
+		navForums: 'Forums',
 	},
 
 	sitemap: {
 		contentLastmod: '2026-09-11',
-		blogImageTitle: '{brand} blog',
-		blogImageCaption: 'Tips and updates for {primaryKeyword}',
+		blogImageTitle: '{brand} forum',
+		blogImageCaption: 'Threads and tips for {primaryKeyword}',
 		reviewsImageTitle: '{brand} reviews',
 		reviewsImageCaption: 'What buyers say about {primaryKeyword}',
 		images: [
@@ -150,7 +155,7 @@ export const brand = {
 			{
 				src: '/images/destiny-2-cheats-crucible.webp',
 				title: 'Destiny 2 Crucible aimbot cheat',
-				caption: 'Undetected aimbot and triggerbot for Trials and Crucible',
+				caption: 'Soft aim and triggerbot for Trials and Crucible',
 			},
 			{
 				src: '/images/destiny-2-cheats-pve.webp',

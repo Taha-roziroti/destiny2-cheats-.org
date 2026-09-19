@@ -1,20 +1,11 @@
 ---
-import BlogPostPage from '../../../components/BlogPostPage.astro';
-import { blogPosts, getPostBySlug, resolvePost } from '../../../data/blog/helpers';
-import { defaultLocale } from '../../../data/i18n/locales';
+import { blogToForumRedirects } from '../../../data/forums/helpers';
 
 export function getStaticPaths() {
-	return blogPosts.map((post) => {
-		const resolved = resolvePost(post, defaultLocale);
-		return {
-			params: { slug: resolved.translation.slug },
-			props: { post: resolved },
-		};
-	});
+	return Object.keys(blogToForumRedirects).map((slug) => ({ params: { slug } }));
 }
 
-const { post } = Astro.props;
-const live = getPostBySlug(defaultLocale, post.translation.slug) ?? post;
+const slug = Astro.params.slug ?? '';
+const target = blogToForumRedirects[slug];
+return Astro.redirect(target ? `/forums/${target}/` : '/forums/', 301);
 ---
-
-<BlogPostPage locale="en" post={live} />

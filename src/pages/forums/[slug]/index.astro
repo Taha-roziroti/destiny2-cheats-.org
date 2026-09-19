@@ -1,0 +1,15 @@
+---
+import ForumThreadPage from '../../../components/ForumThreadPage.astro';
+import { getForumThread, getAllForumThreads } from '../../../data/forums/helpers';
+
+export function getStaticPaths() {
+	return getAllForumThreads().map((thread) => ({
+		params: { slug: thread.slug },
+		props: { thread },
+	}));
+}
+
+const { thread } = Astro.props;
+---
+
+<ForumThreadPage thread={thread} />

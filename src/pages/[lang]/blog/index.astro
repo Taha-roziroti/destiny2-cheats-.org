@@ -12,8 +12,8 @@ export function getStaticPaths() {
 }
 
 if (!isLocaleCode(Astro.params.lang ?? '')) {
-	return Astro.redirect('/blog/', 301);
+	return Astro.redirect('/forums/', 301);
 }
 
-return Astro.redirect('/blog/', 301);
+return Astro.redirect('/forums/', 301);
 ---

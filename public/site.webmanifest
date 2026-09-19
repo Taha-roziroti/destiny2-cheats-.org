@@ -4,8 +4,8 @@
   "description": "Undetected Destiny 2 cheats — ESP, aimbot, and radar for PC",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAFBFD",
-  "theme_color": "#FAFBFD",
+  "background_color": "#0D0A14",
+  "theme_color": "#0D0A14",
   "icons": [
     {
       "src": "/favicon.png",

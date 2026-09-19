@@ -28,7 +28,7 @@ function HomeSeoInner({ faqs }: Props) {
 			hintKey: 'homeSeo.catStatusHint',
 			links: [
 				{ href: p.updates, labelKey: 'homeSeo.linkLiveStatus' },
-				{ href: p.cheats, labelKey: 'homeSeo.linkUndetected' },
+				{ href: p.cheats, labelKey: 'homeSeo.linkCheats' },
 				{ href: p.setup, labelKey: 'homeSeo.linkSetup' },
 				{ href: p.faq, labelKey: 'homeSeo.linkFaq' },
 			],
@@ -49,8 +49,8 @@ function HomeSeoInner({ faqs }: Props) {
 			links: [
 				{ href: p.support, labelKey: 'homeSeo.linkSupport' },
 				{ href: p.setup, labelKey: 'homeSeo.linkSetupGuide' },
-				{ href: p.guides, labelKey: 'common.guides' },
-				{ href: p.blog, labelKey: 'homeSeo.linkBlog' },
+				{ href: p.forums, labelKey: 'homeSeo.linkForums' },
+				{ href: p.reviews, labelKey: 'homeSeo.linkReviews' },
 			],
 		},
 	];

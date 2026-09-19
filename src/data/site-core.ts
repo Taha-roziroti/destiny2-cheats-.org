@@ -13,11 +13,11 @@ export function seoPageTitle(template: string): string {
 export { brand, fillBrandTokens, seoDescription, seoTitle };
 
 const copyDefaults = {
-	tagline: 'Undetected {primaryKeyword} — ESP, aimbot, and radar for PC',
+	tagline: '{primaryKeyword} with aimbot, ESP, wallhack, and radar for PC',
 	summary:
-		'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, soft aim, and radar, with {antiCheat} maintenance after patches.',
-	heroLede: 'Hacks and cheats available — 0% detection.',
-	blogLabel: '{game} Intel',
+		'{brand} is a {game} cheat package for Windows PC with aimbot, ESP, wallhack, radar, and stream-safe overlays plus {antiCheat} maintenance.',
+	heroLede: 'ESP, aimbot, wallhack, and radar for Crucible, Trials, and raids on Windows PC.',
+	blogLabel: 'Forums',
 	ctaBuy: 'Buy now',
 	ctaBuyShort: 'Buy',
 	featuresIntro: 'Everything included in one license for {game} on Windows PC.',
@@ -40,9 +40,9 @@ const copyDefaults = {
 } as const;
 
 const seoDefaults = {
-	homeTitle: '{brand} | Undetected {primaryKeyword}',
+	homeTitle: 'Destiny 2 ESP, Aimbot & Wallhack',
 	homeDescription:
-		'{primaryKeyword} for Windows PC — ESP, aimbot, and radar with {antiCheat} maintenance. Compare plans and buy.',
+		'Destiny 2 cheats with ESP, aimbot, and wallhack for Windows PC. Radar, recoil control, and stream-safe overlays — compare plans and get instant delivery.',
 	featuresTitle: '{game} Features | {brand}',
 	featuresDescription:
 		'Everything in one {game} license for Windows PC — ESP, aimbot, radar, and patch updates.',
@@ -63,8 +63,8 @@ const seoDefaults = {
 	reviewsTitle: '{brand} Reviews | Buyer Feedback',
 	reviewsDescription:
 		'Real buyer reviews for {brand} — ESP, soft aim, radar, and patch updates on Windows PC.',
-	blogTitle: '{game} Intel | {brand}',
-	blogDescription: 'Guides and notes for {game} — meta tips, ESP, aimbot, and {antiCheat} updates.',
+	blogTitle: 'Destiny 2 Cheats Forum — ESP & Aimbot',
+	blogDescription: 'Destiny 2 cheats forum — setup threads, aimbot tuning, ESP presets, and patch-day notes for Windows PC.',
 } as const;
 
 type SeoShape = typeof seoDefaults;

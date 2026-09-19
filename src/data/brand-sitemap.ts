@@ -55,7 +55,7 @@ const pageImageTemplates: Record<PageId, { title: string; caption: string }> = {
 	updates: { title: '{primaryKeyword} live status', caption: 'Check {primaryKeyword} after a game or BattlEye patch' },
 	faq: { title: '{primaryKeyword} FAQ', caption: 'Common questions about {primaryKeyword}' },
 	support: { title: '{primaryKeyword} support', caption: 'Help with your {primaryKeyword} license' },
-	undetected: { title: 'Undetected {primaryKeyword}', caption: 'Status notes for {primaryKeyword} after patches' },
+	undetected: { title: '{primaryKeyword} status', caption: 'Status notes for {primaryKeyword} after patches' },
 	wallhack: { title: '{primaryKeyword} wallhack', caption: 'Through-wall visibility with {primaryKeyword}' },
 	radar: { title: '{primaryKeyword} radar', caption: '2D radar map cues in {primaryKeyword}' },
 	anticheat: { title: '{antiCheat} and {primaryKeyword}', caption: '{primaryKeyword} rebuilds after a BattlEye update' },

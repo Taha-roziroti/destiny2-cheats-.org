@@ -52,13 +52,13 @@ async function resolveDistRoot() {
 const SITE = readBrandUrl();
 const IMAGE_SITEMAP_ENTRIES = countBrandSitemapImages();
 
-const BLOG_PAGES = 18; // /blog/ index + 17 posts
+const FORUM_PAGES = 11; // /forums/ index + 10 threads
+const EN_BLOG_REDIRECT_PAGES = 18; // EN /blog/* stubs 301 → /forums/
 const REVIEW_PAGES = 11; // /reviews/ index + 10 review detail pages
 const FAQ_PAGES = 11; // FAQ answer pages (index is in the product pages)
 /** Product pages in sitemap — excludes cannibal EN URLs that 301 to stronger pillars */
 const ENGLISH_PRODUCT_PAGES = 14;
-const GUIDE_PAGES = 1; // /guides/ hub (native guides only; PBN slugs removed)
-const ENGLISH_PAGES = ENGLISH_PRODUCT_PAGES + BLOG_PAGES + REVIEW_PAGES + FAQ_PAGES + GUIDE_PAGES;
+const ENGLISH_PAGES = ENGLISH_PRODUCT_PAGES + FORUM_PAGES + REVIEW_PAGES + FAQ_PAGES;
 const I18N_LOCALES = 21;
 /** Locale product pages also exclude the same cannibal pageIds */
 const PRODUCT_PAGES_PER_LOCALE = 14;
@@ -67,11 +67,13 @@ const PAGES_PER_LOCALE = PRODUCT_PAGES_PER_LOCALE + BLOG_PAGES_PER_LOCALE;
 const I18N_URLS = I18N_LOCALES * PAGES_PER_LOCALE;
 const TOTAL_PAGES = ENGLISH_PAGES + I18N_URLS;
 /** EN product HTML — 14 indexable pages (11 cannibal stubs are redirect-only, no HTML) */
-const ENGLISH_HTML_PAGES = ENGLISH_PRODUCT_PAGES + BLOG_PAGES + REVIEW_PAGES + FAQ_PAGES + GUIDE_PAGES;
-/** Locale HTML = product pages + blog redirect stubs (index + 17 posts) that are omitted from sitemaps */
+const ENGLISH_HTML_PAGES = ENGLISH_PRODUCT_PAGES + FORUM_PAGES + REVIEW_PAGES + FAQ_PAGES;
+/** Locale HTML = product pages + blog redirect stubs that are omitted from sitemaps */
 const LOCALE_BLOG_REDIRECT_PAGES = 18;
 const TOTAL_HTML_PAGES =
-	ENGLISH_HTML_PAGES + I18N_LOCALES * (PRODUCT_PAGES_PER_LOCALE + LOCALE_BLOG_REDIRECT_PAGES);
+	ENGLISH_HTML_PAGES +
+	EN_BLOG_REDIRECT_PAGES +
+	I18N_LOCALES * (PRODUCT_PAGES_PER_LOCALE + LOCALE_BLOG_REDIRECT_PAGES);
 const HREFLANG_PER_URL = 23;
 const SITEMAP_INDEX_ENTRIES = 1 + I18N_LOCALES + 1; // EN + locales + images
 
@@ -105,25 +107,17 @@ const ENGLISH_PATHS = [
 	'/privacy/',
 	'/refund/',
 	'/terms/',
-	'/guides/',
-	'/blog/',
-	'/blog/pve-strategies/',
-	'/blog/loot-routes/',
-	'/blog/weapon-tier-list/',
-	'/blog/skin-leaks/',
-	'/blog/tournament-meta/',
-	'/blog/pro-settings/',
-	'/blog/warmup-routine/',
-	'/blog/patch-notes/',
-	'/blog/cheats-guide-2026/',
-	'/blog/buyers-guide/',
-	'/blog/cheats-2026-updates/',
-	'/blog/aimbot-settings/',
-	'/blog/esp-wallhack/',
-	'/blog/undetected-battleye/',
-	'/blog/vs-budget-shops/',
-	'/blog/two-week-cheat-test/',
-	'/blog/full-stack-vs-esp-only/',
+	'/forums/',
+	'/forums/aimbot-settings-ban-risk/',
+	'/forums/how-to-use-destiny-2-cheats/',
+	'/forums/destiny-2-esp-wallhack-features/',
+	'/forums/destiny-2-aimbot-setup-guide/',
+	'/forums/crucible-esp-radar-tips/',
+	'/forums/stream-proof-overlay-settings/',
+	'/forums/buying-destiny-2-cheats-license/',
+	'/forums/patch-day-playbook/',
+	'/forums/recoil-triggerbot-settings/',
+	'/forums/radar-trials-flank-control/',
 	'/reviews/',
 	'/reviews/aim-assist-xkrypt0/',
 	'/reviews/esp-dungeon-buildsr4k/',
@@ -136,7 +130,7 @@ const ENGLISH_PATHS = [
 	'/reviews/battleye-patchdaymike/',
 	'/reviews/sniper-aim-snipezonly/',
 	'/faq/what-are-d2-cheats/',
-	'/faq/undetected-in-2026/',
+	'/faq/private-in-2026/',
 	'/faq/crucible-trials-pve/',
 	'/faq/esp-radar-aimbot/',
 	'/faq/license-delivery/',
@@ -145,7 +139,7 @@ const ENGLISH_PATHS = [
 	'/faq/what-is-wallhack/',
 	'/faq/radar-included/',
 	'/faq/battleye-and-cheats/',
-	'/faq/buy-undetected-pc/',
+	'/faq/buy-private-pc/',
 ];
 
 const LOCALE_CODES = [
@@ -440,7 +434,8 @@ async function main() {
 	const htmlSet = new Set(htmlPaths);
 	const missingFromSitemap = [...htmlSet].filter((p) => {
 		if (sitemapPaths.has(p) || REDIRECT_ONLY_PATHS.has(p)) return false;
-		// Locale blog stubs 301 to EN — intentionally omitted from sitemaps
+		// Blog stubs 301 to /forums/ — intentionally omitted from sitemaps
+		if (/^\/blog(\/|$)/.test(p)) return false;
 		if (/^\/[a-z]{2}\/blog(\/|$)/.test(p)) return false;
 		return true;
 	});
