@@ -93,45 +93,40 @@ const extraGraph: Record<string, unknown>[] = [
 	lcpVideo={heroVideo || undefined}
 >
 	<Navbar locale={locale} pageId="home" />
-	<main class="home">
+	<main id="main-content" class="home">
 		<Hero locale={locale} />
 		<HomeReviews locale={locale} />
 		<div class="home__seo">
-			{
-				locale === 'en' ? (
-					<>
-						<HomeAbout locale={locale} />
-						<HomeSeo locale={locale} />
-					</>
-				) : (
-					<div class="shell home__prose">
-						<header class="home__prose-head">
-							<p class="home__prose-eyebrow">{ui.nav.hacks}</p>
-							<h2>{home.h1}</h2>
-							<p class="home__prose-lede">{home.intro}</p>
-						</header>
-						{
-							home.sections.map((section) => (
-								<article class="home__prose-block">
-									<h3>{section.h2}</h3>
-									{section.paragraphs.map((p) => (
-										<p set:html={p} />
-									))}
-									{
-										section.list?.length ? (
-											<ul>
-												{section.list.map((item) => (
-													<li set:html={item} />
-												))}
-											</ul>
-										) : null
-									}
-								</article>
-							))
-						}
-					</div>
-				)
-			}
+			<>
+				<HomeAbout locale={locale} />
+				<div class="shell home__prose">
+					<header class="home__prose-head">
+						<p class="home__prose-eyebrow">{ui.nav.hacks}</p>
+						<h2>{home.h1}</h2>
+						<p class="home__prose-lede">{home.intro}</p>
+					</header>
+					{
+						home.sections.map((section) => (
+							<article class="home__prose-block">
+								<h3>{section.h2}</h3>
+								{section.paragraphs.map((p) => (
+									<p set:html={p} />
+								))}
+								{
+									section.list?.length ? (
+										<ul>
+											{section.list.map((item) => (
+												<li set:html={item} />
+											))}
+										</ul>
+									) : null
+								}
+							</article>
+						))
+					}
+				</div>
+				<HomeSeo locale={locale} />
+			</>
 		</div>
 		<SiteFooter locale={locale} />
 	</main>
