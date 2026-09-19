@@ -1,7 +1,5 @@
-import en from '../../public/locales/en/translation.json';
-import es from '../../public/locales/es/translation.json';
-
-const catalogs: Record<string, typeof en> = { en, es };
+import { defaultLocale, isLocaleCode, type LocaleCode } from '../data/i18n/locales';
+import { getTranslationCatalog } from './catalogs';
 
 function lookup(obj: unknown, path: string): string | undefined {
 	const parts = path.split('.');
@@ -15,9 +13,12 @@ function lookup(obj: unknown, path: string): string | undefined {
 
 /** Sync translator for Astro frontmatter (SSR). React islands use useTranslation(). */
 export function getT(locale: string) {
-	const catalog = catalogs[locale] ?? catalogs.en;
+	const code: LocaleCode = isLocaleCode(locale) ? locale : defaultLocale;
+	const catalog = getTranslationCatalog(code);
+	const fallback = getTranslationCatalog(defaultLocale);
+
 	return (key: string, vars?: Record<string, string | number>) => {
-		let value = lookup(catalog, key) ?? lookup(catalogs.en, key) ?? key;
+		let value = lookup(catalog, key) ?? lookup(fallback, key) ?? key;
 		if (vars) {
 			for (const [k, v] of Object.entries(vars)) {
 				value = value.replaceAll(`{{${k}}}`, String(v));

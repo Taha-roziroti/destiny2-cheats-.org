@@ -10,6 +10,10 @@ import { getReviewPath, reviewsBasePath } from '../../data/reviews';
 import { sitePaths } from '../../data/site-paths';
 import { defaultCrawlImageSrc } from '../../data/page-images';
 import { contentSrcSet, productMainSizes } from '../../lib/responsive-images';
+import { getT } from '../../i18n/server';
+import { defaultLocale } from '../../data/i18n/locales';
+
+const t = getT(defaultLocale);
 
 const title = seoPageTitle(brandSeo.reviewsTitle);
 const description = seoDescription(brandSeo.reviewsDescription);
@@ -60,18 +64,18 @@ const extraGraph: Record<string, unknown>[] = [
 	ogImageAlt={fillBrandTokens('{brand} customer reviews')}
 	locale="en"
 	breadcrumbs={[
-		{ label: 'Home', href: '/' },
-		{ label: 'Reviews' },
+		{ label: t('nav.home'), href: '/' },
+		{ label: t('nav.reviews') },
 	]}
 	extraGraph={extraGraph}
 >
 	<Navbar />
-	<main class="reviews-index">
+	<main id="main-content" class="reviews-index">
 		<div class="shell reviews-index__wrap">
-			<nav class="reviews-index__crumbs" aria-label="Breadcrumb">
-				<a href="/">Home</a>
+			<nav class="reviews-index__crumbs" aria-label={t('common.breadcrumb')}>
+				<a href="/">{t('nav.home')}</a>
 				<span aria-hidden="true">/</span>
-				<span aria-current="page">Reviews</span>
+				<span aria-current="page">{t('nav.reviews')}</span>
 			</nav>
 
 			<header class="reviews-index__head">
@@ -79,10 +83,10 @@ const extraGraph: Record<string, unknown>[] = [
 					<h1 data-edit="navReviews">{siteConfig.name} reviews</h1>
 					<p class="reviews-index__intro" data-edit="reviewsIntro">{reviewsIntro}</p>
 				</div>
-				<div class="reviews-index__summary" aria-label={`${customerReviewStats.averageRating} out of 5 average rating`}>
+				<div class="reviews-index__summary" aria-label={t('reviews.averageAria', { rating: customerReviewStats.averageRating.toFixed(1), count: String(customerReviewStats.totalCount) })}>
 					<p class="reviews-index__avg">{customerReviewStats.averageRating.toFixed(1)}</p>
 					<p class="reviews-index__avg-stars" aria-hidden="true">{stars(Math.round(customerReviewStats.averageRating))}</p>
-					<p class="reviews-index__count">{customerReviewStats.totalCount >= 100 ? '100+' : customerReviewStats.totalCount} reviews · out of 5</p>
+					<p class="reviews-index__count">{customerReviewStats.totalCount >= 100 ? '100+' : customerReviewStats.totalCount} {t('reviews.countLabel')} · {t('reviews.outOf')}</p>
 				</div>
 			</header>
 

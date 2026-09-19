@@ -2,16 +2,23 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
-import { getSelfHreflangAlternates } from '../data/i18n/routing';
+import { getSelfHreflangAlternates, getLocalizedPath } from '../data/i18n/routing';
+import { defaultLocale, isLocaleCode, type LocaleCode } from '../data/i18n/locales';
 import { fillBrandTokens, productInfo, siteConfig } from '../data/site';
 import { sitePaths } from '../data/site-paths';
+import { getT } from '../i18n/server';
+
+const segment = Astro.url.pathname.split('/').filter(Boolean)[0] ?? '';
+const locale: LocaleCode = isLocaleCode(segment) ? segment : defaultLocale;
+const t = getT(locale);
 
 const title = fillBrandTokens('Page Not Found | {brand}');
 const description = fillBrandTokens(
-	'That {brand} page is missing. Return home or browse features, store, setup, reviews, and the blog.',
+	'That {brand} page is missing. Return home or browse features, store, setup, reviews, and forums.',
 );
 const canonicalPath = Astro.url.pathname;
 const hreflangAlternates = getSelfHreflangAlternates(canonicalPath);
+const homeHref = getLocalizedPath('home', locale);
 ---
 
 <Layout
@@ -19,30 +26,28 @@ const hreflangAlternates = getSelfHreflangAlternates(canonicalPath);
 	description={description}
 	canonicalPath={canonicalPath}
 	hreflangAlternates={hreflangAlternates}
+	locale={locale}
 	noindex={true}
 >
-	<Navbar />
-	<main class="missing">
+	<Navbar locale={locale} />
+	<main id="main-content" class="missing">
 		<div class="shell">
 			<div class="shell-content missing__inner">
-			<p class="missing__code">404</p>
-			<h1 class="missing__title">Page not found</h1>
-			<p class="missing__text">
-				The URL you opened is not on {siteConfig.name}. Use the links below for ESP, aimbot, store, and setup
-				for {productInfo.game} on Windows PC.
-			</p>
-			<div class="missing__actions">
-				<a class="btn-buy" href="/">Back to {siteConfig.name} home</a>
-				<a class="missing__ghost" href="/d2-cheats/">{productInfo.game} preview</a>
-				<a class="missing__ghost" href={sitePaths.pricing}>Store</a>
-				<a class="missing__ghost" href={sitePaths.reviews}>Reviews</a>
-				<a class="missing__ghost" href={sitePaths.blog}>Blog</a>
-				<a class="missing__ghost" href={sitePaths.support}>Support</a>
-			</div>
+				<p class="missing__code" aria-hidden="true">404</p>
+				<h1 class="missing__title">{t('a11y.notFoundTitle')}</h1>
+				<p class="missing__text">{t('a11y.notFoundText')}</p>
+				<div class="missing__actions">
+					<a class="btn-buy" href={homeHref}>{t('a11y.notFoundBackHome')}</a>
+					<a class="missing__ghost" href={getLocalizedPath('hacks', locale)}>{t('nav.preview')}</a>
+					<a class="missing__ghost" href={getLocalizedPath('pricing', locale)}>{t('nav.store')}</a>
+					<a class="missing__ghost" href={sitePaths.reviews}>{t('nav.reviews')}</a>
+					<a class="missing__ghost" href={sitePaths.forums}>{t('nav.forums')}</a>
+					<a class="missing__ghost" href={getLocalizedPath('support', locale)}>{t('common.support')}</a>
+				</div>
 			</div>
 		</div>
 	</main>
-	<SiteFooter />
+	<SiteFooter locale={locale} />
 </Layout>
 
 <style>
@@ -94,7 +99,7 @@ const hreflangAlternates = getSelfHreflangAlternates(canonicalPath);
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		min-height: 2.5rem;
+		min-height: var(--touch-min);
 		padding: 0.55rem 0.95rem;
 		border-radius: 0.7rem;
 		border: 1px solid var(--line-strong);

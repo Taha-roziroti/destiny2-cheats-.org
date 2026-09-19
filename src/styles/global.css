@@ -14,7 +14,7 @@
 	--line-soft: #141020;
 	--line-strong: #2a2040;
 	--ink: #f4f0fa;
-	--ink-muted: #a89bb8;
+	--ink-muted: #b8adc4;
 	--ink-faint: #6b6080;
 
 	/* Brand accent — violet purple */
@@ -171,6 +171,49 @@
 
 	:focus:not(:focus-visible) {
 		outline: none;
+	}
+
+	.skip-link {
+		position: absolute;
+		top: 0;
+		left: max(var(--page-gutter), var(--safe-left));
+		z-index: 10000;
+		padding: 0.65rem 1rem;
+		border-radius: var(--radius-sm);
+		background: var(--magenta);
+		color: #fff;
+		font-size: 0.875rem;
+		font-weight: 600;
+		text-decoration: none;
+		transform: translateY(-120%);
+		transition: transform 0.15s ease;
+	}
+
+	.skip-link:focus {
+		transform: translateY(0.5rem);
+		outline: 2px solid #fff;
+		outline-offset: 2px;
+	}
+
+	[dir='rtl'] .skip-link {
+		left: auto;
+		right: max(var(--page-gutter), var(--safe-right));
+	}
+
+	[dir='rtl'] .shell,
+	[dir='rtl'] .home__prose,
+	[dir='rtl'] .page__content {
+		text-align: right;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+
+		.skip-link {
+			transition: none;
+		}
 	}
 }
 

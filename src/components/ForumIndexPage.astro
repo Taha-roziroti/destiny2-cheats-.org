@@ -6,6 +6,7 @@ import { getAllForumThreads, forumsBasePath, absoluteForumUrl } from '../data/fo
 import { siteConfig } from '../data/site';
 import { getLocalizedPath } from '../data/i18n/routing';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { getT } from '../i18n/server';
 
 interface Props {
 	locale?: LocaleCode;
@@ -16,6 +17,7 @@ const threads = getAllForumThreads();
 const canonicalPath = forumsBasePath;
 const canonicalURL = absoluteForumUrl(forumsBasePath);
 const homeHref = getLocalizedPath('home', locale);
+const t = getT(locale);
 
 const pageTitle = 'Destiny 2 Cheats Forum — ESP, Aimbot & Setup';
 const pageDescription =
@@ -27,7 +29,7 @@ const pageDescription =
 	description={pageDescription}
 	canonicalPath={canonicalPath}
 	locale={locale}
-	breadcrumbs={[{ label: 'Home', href: homeHref }, { label: 'Forums' }]}
+	breadcrumbs={[{ label: t('nav.home'), href: homeHref }, { label: t('nav.forums') }]}
 	extraGraph={[
 		{
 			'@type': 'CollectionPage',
@@ -39,9 +41,9 @@ const pageDescription =
 	]}
 >
 	<Navbar locale={locale} />
-	<main class="forum-index">
+	<main id="main-content" class="forum-index">
 		<div class="shell forum-index__head">
-			<p class="forum-index__eyebrow">Community</p>
+			<p class="forum-index__eyebrow">{t('a11y.forumCommunity')}</p>
 			<h1>Destiny 2 Cheats Forum</h1>
 			<p class="forum-index__lede">
 				Setup help, aimbot tuning, ESP presets, and store questions — straight talk from people actually running the tools in Crucible and raids.
@@ -53,7 +55,7 @@ const pageDescription =
 					<article class="forum-card">
 						<div class="forum-card__meta">
 							<span class="forum-card__cat">{thread.category}</span>
-							<span class="forum-card__replies">{thread.replies.length} replies</span>
+							<span class="forum-card__replies">{thread.replies.length} {t('a11y.replies')}</span>
 						</div>
 						<h2>
 							<a href={`${forumsBasePath}${thread.slug}/`}>{thread.title}</a>
