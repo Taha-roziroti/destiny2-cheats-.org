@@ -12,10 +12,8 @@ const segment = Astro.url.pathname.split('/').filter(Boolean)[0] ?? '';
 const locale: LocaleCode = isLocaleCode(segment) ? segment : defaultLocale;
 const t = getT(locale);
 
-const title = fillBrandTokens('Page Not Found | {brand}');
-const description = fillBrandTokens(
-	'That {brand} page is missing. Return home or browse features, store, setup, reviews, and forums.',
-);
+const title = fillBrandTokens(`${t('a11y.notFoundTitle')} | {brand}`);
+const description = t('a11y.notFoundText');
 const canonicalPath = Astro.url.pathname;
 const hreflangAlternates = getSelfHreflangAlternates(canonicalPath);
 const homeHref = getLocalizedPath('home', locale);

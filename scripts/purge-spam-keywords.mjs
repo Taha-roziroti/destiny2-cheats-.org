@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Remove spam-trigger words (undetected, zadeyo) from user-facing copy.
+ * Remove spam-trigger words (undetected, zadeyo, indetectable) from user-facing copy.
+ * Strips words rather than substituting synonyms that read unnaturally.
  * Run: node scripts/purge-spam-keywords.mjs
  */
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -8,25 +9,43 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 
-const REPLACEMENTS = [
-	[/\bundetected\b/gi, 'maintained'],
-	[/\bindetectables?\b/gi, 'maintained'],
-	[/\bindétectables?\b/gi, 'maintenues'],
-	[/\bindetectáveis?\b/gi, 'mantidos'],
-	[/\bindetectável\b/gi, 'mantido'],
-	[/\bindetectável\b/gi, 'mantido'],
-	[/status indetectável/gi, 'status maintained'],
-	[/indetectável permanente/gi, 'safe operation'],
-	[/\bindetectable\b/gi, 'maintained'],
-	[/\bindetectable\b/gi, 'maintained'],
-	[/\bUndetected\b/g, 'Maintained'],
-	[/\bUNDETECTED\b/g, 'MAINTAINED'],
-	[/zadeyo\.com/gi, ''],
-	[/\bZadeyo\b/g, ''],
-	[/\bzadeyo\b/g, ''],
-	[/via\s+checkout\s+via\s+/gi, 'via '],
-	[/checkout\s+via\s+checkout/gi, 'checkout'],
+/** Strip spam tokens — empty string removes the word. */
+const STRIP_PATTERNS = [
+	/\bundetected\b/gi,
+	/\bindetectables?\b/gi,
+	/\bindétectables?\b/gi,
+	/\bindetectáveis?\b/gi,
+	/\bindetectável\b/gi,
+	/\bindetectable\b/gi,
+	/\bnedecektiruemye\b/gi,
+	/\bnedecektovani\b/gi,
+	/\btespit edilemeyen\b/gi,
+	/\bniewykrywalne\b/gi,
+	/\bunentdeckte\b/gi,
+	/zadeyo\.com/gi,
+	/\bZadeyo\b/gi,
+	/\bzadeyo\b/gi,
 ];
+
+function postClean(text) {
+	return text
+		.replace(/via\s+checkout\s+via\s+/gi, 'via ')
+		.replace(/checkout\s+via\s+checkout/gi, 'checkout')
+		.replace(/ — checkout via \./g, '.')
+		.replace(/ — checkout über \./g, '.')
+		.replace(/ — checkout przez \./g, '.')
+		.replace(/ —  checkout\./g, '.')
+		.replace(/ checkout \./g, ' checkout.')
+		.replace(/via \./g, '')
+		.replace(/über \./g, '')
+		.replace(/przez \./g, '')
+		.replace(/  +/g, ' ')
+		.replace(/ +\n/g, '\n')
+		.replace(/ — —/g, ' —')
+		.replace(/^ — /gm, '')
+		.replace(/ — $/gm, '')
+		.trim();
+}
 
 /** Preserve checkout href domain — not shown in visible copy. */
 function cleanBrandTs(text) {
@@ -41,6 +60,11 @@ function cleanBrandTs(text) {
 
 const FILES = [
 	'scripts/i18n-data/pages-en.mjs',
+	'scripts/i18n-data/pages-i18n.mjs',
+	'scripts/i18n-data/ui-strings-part1.mjs',
+	'scripts/i18n-data/ui-strings-part2.mjs',
+	'scripts/i18n-data/phrases.mjs',
+	'scripts/i18n-data/image-alts.mjs',
 	'src/data/site.ts',
 	'src/data/i18n/simple-pages.ts',
 	'src/data/i18n/content.generated.ts',
@@ -48,17 +72,18 @@ const FILES = [
 	'public/locales/en/translation.json',
 	'public/locales/es/translation.json',
 	'src/data/page-related-links.ts',
-	'src/components/react/HomeSeo.tsx',
-	'src/components/react/HomeAbout.tsx',
 	'src/data/forums/threads.ts',
 	'src/data/i18n/locales.ts',
-	'public/locales/es/translation.json',
 ];
 
 function clean(text) {
-	let out = text;
-	for (const [re, rep] of REPLACEMENTS) out = out.replace(re, rep);
-	return out;
+	let out = text
+		.replace(/\bundetected:/g, '__KEY_UNDETECTED__')
+		.replace(/\.undetected\b/g, '.maintenance')
+		.replace(/\bp\.undetected\b/g, 'p.maintenance');
+	for (const re of STRIP_PATTERNS) out = out.replace(re, '');
+	out = out.replace(/__KEY_UNDETECTED__/g, 'undetected:');
+	return postClean(out);
 }
 
 let changed = 0;

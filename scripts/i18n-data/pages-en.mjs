@@ -62,7 +62,7 @@ export const enPages = {
 				],
 			),
 			section(
-				'Maintained ESP with BattlEye updates',
+				'ESP with BattlEye updates',
 				'Destiny 2 Cheats ESP wallhack is maintained for Destiny 2 with rebuilds after BattlEye anti-cheat patches. Check the <a href="/status/">Updates page</a> before you queue — no cheat guarantees permanent safe status.',
 				`Read ${EXT.battleye} for how anti-cheat updates ship, then cross-check our <a href="/status/">BattlEye bypass maintenance guide</a> after major patches.`,
 				'Checkout includes instant digital delivery for Windows 10 and 11. After purchase, follow the <a href="/setup/">Setup guide</a> and tune overlays before your first raid.',
@@ -225,7 +225,7 @@ export const enPages = {
 			'Destiny 2 cheats update log: BattlEye rebuilds for ESP boxes, soft aim, and radar on Windows PC. Check status before queueing after patches.',
 		h1: 'Destiny 2 Cheats Updates — Maintenance Log',
 		intro:
-			'Track BattlEye maintenance and Destiny 2 patch rebuilds for the maintained ESP wallhack, radar hack, and Aimbot package. Check here before queueing after major updates.',
+			'Track BattlEye maintenance and Destiny 2 patch rebuilds for the ESP wallhack, radar hack, and Aimbot package. Check here before queueing after major updates.',
 		imageAlt: "Destiny 2 Cheats live status after BattlEye and game patches",
 		galleryTitle: 'Destiny 2 patch and maintenance visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
@@ -245,7 +245,7 @@ export const enPages = {
 				'For context on why rebuilds happen, read the <a href="/status/">BattlEye bypass guide</a> and <a href="/d2-cheats/">Destiny 2 cheats</a> explainer.',
 			),
 			section(
-				'Staying maintained after patches',
+				'Staying after patches',
 				'No cheat guarantees permanent safe status. Combine maintenance updates with responsible in-game settings and patch awareness.',
 				`Follow season notes from ${EXT['destiny-2']}, then confirm our rebuild is live before you queue.`,
 				'For urgent status questions after a BattlEye update, contact <a href="/support/">Support</a> with your license tier and last played build version.',
@@ -267,13 +267,13 @@ export const enPages = {
 		sections: [
 			section(
 				'What is Destiny 2 Cheats?',
-				'Destiny 2 Cheats is a maintained cheat package for Destiny 2 on Windows PC. It includes ESP wallhack, 2D radar-style awareness, and Aimbot controls with BattlEye maintenance updates.',
+				'Destiny 2 Cheats is a cheat package for Destiny 2 on Windows PC. It includes ESP wallhack, 2D radar-style awareness, and Aimbot controls with BattlEye maintenance updates.',
 				'Packages cover raids and PvE. Explore <a href="/features/">Features</a> for the full control list and <a href="/destiny-2-esp/">ESP</a> / <a href="/destiny-2-aimbot/">Aimbot</a> for module detail.',
 				`Destiny 2 itself is published by Bungie (${EXT['destiny-2']}). Cheats are third-party tools and may violate Bungie's rules — use is at your own risk.`,
 			),
 			section(
-				'Are Destiny 2 Cheats maintained after patches in 2026?',
-				'Destiny 2 Cheats is maintained with rebuilds after BattlEye anti-cheat and game patches. Check the <a href="/status/">Updates page</a> for current status — no cheat can guarantee permanent safe operation.',
+				'Are Destiny 2 Cheats after patches in 2026?',
+				'Destiny 2 Cheats is with rebuilds after BattlEye anti-cheat and game patches. Check the <a href="/status/">Updates page</a> for current status — no cheat can guarantee permanent safe operation.',
 				'Read <a href="/d2-cheats/">Destiny 2 cheats</a> and the <a href="/status/">BattlEye guide</a> for the maintenance workflow.',
 				'Responsible settings and reading maintenance notes before queueing are essential.',
 			),
@@ -318,22 +318,22 @@ export const enPages = {
 			),
 		],
 	},
-	maintained: {
-		title: 'Maintained Destiny 2 Cheats | BattlEye Updates',
+	undetected: {
+		title: 'Destiny 2 Cheat Status | BattlEye Updates',
 		description:
-			'Maintained Destiny 2 cheats with BattlEye rebuilds for ESP boxes, soft aim, and radar on Windows PC. Check status before you queue.',
-		h1: 'Maintained Destiny 2 Cheats — BattlEye Updates',
+			'Destiny 2 cheats with BattlEye rebuilds for ESP boxes, soft aim, and radar on Windows PC. Check status before you queue.',
+		h1: 'Destiny 2 Cheat Status — BattlEye Updates',
 		intro:
-			'How Destiny 2 Cheats stays maintained for Destiny 2 after BattlEye anti-cheat patches — ESP wallhack, radar hack, and Aimbot rebuilds for Windows PC.',
-		imageAlt: "Destiny 2 Cheats maintenance status overview for Windows PC",
-		galleryTitle: 'Maintained Destiny 2 Cheats visuals',
+			'How Destiny 2 Cheats handles BattlEye anti-cheat patches — ESP wallhack, radar, and Aimbot rebuilds for Windows PC.',
+		imageAlt: 'Destiny 2 Cheats maintenance status overview for Windows PC',
+		galleryTitle: 'Destiny 2 Cheats patch status visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
 		ctaSecondary: 'BattlEye bypass guide',
 		ctaSecondaryHref: '/status/',
 		sections: [
 			section(
-				'What maintained means for Destiny 2 Cheats',
-				'Maintained Destiny 2 Cheats means the package is actively maintained against BattlEye anti-cheat and major Destiny 2 patches — not that detection is impossible forever.',
+				'What patch maintenance means',
+				'Destiny 2 Cheats is actively maintained against BattlEye anti-cheat and major Destiny 2 patches — not that detection is impossible forever.',
 				'Rebuilds target ESP wallhack overlays, radar behavior, and Aimbot signatures after BattlEye security updates.',
 				`Anti-cheat technology is documented by ${EXT.battleye}; Destiny 2 client updates ship through ${EXT['destiny-2']}. Maintenance status is an ongoing process tied to those releases.`,
 			),
@@ -432,7 +432,7 @@ export const enPages = {
 		sections: [
 			section(
 				'BattlEye anti-cheat overview',
-				`BattlEye anti-cheat is Bungie's anti-cheat for Destiny 2 on PC (see ${EXT.battleye}). Security updates can affect ESP wallhack, radar, and Aimbot behavior — requiring maintenance rebuilds for maintained packages.`,
+				`BattlEye anti-cheat is Bungie's anti-cheat for Destiny 2 on PC (see ${EXT.battleye}). Security updates can affect ESP wallhack, radar, and Aimbot behavior — requiring maintenance rebuilds for packages.`,
 				`Destiny 2 Cheats monitors BattlEye patch notes and Destiny 2 seasonal updates from ${EXT['destiny-2']} to schedule module reviews.`,
 				'“BattlEye bypass” in our wording means timely maintenance — not a permanent free pass around anti-cheat.',
 			),
@@ -575,7 +575,7 @@ export const enPages = {
 				'Soft tracking players should start with <a href="/destiny-2-aimbot/">soft aim</a> profiles before aggressive FOV.',
 			),
 			section(
-				'Maintained mod menu after BattlEye patches',
+				' mod menu after BattlEye patches',
 				'Destiny 2 mod menu behavior is rebuilt when BattlEye anti-cheat or major Destiny 2 updates land. Follow the <a href="/status/">Updates page</a> and <a href="/status/">BattlEye bypass guide</a> before queueing on patch days.',
 				'Checkout with instant digital delivery for monthly and lifetime licenses — see <a href="/pricing/">Pricing</a>.',
 				'Need install steps? Open <a href="/setup/">Setup</a> after your license email arrives.',
@@ -621,7 +621,7 @@ export const enPages = {
 			'Best Destiny 2 cheats for 2026: ESP boxes, soft aim, and BattlEye maintenance on Windows PC. Use this checklist before checkout.',
 		h1: 'Best Destiny 2 Cheats — 2026 Buyer Guide',
 		intro:
-			'Compare the Destiny 2 cheats for Destiny 2 in 2026 — ESP wallhack, radar hack, and Aimbot in one maintained package with BattlEye anti-cheat rebuilds and instant delivery.',
+			'Compare the Destiny 2 cheats for Destiny 2 in 2026 — ESP wallhack, radar hack, and Aimbot in one package with BattlEye anti-cheat rebuilds and instant delivery.',
 		imageAlt: "Destiny 2 Cheats overview for Destiny 2 on PC",
 		galleryTitle: 'Best Destiny 2 cheats gallery',
 		ctaPrimary: 'Buy Destiny 2 Cheats',

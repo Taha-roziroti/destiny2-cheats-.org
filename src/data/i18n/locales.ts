@@ -110,10 +110,10 @@ export const blogUi: Record<
 	es: {
 		blogTitle: 'Foro Destiny 2 Cheats 2026 | Guías en 22 idiomas',
 		blogDescription:
-			'Foro de Destiny 2 Cheats con guías de trucos maintained, ESP wallhack, radar y Aimbot para Destiny 2 en PC Windows.',
+			'Foro de Destiny 2 Cheats con guías de trucos , ESP wallhack, radar y Aimbot para Destiny 2 en PC Windows.',
 		blogH1: 'Foro Destiny 2 Cheats — Foro global',
 		blogIntro:
-			'Guías SEO de trucos Destiny 2 maintained, ESP wallhack, radar hack, Aimbot y mantenimiento BattlEye anti-cheat en 22 idiomas.',
+			'Guías SEO de trucos Destiny 2 , ESP wallhack, radar hack, Aimbot y mantenimiento BattlEye anti-cheat en 22 idiomas.',
 		readMore: 'Leer hilo',
 		published: 'Publicado',
 		updated: 'Actualizado',
@@ -125,10 +125,10 @@ export const blogUi: Record<
 	fr: {
 		blogTitle: 'Foro Destiny 2 Cheats 2026 | Guides en 22 langues',
 		blogDescription:
-			'Foro Destiny 2 Cheats : triches maintenues, ESP wallhack, radar et Aimbot pour Destiny 2 sur PC Windows.',
+			'Foro Destiny 2 Cheats : triches , ESP wallhack, radar et Aimbot pour Destiny 2 sur PC Windows.',
 		blogH1: 'Foro Destiny 2 Cheats — Forum global',
 		blogIntro:
-			'Guides SEO triches Destiny 2 maintenues, ESP wallhack, radar hack, Aimbot et BattlEye anti-cheat en 22 langues.',
+			'Guides SEO triches Destiny 2 , ESP wallhack, radar hack, Aimbot et BattlEye anti-cheat en 22 langues.',
 		readMore: 'Lire le guide',
 		published: 'Publié',
 		updated: 'Mis à jour',
@@ -155,10 +155,10 @@ export const blogUi: Record<
 	pt: {
 		blogTitle: 'Foro Destiny 2 Cheats 2026 | Guias em 22 idiomas',
 		blogDescription:
-			'Foro Destiny 2 Cheats com guias de cheats mantidos, ESP wallhack, radar e Aimbot para Destiny 2 no PC.',
+			'Foro Destiny 2 Cheats com guias de cheats , ESP wallhack, radar e Aimbot para Destiny 2 no PC.',
 		blogH1: 'Foro Destiny 2 Cheats — Fórum global',
 		blogIntro:
-			'Guias SEO de cheats Destiny 2 mantidos, ESP wallhack, radar hack, Aimbot e BattlEye anti-cheat em 22 idiomas.',
+			'Guias SEO de cheats Destiny 2 , ESP wallhack, radar hack, Aimbot e BattlEye anti-cheat em 22 idiomas.',
 		readMore: 'Ler guia',
 		published: 'Publicado',
 		updated: 'Atualizado',
@@ -170,10 +170,10 @@ export const blogUi: Record<
 	it: {
 		blogTitle: 'Foro Destiny 2 Cheats 2026 | Guide in 22 lingue',
 		blogDescription:
-			'Foro Destiny 2 Cheats con guide cheat maintained, ESP wallhack, radar e Aimbot per Destiny 2 su PC Windows.',
+			'Foro Destiny 2 Cheats con guide cheat , ESP wallhack, radar e Aimbot per Destiny 2 su PC Windows.',
 		blogH1: 'Foro Destiny 2 Cheats — Forum globale',
 		blogIntro:
-			'Guide SEO cheat Destiny 2 maintained, ESP wallhack, radar hack, Aimbot e BattlEye anti-cheat in 22 lingue.',
+			'Guide SEO cheat Destiny 2 , ESP wallhack, radar hack, Aimbot e BattlEye anti-cheat in 22 lingue.',
 		readMore: 'Leggi guida',
 		published: 'Pubblicato',
 		updated: 'Aggiornato',

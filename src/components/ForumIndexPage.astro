@@ -35,7 +35,7 @@ const pageDescription = seoDescription(brandSeo.forumsDescription);
 		{
 			'@type': 'CollectionPage',
 			'@id': `${canonicalURL}#collection`,
-			name: 'Destiny 2 Cheats Forum',
+			name: t('blog.blogH1'),
 			description: pageDescription,
 			url: canonicalURL,
 		},
@@ -45,10 +45,8 @@ const pageDescription = seoDescription(brandSeo.forumsDescription);
 	<main id="main-content" class="forum-index">
 		<div class="shell forum-index__head">
 			<p class="forum-index__eyebrow">{t('a11y.forumCommunity')}</p>
-			<h1>Destiny 2 Cheats Forum</h1>
-			<p class="forum-index__lede">
-				Setup help, aimbot tuning, ESP presets, and store questions — straight talk from people actually running the tools in Crucible and raids.
-			</p>
+			<h1>{t('blog.blogH1')}</h1>
+			<p class="forum-index__lede">{t('blog.blogIntro')}</p>
 		</div>
 		<div class="shell forum-index__list">
 			{
@@ -63,14 +61,14 @@ const pageDescription = seoDescription(brandSeo.forumsDescription);
 						</h2>
 						<p>{thread.intro}</p>
 						<a class="forum-card__link" href={`${forumsBasePath}${thread.slug}/`}>
-							Read thread →
+							{t('blog.readMore')} →
 						</a>
 					</article>
 				))
 			}
 		</div>
-		<SiteFooter locale={locale} />
 	</main>
+	<SiteFooter locale={locale} />
 </Layout>
 
 <style>

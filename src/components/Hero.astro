@@ -25,6 +25,7 @@ const imageAlt = home.imageAlt;
 				<video
 					class="hero__video"
 					src={heroVideo}
+					poster={siteConfig.heroVideoPoster || siteConfig.heroImage}
 					autoplay
 					muted
 					loop
@@ -34,7 +35,6 @@ const imageAlt = home.imageAlt;
 					height={heroHeight}
 					aria-hidden="true"
 				>
-					<!-- Poster is intentionally omitted — the old poster looked like a static hero image. -->
 				</video>
 			) : (
 				<img
@@ -113,7 +113,7 @@ const imageAlt = home.imageAlt;
 		display: grid;
 		align-items: center;
 		overflow: hidden;
-		background: #050506;
+		background: #0D0A14;
 		aspect-ratio: var(--hero-ratio);
 		width: 100%;
 		height: auto;
