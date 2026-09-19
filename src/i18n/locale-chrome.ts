@@ -34,6 +34,11 @@ export type ReviewChrome = {
 	averageAria: string;
 	outOfFiveAria: string;
 	readAll: string;
+	readFullReview: string;
+	readyToTry: string;
+	comparePricing: string;
+	buyNowPrice: string;
+	verifiedBuyer: string;
 };
 
 export type A11yChrome = {
@@ -98,9 +103,17 @@ export const commonChrome: Record<LocaleCode, CommonChrome> = {
 	sv: { selectLanguage: 'Välj språk', breadcrumb: 'Sökväg', browse: 'Bläddra', skipToContent: 'Hoppa till huvudinnehåll', support: 'Support', privacy: 'Integritet', terms: 'Villkor', featureList: 'Funktionslista', pricingPlans: 'Priser', buyerReviewsNav: 'Recensioner', forums: 'Forum', blog: 'Forum', officialResources: 'Officiella Destiny 2-resurser', officialResourcesLead: 'Lär dig spelet via officiella och community-källor:' },
 };
 
+const reviewExtras = {
+	readFullReview: 'Read full review',
+	readyToTry: 'Ready to try {{brand}}?',
+	comparePricing: 'Compare pricing',
+	buyNowPrice: 'Buy Now — ${{price}}',
+	verifiedBuyer: 'Verified buyer',
+};
+
 export const reviewChrome: Record<LocaleCode, ReviewChrome> = {
-	en: { buyerReviews: '{{count}} buyer reviews', averageAria: '{{rating}} average from {{count}} reviews', outOfFiveAria: '{{rating}} out of 5', readAll: 'Read all reviews →' },
-	es: { buyerReviews: '{{count}} reseñas de compradores', averageAria: '{{rating}} de media de {{count}} reseñas', outOfFiveAria: '{{rating}} de 5', readAll: 'Ver todas las reseñas →' },
+	en: { buyerReviews: '{{count}} buyer reviews', averageAria: '{{rating}} average from {{count}} reviews', outOfFiveAria: '{{rating}} out of 5', readAll: 'Read all reviews →', ...reviewExtras },
+	es: { buyerReviews: '{{count}} reseñas de compradores', averageAria: '{{rating}} de media de {{count}} reseñas', outOfFiveAria: '{{rating}} de 5', readAll: 'Ver todas las reseñas →', readFullReview: 'Leer reseña completa', readyToTry: '¿Listo para probar {{brand}}?', comparePricing: 'Comparar precios', buyNowPrice: 'Comprar — ${{price}}', verifiedBuyer: 'Comprador verificado' },
 	fr: { buyerReviews: '{{count}} avis acheteurs', averageAria: '{{rating}} en moyenne sur {{count}} avis', outOfFiveAria: '{{rating}} sur 5', readAll: 'Voir tous les avis →' },
 	de: { buyerReviews: '{{count}} Käuferbewertungen', averageAria: '{{rating}} Durchschnitt aus {{count}} Bewertungen', outOfFiveAria: '{{rating}} von 5', readAll: 'Alle Bewertungen →' },
 	pt: { buyerReviews: '{{count}} avaliações de compradores', averageAria: '{{rating}} média de {{count}} avaliações', outOfFiveAria: '{{rating}} de 5', readAll: 'Ver todas as avaliações →' },
@@ -176,3 +189,29 @@ const chipLabels: Record<LocaleCode, { chipEsp: string; chipAim: string; chipRad
 export function getChipLabels(locale: LocaleCode) {
 	return chipLabels[locale] ?? chipLabels.en;
 }
+
+/** Localized "from" prefix for hero pricing. */
+export const priceFromLabels: Record<LocaleCode, string> = {
+	en: 'from',
+	es: 'desde',
+	fr: 'dès',
+	de: 'ab',
+	pt: 'desde',
+	it: 'da',
+	nl: 'vanaf',
+	pl: 'od',
+	ru: 'от',
+	tr: 'den',
+	ar: 'من',
+	ja: 'から',
+	ko: '부터',
+	zh: '起',
+	hi: 'से',
+	id: 'dari',
+	th: 'จาก',
+	vi: 'từ',
+	uk: 'від',
+	cs: 'od',
+	ro: 'de la',
+	sv: 'från',
+};

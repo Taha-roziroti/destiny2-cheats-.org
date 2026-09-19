@@ -3,12 +3,12 @@ import { HERO_IMAGES, clampTitle, clampDesc, section, stripZadeyoFromMeta, EXT }
 /** Richest English page content — source of truth for structure. */
 export const enPages = {
 	home: {
-		title: 'Destiny 2 Cheats | Undetected PC Hacks',
+		title: 'Destiny 2 Cheats — ESP, Aimbot & Wallhack',
 		description:
 			'Official Destiny 2 cheats for Windows PC — aimbot, ESP, wallhack, radar, and BattlEye updates. Compare plans and buy with instant delivery.',
 		h1: 'Destiny 2 Cheats',
 		intro:
-			'Undetected Destiny 2 cheats for Windows PC — ESP, soft aim, and radar in one license with BattlEye maintenance after patches.',
+			'Destiny 2 cheats for Windows PC — ESP, soft aim, and radar in one license with BattlEye maintenance after patches.',
 		imageAlt: "Destiny 2 Cheats homepage hero — ESP and aimbot for Destiny 2",
 		galleryTitle: 'Destiny 2 Cheats gallery — ESP, Aimbot and wallhack visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
@@ -33,7 +33,7 @@ export const enPages = {
 	'destiny-2-esp': {
 		title: 'Destiny 2 ESP | Player Boxes & Wallhack',
 		description:
-			'Destiny 2 ESP for Windows PC — player boxes, loot markers, and distance readouts. Part of our undetected Destiny 2 cheats.',
+			'Destiny 2 ESP for Windows PC — player boxes, loot markers, and distance readouts. Part of the Destiny 2 Cheats package.',
 		h1: 'Destiny 2 ESP — Player Boxes & Wallhack',
 		intro:
 			'Player boxes, loot markers, and distance readouts for Crucible, Trials, and raids. Toggle categories so the overlay stays readable mid-match.',
@@ -62,8 +62,8 @@ export const enPages = {
 				],
 			),
 			section(
-				'Undetected ESP with BattlEye maintenance',
-				'Destiny 2 Cheats ESP wallhack is maintained for Destiny 2 with rebuilds after BattlEye anti-cheat patches. Check the <a href="/status/">Updates page</a> before you queue — no cheat guarantees permanent undetected status.',
+				'ESP with BattlEye updates',
+				'Destiny 2 Cheats ESP wallhack is maintained for Destiny 2 with rebuilds after BattlEye anti-cheat patches. Check the <a href="/status/">Updates page</a> before you queue — no cheat guarantees permanent safe status.',
 				`Read ${EXT.battleye} for how anti-cheat updates ship, then cross-check our <a href="/status/">BattlEye bypass maintenance guide</a> after major patches.`,
 				'Checkout includes instant digital delivery for Windows 10 and 11. After purchase, follow the <a href="/setup/">Setup guide</a> and tune overlays before your first raid.',
 			),
@@ -71,7 +71,7 @@ export const enPages = {
 				'ESP next steps — Aimbot, pricing, and support',
 				'ESP alone wins information wars; Aimbot covers the firefight. Review <a href="/destiny-2-aimbot/">Aimbot controls</a> if you want one license for visibility and assist.',
 				'Compare monthly ($35) and lifetime ($150) on <a href="/pricing/">Pricing</a>, then keep <a href="/support/">Support</a> ready if activation needs a human reply.',
-				'Still researching? Read the <a href="/d2-cheats/">product overview</a> and <a href="/blog/buyers-guide/">buyers guide</a>.',
+				'Still researching? Read the <a href="/d2-cheats/">product overview</a> and <a href="/forums/buying-destiny-2-cheats-license/">buyers guide</a>.',
 			),
 		],
 	},
@@ -107,10 +107,10 @@ export const enPages = {
 				],
 			),
 			section(
-				'BattlEye maintenance for undetected Aimbot',
+				'BattlEye maintenance for soft aim',
 				'Destiny 2 Cheats rebuilds Aimbot behavior when BattlEye anti-cheat or major Destiny 2 patches land. Maintenance notes appear on the <a href="/status/">Updates page</a> so you know when a new build is live.',
 				`Cross-check service health on ${EXT.status} and anti-cheat context on ${EXT.battleye}, then follow our <a href="/status/">BattlEye maintenance guide</a> before queueing on patch day.`,
-				'Responsible settings matter — undetected status requires ongoing maintenance, not set-and-forget configs. Start with conservative smoothness, then tune.',
+				'Responsible settings matter — maintenance requires ongoing maintenance, not set-and-forget configs. Start with conservative smoothness, then tune.',
 			),
 			section(
 				'Buy Aimbot with ESP — pricing and setup',
@@ -149,7 +149,7 @@ export const enPages = {
 				'Licensing, delivery, and BattlEye maintenance',
 				'Monthly ($35) and lifetime ($150) licenses with instant digital delivery. BattlEye maintenance rebuilds publish on the <a href="/status/">Updates page</a> after anti-cheat or game patches.',
 				`Monitor ${EXT.status} on patch days, then confirm rebuild notes before you queue. Setup and billing help lives on <a href="/support/">Support</a> and support@destiny2cheats.org.`,
-				'Next step: compare plans on <a href="/pricing/">Pricing</a> or read <a href="/d2-cheats/">how undetected maintenance works</a>.',
+				'Next step: compare plans on <a href="/pricing/">Pricing</a> or read <a href="/d2-cheats/">how BattlEye maintenance works</a>.',
 			),
 		],
 	},
@@ -159,7 +159,7 @@ export const enPages = {
 			'Destiny 2 cheats pricing: $35/month or $150 lifetime for ESP, soft aim, and radar on Windows PC. Instant delivery — pick a plan.',
 		h1: 'Destiny 2 Cheats Pricing — Monthly & Lifetime',
 		intro:
-			'Choose monthly or lifetime access to undetected Destiny 2 Cheats — ESP wallhack, radar hack, and Aimbot for Destiny 2 on Windows PC. Instant digital delivery after payment.',
+			'Choose monthly or lifetime access to Destiny 2 Cheats — ESP wallhack, radar hack, and Aimbot for Destiny 2 on Windows PC. Instant digital delivery after payment.',
 		imageAlt: "Destiny 2 Cheats store plans for monthly and lifetime licenses",
 		galleryTitle: 'Destiny 2 Cheats package visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
@@ -169,7 +169,7 @@ export const enPages = {
 			section(
 				'Monthly and lifetime Destiny 2 Cheats plans',
 				'Monthly license: $35 USD for 30 days of full ESP wallhack, radar hack, and Aimbot access with BattlEye maintenance included during your term.',
-				'Lifetime license: $150 USD for long-term access to the same undetected Destiny 2 Cheats package — ideal if you play Destiny 2 regularly across seasons.',
+				'Lifetime license: $150 USD for long-term access to the same Destiny 2 Cheats package — ideal if you play Destiny 2 regularly across seasons.',
 				'Both plans unlock the same feature stack described on <a href="/features/">Features</a>. Choose monthly to test, or lifetime if you already know you want the full toolkit.',
 			),
 			section(
@@ -214,7 +214,7 @@ export const enPages = {
 			section(
 				'After Destiny 2 or BattlEye anti-cheat patches',
 				'When Bungie ships a major Destiny 2 update or BattlEye anti-cheat patch, revisit Updates before queueing. Download maintenance rebuilds when posted.',
-				`Official anti-cheat background: ${EXT.battleye}. Our practical workflow is documented on the <a href="/status/">BattlEye bypass page</a> and <a href="/d2-cheats/">undetected guide</a>.`,
+				`Official anti-cheat background: ${EXT.battleye}. Our practical workflow is documented on the <a href="/status/">BattlEye bypass page</a> and <a href="/d2-cheats/">maintenance guide</a>.`,
 				'Contact <a href="/support/">Support</a> with your order ID if activation fails after a patch — include Windows version and error details for faster replies.',
 			),
 		],
@@ -225,11 +225,11 @@ export const enPages = {
 			'Destiny 2 cheats update log: BattlEye rebuilds for ESP boxes, soft aim, and radar on Windows PC. Check status before queueing after patches.',
 		h1: 'Destiny 2 Cheats Updates — Maintenance Log',
 		intro:
-			'Track BattlEye maintenance and Destiny 2 patch rebuilds for the undetected ESP wallhack, radar hack, and Aimbot package. Check here before queueing after major updates.',
+			'Track BattlEye maintenance and Destiny 2 patch rebuilds for the ESP wallhack, radar hack, and Aimbot package. Check here before queueing after major updates.',
 		imageAlt: "Destiny 2 Cheats live status after BattlEye and game patches",
 		galleryTitle: 'Destiny 2 patch and maintenance visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
-		ctaSecondary: 'Undetected status guide',
+		ctaSecondary: 'Maintenance guide',
 		ctaSecondaryHref: '/d2-cheats/',
 		sections: [
 			section(
@@ -242,11 +242,11 @@ export const enPages = {
 				'What maintenance entries cover',
 				'Entries note BattlEye anti-cheat compatibility status, rebuilt ESP wallhack overlays, radar range fixes, Aimbot tuning after weapon balance changes, and digital delivery of new builds to active licenses.',
 				'Lifetime and monthly subscribers receive rebuild access during active license terms. See <a href="/pricing/">Pricing</a> if you need to renew.',
-				'For context on why rebuilds happen, read the <a href="/status/">BattlEye bypass guide</a> and <a href="/d2-cheats/">undetected Destiny 2 cheats</a> explainer.',
+				'For context on why rebuilds happen, read the <a href="/status/">BattlEye bypass guide</a> and <a href="/d2-cheats/">Destiny 2 cheats</a> explainer.',
 			),
 			section(
-				'Staying undetected after patches',
-				'No cheat guarantees permanent undetected status. Combine maintenance updates with responsible in-game settings and patch awareness.',
+				'Staying after patches',
+				'No cheat guarantees permanent safe status. Combine maintenance updates with responsible in-game settings and patch awareness.',
 				`Follow season notes from ${EXT['destiny-2']}, then confirm our rebuild is live before you queue.`,
 				'For urgent status questions after a BattlEye update, contact <a href="/support/">Support</a> with your license tier and last played build version.',
 			),
@@ -258,7 +258,7 @@ export const enPages = {
 			'Destiny 2 cheats FAQ: ESP boxes, soft aim, BattlEye maintenance, and pricing for PC. Clear answers before you buy.',
 		h1: 'Destiny 2 Cheats FAQ — Common Questions',
 		intro:
-			'Answers about undetected Destiny 2 Cheats — ESP wallhack, radar hack, Aimbot, BattlEye maintenance, checkout, and Destiny 2 compatibility on Windows PC.',
+			'Answers about Destiny 2 Cheats — ESP wallhack, radar hack, Aimbot, BattlEye maintenance, checkout, and Destiny 2 compatibility on Windows PC.',
 		imageAlt: "Destiny 2 Cheats FAQ — delivery, setup, and update answers",
 		galleryTitle: 'Destiny 2 Cheats FAQ visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
@@ -267,14 +267,14 @@ export const enPages = {
 		sections: [
 			section(
 				'What is Destiny 2 Cheats?',
-				'Destiny 2 Cheats is an undetected cheat package for Destiny 2 on Windows PC. It includes ESP wallhack, 2D radar-style awareness, and Aimbot controls with BattlEye maintenance updates.',
+				'Destiny 2 Cheats is a cheat package for Destiny 2 on Windows PC. It includes ESP wallhack, 2D radar-style awareness, and Aimbot controls with BattlEye maintenance updates.',
 				'Packages cover raids and PvE. Explore <a href="/features/">Features</a> for the full control list and <a href="/destiny-2-esp/">ESP</a> / <a href="/destiny-2-aimbot/">Aimbot</a> for module detail.',
 				`Destiny 2 itself is published by Bungie (${EXT['destiny-2']}). Cheats are third-party tools and may violate Bungie's rules — use is at your own risk.`,
 			),
 			section(
-				'Are Destiny 2 Cheats undetected in 2026?',
-				'Destiny 2 Cheats is maintained with rebuilds after BattlEye anti-cheat and game patches. Check the <a href="/status/">Updates page</a> for current status — no cheat can guarantee permanent undetected operation.',
-				'Read <a href="/d2-cheats/">undetected Destiny 2 cheats</a> and the <a href="/status/">BattlEye guide</a> for the maintenance workflow.',
+				'Are Destiny 2 Cheats after patches in 2026?',
+				'Destiny 2 Cheats is with rebuilds after BattlEye anti-cheat and game patches. Check the <a href="/status/">Updates page</a> for current status — no cheat can guarantee permanent safe operation.',
+				'Read <a href="/d2-cheats/">Destiny 2 cheats</a> and the <a href="/status/">BattlEye guide</a> for the maintenance workflow.',
 				'Responsible settings and reading maintenance notes before queueing are essential.',
 			),
 			section(
@@ -319,23 +319,23 @@ export const enPages = {
 		],
 	},
 	undetected: {
-		title: 'Undetected Destiny 2 Cheats | BattlEye Maintenance',
+		title: 'Destiny 2 Cheat Status | BattlEye Updates',
 		description:
-			'Undetected Destiny 2 cheats with BattlEye maintenance for ESP boxes, soft aim, and radar on Windows PC. Check status before you queue.',
-		h1: 'Undetected Destiny 2 Cheats — BattlEye Maintenance',
+			'Destiny 2 cheats with BattlEye rebuilds for ESP boxes, soft aim, and radar on Windows PC. Check status before you queue.',
+		h1: 'Destiny 2 Cheat Status — BattlEye Updates',
 		intro:
-			'How Destiny 2 Cheats stays maintained for Destiny 2 after BattlEye anti-cheat patches — ESP wallhack, radar hack, and Aimbot rebuilds for Windows PC.',
-		imageAlt: "Destiny 2 Cheats undetected status overview for Windows PC",
-		galleryTitle: 'Undetected Destiny 2 Cheats visuals',
+			'How Destiny 2 Cheats handles BattlEye anti-cheat patches — ESP wallhack, radar, and Aimbot rebuilds for Windows PC.',
+		imageAlt: 'Destiny 2 Cheats maintenance status overview for Windows PC',
+		galleryTitle: 'Destiny 2 Cheats patch status visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
 		ctaSecondary: 'BattlEye bypass guide',
 		ctaSecondaryHref: '/status/',
 		sections: [
 			section(
-				'What undetected means for Destiny 2 Cheats',
-				'Undetected Destiny 2 Cheats means the package is actively maintained against BattlEye anti-cheat and major Destiny 2 patches — not that detection is impossible forever.',
+				'What patch maintenance means',
+				'Destiny 2 Cheats is actively maintained against BattlEye anti-cheat and major Destiny 2 patches — not that detection is impossible forever.',
 				'Rebuilds target ESP wallhack overlays, radar behavior, and Aimbot signatures after BattlEye security updates.',
-				`Anti-cheat technology is documented by ${EXT.battleye}; Destiny 2 client updates ship through ${EXT['destiny-2']}. Undetected status is an ongoing process tied to those releases.`,
+				`Anti-cheat technology is documented by ${EXT.battleye}; Destiny 2 client updates ship through ${EXT['destiny-2']}. Maintenance status is an ongoing process tied to those releases.`,
 			),
 			section(
 				'BattlEye maintenance workflow',
@@ -345,7 +345,7 @@ export const enPages = {
 			),
 			section(
 				'Responsible use and next steps',
-				'Combine maintenance with conservative in-game settings. Read the <a href="/faq/">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.',
+				'Combine maintenance with conservative in-game settings. Read the <a href="/faq/">FAQ</a> and Updates log regularly — maintenance is not a one-time promise.',
 				'Lifetime and monthly plans include rebuild access during active terms — see <a href="/pricing/">Pricing</a>.',
 				'New buyers should read the <a href="/d2-cheats/">product overview</a> and complete <a href="/setup/">Setup</a> after delivery.',
 			),
@@ -354,7 +354,7 @@ export const enPages = {
 	wallhack: {
 		title: 'Destiny 2 Wallhack | ESP Boxes & Visibility',
 		description:
-			'Destiny 2 wallhack ESP with player boxes and loot markers for Windows PC. Undetected Destiny 2 cheats — learn overlays and buy.',
+			'Destiny 2 wallhack ESP with player boxes and loot markers for Windows PC. Destiny 2 cheats — learn overlays and buy.',
 		h1: 'Destiny 2 Wallhack — ESP Boxes & Visibility',
 		intro:
 			'Destiny 2 wallhack ESP for Destiny 2 — see players, loot, bosses, and containers through toggleable wallhack overlays built for raids and PvE.',
@@ -377,7 +377,7 @@ export const enPages = {
 				'Pair wallhack awareness with <a href="/d2-radar/">radar hack</a> cues for flanks during building and rooftop fights.',
 			),
 			section(
-				'Undetected wallhack maintenance',
+				'Wallhack maintenance after patches',
 				'ESP wallhack modules rebuild after BattlEye anti-cheat patches. Follow the <a href="/status/">Updates page</a> and complete checkout for instant license delivery on Windows PC.',
 				'Follow <a href="/status/">Updates</a> for BattlEye maintenance notes.',
 				'Ready to buy? Compare <a href="/pricing/">Pricing</a> or continue to the <a href="/destiny-2-esp/">ESP hack</a> landing for alternate search wording.',
@@ -432,7 +432,7 @@ export const enPages = {
 		sections: [
 			section(
 				'BattlEye anti-cheat overview',
-				`BattlEye anti-cheat is Bungie's anti-cheat for Destiny 2 on PC (see ${EXT.battleye}). Security updates can affect ESP wallhack, radar, and Aimbot behavior — requiring maintenance rebuilds for undetected packages.`,
+				`BattlEye anti-cheat is Bungie's anti-cheat for Destiny 2 on PC (see ${EXT.battleye}). Security updates can affect ESP wallhack, radar, and Aimbot behavior — requiring maintenance rebuilds for packages.`,
 				`Destiny 2 Cheats monitors BattlEye patch notes and Destiny 2 seasonal updates from ${EXT['destiny-2']} to schedule module reviews.`,
 				'“BattlEye bypass” in our wording means timely maintenance — not a permanent free pass around anti-cheat.',
 			),
@@ -440,11 +440,11 @@ export const enPages = {
 				'What happens after a BattlEye patch',
 				'The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href="/status/">Updates</a>, and ships rebuilt packages to active licenses.',
 				`Confirm Bungie service health on ${EXT.status} if the launcher or matchmaking fails during the same window.`,
-				'Avoid queueing on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href="/d2-cheats/">undetected Destiny 2 cheats</a>.',
+				'Avoid queueing on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href="/d2-cheats/">Destiny 2 cheats</a>.',
 			),
 			section(
 				'No permanent bypass guarantee',
-				'BattlEye bypass in practice means timely maintenance. Read the undetected guide, <a href="/faq/">FAQ</a>, and Updates log before every session.',
+				'BattlEye bypass in practice means timely maintenance. Read the maintenance guide, <a href="/faq/">FAQ</a>, and Updates log before every session.',
 				'Contact <a href="/support/">Support</a> if activation fails immediately after a posted rebuild.',
 				'Buying for the first time? Compare <a href="/pricing/">Pricing</a> and finish <a href="/setup/">Setup</a> only after Updates shows a live build.',
 			),
@@ -453,10 +453,10 @@ export const enPages = {
 	'cheats-2026': {
 		title: 'Destiny 2 Cheats | ESP Soft Aim & Radar',
 		description:
-			'Best Destiny 2 cheats 2026: ESP boxes, soft aim, and radar for Windows PC. Undetected Destiny 2 cheats with BattlEye maintenance — compare and buy.',
+			'Best Destiny 2 cheats 2026: ESP boxes, soft aim, and radar for Windows PC. Destiny 2 cheats with BattlEye maintenance — compare and buy.',
 		h1: 'Destiny 2 Cheats 2026 — ESP, Soft Aim & Radar',
 		intro:
-			'The 2026 Destiny 2 Cheats package for Destiny 2 — undetected ESP wallhack, radar hack, and Aimbot with BattlEye maintenance, instant delivery, and Windows PC support.',
+			'The 2026 Destiny 2 Cheats package for Destiny 2 — ESP wallhack, radar hack, and Aimbot with BattlEye maintenance, instant delivery, and Windows PC support.',
 		imageAlt: "Destiny 2 Cheats product overview for Destiny 2",
 		galleryTitle: 'Destiny 2 Cheats 2026 gallery',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
@@ -477,8 +477,8 @@ export const enPages = {
 			),
 			section(
 				'Before you buy in 2026',
-				'Read the <a href="/d2-cheats/">Destiny 2 cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.',
-				'Also read the <a href="/blog/cheats-2026-updates/">season updates post</a> and <a href="/faq/">FAQ</a> before checkout.',
+				'Read the <a href="/d2-cheats/">Destiny 2 cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check maintenance status notes after every major patch — responsible use and maintenance awareness matter.',
+				'Also read the <a href="/forums/cheats-2026-updates/">season updates post</a> and <a href="/faq/">FAQ</a> before checkout.',
 				'Support is available at support@destiny2cheats.org via the <a href="/support/">Support page</a>.',
 			),
 		],
@@ -486,7 +486,7 @@ export const enPages = {
 	hacks: {
 		title: 'Buy Destiny 2 Cheats | Windows PC License',
 		description:
-			'Purchase undetected Destiny 2 cheats for Windows PC — ESP, aimbot, radar, and BattlEye rebuilds. Monthly and lifetime plans with instant delivery.',
+			'Purchase Destiny 2 cheats for Windows PC — ESP, aimbot, radar, and BattlEye rebuilds. Monthly and lifetime plans with instant delivery.',
 		h1: 'Buy Destiny 2 Cheats',
 		intro:
 			'Destiny 2 Cheats for Windows PC — ESP, soft aim, and radar in one license with BattlEye rebuilds after patches.',
@@ -505,14 +505,14 @@ export const enPages = {
 			section(
 				'Built for Destiny 2 raids',
 				'Read Guardians and enemies before you push, mark loot worth the risk, and stay aware of flanks. Tune soft aim per weapon class for Crucible, Trials, and raid encounters.',
-				'Module guides: <a href="/destiny-2-esp/">ESP</a>, <a href="/destiny-2-aimbot/">Aimbot</a>, and <a href="/d2-radar/">radar</a>. Research posts: <a href="/blog/buyers-guide/">buyers guide</a> and <a href="/blog/undetected-battleye/">BattlEye notes</a>.',
+				'Module guides: <a href="/destiny-2-esp/">ESP</a>, <a href="/destiny-2-aimbot/">Aimbot</a>, and <a href="/d2-radar/">radar</a>. Research posts: <a href="/forums/buying-destiny-2-cheats-license/">buyers guide</a> and <a href="/forums/patch-day-playbook/">BattlEye notes</a>.',
 				`Official game updates come from ${EXT['destiny-2']}; maintenance notes publish on the <a href="/status/">Updates page</a>. Cross-check ${EXT.status} before patch-day queues.`,
 			),
 			section(
 				'How to start',
 				'Buy a plan, get your license by email, then follow setup. Check status after every major patch.',
 				'Open <a href="/pricing/">Pricing</a>, follow <a href="/setup/">Setup</a>, and read <a href="/faq/">FAQ</a> if you need delivery or license help.',
-				'No cheat stays undetected forever — check status first, then play with conservative settings.',
+				'No cheat stays safe forever — check status first, then play with conservative settings.',
 			),
 		],
 	},
@@ -552,7 +552,7 @@ export const enPages = {
 	'crucible-cheats': {
 		title: 'Destiny 2 Mod Menu | ESP & Soft Aim Toggles',
 		description:
-			'Destiny 2 mod menu for in-match toggles — ESP boxes, soft aim, radar, and on Windows PC. Undetected Destiny 2 cheats package.',
+			'Destiny 2 mod menu for in-match toggles — ESP boxes, soft aim, radar, and on Windows PC. Destiny 2 Cheats package.',
 		h1: 'Destiny 2 Mod Menu — In-Client Control Panel',
 		intro:
 			'Destiny 2 mod menu controls for Destiny 2 — toggle ESP wallhack categories, radar range, and Aimbot profiles mid-match without leaving your Destiny 2 session on Windows PC.',
@@ -575,7 +575,7 @@ export const enPages = {
 				'Soft tracking players should start with <a href="/destiny-2-aimbot/">soft aim</a> profiles before aggressive FOV.',
 			),
 			section(
-				'Maintained mod menu after BattlEye patches',
+				' mod menu after BattlEye patches',
 				'Destiny 2 mod menu behavior is rebuilt when BattlEye anti-cheat or major Destiny 2 updates land. Follow the <a href="/status/">Updates page</a> and <a href="/status/">BattlEye bypass guide</a> before queueing on patch days.',
 				'Checkout with instant digital delivery for monthly and lifetime licenses — see <a href="/pricing/">Pricing</a>.',
 				'Need install steps? Open <a href="/setup/">Setup</a> after your license email arrives.',
@@ -588,7 +588,7 @@ export const enPages = {
 			'Destiny 2 soft aim settings for natural tracking on Windows PC. Smoothness, FOV, and bone priority — included in our Destiny 2 cheats with ESP boxes.',
 		h1: 'Destiny 2 Soft Aim — Smooth Aimbot Controls',
 		intro:
-			'Destiny 2 soft aim settings for Destiny 2 — configurable Aimbot smoothness, FOV, bone priority, and hotkey toggles bundled with ESP wallhack and radar in one undetected license.',
+			'Destiny 2 soft aim settings for Destiny 2 — configurable Aimbot smoothness, FOV, bone priority, and hotkey toggles bundled with ESP wallhack and radar in one license.',
 		imageAlt: "Destiny 2 soft aim FOV and smoothness settings",
 		galleryTitle: 'Destiny 2 soft aim gallery',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
@@ -608,8 +608,8 @@ export const enPages = {
 				'Soft aim ships alongside <a href="/destiny-2-esp/">ESP wallhack</a> and <a href="/d2-radar/">2D radar</a> overlays.',
 			),
 			section(
-				'Undetected soft aim with BattlEye maintenance',
-				'Aimbot modules rebuild after BattlEye anti-cheat patches. Check the <a href="/status/">Updates page</a> before queueing — responsible settings and maintenance awareness matter for undetected play.',
+				'Soft aim with BattlEye maintenance',
+				'Aimbot modules rebuild after BattlEye anti-cheat patches. Check the <a href="/status/">Updates page</a> before queueing — responsible settings and maintenance awareness matter for safe play.',
 				'Monthly and lifetime licenses checkout with digital delivery on Windows PC — <a href="/pricing/">Pricing</a>.',
 				'Activation help: <a href="/setup/">Setup</a> · status questions: <a href="/support/">Support</a>.',
 			),
@@ -621,7 +621,7 @@ export const enPages = {
 			'Best Destiny 2 cheats for 2026: ESP boxes, soft aim, and BattlEye maintenance on Windows PC. Use this checklist before checkout.',
 		h1: 'Best Destiny 2 Cheats — 2026 Buyer Guide',
 		intro:
-			'Compare the Destiny 2 cheats for Destiny 2 in 2026 — undetected ESP wallhack, radar hack, and Aimbot in one maintained package with BattlEye anti-cheat rebuilds and instant delivery.',
+			'Compare the Destiny 2 cheats for Destiny 2 in 2026 — ESP wallhack, radar hack, and Aimbot in one package with BattlEye anti-cheat rebuilds and instant delivery.',
 		imageAlt: "Destiny 2 Cheats overview for Destiny 2 on PC",
 		galleryTitle: 'Best Destiny 2 cheats gallery',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
@@ -643,7 +643,7 @@ export const enPages = {
 			section(
 				'Buying the Destiny 2 cheats safely',
 				'Purchase through secure checkout for instant digital delivery. Read Setup, FAQ, and Updates pages before your first queue — and contact Support with order details if activation needs help.',
-				'No cheat guarantees permanent undetected status — combine maintenance with responsible in-game settings.',
+				'No cheat guarantees permanent safe status — combine maintenance with responsible in-game settings.',
 				`Remember: using cheats can violate Bungie terms. Proceed only if you accept that risk.`,
 			),
 		],
@@ -654,7 +654,7 @@ export const enPages = {
 			'Destiny 2 aimbot hack with soft aim for Windows PC. FOV, bone priority, and hotkeys — bundled with ESP boxes in our Destiny 2 cheats package.',
 		h1: 'Destiny 2 Aimbot Hack — Soft Aim Assist',
 		intro:
-			'Destiny 2 aimbot hack tools for Destiny 2 — smoothness, FOV, bone priority, per-weapon profiles, and hotkey toggles bundled with ESP wallhack and radar in one undetected license.',
+			'Destiny 2 aimbot hack tools for Destiny 2 — smoothness, FOV, bone priority, per-weapon profiles, and hotkey toggles bundled with ESP wallhack and radar in one license.',
 		imageAlt: "Destiny 2 aimbot hack controls and bone priority",
 		galleryTitle: 'Destiny 2 aimbot hack gallery',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
@@ -674,7 +674,7 @@ export const enPages = {
 				`Balance patches from ${EXT['destiny-2']} can change ideal FOV — retune after major weapon updates.`,
 			),
 			section(
-				'Undetected aimbot hack maintenance',
+				'Aimbot maintenance after patches',
 				'Aimbot hack signatures rebuild after BattlEye anti-cheat updates. Follow the <a href="/status/">Updates page</a> and <a href="/status/">BattlEye bypass guide</a> before queueing after patch days.',
 				'Checkout with instant digital delivery for Windows 10 and 11 — <a href="/pricing/">Pricing</a>.',
 				'Pair with <a href="/destiny-2-esp/">ESP</a> for the full information + assist loop.',
@@ -684,7 +684,7 @@ export const enPages = {
 	'esp-hack': {
 		title: 'Destiny 2 ESP Hack | Player Boxes & Loot',
 		description:
-			'Destiny 2 ESP hack with player boxes and loot markers for Windows PC. Undetected Destiny 2 cheats with — see overlays and buy.',
+			'Destiny 2 ESP hack with player boxes and loot markers for Windows PC. Destiny 2 cheats — see overlays and buy.',
 		h1: 'Destiny 2 ESP Hack — Player Boxes Guide',
 		intro:
 			'Destiny 2 ESP hack overlays for Destiny 2 — player outlines, boss threat cues, loot and container markers with distance readouts across raids and PvE.',
@@ -707,7 +707,7 @@ export const enPages = {
 				`POI and loot changes publish through ${EXT['destiny-2']} — keep categories toggled to what the current map rewards.`,
 			),
 			section(
-				'Undetected ESP hack with BattlEye maintenance',
+				'ESP with BattlEye maintenance',
 				'ESP hack modules rebuild after BattlEye anti-cheat and Destiny 2 patches. Check the <a href="/status/">Updates page</a> before queueing — pair ESP hack awareness with <a href="/d2-radar/">radar hack</a> for flank reads.',
 				'Licenses deliver digitally after checkout on Windows PC — see <a href="/pricing/">Pricing</a>.',
 				'Install steps: <a href="/setup/">Setup</a>. Status questions: <a href="/status/">live status</a>.',
@@ -741,7 +741,7 @@ export const enPages = {
 			),
 			section(
 				'Buying Destiny 2 Cheats for the right reasons',
-				'If you need undetected ESP wallhack, radar hack, and Aimbot for Destiny 2 on Windows PC, compare <a href="/pricing/">Pricing</a> and read the <a href="/setup/">Setup guide</a> before checkout.',
+				'If you need ESP wallhack, radar hack, and Aimbot for Destiny 2 on Windows PC, compare <a href="/pricing/">Pricing</a> and read the <a href="/setup/">Setup guide</a> before checkout.',
 				'Check the <a href="/status/">Updates page</a> after BattlEye anti-cheat patches — maintenance rebuilds publish for active licenses.',
 				'Questions? <a href="/faq/">FAQ</a> and <a href="/support/">Support</a> cover delivery and configuration — not cosmetic unlocks.',
 			),
@@ -826,8 +826,8 @@ export const enPages = {
 			),
 			section(
 				'Risk and anti-cheat disclaimer',
-				`Using cheats in Destiny 2 may violate Bungie terms and result in account penalties. Destiny 2 Cheats provides maintenance but does not guarantee undetected status or account safety.`,
-				'You assume all risk. We are not liable for bans, data loss, or damages arising from product use. See also <a href="/d2-cheats/">undetected status</a>.',
+				`Using cheats in Destiny 2 may violate Bungie terms and result in account penalties. Destiny 2 Cheats provides maintenance but does not guarantee account safety or account safety.`,
+				'You assume all risk. We are not liable for bans, data loss, or damages arising from product use. See also <a href="/d2-cheats/">maintenance status</a>.',
 			),
 			section(
 				'Changes and governing law',

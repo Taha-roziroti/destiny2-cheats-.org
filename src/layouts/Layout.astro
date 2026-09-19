@@ -9,6 +9,7 @@ import { defaultLocale, localeMap, locales, type LocaleCode } from '../data/i18n
 import type { PageId } from '../data/i18n/content.generated';
 import { buildCanonicalUrl, type HreflangAlternate } from '../data/i18n/routing';
 import { getT } from '../i18n/server';
+import { heroWidth, heroHeight } from '../lib/responsive-images';
 
 interface Crumb {
 	label: string;
@@ -58,8 +59,8 @@ const ogImageURL = new URL(ogImage, siteConfig.url).href;
 const logoURL = new URL(siteConfig.logoRaster, siteConfig.url).href;
 const ogImageIsLogo = ogImage === siteConfig.logo;
 const ogImageType = ogImage.endsWith('.webp') ? 'image/webp' : 'image/png';
-const ogImageWidth = ogImageIsLogo ? '512' : '1920';
-const ogImageHeight = ogImageIsLogo ? '512' : '1080';
+const ogImageWidth = ogImageIsLogo ? '512' : String(heroWidth);
+const ogImageHeight = ogImageIsLogo ? '512' : String(heroHeight);
 const twitterCard = ogImageIsLogo ? 'summary' : 'summary_large_image';
 const robots = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
 const siteDescription = `${productInfo.tagline}. ${productInfo.summary}`;
@@ -171,7 +172,7 @@ if (aboutNode) {
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-		<meta name="color-scheme" content="light" />
+		<meta name="color-scheme" content="dark" />
 		<meta name="theme-color" content={brandTheme.bg} />
 		<link
 			rel="preload"

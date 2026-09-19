@@ -25,10 +25,11 @@
 		"generate:brand": "node scripts/generate-brand-assets.mjs",
 		"preview": "astro preview",
 		"validate:sitemaps": "node scripts/validate-sitemaps.mjs && node scripts/audit-sitemap-deep.mjs",
-		"generate:i18n": "node scripts/generate-i18n-content.mjs",
+		"generate:i18n": "node scripts/generate-i18n-content.mjs && node scripts/purge-spam-keywords.mjs",
+		"seo:validate": "node scripts/check-seo-meta-lengths.mjs && npm run build:validate && node scripts/audit-internal-links.mjs",
 		"generate:guides": "node scripts/generate-game-guides.mjs",
 		"deploy": "npm run build && wrangler deploy",
-		"pages:deploy": "wrangler pages deploy dist --project-name=warthundercheat",
+		"pages:deploy": "wrangler pages deploy dist --project-name=destiny2cheats",
 		"astro": "astro"
 	},
 	"dependencies": {

@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import { customerReviewStats, customerReviews, fillBrandTokens, productInfo, siteConfig } from '../../data/site';
+import { productSchemaId } from '../../data/product-schema';
 import { brandCopy, brandSeo, seoPageTitle } from '../../data/site-core';
 import { seoDescription } from '../../data/brand';
 import { getSelfHreflangAlternates } from '../../data/i18n/routing';
@@ -51,6 +52,18 @@ const extraGraph: Record<string, unknown>[] = [
 			url: new URL(getReviewPath(review.slug), siteConfig.url).href,
 			name: review.seoTitle,
 		})),
+	},
+	{
+		'@type': 'Product',
+		'@id': productSchemaId,
+		name: productInfo.name,
+		aggregateRating: {
+			'@type': 'AggregateRating',
+			ratingValue: customerReviewStats.averageRating.toFixed(1),
+			reviewCount: String(customerReviewStats.onSiteCount),
+			bestRating: '5',
+			worstRating: '1',
+		},
 	},
 ];
 ---
@@ -102,14 +115,14 @@ const extraGraph: Record<string, unknown>[] = [
 										<p class="reviews-index__date"><time datetime={review.date}>{formatDate(review.date)}</time></p>
 									</div>
 								</div>
-								<p class="reviews-index__stars" aria-label={`${review.rating} out of 5 stars`}>
+								<p class="reviews-index__stars" aria-label={t('reviews.outOfFiveAria', { rating: String(review.rating) })}>
 									{stars(review.rating)}
 								</p>
 							</div>
 							{review.tag ? <p class="reviews-index__tag">{review.tag}</p> : null}
 							<p class="reviews-index__text">{review.text}</p>
 							<a class="reviews-index__more" href={getReviewPath(review.slug)}>
-								Read full review
+								{t('reviews.readFullReview')}
 								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
 									<path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 								</svg>
@@ -119,17 +132,17 @@ const extraGraph: Record<string, unknown>[] = [
 				}
 			</div>
 
-			<section class="reviews-index__cta" aria-label={`Buy ${siteConfig.name}`}>
-				<h2>Ready to try {siteConfig.name}?</h2>
+			<section class="reviews-index__cta" aria-label={t('cta.buy')}>
+				<h2>{t('reviews.readyToTry', { brand: siteConfig.name })}</h2>
 				<p>
 					ESP, soft aim, and radar in one package for Windows PC — with {productInfo.game} patch
 					maintenance after updates.
 				</p>
 				<div class="reviews-index__cta-row">
 					<a href={siteConfig.checkoutUrl} class="reviews-index__buy" rel="noopener noreferrer">
-						Buy Now — ${productInfo.plans[0].price}
+						{t('reviews.buyNowPrice', { price: String(productInfo.plans[0].price) })}
 					</a>
-					<a href={sitePaths.pricing} class="reviews-index__link-btn">Compare pricing</a>
+					<a href={sitePaths.pricing} class="reviews-index__link-btn">{t('reviews.comparePricing')}</a>
 				</div>
 			</section>
 		</div>

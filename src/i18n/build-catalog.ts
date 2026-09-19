@@ -8,6 +8,7 @@ import {
 	getChipLabels,
 	navChrome,
 	reviewChrome,
+	priceFromLabels,
 } from './locale-chrome';
 
 export type TranslationCatalog = typeof enBase & {
@@ -50,20 +51,32 @@ export function buildCatalog(locale: LocaleCode): TranslationCatalog {
 		...navX,
 	};
 
+	const cleanHero = (s: string) =>
+		s
+			.replace(/\bundetected\b/gi, '')
+			.replace(/\bmaintained\b/gi, '')
+			.replace(/\s{2,}/g, ' ')
+			.trim();
+
 	catalog.hero = {
 		...catalog.hero,
-		accent: ui.hero.accent.replace(/\bundetected\b/gi, '').replace(/\s{2,}/g, ' ').trim(),
-		accentShort: ui.hero.accentShort.replace(/\bundetected\b/gi, '').trim(),
+		accent: cleanHero(ui.hero.accent),
+		accentShort: cleanHero(ui.hero.accentShort),
 		subtitle: ui.hero.subtitle,
 		subtitleShort: ui.hero.subtitleShort,
 		buyNow: ui.hero.buyNow,
 		seeFeatures: ui.hero.seeFeatures,
 		title: ui.product.title,
+		priceFrom: priceFromLabels[locale] ?? priceFromLabels.en,
+		imageAlt: ui.images.hero,
 		...chips,
 	};
 
 	catalog.cta = { buy: ui.hero.buyNow, buyShort: ui.nav.buyNow.split(' ')[0] ?? ui.nav.buyNow };
-	catalog.trust = { ...ui.trust, statusNote: ui.trust.statusNote.replace(/\bundetected\b/gi, '').trim() };
+	catalog.trust = {
+		...ui.trust,
+		statusNote: ui.trust.statusNote.replace(/\bundetected\b/gi, '').replace(/\bmaintained\b/gi, '').trim(),
+	};
 	catalog.product = {
 		...catalog.product,
 		...ui.product,

@@ -2,7 +2,7 @@
 export const DESCRIPTIVE_IMAGE_ALTS = {
 	hero: 'Destiny 2 Cheats hero — ESP and aimbot overlay in Destiny 2',
 	espWallhack: 'Wallhack outlines showing Guardians and enemies through walls',
-	aimbotCombat: 'Soft aim assist overlay during an Destiny 2 raid',
+	aimbotCombat: 'Soft aim assist overlay during a Destiny 2 raid',
 	squadFight: 'Destiny 2 Cheats combat overlay during a squad fight',
 	playerEsp: 'Player ESP boxes and distance readouts in a Destiny 2 raid',
 	headerArt: 'Aimbot view and bone priority controls for Destiny 2',
@@ -23,7 +23,7 @@ export const PAGE_IMAGE_ALTS = {
 	updates: 'Destiny 2 Cheats live status after BattlEye and game patches',
 	faq: 'Destiny 2 Cheats FAQ — delivery, setup, and update answers',
 	support: 'Destiny 2 Cheats support page for license and setup help',
-	undetected: 'Destiny 2 Cheats undetected status overview for Windows PC',
+	undetected: 'Destiny 2 Cheats patch status overview for Windows PC',
 	wallhack: 'Destiny 2 wallhack visibility through walls in a raid',
 	radar: 'Destiny 2 2D radar overlay showing nearby threats',
 	battleye: 'Destiny 2 Cheats maintenance after a BattlEye patch',
