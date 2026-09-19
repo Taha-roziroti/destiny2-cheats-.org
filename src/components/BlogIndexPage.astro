@@ -31,9 +31,9 @@ const canonicalURL = absoluteBlogUrl(locale);
 const hreflangAlternates = getBlogIndexHreflangAlternates(locale);
 const homeHref = getLocalizedPath('home', locale);
 
-const pageTitle = locale === defaultLocale ? seoPageTitle(brandSeo.blogTitle) : ui.blogTitle;
+const pageTitle = locale === defaultLocale ? seoPageTitle(brandSeo.forumsTitle) : ui.blogTitle;
 const pageDescription =
-	locale === defaultLocale ? seoDescription(brandSeo.blogDescription) : ui.blogDescription;
+	locale === defaultLocale ? seoDescription(brandSeo.forumsDescription) : ui.blogDescription;
 
 const articleListSchema = {
 	'@type': 'CollectionPage',

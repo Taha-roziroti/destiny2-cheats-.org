@@ -67,7 +67,8 @@ const DIR_MOVES = [
 /** FAQ slug OLD → NEW */
 export const FAQ_SLUG_MAP = {
 	'what-are-destiny-2-cheats': 'what-are-d2-cheats',
-	'are-destiny-2-cheats-undetected-in-2026': 'undetected-in-2026',
+	'are-destiny-2-cheats-undetected-in-2026': 'private-in-2026',
+	'undetected-in-2026': 'private-in-2026',
 	'crucible-trials-and-pve': 'crucible-trials-pve',
 	'esp-wallhack-radar-or-aimbot': 'esp-radar-aimbot',
 	'how-are-licenses-delivered': 'license-delivery',
@@ -76,7 +77,8 @@ export const FAQ_SLUG_MAP = {
 	'what-is-a-destiny-2-wallhack': 'what-is-wallhack',
 	'does-destiny-2-cheats-include-radar-hack': 'radar-included',
 	'battleye-anti-cheat-and-destiny-2-cheats': 'battleye-and-cheats',
-	'buy-undetected-destiny-2-cheats-windows-pc': 'buy-undetected-pc',
+	'buy-undetected-destiny-2-cheats-windows-pc': 'buy-private-pc',
+	'buy-undetected-pc': 'buy-private-pc',
 };
 
 /** Review slug OLD → NEW */

@@ -65,21 +65,21 @@ export const brand = {
 	},
 
 	seo: {
-		homeTitle: 'Destiny 2 ESP, Aimbot & Wallhack',
+		homeTitle: 'Destiny 2 Cheats — ESP, Aimbot & Wallhack',
 		homeDescription:
-			'Destiny 2 cheats with ESP, aimbot, and wallhack for Windows PC. Radar, recoil control, and stream-safe overlays in one license — compare plans and get instant delivery.',
-		featuresTitle: 'Destiny 2 ESP, Aimbot & Wallhack Features',
+			'Destiny 2 cheats with ESP, aimbot, wallhack, and radar for Windows PC. One license covers Crucible, Trials, and raids — compare monthly and lifetime plans with instant delivery.',
+		featuresTitle: 'Destiny 2 Cheat Features — ESP, Aimbot & Radar',
 		featuresDescription:
-			'Destiny 2 cheats include aimbot, ESP, wallhack, radar, recoil control, and stream-safe overlays in one Windows PC license.',
-		storeTitle: 'Destiny 2 Cheats — Monthly & Lifetime Plans',
+			'Full feature list for Destiny 2 cheats on Windows PC — ESP wallhack, soft aim, 2D radar, recoil control, triggerbot, and stream-safe overlays in one license.',
+		storeTitle: 'Destiny 2 Cheats Pricing — Monthly & Lifetime',
 		storeDescription:
-			'Destiny 2 cheats pricing for Windows PC. Same ESP, aimbot, wallhack, and radar on monthly and lifetime plans with instant delivery.',
+			'Destiny 2 cheats pricing for Windows PC. Monthly ($35) and lifetime ($150) plans include ESP, aimbot, wallhack, and radar with instant digital delivery after checkout.',
 		statusTitle: 'Destiny 2 Cheat Status — Live Updates',
 		statusDescription:
-			'Destiny 2 cheat status after {game} and {antiCheat} patches. Check before Crucible, Trials, or raids on Windows PC.',
-		previewTitle: 'Destiny 2 Cheats — ESP, Aimbot & Wallhack',
+			'Live Destiny 2 cheat status after {game} and {antiCheat} patches. Check maintenance notes before Crucible, Trials, or raids on Windows PC.',
+		previewTitle: 'Buy Destiny 2 Cheats — ESP, Aimbot & Radar',
 		previewDescription:
-			'Destiny 2 cheats for Windows PC with ESP, aimbot, radar, and wallhack. Monthly and lifetime plans with patch-day rebuilds.',
+			'Buy Destiny 2 cheats for Windows PC — ESP wallhack, soft aim, 2D radar, and BattlEye rebuilds after patches. Monthly and lifetime plans with instant delivery.',
 		setupTitle: '{game} Cheat Setup | {brand}',
 		setupDescription:
 			'Install and launch {brand} on Windows PC after checkout. Short setup steps for Crucible, Trials, and PvE — follow each step before your first match.',
@@ -94,10 +94,7 @@ export const brand = {
 			'Buyer reviews for {brand} — aimbot, ESP, wallhack, radar, and patch updates for Destiny 2 on Windows PC. Real feedback from license holders.',
 		forumsTitle: 'Destiny 2 Cheats Forum — ESP & Aimbot',
 		forumsDescription:
-			'Destiny 2 cheats forum with setup threads, aimbot tuning, ESP presets, and license questions from PC players.',
-		blogTitle: 'Destiny 2 Cheats Forum — ESP & Aimbot',
-		blogDescription:
-			'Destiny 2 cheats forum — Crucible tips, aimbot settings, ESP walkthroughs, and patch-day notes for Windows PC.',
+			'Destiny 2 cheats forum with setup threads, aimbot tuning, ESP presets, Crucible tips, and license questions from Windows PC players.',
 	},
 
 	copy: {

@@ -43,17 +43,18 @@ const seoDefaults = {
 	homeTitle: 'Destiny 2 ESP, Aimbot & Wallhack',
 	homeDescription:
 		'Destiny 2 cheats with ESP, aimbot, and wallhack for Windows PC. Radar, recoil control, and stream-safe overlays — compare plans and get instant delivery.',
-	featuresTitle: '{game} Features | {brand}',
+	featuresTitle: '{game} Cheat Features — ESP, Aimbot & Radar',
 	featuresDescription:
-		'Everything in one {game} license for Windows PC — ESP, aimbot, radar, and patch updates.',
-	storeTitle: '{game} Store | {brand}',
-	storeDescription: 'Monthly and lifetime {game} plans. Same features. Instant delivery after payment.',
-	statusTitle: '{game} Status | {brand}',
+		'Full feature list for {game} cheats on Windows PC — ESP wallhack, soft aim, 2D radar, recoil control, and stream-safe overlays in one license.',
+	storeTitle: '{game} Cheats Pricing — Monthly & Lifetime',
+	storeDescription:
+		'Monthly and lifetime {game} cheat plans for Windows PC. Same ESP, aimbot, wallhack, and radar on both tiers with instant delivery.',
+	statusTitle: '{game} Cheat Status — Live Updates',
 	statusDescription:
-		'Live status for {brand} after {game} or {antiCheat} patches. Check before you queue.',
-	previewTitle: '{game} Preview | {brand}',
+		'Live status for {brand} after {game} or {antiCheat} patches. Check maintenance notes before Crucible, Trials, or raids.',
+	previewTitle: 'Buy {game} Cheats — ESP, Aimbot & Radar',
 	previewDescription:
-		'Quick preview of {brand} — ESP, aimbot, radar, and updates after {game} patches.',
+		'Buy {game} cheats for Windows PC — ESP wallhack, soft aim, 2D radar, and patch rebuilds. Monthly and lifetime plans with instant delivery.',
 	setupTitle: '{game} Setup | {brand}',
 	setupDescription: 'Install and launch {brand} on Windows PC. Short setup steps after you buy.',
 	supportTitle: '{game} Support | {brand}',
@@ -63,8 +64,9 @@ const seoDefaults = {
 	reviewsTitle: '{brand} Reviews | Buyer Feedback',
 	reviewsDescription:
 		'Real buyer reviews for {brand} — ESP, soft aim, radar, and patch updates on Windows PC.',
-	blogTitle: 'Destiny 2 Cheats Forum — ESP & Aimbot',
-	blogDescription: 'Destiny 2 cheats forum — setup threads, aimbot tuning, ESP presets, and patch-day notes for Windows PC.',
+	forumsTitle: '{game} Cheats Forum — ESP & Aimbot',
+	forumsDescription:
+		'{game} cheats forum with setup threads, aimbot tuning, ESP presets, Crucible tips, and license questions from Windows PC players.',
 } as const;
 
 type SeoShape = typeof seoDefaults;

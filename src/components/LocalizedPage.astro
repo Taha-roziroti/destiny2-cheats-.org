@@ -64,19 +64,20 @@ const priceValidUntil = '2027-12-31';
 const faqSchema =
 	pageId === 'faq' && locale === 'en'
 		? {
-				'@type': 'FAQPage',
-				'@id': `${pageUrl}#faq`,
-				mainEntity: seoFaqs.map((item) => ({
-					'@type': 'Question',
+				'@type': 'ItemList',
+				'@id': `${pageUrl}#faq-list`,
+				name: 'Destiny 2 Cheats FAQ',
+				itemListElement: seoFaqs.map((item, index) => ({
+					'@type': 'ListItem',
+					position: index + 1,
 					name: item.question,
 					url: absoluteFaqUrl(item.slug),
-					acceptedAnswer: { '@type': 'Answer', text: item.answer },
 				})),
 			}
 		: null;
 
 const storeSchema =
-	pageId === 'pricing' || pageId === 'hacks'
+	pageId === 'hacks'
 		? {
 				'@type': 'Product',
 				'@id': productSchemaId,
@@ -88,7 +89,7 @@ const storeSchema =
 				aggregateRating: {
 					'@type': 'AggregateRating',
 					ratingValue: customerReviewStats.averageRating.toFixed(1),
-					reviewCount: String(customerReviewStats.totalCount),
+					reviewCount: String(customerReviewStats.onSiteCount),
 					bestRating: '5',
 					worstRating: '1',
 				},
@@ -138,7 +139,7 @@ const eyebrowByPage: Partial<Record<PageId, string>> = {
 	faq: ui.nav.faq,
 };
 
-const showRelatedLinks = locale === 'en' && getRelatedPageLinks(pageId).length > 0;
+const showRelatedLinks = getRelatedPageLinks(pageId).length > 0;
 const showOfficialResources =
 	locale === 'en' &&
 	(pageId === 'hacks' || pageId === 'setup' || pageId === 'updates' || pageId === 'faq');

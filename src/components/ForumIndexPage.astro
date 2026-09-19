@@ -4,6 +4,8 @@ import Navbar from './Navbar.astro';
 import SiteFooter from './SiteFooter.astro';
 import { getAllForumThreads, forumsBasePath, absoluteForumUrl } from '../data/forums/helpers';
 import { siteConfig } from '../data/site';
+import { brandSeo, seoPageTitle } from '../data/site-core';
+import { seoDescription } from '../data/brand';
 import { getLocalizedPath } from '../data/i18n/routing';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { getT } from '../i18n/server';
@@ -19,9 +21,8 @@ const canonicalURL = absoluteForumUrl(forumsBasePath);
 const homeHref = getLocalizedPath('home', locale);
 const t = getT(locale);
 
-const pageTitle = 'Destiny 2 Cheats Forum — ESP, Aimbot & Setup';
-const pageDescription =
-	'Destiny 2 cheats forum with threads on ESP, aimbot, wallhack setup, Crucible tips, and license questions from PC players.';
+const pageTitle = seoPageTitle(brandSeo.forumsTitle);
+const pageDescription = seoDescription(brandSeo.forumsDescription);
 ---
 
 <Layout
