@@ -9,9 +9,18 @@ import path from 'node:path';
 const ROOT = process.cwd();
 
 const REPLACEMENTS = [
-	[/\bundetected\b/gi, 'private'],
-	[/\bUndetected\b/g, 'Private'],
-	[/\bUNDETECTED\b/g, 'PRIVATE'],
+	[/\bundetected\b/gi, 'maintained'],
+	[/\bindetectables?\b/gi, 'maintained'],
+	[/\bindétectables?\b/gi, 'maintenues'],
+	[/\bindetectáveis?\b/gi, 'mantidos'],
+	[/\bindetectável\b/gi, 'mantido'],
+	[/\bindetectável\b/gi, 'mantido'],
+	[/status indetectável/gi, 'status maintained'],
+	[/indetectável permanente/gi, 'safe operation'],
+	[/\bindetectable\b/gi, 'maintained'],
+	[/\bindetectable\b/gi, 'maintained'],
+	[/\bUndetected\b/g, 'Maintained'],
+	[/\bUNDETECTED\b/g, 'MAINTAINED'],
 	[/zadeyo\.com/gi, ''],
 	[/\bZadeyo\b/g, ''],
 	[/\bzadeyo\b/g, ''],
@@ -31,6 +40,7 @@ function cleanBrandTs(text) {
 }
 
 const FILES = [
+	'scripts/i18n-data/pages-en.mjs',
 	'src/data/site.ts',
 	'src/data/i18n/simple-pages.ts',
 	'src/data/i18n/content.generated.ts',

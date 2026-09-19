@@ -318,7 +318,7 @@ export const enPages = {
 			),
 		],
 	},
-	undetected: {
+	maintained: {
 		title: 'Maintained Destiny 2 Cheats | BattlEye Updates',
 		description:
 			'Maintained Destiny 2 cheats with BattlEye rebuilds for ESP boxes, soft aim, and radar on Windows PC. Check status before you queue.',

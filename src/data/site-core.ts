@@ -51,7 +51,7 @@ const seoDefaults = {
 		'Monthly and lifetime {game} cheat plans for Windows PC. Same ESP, aimbot, wallhack, and radar on both tiers with instant delivery.',
 	statusTitle: '{game} Cheat Status — Live Updates',
 	statusDescription:
-		'Live status for {brand} after {game} or {antiCheat} patches. Check maintenance notes before Crucible, Trials, or raids.',
+		'Live status for {brand} after {game} or {antiCheat} patches. Check maintenance notes before Crucible, Trials, or raids — updated after every major update.',
 	previewTitle: 'Buy {game} Cheats — ESP, Aimbot & Radar',
 	previewDescription:
 		'Buy {game} cheats for Windows PC — ESP wallhack, soft aim, 2D radar, and patch rebuilds. Monthly and lifetime plans with instant delivery.',
@@ -60,13 +60,14 @@ const seoDefaults = {
 	supportTitle: '{game} Support | {brand}',
 	supportDescription: 'Get help with {brand}. Email {email} with your order ID.',
 	faqTitle: '{game} FAQ | {brand}',
-	faqDescription: 'Short answers about {brand} — delivery, setup, updates, and refunds.',
+	faqDescription:
+		'Short answers about {brand} — license delivery, setup steps, {antiCheat} maintenance updates, stream-proof mode, refunds, and Windows PC compatibility.',
 	reviewsTitle: '{brand} Reviews | Buyer Feedback',
 	reviewsDescription:
 		'Real buyer reviews for {brand} — ESP, soft aim, radar, and patch updates on Windows PC.',
 	forumsTitle: '{game} Cheats Forum — ESP & Aimbot',
 	forumsDescription:
-		'{game} cheats forum with setup threads, aimbot tuning, ESP presets, Crucible tips, and license questions from Windows PC players.',
+		'{game} cheats forum with setup threads, aimbot tuning, ESP presets, Crucible tips, patch-day notes, and license questions from Windows PC players.',
 } as const;
 
 type SeoShape = typeof seoDefaults;

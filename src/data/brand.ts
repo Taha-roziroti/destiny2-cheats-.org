@@ -76,7 +76,7 @@ export const brand = {
 			'Destiny 2 cheats pricing for Windows PC. Monthly ($35) and lifetime ($150) plans include ESP, aimbot, wallhack, and radar with instant digital delivery after checkout.',
 		statusTitle: 'Destiny 2 Cheat Status — Live Updates',
 		statusDescription:
-			'Live Destiny 2 cheat status after {game} and {antiCheat} patches. Check maintenance notes before Crucible, Trials, or raids on Windows PC.',
+			'Live Destiny 2 cheat status after {game} and {antiCheat} patches. Check maintenance notes before Crucible, Trials, or raids on Windows PC — updated after every major update.',
 		previewTitle: 'Buy Destiny 2 Cheats — ESP, Aimbot & Radar',
 		previewDescription:
 			'Buy Destiny 2 cheats for Windows PC — ESP wallhack, soft aim, 2D radar, and BattlEye rebuilds after patches. Monthly and lifetime plans with instant delivery.',
@@ -88,13 +88,13 @@ export const brand = {
 			'Get help with {brand} on Windows PC. Email {email} with your order ID for setup, delivery, or billing help after you buy.',
 		faqTitle: '{game} Cheats FAQ | {brand}',
 		faqDescription:
-			'Short answers about {brand} for Destiny 2 — delivery, setup, {antiCheat} updates, stream-proof mode, refunds, and Windows PC notes.',
+			'Short answers about {brand} for Destiny 2 — license delivery, setup steps, {antiCheat} maintenance updates, stream-proof mode, refunds, and Windows PC compatibility.',
 		reviewsTitle: '{brand} Reviews | Buyer Feedback',
 		reviewsDescription:
 			'Buyer reviews for {brand} — aimbot, ESP, wallhack, radar, and patch updates for Destiny 2 on Windows PC. Real feedback from license holders.',
 		forumsTitle: 'Destiny 2 Cheats Forum — ESP & Aimbot',
 		forumsDescription:
-			'Destiny 2 cheats forum with setup threads, aimbot tuning, ESP presets, Crucible tips, and license questions from Windows PC players.',
+			'Destiny 2 cheats forum with setup threads, aimbot tuning, ESP presets, Crucible tips, patch-day notes, and license questions from Windows PC players.',
 	},
 
 	copy: {

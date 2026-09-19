@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 /**
- * Completes escape-from-destiny-2-cheats SEO audit: add missing pages, fix leftovers, strip Zadeyo from meta.
- * Run: node scripts/complete-seo-audit.mjs
+ * DEPRECATED — do not run on the current short-URL architecture.
+ * This script creates long-path stub pages that conflict with cannibal redirects.
+ * Use: npm run seo:validate
  */
+console.error('complete-seo-audit.mjs is deprecated. Use npm run seo:validate instead.');
+process.exit(1);
+
 import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
