@@ -1,0 +1,250 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from './Navbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import { absoluteForumUrl, forumsBasePath } from '../data/forums/helpers';
+import type { ForumThread } from '../data/forums/types';
+import { siteConfig } from '../data/site';
+import { getLocalizedPath } from '../data/i18n/routing';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { contentSrcSet, galleryTileSizes } from '../lib/responsive-images';
+
+interface Props {
+	thread: ForumThread;
+	locale?: LocaleCode;
+}
+
+const { thread, locale = defaultLocale } = Astro.props;
+const canonicalPath = `${forumsBasePath}${thread.slug}/`;
+const canonicalURL = absoluteForumUrl(canonicalPath);
+const homeHref = getLocalizedPath('home', locale);
+
+const articleSchema = {
+	'@type': 'Article',
+	'@id': `${canonicalURL}#article`,
+	headline: thread.title,
+	description: thread.metaDescription,
+	datePublished: thread.published,
+	dateModified: thread.updated,
+	image: new URL(thread.imageSrc, siteConfig.url).href,
+	author: { '@type': 'Organization', name: siteConfig.name, url: siteConfig.url },
+	publisher: {
+		'@type': 'Organization',
+		name: siteConfig.name,
+		url: siteConfig.url,
+		logo: { '@type': 'ImageObject', url: new URL(siteConfig.logoRaster, siteConfig.url).href },
+	},
+	mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalURL },
+};
+
+function formatDate(iso: string) {
+	return new Date(`${iso}T12:00:00`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+---
+
+<Layout
+	title={thread.metaTitle}
+	description={thread.metaDescription}
+	canonicalPath={canonicalPath}
+	ogImage={thread.imageSrc}
+	ogImageAlt={thread.imageAlt}
+	locale={locale}
+	breadcrumbs={[
+		{ label: 'Home', href: homeHref },
+		{ label: 'Forums', href: forumsBasePath },
+		{ label: thread.title },
+	]}
+	extraGraph={[articleSchema]}
+>
+	<Navbar locale={locale} />
+	<main class="forum-thread">
+		<article class="shell forum-thread__wrap">
+			<header class="forum-thread__head">
+				<p class="forum-thread__cat">{thread.category}</p>
+				<h1>{thread.title}</h1>
+				<p class="forum-thread__intro">{thread.intro}</p>
+			</header>
+
+			<div class="forum-thread__body">
+				<div class="forum-thread__content">
+					{
+						thread.sections.map((section) => (
+							<section>
+								<h2>{section.h2}</h2>
+								{section.paragraphs.map((p) => (
+									<p set:html={p} />
+								))}
+							</section>
+						))
+					}
+				</div>
+				<figure class="forum-thread__figure">
+					<img
+						src={thread.imageSrc}
+						srcset={contentSrcSet(thread.imageSrc) ?? undefined}
+						sizes={galleryTileSizes}
+						alt={thread.imageAlt}
+						width={960}
+						height={540}
+						loading="lazy"
+						decoding="async"
+					/>
+				</figure>
+			</div>
+
+			<section class="forum-thread__replies" aria-labelledby="replies-title">
+				<h2 id="replies-title">Discussion ({thread.replies.length})</h2>
+				<ul>
+					{
+						thread.replies.map((reply) => (
+							<li class="forum-reply">
+								<header>
+									<strong>{reply.author}</strong>
+									<time datetime={reply.date}>{formatDate(reply.date)}</time>
+								</header>
+								<p>{reply.body}</p>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</article>
+		<SiteFooter locale={locale} />
+	</main>
+</Layout>
+
+<style>
+	.forum-thread {
+		background: linear-gradient(180deg, var(--bg) 0%, #0e0b17 50%, #0f0c18 100%);
+	}
+
+	.forum-thread__wrap {
+		padding-block: clamp(2rem, 4vw, 3rem);
+		max-width: var(--page-max);
+	}
+
+	.forum-thread__cat {
+		margin: 0 0 0.35rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--accent);
+	}
+
+	.forum-thread__head h1 {
+		margin: 0 0 0.75rem;
+		font-family: var(--font-display);
+		font-size: clamp(1.5rem, 3.5vw, 2.15rem);
+		line-height: 1.15;
+		color: var(--ink);
+		max-width: 40rem;
+	}
+
+	.forum-thread__intro {
+		margin: 0 0 1.5rem;
+		color: var(--ink-muted);
+		line-height: 1.6;
+		max-width: 42rem;
+	}
+
+	.forum-thread__body {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
+		gap: 1.5rem;
+		align-items: start;
+		margin-bottom: 2rem;
+	}
+
+	.forum-thread__content section {
+		margin-bottom: 1.25rem;
+	}
+
+	.forum-thread__content h2 {
+		margin: 0 0 0.5rem;
+		font-size: 1.05rem;
+		color: var(--ink);
+	}
+
+	.forum-thread__content p {
+		margin: 0 0 0.65rem;
+		font-size: 0.9375rem;
+		line-height: 1.6;
+		color: var(--ink-muted);
+	}
+
+	.forum-thread__content a {
+		color: var(--accent);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.forum-thread__figure {
+		margin: 0;
+		border-radius: var(--radius-md);
+		overflow: hidden;
+		border: 1px solid var(--line-soft);
+		box-shadow: 0 8px 32px #04030660;
+	}
+
+	.forum-thread__figure img {
+		display: block;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+
+	.forum-thread__replies h2 {
+		margin: 0 0 1rem;
+		font-size: 1.1rem;
+		color: var(--ink);
+	}
+
+	.forum-thread__replies ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.forum-reply {
+		padding: 1rem 1.1rem;
+		border-radius: var(--radius-sm);
+		background: var(--bg-panel);
+		border: 1px solid var(--line-soft);
+	}
+
+	.forum-reply header {
+		display: flex;
+		justify-content: space-between;
+		gap: 0.5rem;
+		margin-bottom: 0.4rem;
+		font-size: 0.8125rem;
+	}
+
+	.forum-reply strong {
+		color: var(--ink);
+	}
+
+	.forum-reply time {
+		color: var(--ink-faint);
+	}
+
+	.forum-reply p {
+		margin: 0;
+		font-size: 0.875rem;
+		line-height: 1.55;
+		color: var(--ink-muted);
+	}
+
+	@media (max-width: 768px) {
+		.forum-thread__body {
+			grid-template-columns: 1fr;
+		}
+
+		.forum-thread__figure {
+			order: -1;
+		}
+	}
+</style>

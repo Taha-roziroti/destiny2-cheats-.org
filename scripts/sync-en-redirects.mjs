@@ -69,6 +69,42 @@ const LEGACY_REVIEWS = {
 	'/reviews/destiny-2-controller-aim-assist-review-ctrl-player99/': '/reviews/aim-assist-ctrl-player99/',
 };
 
+/** Blog → forums (blog retired). */
+const BLOG_TO_FORUM = {
+	'/blog/': '/forums/',
+	'/blog/aimbot-settings/': '/forums/aimbot-settings-ban-risk/',
+	'/blog/esp-wallhack/': '/forums/destiny-2-esp-wallhack-features/',
+	'/blog/cheats-guide-2026/': '/forums/how-to-use-destiny-2-cheats/',
+	'/blog/buyers-guide/': '/forums/buying-destiny-2-cheats-license/',
+	'/blog/undetected-battleye/': '/forums/patch-day-playbook/',
+	'/blog/patch-notes/': '/forums/patch-day-playbook/',
+	'/blog/pve-strategies/': '/forums/crucible-esp-radar-tips/',
+	'/blog/weapon-tier-list/': '/forums/destiny-2-aimbot-setup-guide/',
+	'/blog/cheats-2026-updates/': '/forums/patch-day-playbook/',
+	'/blog/full-stack-vs-esp-only/': '/forums/destiny-2-esp-wallhack-features/',
+	'/blog/two-week-cheat-test/': '/forums/buying-destiny-2-cheats-license/',
+	'/blog/vs-budget-shops/': '/forums/buying-destiny-2-cheats-license/',
+	'/blog/pro-settings/': '/forums/recoil-triggerbot-settings/',
+	'/blog/warmup-routine/': '/forums/how-to-use-destiny-2-cheats/',
+	'/blog/loot-routes/': '/forums/crucible-esp-radar-tips/',
+	'/blog/tournament-meta/': '/forums/crucible-esp-radar-tips/',
+	'/blog/skin-leaks/': '/forums/stream-proof-overlay-settings/',
+};
+
+/** Guides hub retired → forums or pillar pages. */
+const GUIDES_REDIRECTS = {
+	'/guides/': '/forums/',
+	'/guides/destiny-2-cheats/': '/d2-cheats/',
+	'/guides/destiny-2-esp/': '/forums/destiny-2-esp-wallhack-features/',
+	'/guides/destiny-2-aimbot/': '/forums/destiny-2-aimbot-setup-guide/',
+	'/guides/destiny-2-wallhack/': '/destiny-2-esp/',
+	'/guides/destiny-2-radar-hack/': '/forums/radar-trials-flank-control/',
+	'/guides/features/': '/features/',
+	'/guides/setup/': '/setup/',
+	'/guides/destiny-2-crucible-cheats/': '/forums/crucible-esp-radar-tips/',
+	'/guides/destiny-2-pve-cheats/': '/d2-cheats/',
+};
+
 /** Fortnite blog slugs → current short D2 blog posts. */
 const LEGACY_BLOG = {
 	'/blog/patch-notes-buffs-nerfs-vaults/': '/blog/patch-notes/',
@@ -132,6 +168,8 @@ function buildEnBlock() {
 		...mapToLines(LEGACY_GAME, '# Legacy Tarkov / Fortnite / Warzone keyword paths'),
 		...mapToLines(LEGACY_REVIEWS, '# Legacy review slug fixes'),
 		...mapToLines(LEGACY_BLOG, '# Legacy Fortnite blog slugs → D2 posts'),
+		...mapToLines(BLOG_TO_FORUM, '# Blog → forums'),
+		...mapToLines(GUIDES_REDIRECTS, '# Guides → forums / pillars'),
 		...mapToLines(EN_CANNIBAL, '# EN cannibal stub pages → pillar pages'),
 		...longPathLines(),
 		'',
@@ -198,6 +236,24 @@ function assertNoTwoHopChains(redirectText) {
 }
 
 assertNoTwoHopChains(readFileSync(REDIRECTS, 'utf8'));
+
+/** Fail if Pages middleware PATH_REDIRECTS maps any path to itself (infinite loop). */
+function assertNoMiddlewareSelfRedirects() {
+	const mw = readFileSync(path.join(ROOT, 'functions/_middleware.js'), 'utf8');
+	const block = mw.match(/const PATH_REDIRECTS = \{([\s\S]*?)\};/);
+	if (!block) return;
+	const violations = [];
+	for (const m of block[1].matchAll(/'([^']+)':\s*'([^']+)'/g)) {
+		if (m[1] === m[2]) violations.push(m[1]);
+	}
+	if (violations.length) {
+		console.error('Middleware self-redirect loops detected (PATH_REDIRECTS):');
+		for (const v of violations) console.error(`  ${v} → ${v}`);
+		process.exit(1);
+	}
+}
+
+assertNoMiddlewareSelfRedirects();
 
 const enCount =
 	Object.keys(LEGACY_GAME).length +

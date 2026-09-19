@@ -39,6 +39,7 @@ function HomeReviewsInner({
 }: Props) {
 	const { t } = useTranslation();
 	const ratingLabel = averageRating.toFixed(1);
+	const countLabel = totalCount >= 100 ? '100+' : String(totalCount);
 
 	return (
 		<section className="reviews" aria-labelledby="reviews-title">
@@ -63,7 +64,7 @@ function HomeReviewsInner({
 									</svg>
 								))}
 							</span>
-							<p>{t('reviews.buyerReviews', { count: totalCount })}</p>
+							<p>{t('reviews.buyerReviews', { count: countLabel })}</p>
 						</div>
 					</div>
 				</header>

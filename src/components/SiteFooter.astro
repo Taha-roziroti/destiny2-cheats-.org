@@ -2,7 +2,7 @@
 import SiteFooterApp from './react/SiteFooter';
 import { getLocalizedPath } from '../data/i18n/routing';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
-import { getBlogBasePath } from '../data/blog/helpers';
+import { forumsBasePath } from '../data/forums/helpers';
 import { reviewsBasePath } from '../data/reviews';
 import { siteConfig } from '../data/site';
 import { destiny2OfficialResources } from '../data/official-resources';
@@ -19,8 +19,7 @@ const explore = [
 	{ labelKey: 'nav.aimbot', href: getLocalizedPath('destiny-2-aimbot', locale) },
 	{ labelKey: 'common.featureList', href: getLocalizedPath('features', locale) },
 	{ labelKey: 'common.pricingPlans', href: getLocalizedPath('pricing', locale) },
-	{ labelKey: 'common.guides', href: '/guides/' },
-	{ labelKey: 'common.blog', href: getBlogBasePath(locale) },
+	{ labelKey: 'nav.forums', href: forumsBasePath },
 	{ labelKey: 'nav.faq', href: getLocalizedPath('faq', locale) },
 ];
 

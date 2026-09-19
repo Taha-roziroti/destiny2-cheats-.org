@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from './Navbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import { getAllForumThreads, forumsBasePath, absoluteForumUrl } from '../data/forums/helpers';
+import { siteConfig } from '../data/site';
+import { getLocalizedPath } from '../data/i18n/routing';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+
+interface Props {
+	locale?: LocaleCode;
+}
+
+const locale = Astro.props.locale ?? defaultLocale;
+const threads = getAllForumThreads();
+const canonicalPath = forumsBasePath;
+const canonicalURL = absoluteForumUrl(forumsBasePath);
+const homeHref = getLocalizedPath('home', locale);
+
+const pageTitle = 'Destiny 2 Cheats Forum — ESP, Aimbot & Setup';
+const pageDescription =
+	'Destiny 2 cheats forum with threads on ESP, aimbot, wallhack setup, Crucible tips, and license questions from PC players.';
+---
+
+<Layout
+	title={pageTitle}
+	description={pageDescription}
+	canonicalPath={canonicalPath}
+	locale={locale}
+	breadcrumbs={[{ label: 'Home', href: homeHref }, { label: 'Forums' }]}
+	extraGraph={[
+		{
+			'@type': 'CollectionPage',
+			'@id': `${canonicalURL}#collection`,
+			name: 'Destiny 2 Cheats Forum',
+			description: pageDescription,
+			url: canonicalURL,
+		},
+	]}
+>
+	<Navbar locale={locale} />
+	<main class="forum-index">
+		<div class="shell forum-index__head">
+			<p class="forum-index__eyebrow">Community</p>
+			<h1>Destiny 2 Cheats Forum</h1>
+			<p class="forum-index__lede">
+				Setup help, aimbot tuning, ESP presets, and store questions — straight talk from people actually running the tools in Crucible and raids.
+			</p>
+		</div>
+		<div class="shell forum-index__list">
+			{
+				threads.map((thread) => (
+					<article class="forum-card">
+						<div class="forum-card__meta">
+							<span class="forum-card__cat">{thread.category}</span>
+							<span class="forum-card__replies">{thread.replies.length} replies</span>
+						</div>
+						<h2>
+							<a href={`${forumsBasePath}${thread.slug}/`}>{thread.title}</a>
+						</h2>
+						<p>{thread.intro}</p>
+						<a class="forum-card__link" href={`${forumsBasePath}${thread.slug}/`}>
+							Read thread →
+						</a>
+					</article>
+				))
+			}
+		</div>
+		<SiteFooter locale={locale} />
+	</main>
+</Layout>
+
+<style>
+	.forum-index {
+		background: linear-gradient(180deg, var(--bg) 0%, #0f0c18 100%);
+		min-height: 60vh;
+	}
+
+	.forum-index__head {
+		padding-block: clamp(2rem, 5vw, 3rem);
+		max-width: var(--content-max);
+	}
+
+	.forum-index__eyebrow {
+		margin: 0 0 0.5rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--accent);
+	}
+
+	.forum-index__head h1 {
+		margin: 0 0 0.75rem;
+		font-family: var(--font-display);
+		font-size: clamp(1.75rem, 4vw, 2.5rem);
+		color: var(--ink);
+	}
+
+	.forum-index__lede {
+		margin: 0;
+		color: var(--ink-muted);
+		line-height: 1.6;
+		max-width: 42rem;
+	}
+
+	.forum-index__list {
+		display: grid;
+		gap: 1rem;
+		padding-bottom: 3rem;
+	}
+
+	.forum-card {
+		padding: 1.25rem 1.35rem;
+		border: 1px solid var(--line-soft);
+		border-radius: var(--radius-md);
+		background: var(--bg-panel);
+		box-shadow: 0 4px 24px #04030640;
+	}
+
+	.forum-card__meta {
+		display: flex;
+		gap: 0.75rem;
+		margin-bottom: 0.5rem;
+		font-size: 0.75rem;
+		color: var(--ink-faint);
+	}
+
+	.forum-card__cat {
+		color: var(--accent);
+		font-weight: 600;
+	}
+
+	.forum-card h2 {
+		margin: 0 0 0.5rem;
+		font-size: 1.1rem;
+		line-height: 1.35;
+	}
+
+	.forum-card h2 a {
+		color: var(--ink);
+		text-decoration: none;
+	}
+
+	.forum-card h2 a:hover {
+		color: var(--accent);
+	}
+
+	.forum-card p {
+		margin: 0 0 0.75rem;
+		font-size: 0.9rem;
+		color: var(--ink-muted);
+		line-height: 1.55;
+	}
+
+	.forum-card__link {
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--accent);
+		text-decoration: none;
+	}
+</style>

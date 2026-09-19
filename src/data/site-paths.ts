@@ -1,8 +1,7 @@
 import { englishPaths } from './i18n/routing';
 import { reviewsBasePath } from './reviews';
 import { faqBasePath } from './faq';
-import { getBlogBasePath } from './blog/helpers';
-import { defaultLocale } from './i18n/locales';
+import { forumsBasePath } from './forums/helpers';
 
 /** Canonical EN paths for internal linking — keep in sync with englishPaths + module base paths. */
 export const sitePaths = {
@@ -18,8 +17,7 @@ export const sitePaths = {
 	aimbot: englishPaths['destiny-2-aimbot'],
 	radar: englishPaths.radar,
 	reviews: reviewsBasePath,
-	blog: getBlogBasePath(defaultLocale),
-	guides: '/guides/',
+	forums: forumsBasePath,
 	privacy: englishPaths.privacy,
 	refund: englishPaths.refund,
 	terms: englishPaths.terms,

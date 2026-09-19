@@ -82,7 +82,7 @@ const extraGraph: Record<string, unknown>[] = [
 				<div class="reviews-index__summary" aria-label={`${customerReviewStats.averageRating} out of 5 average rating`}>
 					<p class="reviews-index__avg">{customerReviewStats.averageRating.toFixed(1)}</p>
 					<p class="reviews-index__avg-stars" aria-hidden="true">{stars(Math.round(customerReviewStats.averageRating))}</p>
-					<p class="reviews-index__count">{customerReviewStats.totalCount} reviews · out of 5</p>
+					<p class="reviews-index__count">{customerReviewStats.totalCount >= 100 ? '100+' : customerReviewStats.totalCount} reviews · out of 5</p>
 				</div>
 			</header>
 
