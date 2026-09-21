@@ -22,10 +22,32 @@ type Props = {
 	links: NavLink[];
 };
 
+function MenuIcon({ open }: { open: boolean }) {
+	if (open) {
+		return (
+			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+				<path
+					d="M6 6l12 12M18 6L6 18"
+					stroke="currentColor"
+					strokeWidth="1.8"
+					strokeLinecap="round"
+				/>
+			</svg>
+		);
+	}
+	return (
+		<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+			<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+		</svg>
+	);
+}
+
 function NavbarInner({
 	locale,
+	siteName,
 	checkoutUrl,
 	currentPath,
+	homeHref,
 	reviewsBasePath,
 	locales,
 	hrefForLocale,
@@ -33,6 +55,7 @@ function NavbarInner({
 }: Props) {
 	const { t } = useTranslation();
 	const [scrolled, setScrolled] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	const isActive = (href: string) => {
 		if (href === '/') return currentPath === '/' || currentPath === `/${locale}/`;
@@ -47,6 +70,24 @@ function NavbarInner({
 		return () => window.removeEventListener('scroll', onScroll);
 	}, []);
 
+	useEffect(() => {
+		setMenuOpen(false);
+	}, [currentPath]);
+
+	useEffect(() => {
+		if (!menuOpen) return;
+		const prev = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		const onKey = (event: KeyboardEvent) => {
+			if (event.key === 'Escape') setMenuOpen(false);
+		};
+		window.addEventListener('keydown', onKey);
+		return () => {
+			document.body.style.overflow = prev;
+			window.removeEventListener('keydown', onKey);
+		};
+	}, [menuOpen]);
+
 	const navLinks = useMemo(
 		() =>
 			links.map((item) => ({
@@ -57,15 +98,27 @@ function NavbarInner({
 		[links, t, currentPath, locale, reviewsBasePath],
 	);
 
+	const renderNavLink = (item: (typeof navLinks)[number], onNavigate?: () => void) => (
+		<a
+			key={item.id}
+			href={item.href}
+			className={item.active ? 'is-active' : undefined}
+			aria-current={item.active ? 'page' : undefined}
+			onClick={onNavigate}
+		>
+			<span data-edit={item.edit}>{item.label}</span>
+		</a>
+	);
+
 	return (
-		<header className={`site-header${scrolled ? ' is-scrolled' : ''}`} data-nav>
+		<header className={`site-header${scrolled ? ' is-scrolled' : ''}${menuOpen ? ' is-menu-open' : ''}`} data-nav>
 			<div className="shell site-header__bar">
-				<nav className="site-nav" aria-label={t('nav.primaryAria')}>
-					{navLinks.map((item) => (
-						<a key={item.id} href={item.href} className={item.active ? 'is-active' : undefined}>
-							<span data-edit={item.edit}>{item.label}</span>
-						</a>
-					))}
+				<a href={homeHref} className="site-header__brand">
+					{siteName ?? 'Home'}
+				</a>
+
+				<nav className="site-nav site-nav--desktop" aria-label={t('nav.primaryAria')}>
+					{navLinks.map((item) => renderNavLink(item))}
 				</nav>
 
 				<div className="site-tools">
@@ -93,8 +146,35 @@ function NavbarInner({
 						</svg>
 						<span data-edit="ctaBuyShort">{t('cta.buyShort')}</span>
 					</a>
+					<button
+						type="button"
+						className="site-nav-toggle"
+						aria-expanded={menuOpen}
+						aria-controls="site-mobile-nav"
+						aria-label={menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
+						onClick={() => setMenuOpen((open) => !open)}
+					>
+						<MenuIcon open={menuOpen} />
+					</button>
 				</div>
 			</div>
+
+			<div
+				className={`site-nav-backdrop${menuOpen ? ' is-visible' : ''}`}
+				hidden={!menuOpen}
+				onClick={() => setMenuOpen(false)}
+				aria-hidden="true"
+			/>
+
+			<nav
+				id="site-mobile-nav"
+				className={`site-nav site-nav--mobile${menuOpen ? ' is-open' : ''}`}
+				aria-label={t('nav.mobileAria')}
+				aria-hidden={!menuOpen}
+				inert={!menuOpen ? true : undefined}
+			>
+				{navLinks.map((item) => renderNavLink(item, () => setMenuOpen(false)))}
+			</nav>
 		</header>
 	);
 }
