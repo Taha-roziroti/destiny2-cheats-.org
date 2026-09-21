@@ -159,11 +159,12 @@ function NavbarInner({
 				</div>
 			</div>
 
-			<div
+			<button
+				type="button"
 				className={`site-nav-backdrop${menuOpen ? ' is-visible' : ''}`}
-				hidden={!menuOpen}
+				tabIndex={menuOpen ? 0 : -1}
+				aria-label={t('nav.closeMenu')}
 				onClick={() => setMenuOpen(false)}
-				aria-hidden="true"
 			/>
 
 			<nav
@@ -174,6 +175,20 @@ function NavbarInner({
 				inert={!menuOpen ? true : undefined}
 			>
 				{navLinks.map((item) => renderNavLink(item, () => setMenuOpen(false)))}
+				<div className="site-nav--mobile__tools">
+					<LanguageSwitcher
+						currentLocale={locale}
+						locales={locales}
+						hrefForLocale={hrefForLocale}
+					/>
+					<a
+						href={checkoutUrl}
+						className="site-nav--mobile__buy"
+						rel="noopener noreferrer"
+					>
+						{t('cta.buyShort')}
+					</a>
+				</div>
 			</nav>
 		</header>
 	);
