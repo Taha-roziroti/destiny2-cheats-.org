@@ -22,26 +22,6 @@ type Props = {
 	links: NavLink[];
 };
 
-function MenuIcon({ open }: { open: boolean }) {
-	if (open) {
-		return (
-			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-				<path
-					d="M6 6l12 12M18 6L6 18"
-					stroke="currentColor"
-					strokeWidth="1.8"
-					strokeLinecap="round"
-				/>
-			</svg>
-		);
-	}
-	return (
-		<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-			<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-		</svg>
-	);
-}
-
 function NavbarInner({
 	locale,
 	siteName,
@@ -55,7 +35,6 @@ function NavbarInner({
 }: Props) {
 	const { t } = useTranslation();
 	const [scrolled, setScrolled] = useState(false);
-	const [menuOpen, setMenuOpen] = useState(false);
 
 	const isActive = (href: string) => {
 		if (href === '/') return currentPath === '/' || currentPath === `/${locale}/`;
@@ -70,24 +49,6 @@ function NavbarInner({
 		return () => window.removeEventListener('scroll', onScroll);
 	}, []);
 
-	useEffect(() => {
-		setMenuOpen(false);
-	}, [currentPath]);
-
-	useEffect(() => {
-		if (!menuOpen) return;
-		const prev = document.body.style.overflow;
-		document.body.style.overflow = 'hidden';
-		const onKey = (event: KeyboardEvent) => {
-			if (event.key === 'Escape') setMenuOpen(false);
-		};
-		window.addEventListener('keydown', onKey);
-		return () => {
-			document.body.style.overflow = prev;
-			window.removeEventListener('keydown', onKey);
-		};
-	}, [menuOpen]);
-
 	const navLinks = useMemo(
 		() =>
 			links.map((item) => ({
@@ -98,20 +59,19 @@ function NavbarInner({
 		[links, t, currentPath, locale, reviewsBasePath],
 	);
 
-	const renderNavLink = (item: (typeof navLinks)[number], onNavigate?: () => void) => (
+	const renderNavLink = (item: (typeof navLinks)[number]) => (
 		<a
 			key={item.id}
 			href={item.href}
 			className={item.active ? 'is-active' : undefined}
 			aria-current={item.active ? 'page' : undefined}
-			onClick={onNavigate}
 		>
 			<span data-edit={item.edit}>{item.label}</span>
 		</a>
 	);
 
 	return (
-		<header className={`site-header${scrolled ? ' is-scrolled' : ''}${menuOpen ? ' is-menu-open' : ''}`} data-nav>
+		<header className={`site-header${scrolled ? ' is-scrolled' : ''}`} data-nav>
 			<div className="shell site-header__bar">
 				<a href={homeHref} className="site-header__brand">
 					{siteName ?? 'Home'}
@@ -149,32 +109,42 @@ function NavbarInner({
 					<button
 						type="button"
 						className="site-nav-toggle"
-						aria-expanded={menuOpen}
+						aria-expanded={false}
 						aria-controls="site-mobile-nav"
-						aria-label={menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
-						onClick={() => setMenuOpen((open) => !open)}
+						aria-label={t('nav.openMenu')}
+						data-open-label={t('nav.openMenu')}
+						data-close-label={t('nav.closeMenu')}
 					>
-						<MenuIcon open={menuOpen} />
+						<svg className="site-nav-toggle__menu" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+							<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+						</svg>
+						<svg className="site-nav-toggle__close" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+							<path
+								d="M6 6l12 12M18 6L6 18"
+								stroke="currentColor"
+								strokeWidth="1.8"
+								strokeLinecap="round"
+							/>
+						</svg>
 					</button>
 				</div>
 			</div>
 
 			<button
 				type="button"
-				className={`site-nav-backdrop${menuOpen ? ' is-visible' : ''}`}
-				tabIndex={menuOpen ? 0 : -1}
+				className="site-nav-backdrop"
+				tabIndex={-1}
 				aria-label={t('nav.closeMenu')}
-				onClick={() => setMenuOpen(false)}
 			/>
 
 			<nav
 				id="site-mobile-nav"
-				className={`site-nav site-nav--mobile${menuOpen ? ' is-open' : ''}`}
+				className="site-nav site-nav--mobile"
 				aria-label={t('nav.mobileAria')}
-				aria-hidden={!menuOpen}
-				inert={!menuOpen ? true : undefined}
+				aria-hidden={true}
+				inert=""
 			>
-				{navLinks.map((item) => renderNavLink(item, () => setMenuOpen(false)))}
+				{navLinks.map((item) => renderNavLink(item))}
 				<div className="site-nav--mobile__tools">
 					<LanguageSwitcher
 						currentLocale={locale}
