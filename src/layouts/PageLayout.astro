@@ -260,36 +260,7 @@ const breadcrumbs = [
 	<SiteFooter locale={locale} />
 </Layout>
 
-{
-	heroVideo && showBanner ? (
-		<script is:inline>
-			(() => {
-				const video = document.querySelector('.banner__video');
-				if (!(video instanceof HTMLVideoElement)) return;
-				video.muted = true;
-				video.defaultMuted = true;
-				video.playsInline = true;
-				const play = () => {
-					const attempt = video.play();
-					if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {});
-				};
-				video.addEventListener('loadeddata', play);
-				video.addEventListener('canplay', play);
-				video.addEventListener('canplaythrough', play);
-				play();
-				let tries = 0;
-				const retry = window.setInterval(() => {
-					if (video.paused && tries < 12) {
-						play();
-						tries += 1;
-						return;
-					}
-					window.clearInterval(retry);
-				}, 400);
-			})();
-		</script>
-	) : null
-}
+{heroVideo && showBanner ? <script is:inline src="/hero-video.js"></script> : null}
 
 <style>
 	.page {
@@ -325,6 +296,16 @@ const breadcrumbs = [
 		height: 100%;
 		object-fit: cover;
 		object-position: right 28%;
+	}
+
+	.banner__video {
+		background: #0D0A14;
+		opacity: 0;
+		transition: opacity 0.45s ease;
+	}
+
+	.banner__video.is-ready {
+		opacity: 1;
 	}
 
 	.banner__scrim {

@@ -25,7 +25,6 @@ const imageAlt = home.imageAlt;
 				<video
 					class="hero__video"
 					src={heroVideo}
-					poster={siteConfig.heroVideoPoster || siteConfig.heroImage}
 					autoplay
 					muted
 					loop
@@ -62,42 +61,7 @@ const imageAlt = home.imageAlt;
 	/>
 </section>
 
-{
-	heroVideo ? (
-		<script is:inline>
-			(() => {
-				const video = document.querySelector('.hero__video');
-				if (!(video instanceof HTMLVideoElement)) return;
-
-				video.muted = true;
-				video.defaultMuted = true;
-				video.playsInline = true;
-
-				const play = () => {
-					const attempt = video.play();
-					if (attempt && typeof attempt.catch === 'function') {
-						attempt.catch(() => {});
-					}
-				};
-
-				video.addEventListener('loadeddata', play);
-				video.addEventListener('canplay', play);
-				video.addEventListener('canplaythrough', play);
-
-				play();
-				let tries = 0;
-				const retry = window.setInterval(() => {
-					if (video.paused && tries < 12) {
-						play();
-						tries += 1;
-						return;
-					}
-					window.clearInterval(retry);
-				}, 400);
-			})();
-		</script>
-	) : null
-}
+{heroVideo ? <script is:inline src="/hero-video.js"></script> : null}
 
 <style is:global>
 	.hero {
@@ -135,8 +99,7 @@ const imageAlt = home.imageAlt;
 		height: 100%;
 	}
 
-	.hero__media img,
-	.hero__media video {
+	.hero__media img {
 		/* Cover = keep proportions; crop top/bottom of the shorter bar */
 		object-fit: cover;
 		/* Prefer a bit higher in the frame so the Guardian silhouette stays in view */
@@ -144,6 +107,20 @@ const imageAlt = home.imageAlt;
 		image-rendering: auto;
 		transform: translateZ(0);
 		animation: hero-in 0.9s ease-out both;
+	}
+
+	.hero__media video {
+		object-fit: cover;
+		object-position: right 28%;
+		image-rendering: auto;
+		transform: translateZ(0);
+		background: #0D0A14;
+		opacity: 0;
+		transition: opacity 0.45s ease;
+	}
+
+	.hero__media video.is-ready {
+		opacity: 1;
 	}
 
 	.hero__veil {
@@ -339,9 +316,12 @@ const imageAlt = home.imageAlt;
 
 	@media (prefers-reduced-motion: reduce) {
 		.hero__copy,
-		.hero__media img,
-		.hero__media video {
+		.hero__media img {
 			animation: none;
+		}
+
+		.hero__media video {
+			transition: none;
 		}
 
 		.hero__buy,
