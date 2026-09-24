@@ -5,6 +5,7 @@ import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { forumsBasePath } from '../data/forums/helpers';
 import { reviewsBasePath } from '../data/reviews';
 import { siteConfig } from '../data/site';
+import { getAffiliateCopy } from '../data/affiliate-disclosure-copy';
 import { destiny2OfficialResources } from '../data/official-resources';
 
 interface Props {
@@ -30,6 +31,7 @@ const help = [
 	{ labelKey: 'common.support', href: getLocalizedPath('support', locale) },
 	{ labelKey: 'common.privacy', href: getLocalizedPath('privacy', locale) },
 	{ labelKey: 'common.terms', href: getLocalizedPath('terms', locale) },
+	{ labelKey: 'common.affiliateDisclosure', href: getLocalizedPath('affiliate-disclosure', locale) },
 ];
 ---
 
@@ -43,6 +45,8 @@ const help = [
 	explore={explore}
 	help={help}
 	officialResources={destiny2OfficialResources}
+	affiliateDisclosure={getAffiliateCopy(locale).disclosure}
+	affiliateShortLabel={getAffiliateCopy(locale).shortLabel}
 />
 
 <style is:global>
@@ -69,6 +73,14 @@ const help = [
 
 	.site-footer__tagline + .site-footer__tagline {
 		margin-top: 0.25rem;
+	}
+
+	.site-footer__affiliate-note {
+		margin: 0.85rem 0 0.45rem;
+		max-width: 22rem;
+		font-size: 0.8125rem;
+		line-height: 1.45;
+		color: var(--ink-muted);
 	}
 
 	.site-footer__cta {

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import I18nProvider from './I18nProvider';
+import { affiliateLinkRel } from '../../data/affiliate';
 
 type FooterLink = { labelKey: string; href: string };
 type ResourceLink = { label: string; href: string };
@@ -13,6 +14,8 @@ type Props = {
 	explore: FooterLink[];
 	help: FooterLink[];
 	officialResources?: ResourceLink[];
+	affiliateDisclosure: string;
+	affiliateShortLabel: string;
 };
 
 function SiteFooterInner({
@@ -23,6 +26,8 @@ function SiteFooterInner({
 	explore,
 	help,
 	officialResources = [],
+	affiliateDisclosure,
+	affiliateShortLabel,
 }: Props) {
 	const { t } = useTranslation();
 	const year = new Date().getFullYear();
@@ -55,7 +60,13 @@ function SiteFooterInner({
 							{line}
 						</p>
 					))}
-					<a className="site-footer__cta" href={checkoutUrl} rel="noopener noreferrer">
+					<p className="site-footer__affiliate-note">{affiliateDisclosure}</p>
+					<a
+						className="site-footer__cta"
+						href={checkoutUrl}
+						rel={affiliateLinkRel}
+						aria-label={`${t('common.buyNow')} (${affiliateShortLabel})`}
+					>
 						{t('common.buyNow')}
 					</a>
 					<p className="site-footer__share-label">{t('common.share')}</p>

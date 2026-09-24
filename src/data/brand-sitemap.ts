@@ -71,6 +71,7 @@ const pageImageTemplates: Record<PageId, { title: string; caption: string }> = {
 	privacy: { title: '{brand} privacy', caption: 'Privacy info for {primaryKeyword}' },
 	refund: { title: '{brand} refunds', caption: 'Refund info for {primaryKeyword}' },
 	terms: { title: '{brand} terms', caption: 'Terms for {primaryKeyword}' },
+	'affiliate-disclosure': { title: '{brand} affiliate disclosure', caption: 'Affiliate link disclosure for {primaryKeyword}' },
 };
 
 const sitemapDefaults = {

@@ -1,0 +1,64 @@
+---
+import { getAffiliateCopy } from '../data/affiliate-disclosure-copy';
+import { getLocalizedPath } from '../data/i18n/routing';
+import type { LocaleCode } from '../data/i18n/locales';
+import { defaultLocale } from '../data/i18n/locales';
+
+interface Props {
+	locale?: LocaleCode;
+	/** When true, include a link to the full disclosure page. */
+	showPageLink?: boolean;
+}
+
+const { locale = defaultLocale, showPageLink = true } = Astro.props;
+const copy = getAffiliateCopy(locale);
+const disclosureHref = getLocalizedPath('affiliate-disclosure', locale);
+---
+
+<p class="affiliate-disclosure">
+	{copy.disclosure}
+	{
+		showPageLink ? (
+			<>
+				{' '}
+				<a href={disclosureHref}>{copy.navLabel}</a>.
+			</>
+		) : null
+	}
+</p>
+
+<style is:global>
+	.affiliate-disclosure {
+		margin: 0;
+		padding: 0.55rem 0;
+		font-size: 0.8125rem;
+		line-height: 1.45;
+		color: var(--ink-muted);
+		max-width: 52rem;
+	}
+
+	.affiliate-disclosure a {
+		color: var(--ink);
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
+	}
+
+	.affiliate-disclosure a:hover {
+		color: var(--accent);
+	}
+
+	.affiliate-disclosure--compact {
+		padding: 0.35rem 0;
+		font-size: 0.75rem;
+	}
+
+	.site-tools .affiliate-disclosure--compact {
+		display: none;
+	}
+
+	@media (max-width: 900px) {
+		.site-tools .affiliate-disclosure--compact {
+			display: none;
+		}
+	}
+</style>

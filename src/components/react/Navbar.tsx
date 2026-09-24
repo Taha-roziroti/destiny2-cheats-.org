@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import I18nProvider from './I18nProvider';
 import LanguageSwitcher, { type LocaleMeta } from './LanguageSwitcher';
+import { affiliateLinkRel } from '../../data/affiliate';
 
 type NavLink = {
 	id: string;
@@ -20,6 +21,7 @@ type Props = {
 	locales: LocaleMeta[];
 	hrefForLocale: Record<string, string>;
 	links: NavLink[];
+	affiliateShortLabel: string;
 };
 
 function NavbarInner({
@@ -32,6 +34,7 @@ function NavbarInner({
 	locales,
 	hrefForLocale,
 	links,
+	affiliateShortLabel,
 }: Props) {
 	const { t } = useTranslation();
 	const [scrolled, setScrolled] = useState(false);
@@ -92,8 +95,8 @@ function NavbarInner({
 					<a
 						href={checkoutUrl}
 						className="site-tools__buy"
-						rel="noopener noreferrer"
-						aria-label={t('cta.buyShort')}
+						rel={affiliateLinkRel}
+						aria-label={`${t('cta.buyShort')} (${affiliateShortLabel})`}
 					>
 						<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
 							<path
@@ -154,7 +157,8 @@ function NavbarInner({
 					<a
 						href={checkoutUrl}
 						className="site-nav--mobile__buy"
-						rel="noopener noreferrer"
+						rel={affiliateLinkRel}
+						aria-label={`${t('cta.buyShort')} (${affiliateShortLabel})`}
 					>
 						{t('cta.buyShort')}
 					</a>

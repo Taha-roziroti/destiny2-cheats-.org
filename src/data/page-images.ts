@@ -43,6 +43,7 @@ export const pageImageSrcById: Record<PageId, string> = {
 	privacy: '/images/destiny-2-cheats-crucible.webp',
 	refund: '/images/destiny-2-cheats-pve.webp',
 	terms: '/images/destiny-2-cheats-aimbot-esp.webp',
+	'affiliate-disclosure': '/images/destiny-2-cheats-raid.webp',
 };
 
 for (const pageId of pageIds) {

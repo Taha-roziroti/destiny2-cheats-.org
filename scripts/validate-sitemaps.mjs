@@ -57,11 +57,11 @@ const EN_BLOG_REDIRECT_PAGES = 18; // EN /blog/* stubs 301 → /forums/
 const REVIEW_PAGES = 11; // /reviews/ index + 10 review detail pages
 const FAQ_PAGES = 11; // FAQ answer pages (index is in the product pages)
 /** Product pages in sitemap — excludes cannibal EN URLs that 301 to stronger pillars */
-const ENGLISH_PRODUCT_PAGES = 14;
+const ENGLISH_PRODUCT_PAGES = 15;
 const ENGLISH_PAGES = ENGLISH_PRODUCT_PAGES + FORUM_PAGES + REVIEW_PAGES + FAQ_PAGES;
 const I18N_LOCALES = 21;
 /** Locale product pages also exclude the same cannibal pageIds */
-const PRODUCT_PAGES_PER_LOCALE = 14;
+const PRODUCT_PAGES_PER_LOCALE = 15;
 const BLOG_PAGES_PER_LOCALE = 0; // Locale blog URLs 301 to EN; not in sitemaps
 const PAGES_PER_LOCALE = PRODUCT_PAGES_PER_LOCALE + BLOG_PAGES_PER_LOCALE;
 const I18N_URLS = I18N_LOCALES * PAGES_PER_LOCALE;
@@ -107,6 +107,7 @@ const ENGLISH_PATHS = [
 	'/privacy/',
 	'/refund/',
 	'/terms/',
+	'/affiliate-disclosure/',
 	'/forums/',
 	'/forums/aimbot-settings-ban-risk/',
 	'/forums/how-to-use-destiny-2-cheats/',

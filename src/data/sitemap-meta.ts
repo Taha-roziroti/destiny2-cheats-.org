@@ -45,6 +45,7 @@ export const pageSitemapMeta: Record<PageId, PageSitemapMeta> = {
 	privacy: { priority: 0.4, changefreq: 'yearly', i18nPriority: 0.35, lastmod: '2026-06-08' },
 	refund: { priority: 0.4, changefreq: 'yearly', i18nPriority: 0.35, lastmod: '2026-06-14' },
 	terms: { priority: 0.4, changefreq: 'yearly', i18nPriority: 0.35, lastmod: '2026-05-22' },
+	'affiliate-disclosure': { priority: 0.4, changefreq: 'yearly', i18nPriority: 0.35, lastmod: '2026-09-24' },
 };
 
 /** Most recent page lastmod — used as the sitemap index <lastmod> for page sitemaps. */

@@ -9,7 +9,7 @@ export const PAGE_IDS = [
 	'home', 'destiny-2-esp', 'destiny-2-aimbot', 'features', 'pricing', 'setup',
 	'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'anticheat',
 	'cheats-2026', 'hacks', 'cheat-download', 'crucible-cheats', 'aim-assist', 'best-cheats',
-	'aimbot-hack', 'esp-hack', 'pve-cheats', 'privacy', 'refund', 'terms',
+	'aimbot-hack', 'esp-hack', 'pve-cheats', 'privacy', 'refund', 'terms', 'affiliate-disclosure',
 ];
 
 /** Hero image per page — simple Destiny 2 cheats keyword filenames. */
@@ -39,6 +39,7 @@ export const HERO_IMAGES = {
 	privacy: '/images/destiny-2-cheats-aimbot.webp',
 	refund: '/images/destiny-2-cheats-raid.webp',
 	terms: '/images/destiny-2-cheats-aimbot-view.webp',
+	'affiliate-disclosure': '/images/destiny-2-cheats-raid.webp',
 };
 
 export const TS_HEADER = `import type { LocaleCode } from './locales';

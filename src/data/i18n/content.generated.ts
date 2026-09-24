@@ -1070,6 +1070,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					],
 					heroImage: "/images/destiny-2-cheats-aimbot-view.webp",
 				},
+				"affiliate-disclosure": {
+					title: "Affiliate Disclosure | Destiny 2 Cheats",
+					description: "Affiliate disclosure for destiny2cheats.org. How commission links work when you buy Destiny 2 cheats licenses through checkout links on this site.",
+					h1: "Affiliate Disclosure",
+					intro: "Some links on destiny2cheats.org are affiliate links. If you buy through them, we may earn a commission at no extra cost to you.",
+					imageAlt: "Destiny 2 Cheats affiliate disclosure page",
+					galleryTitle: "Destiny 2 Cheats legal resources",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy policy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "What affiliate links are",
+							paragraphs: [
+								"Affiliate links track that you arrived from this website before checkout. If you complete a purchase, we may receive a commission from the seller.",
+								"This does not change the price you pay when the program terms state there is no extra cost to you.",
+							],
+						},
+						{
+							h2: "Where they appear",
+							paragraphs: [
+								"Buy buttons, pricing cards, and store links that lead to checkout may be affiliate links. They are marked with sponsored link attributes for search engines.",
+								"Editorial pages such as setup guides, status notes, and forums do not become ads simply because they link to store pages when relevant.",
+							],
+						},
+						{
+							h2: "Questions",
+							paragraphs: [
+								"Email support@destiny2cheats.org if you have questions about how links on this site work.",
+								"See also <a href=\"/privacy/\">Privacy Policy</a> and <a href=\"/terms/\">Terms of Use</a>.",
+							],
+						},
+					],
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+				},
 			},
 		},
 		es: {
@@ -2002,6 +2037,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 Cheats ofrece ESP wallhack, radar hack y Destiny 2 aimbot para Destiny 2 en Windows PC. Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "Cambios",
+							paragraphs: [
+								"Contacta support@destiny2cheats.org para solicitudes legales o de soporte.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "Divulgación de afiliados | Destiny 2 Cheats",
+					description: "Divulgación de afiliados for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "Divulgación de afiliados",
+					intro: "Destiny 2 Cheats ofrece ESP wallhack, radar hack y Destiny 2 aimbot para Destiny 2 en Windows PC. Divulgación de afiliados for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Leer privacidad",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Aceptación de términos",
+							paragraphs: [
+								"Destiny 2 Cheats ofrece ESP wallhack, radar hack y Destiny 2 aimbot para Destiny 2 en Windows PC. Contact email, order references, and basic site security data.",
+								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen BattlEye anti-cheat maintenance.",
+							],
+						},
+						{
+							h2: "Riesgos y anti-cheat",
+							paragraphs: [
+								"Destiny 2 Cheats ofrece ESP wallhack, radar hack y Destiny 2 aimbot para Destiny 2 en Windows PC. Support responses, order resolution, and legal compliance when required.",
+								"Consulta la página Updates antes de jugar tras parches de BattlEye anti-cheat. Ningún cheat garantiza seguridad permanente.",
 							],
 						},
 						{
@@ -2956,6 +3026,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						},
 					],
 				},
+				"affiliate-disclosure": {
+					title: "Divulgation d’affiliation | Destiny 2 Cheats",
+					description: "Divulgation d’affiliation for Destiny 2 Cheats — ESP wallhack, Aimbot, PC Windows.",
+					h1: "Divulgation d’affiliation",
+					intro: "Destiny 2 Cheats combine ESP wallhack, radar hack et Destiny 2 aimbot pour Destiny 2 sur PC Windows. Divulgation d’affiliation for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptation",
+							paragraphs: [
+								"Destiny 2 Cheats combine ESP wallhack, radar hack et Destiny 2 aimbot pour Destiny 2 sur PC Windows. Contact email, order references, and basic site security data.",
+								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "Risques",
+							paragraphs: [
+								"Destiny 2 Cheats combine ESP wallhack, radar hack et Destiny 2 aimbot pour Destiny 2 sur PC Windows. Support responses, order resolution, and legal compliance when required.",
+								"Consultez Updates après les patchs BattlEye anti-cheat. Aucune triche ne garantit un statut sûr permanent.",
+							],
+						},
+						{
+							h2: "Modifications",
+							paragraphs: [
+								"Contactez support@destiny2cheats.org pour le support ou les demandes légales.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
 			},
 		},
 		de: {
@@ -3888,6 +3993,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 Cheats bündelt ESP wallhack, radar hack und Destiny 2 aimbot als Paket für Destiny 2 auf Windows PC. Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "Änderungen",
+							paragraphs: [
+								"support@destiny2cheats.org für Support und rechtliche Anfragen.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "Affiliate-Hinweis | Destiny 2 Cheats",
+					description: "Affiliate-Hinweis for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "Affiliate-Hinweis",
+					intro: "Destiny 2 Cheats bündelt ESP wallhack, radar hack und Destiny 2 aimbot als Paket für Destiny 2 auf Windows PC. Affiliate-Hinweis for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Annahme",
+							paragraphs: [
+								"Destiny 2 Cheats bündelt ESP wallhack, radar hack und Destiny 2 aimbot als Paket für Destiny 2 auf Windows PC. Contact email, order references, and basic site security data.",
+								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. BattlEye anti-cheat-Wartung.",
+							],
+						},
+						{
+							h2: "Risiko",
+							paragraphs: [
+								"Destiny 2 Cheats bündelt ESP wallhack, radar hack und Destiny 2 aimbot als Paket für Destiny 2 auf Windows PC. Support responses, order resolution, and legal compliance when required.",
+								"Updates-Seite nach BattlEye anti-cheat-Patches prüfen. Kein Cheat garantiert dauerhaft safe status.",
 							],
 						},
 						{
@@ -4842,6 +4982,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						},
 					],
 				},
+				"affiliate-disclosure": {
+					title: "Divulgação de afiliados | Destiny 2 Cheats",
+					description: "Divulgação de afiliados for Destiny 2 Cheats — ESP wallhack, Aimbot, PC Windows.",
+					h1: "Divulgação de afiliados",
+					intro: "Destiny 2 Cheats reúne ESP wallhack, radar hack e Destiny 2 aimbot para Destiny 2 no PC Windows. Divulgação de afiliados for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats reúne ESP wallhack, radar hack e Destiny 2 aimbot para Destiny 2 no PC Windows. Contact email, order references, and basic site security data.",
+								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats reúne ESP wallhack, radar hack e Destiny 2 aimbot para Destiny 2 no PC Windows. Support responses, order resolution, and legal compliance when required.",
+								"Verifique Updates após patches BattlEye anti-cheat. Nenhum cheat garante status seguro permanente.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"Contacte support@destiny2cheats.org para suporte ou questões legais.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
 			},
 		},
 		it: {
@@ -5774,6 +5949,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 Cheats unisce ESP wallhack, radar hack e Destiny 2 aimbot per Destiny 2 su PC Windows. Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"Contatta support@destiny2cheats.org per supporto o richieste legali.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "Informativa affiliati | Destiny 2 Cheats",
+					description: "Informativa affiliati for Destiny 2 Cheats — ESP wallhack, Aimbot, PC Windows.",
+					h1: "Informativa affiliati",
+					intro: "Destiny 2 Cheats unisce ESP wallhack, radar hack e Destiny 2 aimbot per Destiny 2 su PC Windows. Informativa affiliati for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats unisce ESP wallhack, radar hack e Destiny 2 aimbot per Destiny 2 su PC Windows. Contact email, order references, and basic site security data.",
+								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats unisce ESP wallhack, radar hack e Destiny 2 aimbot per Destiny 2 su PC Windows. Support responses, order resolution, and legal compliance when required.",
+								"Controlla Updates dopo patch BattlEye anti-cheat. Nessun cheat garantisce sicurezza permanente.",
 							],
 						},
 						{
@@ -6728,6 +6938,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						},
 					],
 				},
+				"affiliate-disclosure": {
+					title: "Affiliate-disclaimer | Destiny 2 Cheats",
+					description: "Affiliate-disclaimer for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "Affiliate-disclaimer",
+					intro: "Destiny 2 Cheats bundelt ESP wallhack, radar hack en Destiny 2 aimbot als pakket voor Destiny 2 op Windows PC. Affiliate-disclaimer for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats bundelt ESP wallhack, radar hack en Destiny 2 aimbot als pakket voor Destiny 2 op Windows PC. Contact email, order references, and basic site security data.",
+								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. BattlEye anti-cheat-onderhoud.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats bundelt ESP wallhack, radar hack en Destiny 2 aimbot als pakket voor Destiny 2 op Windows PC. Support responses, order resolution, and legal compliance when required.",
+								"Check Updates na BattlEye anti-cheat-patches. Geen cheat garandeert permanent safe status.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"support@destiny2cheats.org voor support en juridische vragen.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
 			},
 		},
 		pl: {
@@ -7660,6 +7905,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 Cheats łączy ESP wallhack, radar hack i Destiny 2 aimbot jako pakiet dla Destiny 2 na PC Windows. Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"support@destiny2cheats.org w sprawach wsparcia i prawnych.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "Informacja partnerska | Destiny 2 Cheats",
+					description: "Informacja partnerska for Destiny 2 Cheats — ESP wallhack, Aimbot, PC Windows.",
+					h1: "Informacja partnerska",
+					intro: "Destiny 2 Cheats łączy ESP wallhack, radar hack i Destiny 2 aimbot jako pakiet dla Destiny 2 na PC Windows. Informacja partnerska for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats łączy ESP wallhack, radar hack i Destiny 2 aimbot jako pakiet dla Destiny 2 na PC Windows. Contact email, order references, and basic site security data.",
+								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats łączy ESP wallhack, radar hack i Destiny 2 aimbot jako pakiet dla Destiny 2 na PC Windows. Support responses, order resolution, and legal compliance when required.",
+								"Sprawdź Updates po patchach BattlEye anti-cheat. Żaden cheat nie gwarantuje permanentnego safe statusu.",
 							],
 						},
 						{
@@ -8614,6 +8894,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						},
 					],
 				},
+				"affiliate-disclosure": {
+					title: "Раскрытие партнёрских ссылок | Destiny 2 Cheats",
+					description: "Раскрытие партнёрских ссылок for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "Раскрытие партнёрских ссылок",
+					intro: "Destiny 2 Cheats объединяет ESP wallhack, radar hack и Destiny 2 aimbot в пакете для Destiny 2 на Windows PC. Раскрытие партнёрских ссылок for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats объединяет ESP wallhack, radar hack и Destiny 2 aimbot в пакете для Destiny 2 на Windows PC. Contact email, order references, and basic site security data.",
+								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats объединяет ESP wallhack, radar hack и Destiny 2 aimbot в пакете для Destiny 2 на Windows PC. Support responses, order resolution, and legal compliance when required.",
+								"Проверяйте Updates после патчей BattlEye anti-cheat. Ни один чит не гарантирует постоянный статус.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"support@destiny2cheats.org для поддержки и юридических вопросов.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
 			},
 		},
 		tr: {
@@ -9546,6 +9861,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 Cheats, Destiny 2 için Windows PC üzerinde ESP wallhack, radar hack ve Destiny 2 aimbot paket sunar. Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"Destek ve yasal sorular için support@destiny2cheats.org.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "Satış ortaklığı açıklaması | Destiny 2 Cheats",
+					description: "Satış ortaklığı açıklaması for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "Satış ortaklığı açıklaması",
+					intro: "Destiny 2 Cheats, Destiny 2 için Windows PC üzerinde ESP wallhack, radar hack ve Destiny 2 aimbot paket sunar. Satış ortaklığı açıklaması for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats, Destiny 2 için Windows PC üzerinde ESP wallhack, radar hack ve Destiny 2 aimbot paket sunar. Contact email, order references, and basic site security data.",
+								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları BattlEye anti-cheat bakımı içerir.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats, Destiny 2 için Windows PC üzerinde ESP wallhack, radar hack ve Destiny 2 aimbot paket sunar. Support responses, order resolution, and legal compliance when required.",
+								"BattlEye anti-cheat yamalarından sonra Updates sayfasını kontrol edin. Hiçbir hile kalıcı garantisi vermez.",
 							],
 						},
 						{
@@ -10500,6 +10850,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						},
 					],
 				},
+				"affiliate-disclosure": {
+					title: "إفصاح الروابط التابعة | Destiny 2 Cheats",
+					description: "إفصاح الروابط التابعة for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "إفصاح الروابط التابعة",
+					intro: "Destiny 2 Cheats يجمع ESP wallhack وradar hack وDestiny 2 aimbot لـ Destiny 2 على Windows PC. إفصاح الروابط التابعة for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "مراسلة الدعم",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "قبول الشروط",
+							paragraphs: [
+								"Destiny 2 Cheats يجمع ESP wallhack وradar hack وDestiny 2 aimbot لـ Destiny 2 على Windows PC. Contact email, order references, and basic site security data.",
+								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "المخاطر",
+							paragraphs: [
+								"Destiny 2 Cheats يجمع ESP wallhack وradar hack وDestiny 2 aimbot لـ Destiny 2 على Windows PC. Support responses, order resolution, and legal compliance when required.",
+								"راجع Updates بعد تص patches BattlEye anti-cheat. لا يضمن أي غش حالة دائمة.",
+							],
+						},
+						{
+							h2: "التغييرات",
+							paragraphs: [
+								"support@destiny2cheats.org للدعم والطلبات القانونية.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
 			},
 		},
 		ja: {
@@ -11432,6 +11817,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 CheatsはDestiny 2向けWindows PC用ESP wallhack、radar hack、Destiny 2 aimbotの統合パッケージです。Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "変更",
+							paragraphs: [
+								"サポート・法務: support@destiny2cheats.org",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "アフィリエイト開示 | Destiny 2 Cheats",
+					description: "アフィリエイト開示 for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "アフィリエイト開示",
+					intro: "Destiny 2 CheatsはDestiny 2向けWindows PC用ESP wallhack、radar hack、Destiny 2 aimbotの統合パッケージです。アフィリエイト開示 for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "サポートにメール",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "規約への同意",
+							paragraphs: [
+								"Destiny 2 CheatsはDestiny 2向けWindows PC用ESP wallhack、radar hack、Destiny 2 aimbotの統合パッケージです。Contact email, order references, and basic site security data.",
+								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにBattlEye anti-cheatメンテナンス含む。",
+							],
+						},
+						{
+							h2: "リスク",
+							paragraphs: [
+								"Destiny 2 CheatsはDestiny 2向けWindows PC用ESP wallhack、radar hack、Destiny 2 aimbotの統合パッケージです。Support responses, order resolution, and legal compliance when required.",
+								"BattlEye anti-cheatパッチ後はUpdatesページを確認。永久は保証されません。",
 							],
 						},
 						{
@@ -12386,6 +12806,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						},
 					],
 				},
+				"affiliate-disclosure": {
+					title: "제휴 고지 | Destiny 2 Cheats",
+					description: "제휴 고지 for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "제휴 고지",
+					intro: "Destiny 2 Cheats는 Destiny 2 Windows PC용 ESP wallhack, radar hack, Destiny 2 aimbot 패키지입니다. 제휴 고지 for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "지원 이메일",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats는 Destiny 2 Windows PC용 ESP wallhack, radar hack, Destiny 2 aimbot 패키지입니다. Contact email, order references, and basic site security data.",
+								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 BattlEye anti-cheat 유지보수 포함.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats는 Destiny 2 Windows PC용 ESP wallhack, radar hack, Destiny 2 aimbot 패키지입니다. Support responses, order resolution, and legal compliance when required.",
+								"BattlEye anti-cheat 패치 후 Updates 페이지 확인. 영구 보장 없음.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"지원 및 법무: support@destiny2cheats.org",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
 			},
 		},
 		zh: {
@@ -13318,6 +13773,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 Cheats为Destiny 2Windows PC提供ESP wallhack、radar hack和Destiny 2 aimbot一体化套餐。Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"支持与法务：support@destiny2cheats.org",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "联盟披露 | Destiny 2 Cheats",
+					description: "联盟披露 for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "联盟披露",
+					intro: "Destiny 2 Cheats为Destiny 2Windows PC提供ESP wallhack、radar hack和Destiny 2 aimbot一体化套餐。联盟披露 for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "邮件支持",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats为Destiny 2Windows PC提供ESP wallhack、radar hack和Destiny 2 aimbot一体化套餐。Contact email, order references, and basic site security data.",
+								"通过checkout checkout即时数字交付。$35/月和$150终身含BattlEye anti-cheat维护。",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats为Destiny 2Windows PC提供ESP wallhack、radar hack和Destiny 2 aimbot一体化套餐。Support responses, order resolution, and legal compliance when required.",
+								"BattlEye anti-cheat补丁后请查看Updates页面。无任何作弊保证永久。",
 							],
 						},
 						{
@@ -14272,6 +14762,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						},
 					],
 				},
+				"affiliate-disclosure": {
+					title: "सहबद्ध प्रकटीकरण | Destiny 2 Cheats",
+					description: "सहबद्ध प्रकटीकरण for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "सहबद्ध प्रकटीकरण",
+					intro: "Destiny 2 Cheats Destiny 2 के लिए Windows PC पर ESP wallhack, radar hack और Destiny 2 aimbot पैकेज देता है। सहबद्ध प्रकटीकरण for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats Destiny 2 के लिए Windows PC पर ESP wallhack, radar hack और Destiny 2 aimbot पैकेज देता है। Contact email, order references, and basic site security data.",
+								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में BattlEye anti-cheat maintenance शामिल।",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats Destiny 2 के लिए Windows PC पर ESP wallhack, radar hack और Destiny 2 aimbot पैकेज देता है। Support responses, order resolution, and legal compliance when required.",
+								"BattlEye anti-cheat पैच के बाद Updates पेज देखें। कोई भी cheat permanent गारंटी नहीं देता।",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"सहायता: support@destiny2cheats.org",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
 			},
 		},
 		id: {
@@ -15204,6 +15729,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 Cheats menyediakan ESP wallhack, radar hack, dan Destiny 2 aimbot untuk Destiny 2 di PC Windows. Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"support@destiny2cheats.org untuk dukungan dan legal.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "Pengungkapan afiliasi | Destiny 2 Cheats",
+					description: "Pengungkapan afiliasi for Destiny 2 Cheats — ESP wallhack, Aimbot, PC Windows.",
+					h1: "Pengungkapan afiliasi",
+					intro: "Destiny 2 Cheats menyediakan ESP wallhack, radar hack, dan Destiny 2 aimbot untuk Destiny 2 di PC Windows. Pengungkapan afiliasi for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats menyediakan ESP wallhack, radar hack, dan Destiny 2 aimbot untuk Destiny 2 di PC Windows. Contact email, order references, and basic site security data.",
+								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats menyediakan ESP wallhack, radar hack, dan Destiny 2 aimbot untuk Destiny 2 di PC Windows. Support responses, order resolution, and legal compliance when required.",
+								"Periksa Updates setelah patch BattlEye anti-cheat. Tidak ada cheat yang menjamin permanen.",
 							],
 						},
 						{
@@ -16158,6 +16718,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						},
 					],
 				},
+				"affiliate-disclosure": {
+					title: "การเปิดเผยพันธมิตร | Destiny 2 Cheats",
+					description: "การเปิดเผยพันธมิตร for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "การเปิดเผยพันธมิตร",
+					intro: "Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC การเปิดเผยพันธมิตร for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Contact email, order references, and basic site security data.",
+								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล BattlEye anti-cheat",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats รวม ESP wallhack, radar hack และ Destiny 2 aimbot สำหรับ Destiny 2 บน Windows PC Support responses, order resolution, and legal compliance when required.",
+								"ตรวจ Updates หลังแพตช์ BattlEye anti-cheat ไม่มี cheat รับประกัน ถาวร",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"support@destiny2cheats.org สำหรับการสนับสนุน",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
 			},
 		},
 		vi: {
@@ -17090,6 +17685,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 Cheats cung cấp ESP wallhack, radar hack và Destiny 2 aimbot cho Destiny 2 trên PC Windows. Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"support@destiny2cheats.org cho hỗ trợ và pháp lý.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "Công bố liên kết tiếp thị | Destiny 2 Cheats",
+					description: "Công bố liên kết tiếp thị for Destiny 2 Cheats — ESP wallhack, Aimbot, PC Windows.",
+					h1: "Công bố liên kết tiếp thị",
+					intro: "Destiny 2 Cheats cung cấp ESP wallhack, radar hack và Destiny 2 aimbot cho Destiny 2 trên PC Windows. Công bố liên kết tiếp thị for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats cung cấp ESP wallhack, radar hack và Destiny 2 aimbot cho Destiny 2 trên PC Windows. Contact email, order references, and basic site security data.",
+								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats cung cấp ESP wallhack, radar hack và Destiny 2 aimbot cho Destiny 2 trên PC Windows. Support responses, order resolution, and legal compliance when required.",
+								"Kiểm tra Updates sau bản vá BattlEye anti-cheat. Không cheat nào đảm bảo vĩnh viễn.",
 							],
 						},
 						{
@@ -18044,6 +18674,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						},
 					],
 				},
+				"affiliate-disclosure": {
+					title: "Розкриття партнерських посилань | Destiny 2 Cheats",
+					description: "Розкриття партнерських посилань for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "Розкриття партнерських посилань",
+					intro: "Destiny 2 Cheats об'єднує ESP wallhack, radar hack і Destiny 2 aimbot у пакеті для Destiny 2 на Windows PC. Розкриття партнерських посилань for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats об'єднує ESP wallhack, radar hack і Destiny 2 aimbot у пакеті для Destiny 2 на Windows PC. Contact email, order references, and basic site security data.",
+								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats об'єднує ESP wallhack, radar hack і Destiny 2 aimbot у пакеті для Destiny 2 на Windows PC. Support responses, order resolution, and legal compliance when required.",
+								"Перевіряйте Updates після патчів BattlEye anti-cheat. Жоден чит не гарантує постійний статус.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"support@destiny2cheats.org для підтримки та правових питань.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
 			},
 		},
 		cs: {
@@ -18976,6 +19641,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 Cheats spojuje ESP wallhack, radar hack a Destiny 2 aimbot jako balíček pro Destiny 2 na Windows PC. Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"support@destiny2cheats.org pro podporu a právní dotazy.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "Affiliate prohlášení | Destiny 2 Cheats",
+					description: "Affiliate prohlášení for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "Affiliate prohlášení",
+					intro: "Destiny 2 Cheats spojuje ESP wallhack, radar hack a Destiny 2 aimbot jako balíček pro Destiny 2 na Windows PC. Affiliate prohlášení for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats spojuje ESP wallhack, radar hack a Destiny 2 aimbot jako balíček pro Destiny 2 na Windows PC. Contact email, order references, and basic site security data.",
+								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats spojuje ESP wallhack, radar hack a Destiny 2 aimbot jako balíček pro Destiny 2 na Windows PC. Support responses, order resolution, and legal compliance when required.",
+								"Po patchích BattlEye anti-cheat zkontrolujte Updates. Žádný cheat negarantuje trvalý stav.",
 							],
 						},
 						{
@@ -19930,6 +20630,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						},
 					],
 				},
+				"affiliate-disclosure": {
+					title: "Dezvăluire afiliere | Destiny 2 Cheats",
+					description: "Dezvăluire afiliere for Destiny 2 Cheats — ESP wallhack, Aimbot, PC Windows.",
+					h1: "Dezvăluire afiliere",
+					intro: "Destiny 2 Cheats combină ESP wallhack, radar hack și Destiny 2 aimbot pentru Destiny 2 pe PC Windows. Dezvăluire afiliere for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats combină ESP wallhack, radar hack și Destiny 2 aimbot pentru Destiny 2 pe PC Windows. Contact email, order references, and basic site security data.",
+								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță BattlEye anti-cheat.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats combină ESP wallhack, radar hack și Destiny 2 aimbot pentru Destiny 2 pe PC Windows. Support responses, order resolution, and legal compliance when required.",
+								"Verificați Updates după patch-uri BattlEye anti-cheat. Niciun cheat nu garantează permanent.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"support@destiny2cheats.org pentru suport și legal.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
 			},
 		},
 		sv: {
@@ -20862,6 +21597,41 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Destiny 2 Cheats kombinerar ESP wallhack, radar hack och Destiny 2 aimbot som paket för Destiny 2 på Windows PC. Support responses, order resolution, and legal compliance when required.",
 								"Using cheats may violate Bungie terms of service — you assume all ban risk.",
+							],
+						},
+						{
+							h2: "Policy changes",
+							paragraphs: [
+								"support@destiny2cheats.org för support och juridik.",
+								"Email: support@destiny2cheats.org",
+							],
+						},
+					],
+				},
+				"affiliate-disclosure": {
+					title: "Affiliate-information | Destiny 2 Cheats",
+					description: "Affiliate-information for Destiny 2 Cheats — ESP wallhack, Aimbot, Windows PC.",
+					h1: "Affiliate-information",
+					intro: "Destiny 2 Cheats kombinerar ESP wallhack, radar hack och Destiny 2 aimbot som paket för Destiny 2 på Windows PC. Affiliate-information for destiny2cheats.org and Destiny 2 licenses.",
+					imageAlt: "Destiny 2 cheats",
+					galleryTitle: "Destiny 2 cheats",
+					heroImage: "/images/destiny-2-cheats-raid.webp",
+					ctaPrimary: "Email support",
+					ctaSecondary: "Read privacy",
+					ctaSecondaryHref: "/privacy/",
+					sections: [
+						{
+							h2: "Acceptance of terms",
+							paragraphs: [
+								"Destiny 2 Cheats kombinerar ESP wallhack, radar hack och Destiny 2 aimbot som paket för Destiny 2 på Windows PC. Contact email, order references, and basic site security data.",
+								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. BattlEye anti-cheat-underhåll.",
+							],
+						},
+						{
+							h2: "Risk disclaimer",
+							paragraphs: [
+								"Destiny 2 Cheats kombinerar ESP wallhack, radar hack och Destiny 2 aimbot som paket för Destiny 2 på Windows PC. Support responses, order resolution, and legal compliance when required.",
+								"Kontrollera Updates efter BattlEye anti-cheat-patchar. Ingen cheat garanterar permanent safe status.",
 							],
 						},
 						{

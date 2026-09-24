@@ -836,6 +836,36 @@ export const enPages = {
 			),
 		],
 	},
+	'affiliate-disclosure': {
+		title: 'Affiliate Disclosure | Destiny 2 Cheats',
+		description:
+			'Affiliate disclosure for destiny2cheats.org. How commission links work when you buy Destiny 2 cheats licenses through checkout links on this site.',
+		h1: 'Affiliate Disclosure',
+		intro:
+			'Some links on destiny2cheats.org are affiliate links. If you buy through them, we may earn a commission at no extra cost to you.',
+		imageAlt: 'Destiny 2 Cheats affiliate disclosure page',
+		galleryTitle: 'Destiny 2 Cheats legal resources',
+		ctaPrimary: 'Email support',
+		ctaSecondary: 'Read privacy policy',
+		ctaSecondaryHref: '/privacy/',
+		sections: [
+			section(
+				'What affiliate links are',
+				'Affiliate links track that you arrived from this website before checkout. If you complete a purchase, we may receive a commission from the seller.',
+				'This does not change the price you pay when the program terms state there is no extra cost to you.',
+			),
+			section(
+				'Where they appear',
+				'Buy buttons, pricing cards, and store links that lead to checkout may be affiliate links. They are marked with sponsored link attributes for search engines.',
+				'Editorial pages such as setup guides, status notes, and forums do not become ads simply because they link to store pages when relevant.',
+			),
+			section(
+				'Questions',
+				'Email support@destiny2cheats.org if you have questions about how links on this site work.',
+				'See also <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms of Use</a>.',
+			),
+		],
+	},
 };
 
 /** Attach heroImage paths and clamp meta lengths. */
