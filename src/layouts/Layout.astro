@@ -177,9 +177,6 @@ if (aboutNode) {
 			)
 		}
 		<title>{title}</title>
-		<script is:inline>
-			{`(()=>{if(!window.trustedTypes||!window.trustedTypes.createPolicy)return;try{window.trustedTypes.createPolicy('default',{createHTML:i=>i,createScript:i=>i,createScriptURL:i=>i})}catch{}})();`}
-		</script>
 		<style id="brand-theme-critical" set:html={brandThemeHeadCritical()} />
 		{lcpImage && <style id="lcp-poster-critical" set:html={lcpPosterCriticalCss} />}
 		<meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -244,6 +241,9 @@ if (aboutNode) {
 		)}
 		{/* After Vite/Tailwind CSS so brand tokens win over @theme defaults */}
 		<style id="brand-theme-vars" set:html={brandThemeRootCss()}></style>
+		<script is:inline>
+			{`(()=>{if(!window.trustedTypes||!window.trustedTypes.createPolicy)return;try{window.trustedTypes.createPolicy('default',{createHTML:i=>i,createScript:i=>i,createScriptURL:i=>i})}catch{}})();`}
+		</script>
 		<script is:inline src="/site-ui.js" defer></script>
 	</body>
 </html>

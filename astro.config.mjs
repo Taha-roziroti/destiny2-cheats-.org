@@ -11,10 +11,8 @@ export default defineConfig({
 	site: 'https://destiny2cheats.org',
 	trailingSlash: 'always',
 	compressHTML: true,
-	prefetch: {
-		prefetchAll: false,
-		defaultStrategy: 'viewport',
-	},
+	// Prefetch injects a head module that scans every link on load — hurts Lighthouse LCP on large pages.
+	prefetch: false,
 	devToolbar: { enabled: false },
 	server: {
 		// Bind IPv4 + IPv6 so localhost/port-forwarding works (not ::1-only).
