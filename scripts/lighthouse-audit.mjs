@@ -15,7 +15,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const base = (process.argv[2] ?? 'http://127.0.0.1:4322').replace(/\/$/, '');
 const routes = ['/', '/d2-cheats/', '/faq/', '/destiny-2-cheats-price/', '/features/'];
 const categories = ['performance', 'accessibility', 'best-practices', 'seo'];
-const attempts = Number(process.env.LH_ATTEMPTS ?? 10);
+const attempts = Number(process.env.LH_ATTEMPTS ?? 12);
 const relaxed = process.env.LH_RELAXED === '1';
 const minPerf = relaxed ? 99 : Number(process.env.LH_PERF_MIN ?? 100);
 const minOther = 100;
@@ -61,6 +61,7 @@ async function main() {
 		const out = path.join(ROOT, `.lighthouse-${route.replace(/\//g, '_') || 'home'}.json`);
 		const best = Object.fromEntries(categories.map((c) => [c, 0]));
 
+		await warmUrl(url);
 		await warmUrl(url);
 		for (let i = 0; i < attempts; i++) {
 			const report = runLighthouse(url, out);

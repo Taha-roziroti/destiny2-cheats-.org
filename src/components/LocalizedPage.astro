@@ -3,7 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import { getPageContent, getUi, type PageId } from '../data/i18n';
 import { getLocalizedPath, localizeInternalHref } from '../data/i18n/routing';
 import type { LocaleCode } from '../data/i18n/locales';
-import { productInfo, seoFaqs, siteConfig, customerReviewStats } from '../data/site';
+import { productInfo, seoFaqs, siteConfig } from '../data/site';
 import { absoluteFaqUrl, getFaqPath } from '../data/faq';
 import { simplePageCopy } from '../data/i18n/simple-pages';
 import { enUsSimplePages } from '../data/en-us-simple-pages';
@@ -12,7 +12,7 @@ import { getPageCrawlImage } from '../data/page-images';
 import PageRelatedLinks from './PageRelatedLinks.astro';
 import OfficialResources from './OfficialResources.astro';
 import { getRelatedPageLinks } from '../data/page-related-links';
-import { productPageUrl, productSchemaId } from '../data/product-schema';
+import { productSchemaNode } from '../data/product-schema';
 import { affiliateLinkRel } from '../data/affiliate';
 import { uniquifyPageHeadings } from '../lib/unique-copy';
 import { buildPageGallery, galleryAltForSrc } from '../lib/page-gallery';
@@ -73,7 +73,6 @@ const gallery = buildPageGallery(
 }));
 
 const pageUrl = new URL(getLocalizedPath(pageId, locale), siteConfig.url).href;
-const priceValidUntil = '2027-12-31';
 const articleSchema =
 	(pageId === 'cheats-review' || pageId === 'setup') && locale === 'en'
 		? {
@@ -120,35 +119,7 @@ const faqSchema =
 			}
 		: null;
 
-const storeSchema =
-	pageId === 'hacks'
-		? {
-				'@type': 'Product',
-				'@id': productSchemaId,
-				name: productInfo.name,
-				description: productInfo.summary,
-				image: crawl.url,
-				brand: { '@type': 'Brand', name: productInfo.brand },
-				url: productPageUrl,
-				aggregateRating: {
-					'@type': 'AggregateRating',
-					ratingValue: customerReviewStats.averageRating.toFixed(1),
-					reviewCount: String(customerReviewStats.onSiteCount),
-					bestRating: '5',
-					worstRating: '1',
-				},
-				offers: {
-					'@type': 'AggregateOffer',
-					lowPrice: Math.min(...productInfo.plans.map((p) => p.price)).toFixed(2),
-					highPrice: Math.max(...productInfo.plans.map((p) => p.price)).toFixed(2),
-					priceCurrency: productInfo.currency,
-					offerCount: productInfo.plans.length,
-					priceValidUntil,
-					availability: 'https://schema.org/InStock',
-					url: siteConfig.checkoutUrl,
-				},
-			}
-		: null;
+const storeSchema = pageId === 'hacks' ? productSchemaNode(crawl.url) : null;
 
 const extraGraph = [faqSchema, storeSchema, articleSchema, pricingListSchema].filter(
 	Boolean,
