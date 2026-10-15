@@ -10,10 +10,10 @@ const input = process.argv[2] ?? path.join(ROOT, 'assets/gameplay/hero-arc-staff
 const images = path.join(ROOT, 'public/images');
 const ratio = 3.15;
 const position = 'right';
-const widths = [480, 640, 960, 1024];
+const widths = [480, 640, 720, 960, 1024, 1280, 1536, 1920];
 
 const meta = await sharp(input).metadata();
-const masterW = Math.min(meta.width ?? 1920, 1920);
+const masterW = Math.min(meta.width ?? 1920, 3840);
 const masterH = Math.round(masterW / ratio);
 
 await sharp(input)
@@ -26,14 +26,14 @@ for (const w of widths) {
 	const out = path.join(images, `destiny-2-hero-poster-${w}w.webp`);
 	await sharp(input)
 		.resize(w, h, { fit: 'cover', position })
-		.webp({ quality: w <= 480 ? 72 : 82, effort: 6 })
+		.webp({ quality: w <= 640 ? 86 : w <= 1024 ? 88 : 90, effort: 6, smartSubsample: false })
 		.toFile(out);
 	console.log(`Wrote ${path.basename(out)} (${statSync(out).size} bytes)`);
 }
 
 await sharp(input)
-	.resize(360, Math.round(360 / ratio), { fit: 'cover', position })
-	.webp({ quality: 58, effort: 6 })
+	.resize(640, Math.round(640 / ratio), { fit: 'cover', position, kernel: sharp.kernel.lanczos3 })
+	.webp({ quality: 86, effort: 6, smartSubsample: false })
 	.toFile(path.join(images, 'destiny-2-hero-poster-mobile.webp'));
 
 await sharp(input)

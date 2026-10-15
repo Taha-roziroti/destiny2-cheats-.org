@@ -1,10 +1,9 @@
 ---
 import '../styles/global.css';
-import '../styles/hero-lcp.css';
+import fontsCss from '../styles/fonts.css?raw';
 import { productInfo, siteConfig } from '../data/site';
 import { brandTheme, brandThemeHeadCritical, brandThemeRootCss } from '../data/brand-theme';
 import I18nHead from '../components/I18nHead.astro';
-import LocaleSuggest from '../components/LocaleSuggest.astro';
 import InlineBrandEditor from '../components/InlineBrandEditor.astro';
 import { defaultLocale, localeMap, locales, type LocaleCode } from '../data/i18n/locales';
 import type { PageId } from '../data/i18n/content.generated';
@@ -173,11 +172,19 @@ if (aboutNode) {
 						fetchpriority="high"
 						media="(min-width: 901px)"
 					/>
+					<link
+						rel="preload"
+						href="/fonts/inter-latin-wght-normal.woff2"
+						as="font"
+						type="font/woff2"
+						crossorigin
+					/>
 				</>
 			)
 		}
 		<title>{title}</title>
 		<style id="brand-theme-critical" set:html={brandThemeHeadCritical()} />
+		<style id="fonts-critical" set:html={fontsCss} />
 		{lcpImage && <style id="lcp-poster-critical" set:html={lcpPosterCriticalCss} />}
 		<meta name="referrer" content="strict-origin-when-cross-origin" />
 		<meta name="color-scheme" content="dark" />
@@ -224,14 +231,12 @@ if (aboutNode) {
 		<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 		<link rel="help" href="/llms.txt" title="Site summary for AI crawlers" />
 	</head>
 	<body>
 		<a class="skip-link" href="#main-content">{skipLabel}</a>
 		<slot />
-		{pageId && <LocaleSuggest currentLocale={locale} pageId={pageId} />}
 		<InlineBrandEditor />
 		{!noindex && (
 			<script
@@ -244,6 +249,7 @@ if (aboutNode) {
 		<script is:inline>
 			{`(()=>{if(!window.trustedTypes||!window.trustedTypes.createPolicy)return;try{window.trustedTypes.createPolicy('default',{createHTML:i=>i,createScript:i=>i,createScriptURL:i=>i})}catch{}})();`}
 		</script>
+		<link rel="manifest" href="/site.webmanifest" />
 		<script is:inline src="/site-ui.js" defer></script>
 	</body>
 </html>

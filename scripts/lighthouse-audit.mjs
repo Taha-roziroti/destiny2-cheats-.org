@@ -7,7 +7,7 @@
  * Default: Performance ≥100, other categories 100. LH_RELAXED=1 → perf≥99.
  */
 import { spawnSync } from 'node:child_process';
-import { readFileSync, unlinkSync } from 'node:fs';
+import { existsSync, readFileSync, unlinkSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -46,25 +46,34 @@ function runLighthouse(url, out) {
 		{ cwd: ROOT, encoding: 'utf8', shell: true },
 	);
 	if (run.status !== 0) return null;
-	const report = JSON.parse(readFileSync(out, 'utf8'));
-	try {
-		unlinkSync(out);
-	} catch {
-		// ignore
+	const reportPath = existsSync(out) ? out : `${out}.report.json`;
+	if (!existsSync(reportPath)) return null;
+	const report = JSON.parse(readFileSync(reportPath, 'utf8'));
+	for (const p of [out, reportPath, `${out}.report.json`]) {
+		try {
+			unlinkSync(p);
+		} catch {
+			// ignore
+		}
 	}
 	return report;
+}
+
+function routeSlug(route) {
+	if (route === '/') return 'home';
+	return route.replace(/\//g, '_').replace(/^_+|_+$/g, '') || 'home';
 }
 
 async function main() {
 	for (const route of routes) {
 		const url = `${base}${route === '/' ? '/' : route}`;
-		const out = path.join(ROOT, `.lighthouse-${route.replace(/\//g, '_') || 'home'}.json`);
 		const best = Object.fromEntries(categories.map((c) => [c, 0]));
 
 		await warmUrl(url);
 		await warmUrl(url);
 		for (let i = 0; i < attempts; i++) {
-			const report = runLighthouse(url, out);
+			const attemptOut = path.join(ROOT, `.lighthouse-${routeSlug(route)}-${i}-${process.pid}.json`);
+			const report = runLighthouse(url, attemptOut);
 			if (!report) continue;
 			for (const c of categories) {
 				const score = Math.round((report.categories[c]?.score ?? 0) * 100);

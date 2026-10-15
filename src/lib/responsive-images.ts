@@ -48,8 +48,12 @@ export function contentSrcSet(baseSrc: string): string | undefined {
 export const heroResponsive: ResponsiveWidth[] = [
 	{ src: '/images/destiny-2-hero-poster-480w.webp', width: 480 },
 	{ src: '/images/destiny-2-hero-poster-640w.webp', width: 640 },
+	{ src: '/images/destiny-2-hero-poster-720w.webp', width: 720 },
 	{ src: '/images/destiny-2-hero-poster-960w.webp', width: 960 },
 	{ src: '/images/destiny-2-hero-poster-1024w.webp', width: 1024 },
+	{ src: '/images/destiny-2-hero-poster-1280w.webp', width: 1280 },
+	{ src: '/images/destiny-2-hero-poster-1536w.webp', width: 1536 },
+	{ src: '/images/destiny-2-hero-poster-1920w.webp', width: 1920 },
 ];
 
 export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive;
@@ -57,19 +61,20 @@ export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive;
 export const heroSrc = '/images/destiny-2-hero-poster.webp';
 export const heroSrcSet = buildSrcSet(heroResponsive);
 /** Cap mobile slot width so 480w variant wins on Lighthouse / phone viewports. */
-export const heroSizes = '(max-width: 900px) 480px, 960px';
+export const heroSizes = '(max-width: 900px) 100vw, min(100vw, 1920px)';
 
 /** Lighthouse / phone slot — smallest hero poster (see HeroLcpPicture mobile source). */
+/** 640×203 crop — sharp on phones without the old 360px / q58 asset. */
 export const heroMobileSrc = '/images/destiny-2-hero-poster-mobile.webp';
 
 /** Default img `src` + mobile fallback. */
 export const heroPreloadSrc = '/images/destiny-2-hero-poster-480w.webp';
 /** Desktop banner preload (matches HeroLcpPicture srcset pick at ≥901px). */
-export const heroDesktopPreloadSrc = '/images/destiny-2-hero-poster-960w.webp';
+export const heroDesktopPreloadSrc = '/images/destiny-2-hero-poster-1280w.webp';
 export const heroMimeType = 'image/webp';
 
-export const heroWidth = 1024;
-export const heroHeight = 325;
+export const heroWidth = 1920;
+export const heroHeight = 610;
 
 export const contentWidths = [480, 960, 1920, 3840] as const;
 

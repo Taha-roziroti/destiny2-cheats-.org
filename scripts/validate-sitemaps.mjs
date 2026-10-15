@@ -59,7 +59,7 @@ const FAQ_PAGES = 11; // FAQ answer pages (index is in the product pages)
 /** Product pages in sitemap — excludes cannibal EN URLs that 301 to stronger pillars */
 const ENGLISH_PRODUCT_PAGES = 17;
 const ENGLISH_PAGES = ENGLISH_PRODUCT_PAGES + FORUM_PAGES + REVIEW_PAGES + FAQ_PAGES;
-const I18N_LOCALES = 21;
+const I18N_LOCALES = 0;
 /** Locale product pages also exclude the same cannibal pageIds */
 const PRODUCT_PAGES_PER_LOCALE = 17;
 const BLOG_PAGES_PER_LOCALE = 0; // Locale blog URLs 301 to EN; not in sitemaps
@@ -74,8 +74,8 @@ const TOTAL_HTML_PAGES =
 	ENGLISH_HTML_PAGES +
 	EN_BLOG_REDIRECT_PAGES +
 	I18N_LOCALES * (PRODUCT_PAGES_PER_LOCALE + LOCALE_BLOG_REDIRECT_PAGES);
-const HREFLANG_PER_URL = 23;
-const SITEMAP_INDEX_ENTRIES = 1 + I18N_LOCALES + 1; // EN + locales + images
+const HREFLANG_PER_URL = 2; // en + x-default (English-only site)
+const SITEMAP_INDEX_ENTRIES = 1 + I18N_LOCALES + 1; // EN + images
 
 /** Cannibal / stub pages that 301 to pillars — built HTML allowed off sitemap */
 const REDIRECT_ONLY_PATHS = new Set([
@@ -145,10 +145,7 @@ const ENGLISH_PATHS = [
 	'/faq/buy-private-pc/',
 ];
 
-const LOCALE_CODES = [
-	'en', 'es', 'fr', 'de', 'pt', 'it', 'nl', 'pl', 'ru', 'tr',
-	'ar', 'ja', 'ko', 'zh', 'hi', 'id', 'th', 'vi', 'uk', 'cs', 'ro', 'sv',
-];
+const LOCALE_CODES = ['en'];
 
 const I18N_LOCALE_CODES = LOCALE_CODES.filter((code) => code !== 'en');
 
@@ -245,8 +242,10 @@ async function main() {
 			bump();
 		}
 	}
-	if (errors === 0) {
-		ok(`All 21 locale sitemaps have ${PAGES_PER_LOCALE} URLs each (${localeUrlTotal} total)`);
+	if (I18N_LOCALE_CODES.length > 0 && errors === 0) {
+		ok(`All ${I18N_LOCALE_CODES.length} locale sitemaps have ${PAGES_PER_LOCALE} URLs each (${localeUrlTotal} total)`);
+	} else if (I18N_LOCALE_CODES.length === 0) {
+		ok('No per-locale sitemaps (English-only site)');
 	}
 
 	// Count checks
@@ -393,7 +392,7 @@ async function main() {
 	if (homeHreflang !== HREFLANG_PER_URL) {
 		fail(`Homepage hreflang links: expected ${HREFLANG_PER_URL}, got ${homeHreflang}`);
 		bump();
-	} else ok(`Homepage has ${HREFLANG_PER_URL} hreflang alternates (22 locales + x-default)`);
+	} else ok(`Homepage has ${HREFLANG_PER_URL} hreflang alternates (en + x-default)`);
 
 	// sitemap.xml index — EN + 21 locale sitemaps + images
 	if (indexLocs.length !== SITEMAP_INDEX_ENTRIES) {
@@ -416,7 +415,7 @@ async function main() {
 			bump();
 		}
 	}
-	if (errors === 0) ok('sitemap.xml lists English, all 21 locale, and image sitemaps');
+	if (errors === 0) ok('sitemap.xml lists English and image sitemaps');
 
 	// robots.txt — single GSC submission path
 	if (!robots.includes(`${SITE}/sitemap.xml`)) {
@@ -475,12 +474,14 @@ async function main() {
 			bump();
 		}
 	}
-	if (errors === 0) ok('All 21 non-English locale homepages in per-locale sitemaps');
+	if (I18N_LOCALE_CODES.length === 0) ok('No locale homepages (English-only site)');
+	else if (errors === 0) ok('All non-English locale homepages in per-locale sitemaps');
 
-	// Locale URL count summary
-	console.log('\nLocale URL counts (per-locale sitemaps):');
-	for (const locale of I18N_LOCALE_CODES) {
-		console.log(`  ${locale}: ${localeSitemapLocs[locale].length}`);
+	if (I18N_LOCALE_CODES.length > 0) {
+		console.log('\nLocale URL counts (per-locale sitemaps):');
+		for (const locale of I18N_LOCALE_CODES) {
+			console.log(`  ${locale}: ${localeSitemapLocs[locale].length}`);
+		}
 	}
 
 	console.log('');

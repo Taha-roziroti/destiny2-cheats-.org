@@ -1,4 +1,5 @@
 import { withCacheHeaders } from './lib/asset-cache';
+import { isLegacyLocaleCode } from './data/i18n/locales';
 
 /**
  * Cloudflare Worker — host canonicalization before static assets.
@@ -39,11 +40,26 @@ function canonicalUrl(request: Request): URL | null {
 	return changed ? url : null;
 }
 
+/** Retired /{locale}/… URLs → English homepage. */
+function retiredLocaleRedirect(request: Request): URL | null {
+	const url = new URL(request.url);
+	const segment = url.pathname.split('/').filter(Boolean)[0]?.toLowerCase();
+	if (!segment || !isLegacyLocaleCode(segment)) return null;
+	const target = new URL(request.url);
+	target.pathname = '/';
+	return target;
+}
+
 export default {
 	async fetch(request: Request, env: Env): Promise<Response> {
 		const target = canonicalUrl(request);
 		if (target) {
 			return Response.redirect(target.toString(), 301);
+		}
+
+		const localeTarget = retiredLocaleRedirect(request);
+		if (localeTarget) {
+			return Response.redirect(localeTarget.toString(), 301);
 		}
 
 		const url = new URL(request.url);

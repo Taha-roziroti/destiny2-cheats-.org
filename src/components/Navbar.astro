@@ -1,17 +1,15 @@
 ---
-import LanguageSwitcher from './LanguageSwitcher.astro';
 import {
 	getLocalizedPath,
-	getPageLocaleSwitchHref,
 	resolvePageContextFromPath,
 	type PageId,
 } from '../data/i18n/routing';
-import { defaultLocale, locales, type LocaleCode } from '../data/i18n/locales';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { reviewsBasePath } from '../data/reviews';
 import { siteConfig } from '../data/site';
 import { affiliateLinkRel } from '../data/affiliate';
 import { getT } from '../i18n/server';
-import { getBlogLocaleSwitchHref, isBlogPath } from '../data/blog/helpers';
+import { isBlogPath } from '../data/blog/helpers';
 
 interface Props {
 	locale?: LocaleCode;
@@ -32,23 +30,6 @@ const pageContext = onBlog
 			...pathContext,
 			pageId: pathContext.pageId ?? pageId,
 		};
-
-function localeSwitchHref(targetLocale: LocaleCode): string {
-	if (onBlog) return getBlogLocaleSwitchHref(current, targetLocale);
-	return getPageLocaleSwitchHref(pageContext, targetLocale);
-}
-
-const hrefForLocale = Object.fromEntries(
-	locales.map((l) => [l.code, localeSwitchHref(l.code)]),
-) as Record<string, string>;
-
-const localeMetas = locales.map((l) => ({
-	code: l.code,
-	name: l.name,
-	nativeName: l.nativeName,
-	hreflang: l.hreflang,
-	region: l.region,
-}));
 
 const links = [
 	{ id: 'home', labelKey: 'nav.home', href: getLocalizedPath('home', locale) },
@@ -97,9 +78,6 @@ const navLinks = links.map((item) => ({
 		</nav>
 
 		<div class="site-tools">
-			<div class="site-tools__lang">
-				<LanguageSwitcher locale={locale} locales={localeMetas} hrefForLocale={hrefForLocale} />
-			</div>
 			<a
 				href={siteConfig.checkoutUrl}
 				class="site-tools__buy"
@@ -160,7 +138,6 @@ const navLinks = links.map((item) => ({
 			))
 		}
 		<div class="site-nav--mobile__tools">
-			<LanguageSwitcher locale={locale} locales={localeMetas} hrefForLocale={hrefForLocale} />
 			<a
 				href={siteConfig.checkoutUrl}
 				class="site-nav--mobile__buy"
