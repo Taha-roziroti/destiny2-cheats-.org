@@ -91,6 +91,16 @@ const BLOG_TO_FORUM = {
 	'/blog/skin-leaks/': '/forums/stream-proof-overlay-settings/',
 };
 
+/** Retired legal page → terms. */
+const AFFILIATE_DISCLOSURE_RETIRED = {
+	'/affiliate-disclosure/': '/terms/',
+};
+
+const US_SEO_PATH_MIGRATION = {
+	'/pricing/': '/destiny-2-cheats-price/',
+	'/setup/': '/destiny-2-cheats-setup/',
+};
+
 /** Guides hub retired → forums or pillar pages. */
 const GUIDES_REDIRECTS = {
 	'/guides/': '/forums/',
@@ -170,6 +180,8 @@ function buildEnBlock() {
 		...mapToLines(LEGACY_BLOG, '# Legacy Fortnite blog slugs → D2 posts'),
 		...mapToLines(BLOG_TO_FORUM, '# Blog → forums'),
 		...mapToLines(GUIDES_REDIRECTS, '# Guides → forums / pillars'),
+		...mapToLines(AFFILIATE_DISCLOSURE_RETIRED, '# Retired affiliate disclosure'),
+		...mapToLines(US_SEO_PATH_MIGRATION, '# US SEO canonical paths'),
 		...mapToLines(EN_CANNIBAL, '# EN cannibal stub pages → pillar pages'),
 		...longPathLines(),
 		'',

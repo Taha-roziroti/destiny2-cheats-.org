@@ -45,7 +45,9 @@ export const pageSitemapMeta: Record<PageId, PageSitemapMeta> = {
 	privacy: { priority: 0.4, changefreq: 'yearly', i18nPriority: 0.35, lastmod: '2026-06-08' },
 	refund: { priority: 0.4, changefreq: 'yearly', i18nPriority: 0.35, lastmod: '2026-06-14' },
 	terms: { priority: 0.4, changefreq: 'yearly', i18nPriority: 0.35, lastmod: '2026-05-22' },
-	'affiliate-disclosure': { priority: 0.4, changefreq: 'yearly', i18nPriority: 0.35, lastmod: '2026-09-24' },
+	'cheats-review': { priority: 0.86, changefreq: 'weekly', i18nPriority: 0.8, lastmod: '2026-10-15' },
+	'cloud-dma': { priority: 0.75, changefreq: 'monthly', i18nPriority: 0.7, lastmod: '2026-10-15' },
+	'hwid-spoofer': { priority: 0.72, changefreq: 'monthly', i18nPriority: 0.68, lastmod: '2026-10-15' },
 };
 
 /** Most recent page lastmod — used as the sitemap index <lastmod> for page sitemaps. */

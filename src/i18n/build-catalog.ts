@@ -66,7 +66,7 @@ export function buildCatalog(locale: LocaleCode): TranslationCatalog {
 		subtitleShort: ui.hero.subtitleShort,
 		buyNow: ui.hero.buyNow,
 		seeFeatures: ui.hero.seeFeatures,
-		title: ui.product.title,
+		title: locale === 'en' ? 'Destiny 2 Cheats for PC' : ui.product.title,
 		priceFrom: priceFromLabels[locale] ?? priceFromLabels.en,
 		imageAlt: ui.images.hero,
 		...chips,
@@ -113,40 +113,16 @@ export function buildCatalog(locale: LocaleCode): TranslationCatalog {
 	catalog.images = { ...ui.images };
 
 	catalog.home = {
-		aboutEyebrow: commonX.browse,
-		aboutTitle: catalog.hero.accent,
-		aboutLede: ui.hero.subtitle,
-		featuresAria: catalog.home.featuresAria,
+		...catalog.home,
 		featEsp: chips.chipEsp,
 		featAim: chips.chipAim,
 		featRadar: chips.chipRadar,
 		featStream: chips.chipUpdates,
-		ctaPlans: ui.nav.pricing,
-		ctaStatus: ui.nav.updates,
-		guidesLabel: commonX.browse,
-		linkCheats: ui.nav.hacks,
-		linkEsp: ui.nav.esp,
-		linkAimbot: ui.nav.aimbot,
-		linkFeatures: ui.nav.features,
 	};
 
 	catalog.homeSeo = {
 		...catalog.homeSeo,
-		eyebrow: commonX.browse,
-		linkEsp: ui.nav.esp,
-		linkAimbot: ui.nav.aimbot,
 		linkLiveStatus: ui.trust.status,
-		linkCheats: ui.nav.hacks,
-		linkSetup: ui.nav.setup,
-		linkPlans: ui.nav.pricing,
-		linkReviews: navX.reviews,
-		linkDestiny2Cheats: ui.nav.hacks,
-		linkFaq: ui.nav.faq,
-		linkSupport: commonX.support,
-		linkSetupGuide: ui.nav.setup,
-		linkForums: navX.forums,
-		linkBlog: navX.forums,
-		faqEyebrow: ui.nav.faq,
 	};
 
 	catalog.deals = {

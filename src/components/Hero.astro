@@ -1,153 +1,72 @@
 ---
-import HeroApp from './react/Hero';
 import type { LocaleCode } from '../data/i18n/locales';
 import { defaultLocale } from '../data/i18n/locales';
 import { getPageContent } from '../data/i18n';
-import { productInfo, siteConfig } from '../data/site';
-import { heroWidth, heroHeight, heroSrcSet, heroSizes, heroSrc } from '../lib/responsive-images';
-
+import { siteConfig } from '../data/site';
+import { getT } from '../i18n/server';
+import { heroWidth, heroHeight, heroSrcSet, heroSizes } from '../lib/responsive-images';
+import HeroLcpPicture from './HeroLcpPicture.astro';
 interface Props {
 	locale?: LocaleCode;
 }
 
 const locale = Astro.props.locale ?? defaultLocale;
-const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo.plans[0];
 const home = getPageContent(locale, 'home');
 const heroVideo = siteConfig.heroVideo?.trim() || '';
 const heroLabel = locale === 'en' ? siteConfig.name : home.h1;
 const imageAlt = home.imageAlt;
+const t = getT(locale);
+const heroChips = ['chipEsp', 'chipAim', 'chipRadar', 'chipUpdates'] as const;
 ---
 
 <section class="hero" aria-label={heroLabel}>
 	<div class="hero__media">
 		{
 			heroVideo ? (
-				<video
-					class="hero__video"
-					src={heroVideo}
-					autoplay
-					muted
-					loop
-					playsinline
-					preload="auto"
-					width={heroWidth}
-					height={heroHeight}
-					aria-hidden="true"
-				>
-				</video>
+				<>
+					<HeroLcpPicture class="hero__poster" />
+					<video
+						class="hero__video"
+						data-src={heroVideo}
+						autoplay
+						muted
+						loop
+						playsinline
+						preload="none"
+						width={heroWidth}
+						height={heroHeight}
+						aria-hidden="true"
+					>
+					</video>
+				</>
 			) : (
-				<img
-					src={heroSrc}
-					srcset={heroSrcSet}
-					sizes={heroSizes}
-					alt={imageAlt}
-					width={heroWidth}
-					height={heroHeight}
-					fetchpriority="high"
-					loading="eager"
-					decoding="async"
-				/>
+				<HeroLcpPicture class="hero__poster" decorative={false} alt={imageAlt} />
 			)
 		}
 	</div>
 	<div class="hero__veil" aria-hidden="true"></div>
-	<HeroApp
-		client:load
-		locale={locale}
-		siteName={siteConfig.name}
-		checkoutUrl={siteConfig.checkoutUrl}
-		monthlyPrice={monthly.price}
-		useBrandHero={false}
-	/>
+	<div class="shell hero__content">
+		<div class="hero__copy">
+			<h1 class="hero__brand">{t('hero.accent')}</h1>
+			<p class="hero__lede">{t('hero.subtitle')}</p>
+			<ul class="hero__features">
+				{
+					heroChips.map((key) => (
+						<li>
+							<span>{t(`hero.${key}`)}</span>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
 </section>
 
 {heroVideo ? <script is:inline src="/hero-video.js"></script> : null}
 
 <style is:global>
 	.hero {
-		--hero-pad-y: clamp(1rem, 2vw, 1.75rem);
 		--hero-stack: clamp(0.85rem, 1.5vw, 1.15rem);
-		/*
-		 * Bar is a bit shorter than the native 1024/409 (~2.5:1) art.
-		 * Image stays undistorted via object-fit: cover (crops edges, no squash).
-		 */
-		--hero-ratio: 3.15 / 1;
-		position: relative;
-		isolation: isolate;
-		display: grid;
-		align-items: center;
-		overflow: hidden;
-		background: #0D0A14;
-		aspect-ratio: var(--hero-ratio);
-		width: 100%;
-		height: auto;
-		min-height: 0;
-		max-height: none;
-	}
-
-	.hero__media {
-		position: absolute;
-		inset: 0;
-		z-index: 0;
-	}
-
-	.hero__media picture,
-	.hero__media img,
-	.hero__media video {
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
-
-	.hero__media img {
-		/* Cover = keep proportions; crop top/bottom of the shorter bar */
-		object-fit: cover;
-		/* Prefer a bit higher in the frame so the Guardian silhouette stays in view */
-		object-position: right 28%;
-		image-rendering: auto;
-		transform: translateZ(0);
-		animation: hero-in 0.9s ease-out both;
-	}
-
-	.hero__media video {
-		object-fit: cover;
-		object-position: right 28%;
-		image-rendering: auto;
-		transform: translateZ(0);
-		background: #0D0A14;
-		opacity: 0;
-		transition: opacity 0.45s ease;
-	}
-
-	.hero__media video.is-ready {
-		opacity: 1;
-	}
-
-	.hero__veil {
-		position: absolute;
-		inset: 0;
-		z-index: 1;
-		pointer-events: none;
-		background: linear-gradient(
-			90deg,
-			rgba(5, 5, 6, 0.78) 0%,
-			rgba(5, 5, 6, 0.52) 34%,
-			rgba(5, 5, 6, 0.18) 58%,
-			transparent 74%
-		);
-	}
-
-	.hero__content {
-		position: relative;
-		z-index: 2;
-		padding-block: var(--hero-pad-y);
-		align-self: center;
-		/* Sit a touch above true center so title reads mid-image */
-		transform: translateY(clamp(-1.5rem, -3vw, -0.35rem));
-		display: grid;
-		grid-template-columns: minmax(0, 1fr);
-		justify-items: start;
-		box-sizing: border-box;
 	}
 
 	.hero__copy {
@@ -160,7 +79,7 @@ const imageAlt = home.imageAlt;
 		min-width: 0;
 		margin: 0;
 		padding: 0;
-		animation: rise 0.65s ease-out both;
+		animation: none;
 	}
 
 	.hero__brand {
@@ -335,48 +254,7 @@ const imageAlt = home.imageAlt;
 		}
 	}
 
-	/*
-	 * Phones / small tablets: stop using the ultra-wide 3.15:1 bar.
-	 * That ratio collapses to ~120px tall on a 390px phone and clips the CTA.
-	 * Mobile = taller full-bleed panel; height grows with copy.
-	 */
 	@media (max-width: 900px) {
-		.hero {
-			aspect-ratio: auto;
-			min-height: 0;
-			max-height: none;
-			height: auto;
-			display: block;
-			overflow: hidden;
-		}
-
-		.hero__media img,
-		.hero__media video {
-			object-fit: cover;
-			object-position: 78% 10%;
-		}
-
-		.hero__veil {
-			background: linear-gradient(
-				180deg,
-				rgba(5, 5, 6, 0.28) 0%,
-				rgba(5, 5, 6, 0.52) 42%,
-				rgba(5, 5, 6, 0.9) 78%,
-				rgba(5, 5, 6, 0.96) 100%
-			);
-		}
-
-		.hero__content {
-			transform: none;
-			width: 100%;
-			min-height: clamp(15rem, 48svh, 22rem);
-			display: flex;
-			align-items: flex-end;
-			padding-block: 1.35rem 1.2rem;
-			padding-bottom: max(1.2rem, env(safe-area-inset-bottom, 0px));
-			box-sizing: border-box;
-		}
-
 		.hero__copy {
 			width: 100%;
 			max-width: 28rem;

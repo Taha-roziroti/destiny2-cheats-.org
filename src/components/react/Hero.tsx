@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import I18nProvider from './I18nProvider';
+import type { TranslationCatalog } from '../../i18n/build-catalog';
 
 type Props = {
 	locale: string;
+	catalog: TranslationCatalog;
 	siteName: string;
 	checkoutUrl: string;
 	monthlyPrice: number;
@@ -92,7 +94,7 @@ function HeroInner({ useBrandHero = true }: Props) {
 
 export default function HeroApp(props: Props) {
 	return (
-		<I18nProvider locale={props.locale}>
+		<I18nProvider locale={props.locale} catalog={props.catalog}>
 			<HeroInner {...props} />
 		</I18nProvider>
 	);

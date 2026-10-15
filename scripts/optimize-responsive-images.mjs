@@ -4,11 +4,11 @@ import sharp from 'sharp';
 
 const imagesDir = path.resolve('public/images');
 
-/** Hero LCP asset — responsive widths for srcset */
-const HERO_WIDTHS = [480, 640, 960, 1400];
+/** Hero LCP asset — responsive widths for srcset (up to 4K) */
+const HERO_WIDTHS = [640, 1024, 1536, 1920, 2560, 3840];
 
-/** Below-fold content images — smaller variants for gallery/product cards */
-const CONTENT_WIDTHS = [480, 960];
+/** Below-fold content images — variants for gallery/product cards */
+const CONTENT_WIDTHS = [480, 960, 1920, 3840];
 
 const SKIP_PATTERNS = [
 	/-\d+w\.webp$/i,

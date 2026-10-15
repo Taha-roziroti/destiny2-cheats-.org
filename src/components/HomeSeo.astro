@@ -1,23 +1,156 @@
 ---
-import HomeSeoApp from './react/HomeSeo';
 import { homeFaqs } from '../data/site';
 import { getFaqPath } from '../data/faq';
+import { forumsBasePath } from '../data/forums/helpers';
+import { reviewsBasePath } from '../data/reviews';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { getLocalizedPath } from '../data/i18n/routing';
+import { getT } from '../i18n/server';
 
 interface Props {
 	locale?: LocaleCode;
 }
 
 const locale = Astro.props.locale ?? defaultLocale;
+const t = getT(locale);
 const faqs = homeFaqs.map((item) => ({
 	slug: item.slug,
 	question: item.question,
 	answer: item.answer,
 	href: getFaqPath(item.slug),
 }));
+
+const p = {
+	features: getLocalizedPath('features', locale),
+	pricing: getLocalizedPath('pricing', locale),
+	setup: getLocalizedPath('setup', locale),
+	updates: getLocalizedPath('updates', locale),
+	faq: getLocalizedPath('faq', locale),
+	support: getLocalizedPath('support', locale),
+	cheats: getLocalizedPath('hacks', locale),
+	esp: getLocalizedPath('destiny-2-esp', locale),
+	aimbot: getLocalizedPath('destiny-2-aimbot', locale),
+	radar: getLocalizedPath('radar', locale),
+	reviews: reviewsBasePath,
+	forums: forumsBasePath,
+};
+
+const rawCategories = [
+	{
+		titleKey: 'homeSeo.catFeatures',
+		hintKey: 'homeSeo.catFeaturesHint',
+		links: [
+			{ href: p.features, labelKey: 'homeSeo.linkAllFeatures' },
+			{ href: p.esp, labelKey: 'homeSeo.linkEsp' },
+			{ href: p.aimbot, labelKey: 'homeSeo.linkAimbot' },
+			{ href: p.radar, labelKey: 'homeSeo.linkRadar' },
+		],
+	},
+	{
+		titleKey: 'homeSeo.catStatus',
+		hintKey: 'homeSeo.catStatusHint',
+		links: [
+			{ href: p.updates, labelKey: 'homeSeo.linkLiveStatus' },
+			{ href: p.cheats, labelKey: 'homeSeo.linkCheats' },
+			{ href: p.setup, labelKey: 'homeSeo.linkSetup' },
+			{ href: p.faq, labelKey: 'homeSeo.linkFaq' },
+		],
+	},
+	{
+		titleKey: 'homeSeo.catStore',
+		hintKey: 'homeSeo.catStoreHint',
+		links: [
+			{ href: p.pricing, labelKey: 'homeSeo.linkPlans' },
+			{ href: p.reviews, labelKey: 'homeSeo.linkReviews' },
+			{ href: p.cheats, labelKey: 'homeSeo.linkDestiny2Cheats' },
+		],
+	},
+	{
+		titleKey: 'homeSeo.catHelp',
+		hintKey: 'homeSeo.catHelpHint',
+		links: [
+			{ href: p.support, labelKey: 'homeSeo.linkSupport' },
+			{ href: p.setup, labelKey: 'homeSeo.linkSetupGuide' },
+			{ href: p.forums, labelKey: 'homeSeo.linkForums' },
+		],
+	},
+];
+
+const seenHref = new Set<string>();
+const seenLabel = new Set<string>();
+const categories = rawCategories.map((cat) => ({
+	...cat,
+	links: cat.links.filter((link) => {
+		const label = t(link.labelKey).trim().toLowerCase();
+		if (seenHref.has(link.href) || seenLabel.has(label)) return false;
+		seenHref.add(link.href);
+		seenLabel.add(label);
+		return true;
+	}),
+}));
 ---
 
-<HomeSeoApp client:visible locale={locale} faqs={faqs} />
+<section class="home-seo shell" aria-labelledby="home-seo-title">
+	<header class="home-seo__head">
+		<div>
+			<h2 id="home-seo-title" class="home-seo__section-title">{t('homeSeo.eyebrow')}</h2>
+			<p class="home-seo__section-sub">{t('homeSeo.title')}</p>
+			<p class="home-seo__lede">{t('homeSeo.lede')}</p>
+		</div>
+	</header>
+
+	<div class="home-seo__cats">
+		{
+			categories.map((cat) => (
+				<nav class="home-seo__cat" aria-label={t(cat.titleKey)}>
+					<header class="home-seo__cat-head">
+						<h3>{t(cat.titleKey)}</h3>
+						<p>{t(cat.hintKey)}</p>
+					</header>
+					<ul>
+						{
+							cat.links.map((link) => (
+								<li>
+									<a href={link.href}>
+										<span>{t(link.labelKey)}</span>
+										<span class="home-seo__cat-arrow" aria-hidden="true" />
+									</a>
+								</li>
+							))
+						}
+					</ul>
+				</nav>
+			))
+		}
+	</div>
+
+	<section class="home-seo__faq" aria-labelledby="home-faq-title">
+		<header class="home-seo__faq-head">
+			<div>
+				<h3 id="home-faq-title" class="home-seo__section-title">{t('homeSeo.faqEyebrow')}</h3>
+				<p class="home-seo__section-sub">{t('homeSeo.faqTitle')}</p>
+				<p class="home-seo__faq-lede">{t('homeSeo.faqLede')}</p>
+			</div>
+			<a class="home-seo__faq-link" href={p.faq}>{t('homeSeo.allAnswers')}</a>
+		</header>
+		<div class="home-seo__faq-list">
+			{
+				faqs.map((item) => (
+					<details class="home-seo__item" id={item.slug}>
+						<summary>
+							<span>{item.question}</span>
+							<span class="home-seo__chev" aria-hidden="true" />
+						</summary>
+						<div class="home-seo__item-body">
+							<p>{item.answer}</p>
+							<a class="home-seo__item-link" href={item.href}>{item.question}</a>
+						</div>
+					</details>
+				))
+			}
+		</div>
+	</section>
+</section>
 
 <style is:global>
 	.home-seo {

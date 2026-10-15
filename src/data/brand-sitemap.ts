@@ -71,7 +71,18 @@ const pageImageTemplates: Record<PageId, { title: string; caption: string }> = {
 	privacy: { title: '{brand} privacy', caption: 'Privacy info for {primaryKeyword}' },
 	refund: { title: '{brand} refunds', caption: 'Refund info for {primaryKeyword}' },
 	terms: { title: '{brand} terms', caption: 'Terms for {primaryKeyword}' },
-	'affiliate-disclosure': { title: '{brand} affiliate disclosure', caption: 'Affiliate link disclosure for {primaryKeyword}' },
+	'cheats-review': {
+		title: 'Destiny 2 cheat product review',
+		caption: 'Destiny 2 cheat product review showing documented features',
+	},
+	'cloud-dma': {
+		title: 'Cloud DMA software setup',
+		caption: 'Cloud DMA software setup screen showing Hyper-V requirements',
+	},
+	'hwid-spoofer': {
+		title: 'HWID spoofer product overview',
+		caption: 'HWID spoofer requirements and checkout on Windows PC',
+	},
 };
 
 const sitemapDefaults = {

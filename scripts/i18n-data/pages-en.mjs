@@ -3,30 +3,42 @@ import { HERO_IMAGES, clampTitle, clampDesc, section, stripZadeyoFromMeta, EXT }
 /** Richest English page content — source of truth for structure. */
 export const enPages = {
 	home: {
-		title: 'Destiny 2 Cheats — ESP, Aimbot & Wallhack',
+		title: 'Destiny 2 Cheats for PC | Features & Pricing',
 		description:
-			'Official Destiny 2 cheats for Windows PC — aimbot, ESP, wallhack, radar, and BattlEye updates. Compare plans and buy with instant delivery.',
-		h1: 'Destiny 2 Cheats',
+			'Explore Destiny 2 cheat software features, compatibility, plans, and setup details. Compare the available options before you choose.',
+		h1: 'Destiny 2 Cheats for PC',
 		intro:
-			'Destiny 2 cheats for Windows PC — ESP, soft aim, and radar in one license with BattlEye maintenance after patches.',
-		imageAlt: "Destiny 2 Cheats homepage hero — ESP and aimbot for Destiny 2",
+			'This page summarizes Destiny 2 cheat software sold through our checkout partner for Windows PC players in the United States. It is for buyers comparing features, pricing, and requirements — not an official Bungie product.',
+		imageAlt: 'Destiny 2 cheat software interface showing ESP and aimbot menus',
 		galleryTitle: 'Destiny 2 Cheats gallery — ESP, Aimbot and wallhack visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
 		ctaSecondary: 'See all features',
 		ctaSecondaryHref: '/features/',
 		sections: [
 			section(
-				'Why players choose Destiny 2 Cheats',
-				'Destiny 2 rewards map awareness. Destiny 2 Cheats combines ESP for Guardians and enemies, radar-style threat cues, and configurable aimbot so you can read fights before committing in Crucible, Trials, and raids.',
-				`Official seasons, patches, and anti-cheat updates come from ${EXT['destiny-2']} and ${EXT.battleye}. We rebuild ESP, radar, and aimbot modules when those patches require maintenance — then post status on the <a href="/status/">Updates page</a>.`,
-				'Licenses ship digitally after payment. Monthly ($35) and lifetime ($150) plans include BattlEye rebuilds when anti-cheat or game patches require updates.',
+				'Destiny 2 Cheat Features and Available Options',
+				'The merchant listing describes ESP/wallhack overlays, aimbot and recoil tools, 2D radar, and stream-safe rendering in one Windows license. Confirm the live checkout page before you rely on any feature name here.',
+				'See <a href="/destiny-2-aimbot/">Destiny 2 aimbot feature details</a> and <a href="/destiny-2-esp/">Destiny 2 ESP features</a> for module-specific notes.',
 			),
 			section(
-				'ESP, radar, and aimbot in one license',
-				'Instead of stacking separate tools, Destiny 2 Cheats bundles player ESP, loot markers, 2D radar, and aimbot profiles in one package built for raids and PvE.',
-				'Browse the <a href="/destiny-2-esp/">ESP</a>, <a href="/destiny-2-aimbot/">Aimbot</a>, and <a href="/d2-radar/">radar</a> pages for control details — or open <a href="/d2-cheats/">the product page</a> and <a href="/pricing/">Pricing</a> when you are ready to buy.',
-				`Before patch days, check ${EXT.status} for service health, then confirm our maintenance notes so you are not queueing on an outdated build.`,
-				'Follow <a href="/setup/">Setup</a> after delivery and keep <a href="/faq/">FAQ</a> or <a href="/support/">Support</a> bookmarked for license questions.',
+				'A Closer Look at Aimbot and ESP Features',
+				'Aimbot covers targeting and fire-control helpers; ESP covers visibility through walls. They are complementary modules, not separate competing products on this site.',
+				'Read the <a href="/destiny-2-cheats-review/">product evaluation</a> for trade-offs before checkout.',
+			),
+			section(
+				'Plans, Pricing, and Product Access',
+				'Monthly ($35) and lifetime ($150) tiers were verified October 15, 2026. Use <a href="/destiny-2-cheats-price/">Compare Destiny 2 cheat plans</a> for billing context.',
+				'Digital delivery follows payment confirmation. Renewal rules are defined by the merchant.',
+			),
+			section(
+				'Windows Requirements and Compatibility',
+				'Windows 10 or 11 is required. Some bundles reference virtualization products such as <a href="/cloud-dma/">Cloud DMA</a> — only purchase them if your listing says they are required.',
+				`Destiny 2 itself is maintained by Bungie (${EXT['destiny-2']}). BattlEye updates (${EXT.battleye}) can break third-party tools; check <a href="/status/">status</a> after patches.`,
+			),
+			section(
+				'Common Questions Before Choosing Destiny 2 Cheat Software',
+				'Third-party cheats can violate Bungie terms and risk account restrictions. We do not claim ban-proof or 100% operation.',
+				'Follow <a href="/destiny-2-cheats-setup/">setup requirements</a>, read <a href="/faq/">pre-purchase questions</a>, and email support with your order ID when needed.',
 			),
 		],
 	},
@@ -65,12 +77,12 @@ export const enPages = {
 				'ESP with BattlEye updates',
 				'Destiny 2 Cheats ESP wallhack is maintained for Destiny 2 with rebuilds after BattlEye anti-cheat patches. Check the <a href="/status/">Updates page</a> before you queue — no cheat guarantees permanent safe status.',
 				`Read ${EXT.battleye} for how anti-cheat updates ship, then cross-check our <a href="/status/">BattlEye bypass maintenance guide</a> after major patches.`,
-				'Checkout includes instant digital delivery for Windows 10 and 11. After purchase, follow the <a href="/setup/">Setup guide</a> and tune overlays before your first raid.',
+				'Checkout includes instant digital delivery for Windows 10 and 11. After purchase, follow the <a href="/destiny-2-cheats-setup/">Setup guide</a> and tune overlays before your first raid.',
 			),
 			section(
 				'ESP next steps — Aimbot, pricing, and support',
 				'ESP alone wins information wars; Aimbot covers the firefight. Review <a href="/destiny-2-aimbot/">Aimbot controls</a> if you want one license for visibility and assist.',
-				'Compare monthly ($35) and lifetime ($150) on <a href="/pricing/">Pricing</a>, then keep <a href="/support/">Support</a> ready if activation needs a human reply.',
+				'Compare monthly ($35) and lifetime ($150) on <a href="/destiny-2-cheats-price/">Pricing</a>, then keep <a href="/support/">Support</a> ready if activation needs a human reply.',
 				'Still researching? Read the <a href="/d2-cheats/">product overview</a> and <a href="/forums/buying-destiny-2-cheats-license/">buyers guide</a>.',
 			),
 		],
@@ -114,7 +126,7 @@ export const enPages = {
 			),
 			section(
 				'Buy Aimbot with ESP — pricing and setup',
-				'Every plan includes Aimbot plus ESP and radar. Compare options on <a href="/pricing/">Pricing</a>, then activate with the <a href="/setup/">Setup guide</a>.',
+				'Every plan includes Aimbot plus ESP and radar. Compare options on <a href="/destiny-2-cheats-price/">Pricing</a>, then activate with the <a href="/destiny-2-cheats-setup/">Setup guide</a>.',
 				'Questions about delivery or profiles? Use <a href="/faq/">FAQ</a> or email <a href="/support/">Support</a> with your order ID.',
 				'Want the full control list first? Open <a href="/features/">Features</a> before checkout.',
 			),
@@ -131,7 +143,7 @@ export const enPages = {
 		galleryTitle: 'Destiny 2 Cheats feature gallery',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
 		ctaSecondary: 'View pricing',
-		ctaSecondaryHref: '/pricing/',
+		ctaSecondaryHref: '/destiny-2-cheats-price/',
 		sections: [
 			section(
 				'ESP wallhack and visibility features',
@@ -149,7 +161,7 @@ export const enPages = {
 				'Licensing, delivery, and BattlEye maintenance',
 				'Monthly ($35) and lifetime ($150) licenses with instant digital delivery. BattlEye maintenance rebuilds publish on the <a href="/status/">Updates page</a> after anti-cheat or game patches.',
 				`Monitor ${EXT.status} on patch days, then confirm rebuild notes before you queue. Setup and billing help lives on <a href="/support/">Support</a> and support@destiny2cheats.org.`,
-				'Next step: compare plans on <a href="/pricing/">Pricing</a> or read <a href="/d2-cheats/">how BattlEye maintenance works</a>.',
+				'Next step: compare plans on <a href="/destiny-2-cheats-price/">Pricing</a> or read <a href="/d2-cheats/">how BattlEye maintenance works</a>.',
 			),
 		],
 	},
@@ -164,7 +176,7 @@ export const enPages = {
 		galleryTitle: 'Destiny 2 Cheats package visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
 		ctaSecondary: 'Read setup guide',
-		ctaSecondaryHref: '/setup/',
+		ctaSecondaryHref: '/destiny-2-cheats-setup/',
 		sections: [
 			section(
 				'Monthly and lifetime Destiny 2 Cheats plans',
@@ -176,7 +188,7 @@ export const enPages = {
 				'What every plan includes',
 				'Player ESP wallhack, loot markers, 2D radar overlays, Aimbot controls, in-client toggles, and maintenance rebuilds after BattlEye anti-cheat or major Destiny 2 patches.',
 				`Season calendars and client updates come from ${EXT['destiny-2']}. Active licenses receive rebuild access when we publish maintenance on <a href="/status/">Updates</a>.`,
-				'Digital delivery starts after payment confirmation. Keep your order reference for <a href="/support/">Support</a> requests and follow <a href="/setup/">Setup</a> for first launch.',
+				'Digital delivery starts after payment confirmation. Keep your order reference for <a href="/support/">Support</a> requests and follow <a href="/destiny-2-cheats-setup/">Setup</a> for first launch.',
 			),
 			section(
 				'Refund, billing, and buying checklist',
@@ -241,14 +253,14 @@ export const enPages = {
 			section(
 				'What maintenance entries cover',
 				'Entries note BattlEye anti-cheat compatibility status, rebuilt ESP wallhack overlays, radar range fixes, Aimbot tuning after weapon balance changes, and digital delivery of new builds to active licenses.',
-				'Lifetime and monthly subscribers receive rebuild access during active license terms. See <a href="/pricing/">Pricing</a> if you need to renew.',
+				'Lifetime and monthly subscribers receive rebuild access during active license terms. See <a href="/destiny-2-cheats-price/">Pricing</a> if you need to renew.',
 				'For context on why rebuilds happen, read the <a href="/status/">BattlEye bypass guide</a> and <a href="/d2-cheats/">Destiny 2 cheats</a> explainer.',
 			),
 			section(
 				'Staying after patches',
 				'No cheat guarantees permanent safe status. Combine maintenance updates with responsible in-game settings and patch awareness.',
 				`Follow season notes from ${EXT['destiny-2']}, then confirm our rebuild is live before you queue.`,
-				'For urgent status questions after a BattlEye update, contact <a href="/support/">Support</a> with your license tier and last played build version.',
+				'For urgent status questions after a BattlEye update, contact the <a href="/support/">help desk</a> with your license tier and last played build version.',
 			),
 		],
 	},
@@ -262,7 +274,7 @@ export const enPages = {
 		imageAlt: "Destiny 2 Cheats FAQ — delivery, setup, and update answers",
 		galleryTitle: 'Destiny 2 Cheats FAQ visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
-		ctaSecondary: 'Contact support',
+		ctaSecondary: 'Open help desk',
 		ctaSecondaryHref: '/support/',
 		sections: [
 			section(
@@ -279,8 +291,8 @@ export const enPages = {
 			),
 			section(
 				'Delivery, pricing, and support',
-				'Licenses deliver digitally after payment confirmation. Monthly is $35; lifetime is $150 USD — see <a href="/pricing/">Pricing</a>.',
-				'Contact support@destiny2cheats.org or the <a href="/support/">Support page</a> with order details for setup or billing help. First launch steps are on <a href="/setup/">Setup</a>.',
+				'Licenses deliver digitally after payment confirmation. Monthly is $35; lifetime is $150 USD — see <a href="/destiny-2-cheats-price/">Pricing</a>.',
+				'Contact support@destiny2cheats.org or the <a href="/support/">help desk</a> with order details for setup or billing help. First launch steps are on <a href="/destiny-2-cheats-setup/">Setup</a>.',
 				'Refund eligibility is covered in the <a href="/refund/">Refund Policy</a>.',
 			),
 		],
@@ -295,26 +307,26 @@ export const enPages = {
 		imageAlt: "Destiny 2 Cheats support page for license and setup help",
 		galleryTitle: 'Destiny 2 Cheats support resources',
 		ctaPrimary: 'Email support',
-		ctaSecondary: 'Read setup guide',
-		ctaSecondaryHref: '/setup/',
+		ctaSecondary: 'Install walkthrough',
+		ctaSecondaryHref: '/destiny-2-cheats-setup/',
 		sections: [
 			section(
 				'When to contact support',
 				'Reach out for order issues, license activation failures, ESP wallhack or Aimbot setup questions, and post-patch problems after BattlEye maintenance rebuilds.',
 				'Include your order ID, license tier (monthly or lifetime), Windows version, and a clear description of the issue.',
-				'Many answers already live in <a href="/faq/">FAQ</a>, <a href="/setup/">Setup</a>, and <a href="/status/">Updates</a> — check those first for faster resolution.',
+				'Many answers already live in the <a href="/faq/">answer library</a>, <a href="/destiny-2-cheats-setup/">Setup</a>, and <a href="/status/">Updates</a> — check those first for faster resolution.',
 			),
 			section(
 				'Response times and scope',
 				'Support requests are reviewed daily. Destiny 2 Cheats support covers delivery, billing, setup, and maintenance — not in-game coaching or account recovery for Bungie bans.',
 				`Account and game policy questions belong with Bungie. We can help with license delivery and product configuration only.`,
-				'Check the Updates page and FAQ before opening a ticket — many post-patch questions are answered there.',
+				'Check the <a href="/status/">Updates page</a> and the pre-purchase <a href="/faq/">question index</a> before opening a ticket — many post-patch questions are answered there.',
 			),
 			section(
 				'Self-service resources',
 				'Setup guide, Features list, Updates log, Refund Policy, and Terms of Use are linked from the footer. BattlEye bypass notes live on the dedicated <a href="/status/">BattlEye anti-cheat page</a>.',
 				'Email: support@destiny2cheats.org',
-				'Ready to purchase or renew? Open <a href="/pricing/">Pricing</a>. Need feature detail first? See <a href="/features/">Features</a>.',
+				'Ready to purchase or renew? Open <a href="/destiny-2-cheats-price/">Pricing</a>. Need feature detail first? See <a href="/features/">Features</a>.',
 			),
 		],
 	},
@@ -346,8 +358,8 @@ export const enPages = {
 			section(
 				'Responsible use and next steps',
 				'Combine maintenance with conservative in-game settings. Read the <a href="/faq/">FAQ</a> and Updates log regularly — maintenance is not a one-time promise.',
-				'Lifetime and monthly plans include rebuild access during active terms — see <a href="/pricing/">Pricing</a>.',
-				'New buyers should read the <a href="/d2-cheats/">product overview</a> and complete <a href="/setup/">Setup</a> after delivery.',
+				'Lifetime and monthly plans include rebuild access during active terms — see <a href="/destiny-2-cheats-price/">Pricing</a>.',
+				'New buyers should read the <a href="/d2-cheats/">product overview</a> and complete <a href="/destiny-2-cheats-setup/">Setup</a> after delivery.',
 			),
 		],
 	},
@@ -380,7 +392,7 @@ export const enPages = {
 				'Wallhack maintenance after patches',
 				'ESP wallhack modules rebuild after BattlEye anti-cheat patches. Follow the <a href="/status/">Updates page</a> and complete checkout for instant license delivery on Windows PC.',
 				'Follow <a href="/status/">Updates</a> for BattlEye maintenance notes.',
-				'Ready to buy? Compare <a href="/pricing/">Pricing</a> or continue to the <a href="/destiny-2-esp/">ESP hack</a> landing for alternate search wording.',
+				'Ready to buy? Compare <a href="/destiny-2-cheats-price/">Pricing</a> or continue to the <a href="/destiny-2-esp/">ESP hack</a> landing for alternate search wording.',
 			),
 		],
 	},
@@ -411,7 +423,7 @@ export const enPages = {
 			),
 			section(
 				'Maintenance and licensing',
-				'Radar hack modules receive BattlEye maintenance rebuilds with the full Destiny 2 Cheats package. Monthly and lifetime licenses include digital delivery — see <a href="/pricing/">Pricing</a>.',
+				'Radar hack modules receive BattlEye maintenance rebuilds with the full Destiny 2 Cheats package. Monthly and lifetime licenses include digital delivery — see <a href="/destiny-2-cheats-price/">Pricing</a>.',
 				'Check <a href="/status/">Updates</a> after major Destiny 2 patches before relying on previous radar configs.',
 				'New to the stack? Start at <a href="/features/">Features</a> or <a href="/status/">live status</a>.',
 			),
@@ -446,7 +458,7 @@ export const enPages = {
 				'No permanent bypass guarantee',
 				'BattlEye bypass in practice means timely maintenance. Read the maintenance guide, <a href="/faq/">FAQ</a>, and Updates log before every session.',
 				'Contact <a href="/support/">Support</a> if activation fails immediately after a posted rebuild.',
-				'Buying for the first time? Compare <a href="/pricing/">Pricing</a> and finish <a href="/setup/">Setup</a> only after Updates shows a live build.',
+				'Buying for the first time? Compare <a href="/destiny-2-cheats-price/">Pricing</a> and finish <a href="/destiny-2-cheats-setup/">Setup</a> only after Updates shows a live build.',
 			),
 		],
 	},
@@ -467,7 +479,7 @@ export const enPages = {
 				'Why Destiny 2 cheats buyers choose Destiny 2 Cheats in 2026',
 				'2026 seasons bring new maps, weapons, and BattlEye anti-cheat updates. Destiny 2 Cheats bundles ESP wallhack, radar hack, and Aimbot with active maintenance — not a stale prior-year build.',
 				`Track official season messaging on ${EXT['destiny-2']}, then use our <a href="/status/">Updates log</a> for product rebuild timing.`,
-				'Monthly ($35) and lifetime ($150) plans cover raids and PvE loops — see <a href="/pricing/">Pricing</a>.',
+				'Monthly ($35) and lifetime ($150) plans cover raids and PvE loops — see <a href="/destiny-2-cheats-price/">Pricing</a>.',
 			),
 			section(
 				'Full feature stack for 2026 buyers',
@@ -511,7 +523,7 @@ export const enPages = {
 			section(
 				'How to start',
 				'Buy a plan, get your license by email, then follow setup. Check status after every major patch.',
-				'Open <a href="/pricing/">Pricing</a>, follow <a href="/setup/">Setup</a>, and read <a href="/faq/">FAQ</a> if you need delivery or license help.',
+				'Open <a href="/destiny-2-cheats-price/">Pricing</a>, follow <a href="/destiny-2-cheats-setup/">Setup</a>, and read <a href="/faq/">FAQ</a> if you need delivery or license help.',
 				'No cheat stays safe forever — check status first, then play with conservative settings.',
 			),
 		],
@@ -527,18 +539,18 @@ export const enPages = {
 		galleryTitle: 'Destiny 2 cheat download visuals',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
 		ctaSecondary: 'Setup guide',
-		ctaSecondaryHref: '/setup/',
+		ctaSecondaryHref: '/destiny-2-cheats-setup/',
 		sections: [
 			section(
 				'How Destiny 2 cheat download delivery works',
 				'After checkout confirms payment, Destiny 2 Cheats license details arrive digitally by email. No physical shipment — access begins once activation instructions are delivered.',
-				'Keep your order confirmation and license email ready for the <a href="/setup/">Setup guide</a> and Support requests.',
+				'Keep your order confirmation and license email ready for the <a href="/destiny-2-cheats-setup/">Setup guide</a> and Support requests.',
 				`If Bungie services are down, check ${EXT.status} before assuming a download failure.`,
 			),
 			section(
 				'What your download unlocks',
 				'Every Destiny 2 cheat download includes player ESP wallhack, loot and container markers, 2D radar overlays, Aimbot profiles, and in-client toggles for raids and PvE.',
-				'Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href="/pricing/">Pricing page</a>.',
+				'Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href="/destiny-2-cheats-price/">Pricing page</a>.',
 				'Feature detail: <a href="/features/">Features</a>. Module pages: <a href="/destiny-2-esp/">ESP</a>, <a href="/destiny-2-aimbot/">Aimbot</a>.',
 			),
 			section(
@@ -577,8 +589,8 @@ export const enPages = {
 			section(
 				' mod menu after BattlEye patches',
 				'Destiny 2 mod menu behavior is rebuilt when BattlEye anti-cheat or major Destiny 2 updates land. Follow the <a href="/status/">Updates page</a> and <a href="/status/">BattlEye bypass guide</a> before queueing on patch days.',
-				'Checkout with instant digital delivery for monthly and lifetime licenses — see <a href="/pricing/">Pricing</a>.',
-				'Need install steps? Open <a href="/setup/">Setup</a> after your license email arrives.',
+				'Checkout with instant digital delivery for monthly and lifetime licenses — see <a href="/destiny-2-cheats-price/">Pricing</a>.',
+				'Need install steps? Open <a href="/destiny-2-cheats-setup/">Setup</a> after your license email arrives.',
 			),
 		],
 	},
@@ -610,8 +622,8 @@ export const enPages = {
 			section(
 				'Soft aim with BattlEye maintenance',
 				'Aimbot modules rebuild after BattlEye anti-cheat patches. Check the <a href="/status/">Updates page</a> before queueing — responsible settings and maintenance awareness matter for safe play.',
-				'Monthly and lifetime licenses checkout with digital delivery on Windows PC — <a href="/pricing/">Pricing</a>.',
-				'Activation help: <a href="/setup/">Setup</a> · status questions: <a href="/support/">Support</a>.',
+				'Monthly and lifetime licenses checkout with digital delivery on Windows PC — <a href="/destiny-2-cheats-price/">Pricing</a>.',
+				'Activation help: <a href="/destiny-2-cheats-setup/">Setup</a> · status questions: <a href="/support/">Support</a>.',
 			),
 		],
 	},
@@ -626,7 +638,7 @@ export const enPages = {
 		galleryTitle: 'Best Destiny 2 cheats gallery',
 		ctaPrimary: 'Buy Destiny 2 Cheats',
 		ctaSecondary: 'Compare pricing',
-		ctaSecondaryHref: '/pricing/',
+		ctaSecondaryHref: '/destiny-2-cheats-price/',
 		sections: [
 			section(
 				'What makes the Destiny 2 cheats in 2026',
@@ -637,7 +649,7 @@ export const enPages = {
 			section(
 				'Best Destiny 2 cheats feature checklist',
 				'Look for player ESP wallhack, loot markers, 2D radar overlays, Aimbot profiles, hotkey toggles, and documented maintenance after Destiny 2 patches.',
-				'Review <a href="/features/">Features</a>, <a href="/status/">live status</a>, and <a href="/pricing/">Pricing</a> before checkout.',
+				'Review <a href="/features/">Features</a>, <a href="/status/">live status</a>, and <a href="/destiny-2-cheats-price/">Pricing</a> before checkout.',
 				'Open the <a href="/destiny-2-esp/">ESP</a> and <a href="/destiny-2-aimbot/">Aimbot</a> guides for module details.',
 			),
 			section(
@@ -676,7 +688,7 @@ export const enPages = {
 			section(
 				'Aimbot maintenance after patches',
 				'Aimbot hack signatures rebuild after BattlEye anti-cheat updates. Follow the <a href="/status/">Updates page</a> and <a href="/status/">BattlEye bypass guide</a> before queueing after patch days.',
-				'Checkout with instant digital delivery for Windows 10 and 11 — <a href="/pricing/">Pricing</a>.',
+				'Checkout with instant digital delivery for Windows 10 and 11 — <a href="/destiny-2-cheats-price/">Pricing</a>.',
 				'Pair with <a href="/destiny-2-esp/">ESP</a> for the full information + assist loop.',
 			),
 		],
@@ -709,8 +721,8 @@ export const enPages = {
 			section(
 				'ESP with BattlEye maintenance',
 				'ESP hack modules rebuild after BattlEye anti-cheat and Destiny 2 patches. Check the <a href="/status/">Updates page</a> before queueing — pair ESP hack awareness with <a href="/d2-radar/">radar hack</a> for flank reads.',
-				'Licenses deliver digitally after checkout on Windows PC — see <a href="/pricing/">Pricing</a>.',
-				'Install steps: <a href="/setup/">Setup</a>. Status questions: <a href="/status/">live status</a>.',
+				'Licenses deliver digitally after checkout on Windows PC — see <a href="/destiny-2-cheats-price/">Pricing</a>.',
+				'Install steps: <a href="/destiny-2-cheats-setup/">Setup</a>. Status questions: <a href="/status/">live status</a>.',
 			),
 		],
 	},
@@ -741,7 +753,7 @@ export const enPages = {
 			),
 			section(
 				'Buying Destiny 2 Cheats for the right reasons',
-				'If you need ESP wallhack, radar hack, and Aimbot for Destiny 2 on Windows PC, compare <a href="/pricing/">Pricing</a> and read the <a href="/setup/">Setup guide</a> before checkout.',
+				'If you need ESP wallhack, radar hack, and Aimbot for Destiny 2 on Windows PC, compare <a href="/destiny-2-cheats-price/">Pricing</a> and read the <a href="/destiny-2-cheats-setup/">Setup guide</a> before checkout.',
 				'Check the <a href="/status/">Updates page</a> after BattlEye anti-cheat patches — maintenance rebuilds publish for active licenses.',
 				'Questions? <a href="/faq/">FAQ</a> and <a href="/support/">Support</a> cover delivery and configuration — not cosmetic unlocks.',
 			),
@@ -803,7 +815,7 @@ export const enPages = {
 			section(
 				'How to request a refund',
 				'Email support@destiny2cheats.org with subject "Refund Request", your order ID, purchase date, and issue summary — or use the <a href="/support/">Support page</a>.',
-				'Approved refunds process back to the original payment method when possible. Pricing details live on <a href="/pricing/">Pricing</a>.',
+				'Approved refunds process back to the original payment method when possible. Pricing details live on <a href="/destiny-2-cheats-price/">Pricing</a>.',
 			),
 		],
 	},
@@ -836,33 +848,123 @@ export const enPages = {
 			),
 		],
 	},
-	'affiliate-disclosure': {
-		title: 'Affiliate Disclosure | Destiny 2 Cheats',
+	'cheats-review': {
+		title: 'Destiny 2 Cheats Review: Features & Trade-Offs',
 		description:
-			'Affiliate disclosure for destiny2cheats.org. How commission links work when you buy Destiny 2 cheats licenses through checkout links on this site.',
-		h1: 'Affiliate Disclosure',
+			'Review Destiny 2 cheat features, requirements, pricing, and limitations before choosing software. Read the product assessment and comparison.',
+		h1: 'Destiny 2 Cheats Review: Features, Requirements, and Trade-Offs',
 		intro:
-			'Some links on destiny2cheats.org are affiliate links. If you buy through them, we may earn a commission at no extra cost to you.',
-		imageAlt: 'Destiny 2 Cheats affiliate disclosure page',
-		galleryTitle: 'Destiny 2 Cheats legal resources',
-		ctaPrimary: 'Email support',
-		ctaSecondary: 'Read privacy policy',
-		ctaSecondaryHref: '/privacy/',
+			'Editorial assessment of the merchant listing for U.S. buyers. Last checked October 15, 2026. Not customer testimonials or lab benchmarks.',
+		imageAlt: 'Destiny 2 cheat product review showing documented feature list',
+		galleryTitle: 'Product evaluation',
+		ctaPrimary: 'Compare plans',
+		ctaSecondary: 'Main listing',
+		ctaSecondaryHref: '/',
 		sections: [
 			section(
-				'What affiliate links are',
-				'Affiliate links track that you arrived from this website before checkout. If you complete a purchase, we may receive a commission from the seller.',
-				'This does not change the price you pay when the program terms state there is no extra cost to you.',
+				'What the Current Product Listing Offers',
+				'The checkout listing advertises bundled ESP, aimbot, radar, and maintenance notes for Windows PC.',
+				'Verify feature names on the merchant page before purchase — listings change after updates.',
 			),
 			section(
-				'Where they appear',
-				'Buy buttons, pricing cards, and store links that lead to checkout may be affiliate links. They are marked with sponsored link attributes for search engines.',
-				'Editorial pages such as setup guides, status notes, and forums do not become ads simply because they link to store pages when relevant.',
+				'Feature Overview: Aimbot, ESP, and Other Modules',
+				'Module pages: <a href="/destiny-2-aimbot/">aimbot</a> and <a href="/destiny-2-esp/">ESP</a>. Buyer comments live at <a href="/reviews/">reviews</a>.',
+				'We do not publish star ratings or invented test scores on this evaluation page.',
 			),
 			section(
-				'Questions',
-				'Email support@destiny2cheats.org if you have questions about how links on this site work.',
-				'See also <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms of Use</a>.',
+				'Setup Requirements and Compatibility Considerations',
+				'Windows 10/11 is expected. Virtualization add-ons such as <a href="/cloud-dma/">Cloud DMA</a> may be separate purchases.',
+				'Destiny 2 and BattlEye updates can break third-party tools without warning.',
+			),
+			section(
+				'Pricing, Access Durations, and Limitations',
+				'Monthly ($35) and lifetime ($150) verified October 15, 2026 on <a href="/destiny-2-cheats-price/">pricing</a>.',
+				'Using cheats may violate Bungie terms; penalties are possible.',
+			),
+			section(
+				'What to Check Before Making a Decision',
+				'Read refund terms, <a href="/status/">status</a>, and <a href="/destiny-2-cheats-setup/">setup</a> before checkout.',
+				'Confirm refund terms and support channels match your expectations.',
+			),
+		],
+	},
+	'cloud-dma': {
+		title: 'Cloud DMA Software: Features & Pricing',
+		description:
+			'Review Cloud DMA single-PC Hyper-V setup, lifetime pricing, requirements, and separate purchases. Check compatibility before buying.',
+		h1: 'Cloud DMA Software: Features, Setup, and Requirements',
+		intro:
+			'Cloud DMA is a separate merchant product: one PC, Hyper-V provisioning, and encrypted activation — not an external DMA box.',
+		imageAlt: 'Cloud DMA software setup screen showing virtualization requirements',
+		galleryTitle: 'Cloud DMA overview',
+		ctaPrimary: 'Buy Cloud DMA',
+		ctaSecondary: 'Destiny 2 pricing',
+		ctaSecondaryHref: '/destiny-2-cheats-price/',
+		sections: [
+			section(
+				'What the Listed Cloud DMA Product Provides',
+				'Infrastructure layer on a single gaming PC with Hyper-V and a service link.',
+				'Not a second tower, USB DMA bridge, or PCIe card.',
+			),
+			section(
+				'Single-PC Setup and Hyper-V Requirements',
+				'CPU virtualization enabled, Hyper-V role during setup, stable internet.',
+				'Windows Pro/Enterprise/Education recommended when Hyper-V is required.',
+			),
+			section(
+				'Included Services, Separate Purchases, and Access Duration',
+				'GREENWARD, Static Server (AWS), and related pieces are separate purchases per the listing.',
+				'Lifetime tier listed at $50 USD — confirm on checkout.',
+			),
+			section(
+				'Windows Compatibility and Hardware Requirements',
+				'Windows 10/11 64-bit, 8 GB RAM minimum (16 GB recommended).',
+				'Verify HVCI, TPM, and Secure Boot notes on the live product page.',
+			),
+			section(
+				'Pricing and Questions to Check Before Buying',
+				'Compare <a href="/destiny-2-cheats-price/">Destiny 2 cheat plans</a> for the game package.',
+				'No product guarantees play or ban protection.',
+			),
+		],
+	},
+	'hwid-spoofer': {
+		title: 'HWID Spoofer: Features & Pricing',
+		description:
+			'Review HWID spoofer features, anti-cheat coverage summary, pricing, and Windows requirements before checkout.',
+		h1: 'HWID Spoofer: Features, Requirements, and Pricing',
+		intro:
+			'Separate affiliate product for hardware-ID reset workflows documented by the merchant — not part of the Destiny 2 cheat license.',
+		imageAlt: 'HWID spoofer product page showing requirements and plans',
+		galleryTitle: 'HWID Spoofer',
+		ctaPrimary: 'Buy HWID Spoofer',
+		ctaSecondary: 'Destiny 2 pricing',
+		ctaSecondaryHref: '/destiny-2-cheats-price/',
+		sections: [
+			section(
+				'What the Listed HWID Spoofer Provides',
+				'Hardware spoofer with cleaner for documented ID changes after HWID bans.',
+				'Follow the merchant guide — violating game terms can lead to penalties.',
+			),
+			section(
+				'Supported Anti-Cheat Families',
+				'Listing groups Vanguard, Easy Anti-Cheat, BattlEye, Ricochet, and other families.',
+				'See the live product page for the full title list.',
+			),
+			section(
+				'Pricing and Access Durations',
+				'Monthly ($50 / 31 days) and lifetime ($150) per October 15, 2026 listing review.',
+				'Confirm totals and renewal terms at checkout.',
+			),
+			section(
+				'System Requirements',
+				'Windows 10/11 64-bit, administrator rights, stable internet.',
+				'Verify HVCI, core isolation, TPM, and Secure Boot on the merchant page.',
+			),
+			section(
+				'Related Products',
+				'Destiny 2 cheats checkout is separate — <a href="/destiny-2-cheats-price/">compare plans</a>.',
+				'<a href="/cloud-dma/">Cloud DMA</a> is a different infrastructure product.',
 			),
 		],
 	},

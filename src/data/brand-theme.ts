@@ -325,6 +325,27 @@ export function brandThemeCssMap(theme: BrandThemeResolved = brandTheme): Record
 	};
 }
 
+/** Minimal tokens for first paint — keep <head> small (Lighthouse LCP). */
+export function brandThemeHeadCritical(theme: BrandThemeResolved = brandTheme): string {
+	const map = brandThemeCssMap(theme);
+	const keys = [
+		'--bg',
+		'--bg-panel',
+		'--bg-elevated',
+		'--line',
+		'--line-soft',
+		'--ink',
+		'--ink-muted',
+		'--ink-faint',
+		'--magenta',
+		'--magenta-soft',
+		'--accent',
+		'--accent-hover',
+	] as const;
+	const body = keys.map((k) => `${k}:${map[k]}`).join(';');
+	return `:root,html{${body}}`;
+}
+
 /** Late <style> block — beats Tailwind @theme :root emission reliably. */
 export function brandThemeRootCss(theme: BrandThemeResolved = brandTheme): string {
 	const body = Object.entries(brandThemeCssMap(theme))

@@ -1,49 +1,49 @@
 import { siteConfig } from './site';
-import { destinyImages } from './destiny';
 import { pageIds, type PageId } from './i18n/routing';
 import { pageSitemapImageLabels } from './brand-sitemap';
 
-/** Rotating product screenshots for FAQ / review detail URLs. */
+/** Rotating product screenshots for FAQ answers, reviews, etc. — diverse families. */
 export const crawlPhotoPool = [
-	destinyImages.espWallhack,
-	destinyImages.aimbotCombat,
-	destinyImages.aimbotSkeleton,
-	destinyImages.playerEsp,
-	destinyImages.cheatsCombat,
-	'/images/destiny-2-cheats-esp.webp',
+	'/images/destiny-2-cheats-radar.webp',
+	'/images/destiny-2-cheats-raid.webp',
+	'/images/destiny-2-esp-player-tags.webp',
+	'/images/destiny-2-cheats-combat.webp',
+	'/images/destiny-2-aimbot-sniper.webp',
+	'/images/destiny-2-cheats-hero.webp',
 ] as const;
 
 /**
- * One primary crawl/OG photo per product page.
- * Prefer compressed WebP screenshots so Google can fetch them quickly.
+ * One primary hero / banner image per product page (unique across money pages where possible).
  */
 export const pageImageSrcById: Record<PageId, string> = {
 	home: '/images/destiny-2-hero-poster.webp',
 	'destiny-2-esp': '/images/destiny-2-cheats-esp-crucible.webp',
-	'destiny-2-aimbot': '/images/destiny-2-cheats-crucible.webp',
-	features: '/images/destiny-2-cheats-aimbot-esp.webp',
-	pricing: '/images/destiny-2-cheats-pve.webp',
+	'destiny-2-aimbot': '/images/destiny-2-cheats-aimbot.webp',
+	features: '/images/destiny-2-cheats-aimbot-view.webp',
+	pricing: '/images/destiny-2-cheats-raid.webp',
 	setup: '/images/destiny-2-cheats-wallhack-skeleton.webp',
-	updates: '/images/destiny-2-cheats-crucible.webp',
-	faq: '/images/destiny-2-cheats-esp-crucible.webp',
-	support: '/images/destiny-2-cheats-pve.webp',
-	undetected: '/images/destiny-2-cheats-wallhack-skeleton.webp',
-	wallhack: '/images/destiny-2-cheats-wallhack-skeleton.webp',
+	updates: '/images/destiny-2-cheats-aimbot-esp.webp',
+	faq: '/images/destiny-2-esp-player-tags.webp',
+	support: '/images/destiny-2-hero-banner.webp',
+	undetected: '/images/destiny-2-cheats-wallhack.webp',
+	wallhack: '/images/destiny-2-wallhack-skeleton.webp',
 	radar: '/images/destiny-2-cheats-radar.webp',
-	anticheat: '/images/destiny-2-cheats-crucible.webp',
-	'cheats-2026': '/images/destiny-2-hero-poster.webp',
+	anticheat: '/images/destiny-2-cheats-combat.webp',
+	'cheats-2026': '/images/destiny-2-hero-ghost.webp',
 	hacks: '/images/destiny-2-cheats-pve.webp',
-	'cheat-download': '/images/destiny-2-cheats-aimbot-esp.webp',
+	'cheat-download': '/images/destiny-2-cheats-hero.webp',
 	'crucible-cheats': '/images/destiny-2-cheats-crucible.webp',
-	'aim-assist': '/images/destiny-2-cheats-aimbot-esp.webp',
-	'best-cheats': '/images/destiny-2-hero-poster.webp',
-	'aimbot-hack': '/images/destiny-2-cheats-crucible.webp',
-	'esp-hack': '/images/destiny-2-cheats-esp-crucible.webp',
-	'pve-cheats': '/images/destiny-2-cheats-pve.webp',
-	privacy: '/images/destiny-2-cheats-crucible.webp',
-	refund: '/images/destiny-2-cheats-pve.webp',
-	terms: '/images/destiny-2-cheats-aimbot-esp.webp',
-	'affiliate-disclosure': '/images/destiny-2-cheats-raid.webp',
+	'aim-assist': '/images/destiny-2-aimbot-sniper.webp',
+	'best-cheats': '/images/reviews-banner.webp',
+	'aimbot-hack': '/images/destiny-2-aimbot-skeleton.webp',
+	'esp-hack': '/images/destiny-2-esp-radar.webp',
+	'pve-cheats': '/images/destiny-2-cheats-aimbot-esp.webp',
+	privacy: '/images/hero-banner.webp',
+	refund: '/images/destiny-2-cheats-crucible.webp',
+	terms: '/images/destiny-2-cheats-pve.webp',
+	'cheats-review': '/images/destiny-2-cheats-esp.webp',
+	'cloud-dma': '/images/destiny-2-aimbot-skeleton.webp',
+	'hwid-spoofer': '/images/hero-banner.webp',
 };
 
 for (const pageId of pageIds) {

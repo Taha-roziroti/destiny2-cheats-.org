@@ -49,7 +49,7 @@ export const nativeGuides: NativeGuide[] = [
 		slug: 'setup',
 		title: 'Destiny 2 Cheats Setup',
 		description: 'Installation, configuration, and first-launch checklist for Windows PC.',
-		href: '/setup/',
+		href: '/destiny-2-cheats-setup/',
 		image: destinyImages.squadFight,
 	},
 	{

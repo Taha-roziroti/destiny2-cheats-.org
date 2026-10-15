@@ -11,6 +11,10 @@ export default defineConfig({
 	site: 'https://destiny2cheats.org',
 	trailingSlash: 'always',
 	compressHTML: true,
+	prefetch: {
+		prefetchAll: false,
+		defaultStrategy: 'viewport',
+	},
 	devToolbar: { enabled: false },
 	server: {
 		// Bind IPv4 + IPv6 so localhost/port-forwarding works (not ::1-only).
@@ -22,7 +26,8 @@ export default defineConfig({
 		// 'auto' keeps small styles inline but emits the large Tailwind bundle as a
 		// cached external file — 'always' inflated HTML to ~160KB and tanked the
 		// text/HTML ratio that SEO checkers score.
-		inlineStylesheets: 'auto',
+		// Inline component CSS to cut render-blocking requests (Lighthouse perf).
+		inlineStylesheets: 'always',
 		format: 'directory',
 	},
 	vite: {
@@ -38,7 +43,14 @@ export default defineConfig({
 			target: 'es2022',
 			rollupOptions: {
 				output: {
-					manualChunks: undefined,
+					manualChunks(id) {
+						if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) {
+							return 'react';
+						}
+						if (id.includes('node_modules/i18next') || id.includes('node_modules/react-i18next')) {
+							return 'i18n';
+						}
+					},
 				},
 			},
 		},

@@ -1,10 +1,17 @@
 User-agent: *
 Allow: /
 Allow: /images/
+Allow: /sitemap.xml
+Allow: /videos/
+Allow: /llms.txt
+Allow: /security.txt
+Allow: /.well-known/security.txt
 Disallow: /brand-studio/
 Disallow: /brand-studio
 Disallow: /__brand/
 Disallow: /__brand
 
-# Primary sitemap for Google Search Console — index covers EN, locale, and image sitemaps.
+User-agent: Googlebot
+Allow: /
+
 Sitemap: https://destiny2cheats.org/sitemap.xml

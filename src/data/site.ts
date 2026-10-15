@@ -1,5 +1,13 @@
 export { brand, blogLabel, fillBrandTokens, homeSeo, seoDescription, seoPageTitle, seoTitle, siteConfig, seoKeywords, productInfo,
-} from './site-core'; import { fillBrandTokens } from './brand';
+} from './site-core';
+export {
+	SITE_URL,
+	SITE_HOST,
+	SITE_PURPOSE,
+	SITE_ABOUT,
+	SEO_ROUTE_INTENTS,
+	ROBOTS_INDEX,
+} from './seo-booster'; import { fillBrandTokens } from './brand';
 import { englishPaths } from './i18n/routing';
 import { sitePaths as p } from './site-paths';
 import { reviewsBasePath } from './reviews'; function faq<T extends { question: string; answer: string; seoTitle: string; seoDescription: string }>(item: T): T { return { ...item, question: fillBrandTokens(item.question), answer: fillBrandTokens(item.answer), seoTitle: fillBrandTokens(item.seoTitle), seoDescription: fillBrandTokens(item.seoDescription), };

@@ -6,7 +6,8 @@ import { getAllForumThreads, forumsBasePath, absoluteForumUrl } from '../data/fo
 import { siteConfig } from '../data/site';
 import { brandSeo, seoPageTitle } from '../data/site-core';
 import { seoDescription } from '../data/brand';
-import { getLocalizedPath } from '../data/i18n/routing';
+import { BOOSTER_OG_ASSETS } from '../data/seo-external';
+import { getLocalizedPath, getSelfHreflangAlternates } from '../data/i18n/routing';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { getT } from '../i18n/server';
 
@@ -23,12 +24,15 @@ const t = getT(locale);
 
 const pageTitle = seoPageTitle(brandSeo.forumsTitle);
 const pageDescription = seoDescription(brandSeo.forumsDescription);
+const hreflangAlternates = getSelfHreflangAlternates(canonicalPath);
 ---
 
 <Layout
 	title={pageTitle}
 	description={pageDescription}
 	canonicalPath={canonicalPath}
+	ogImage={BOOSTER_OG_ASSETS.forums}
+	hreflangAlternates={hreflangAlternates}
 	locale={locale}
 	breadcrumbs={[{ label: t('nav.home'), href: homeHref }, { label: t('nav.forums') }]}
 	extraGraph={[
@@ -60,8 +64,12 @@ const pageDescription = seoDescription(brandSeo.forumsDescription);
 							<a href={`${forumsBasePath}${thread.slug}/`}>{thread.title}</a>
 						</h2>
 						<p>{thread.intro}</p>
-						<a class="forum-card__link" href={`${forumsBasePath}${thread.slug}/`}>
-							{t('blog.readMore')} →
+						<a
+							class="forum-card__link"
+							href={`${forumsBasePath}${thread.slug}/`}
+							aria-label={`${t('blog.readMore')}: ${thread.title}`}
+						>
+							{thread.title} — {t('blog.readMore')} →
 						</a>
 					</article>
 				))

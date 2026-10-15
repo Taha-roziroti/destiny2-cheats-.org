@@ -38,6 +38,12 @@ const PATH_REDIRECTS = {
 	'/destiny-2-esp': '/destiny-2-esp/',
 	'/destiny-2-aimbot': '/destiny-2-aimbot/',
 	'/d2-cheats': '/d2-cheats/',
+	'/affiliate-disclosure': '/terms/',
+	'/affiliate-disclosure/': '/terms/',
+	'/pricing': '/destiny-2-cheats-price/',
+	'/pricing/': '/destiny-2-cheats-price/',
+	'/setup': '/destiny-2-cheats-setup/',
+	'/setup/': '/destiny-2-cheats-setup/',
 	// EN cannibal stub pages → pillars (keep in sync with scripts/sync-en-redirects.mjs)
 	'/d2-cheats-2026': '/d2-cheats/',
 	'/d2-cheats-2026/': '/d2-cheats/',
@@ -243,9 +249,31 @@ export async function onRequest(context) {
 
 	applySecurityHeaders(headers, { html: isHtml });
 
+	const cache = cacheControlForPath(url.pathname);
+	if (cache && !headers.has('Cache-Control')) {
+		headers.set('Cache-Control', cache);
+	}
+
 	return new Response(response.body, {
 		status: response.status,
 		statusText: response.statusText,
 		headers,
 	});
+}
+
+function cacheControlForPath(pathname) {
+	if (pathname.startsWith('/_astro/')) return 'public, max-age=31536000, immutable';
+	if (pathname.startsWith('/fonts/')) return 'public, max-age=31536000, immutable';
+	if (pathname.startsWith('/images/')) return 'public, max-age=31536000, immutable';
+	if (pathname.startsWith('/og/')) return 'public, max-age=31536000, immutable';
+	if (pathname.startsWith('/videos/')) return 'public, max-age=3600';
+	if (pathname.endsWith('.webmanifest') || pathname.endsWith('/site.webmanifest')) {
+		return 'public, max-age=3600';
+	}
+	if (pathname.endsWith('.ico') || /\/favicon[^/]*\.(png|ico)$/.test(pathname)) {
+		return 'public, max-age=31536000, immutable';
+	}
+	if (pathname.endsWith('.xml') && pathname.includes('sitemap')) return 'public, max-age=3600';
+	if (pathname.endsWith('.html') || pathname.endsWith('/')) return 'public, max-age=0, must-revalidate';
+	return null;
 }

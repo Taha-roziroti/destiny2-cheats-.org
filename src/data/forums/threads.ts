@@ -73,7 +73,7 @@ export const forumThreads: ForumThread[] = [
 			{
 				h2: 'Install order that actually works',
 				paragraphs: [
-					'Follow the <a href="/setup/">setup guide</a> in order: loader, overlay, then feature toggles. Skipping the BattlEye note on patch weeks is how people blame the wrong thing.',
+					'Follow the <a href="/destiny-2-cheats-setup/">setup guide</a> in order: loader, overlay, then feature toggles. Skipping the BattlEye note on patch weeks is how people blame the wrong thing.',
 					'Bind hotkeys for ESP, radar, and aimbot separately so you can drop features mid-match without alt-tabbing.',
 				],
 			},
@@ -81,7 +81,7 @@ export const forumThreads: ForumThread[] = [
 				h2: 'First Crucible checklist',
 				paragraphs: [
 					'Run one Control match with ESP + radar only. Add aimbot next match at low FOV. Save aggressive configs for when you understand the lobby pace.',
-					'Compare plans on <a href="/pricing/">pricing</a> if you need lifetime versus monthly.',
+					'Compare plans on <a href="/destiny-2-cheats-price/">pricing</a> if you need lifetime versus monthly.',
 				],
 			},
 		],
@@ -222,7 +222,7 @@ export const forumThreads: ForumThread[] = [
 				h2: 'When monthly wins',
 				paragraphs: [
 					'Try the build for a month before you commit. Good if you only push Trials a few weekends.',
-					'Instant delivery after checkout — see <a href="/pricing/">store</a> for current pricing.',
+					'Instant delivery after checkout — see <a href="/destiny-2-cheats-price/">store</a> for current pricing.',
 				],
 			},
 			{
@@ -307,7 +307,7 @@ export const forumThreads: ForumThread[] = [
 				h2: '2D radar placement',
 				paragraphs: [
 					'Keep the radar near your minimap muscle memory. Color by threat, not by team theme.',
-					'Stack with <a href="/destiny-2-esp/">ESP</a> when you rotate — radar says who, ESP says where to pre-aim.',
+					'Stack with <a href="/destiny-2-esp/">ESP overlays</a> when you rotate — radar says who, ESP says where to pre-aim.',
 				],
 			},
 		],

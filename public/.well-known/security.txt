@@ -1,0 +1,4 @@
+Contact: mailto:support@destiny2cheats.org
+Preferred-Languages: en
+Canonical: https://destiny2cheats.org/.well-known/security.txt
+Policy: https://destiny2cheats.org/privacy/

@@ -249,15 +249,15 @@ function productPage(locale, pageKey, topicName, cta2href) {
 			stripZadeyoFromMeta(`${topicName}: ${meta.focus}. ${p.delivery}. ${p.maintenance} — ${p.win}.`),
 		),
 		h1: topicName,
-		intro: p.s1(`${topicName}.`),
+		intro: p.s1(`${meta.focus}.`),
 		imageAlt: PAGE_IMAGE_ALTS[pageKey] || `${topicName} — Destiny 2 Cheats screenshot`,
-		galleryTitle: topicName,
+		galleryTitle: `${topicName} — ${suffix}`,
 		heroImage: HERO_IMAGES[pageKey],
 		ctaPrimary: p.buy,
 		ctaSecondary: home.cta2,
 		ctaSecondaryHref: cta2href,
 		sections: [
-			section(topicName, p.s1(`${meta.focus}.`), p.s2()),
+			section(suffix, p.s1(`${meta.focus}.`), p.s2()),
 			section(`${p.maintenance}`, p.s3(), p.s2()),
 			section(p.delivery, p.s2(), p.legal()),
 		],
@@ -286,30 +286,36 @@ const TOPIC_NAMES = {
 	'aimbot-hack': { en: 'Destiny 2 Aimbot Hack', es: 'Hack aimbot Destiny 2', fr: 'Hack aimbot Destiny 2', de: 'Destiny 2 Aimbot Hack', pt: 'Hack aimbot Destiny 2', it: 'Hack aimbot Destiny 2', nl: 'Destiny 2 Aimbot Hack', pl: 'Hack aimbot Destiny 2', ru: 'Хак aimbot Destiny 2', tr: 'Destiny 2 Aimbot Hilesi', ar: 'هاك Aimbot Destiny 2', ja: 'Destiny 2 Aimbot Hack', ko: 'Destiny 2 에임봇 핵', zh: 'Destiny 2自瞄外挂', hi: 'Destiny 2 Aimbot Hack', id: 'Hack aimbot Destiny 2', th: 'Hack Aimbot Destiny 2', vi: 'Hack aimbot Destiny 2', uk: 'Хак aimbot Destiny 2', cs: 'Destiny 2 aimbot hack', ro: 'Hack aimbot Destiny 2', sv: 'Destiny 2 Aimbot Hack' },
 	'esp-hack': { en: 'Destiny 2 ESP Hack', es: 'Hack ESP Destiny 2', fr: 'Hack ESP Destiny 2', de: 'Destiny 2 ESP Hack', pt: 'Hack ESP Destiny 2', it: 'Hack ESP Destiny 2', nl: 'Destiny 2 ESP Hack', pl: 'Hack ESP Destiny 2', ru: 'Хак ESP Destiny 2', tr: 'Destiny 2 ESP Hilesi', ar: 'هاك ESP Destiny 2', ja: 'Destiny 2 ESP Hack', ko: 'Destiny 2 ESP 핵', zh: 'Destiny 2 ESP外挂', hi: 'Destiny 2 ESP Hack', id: 'Hack ESP Destiny 2', th: 'Hack ESP Destiny 2', vi: 'Hack ESP Destiny 2', uk: 'Хак ESP Destiny 2', cs: 'Destiny 2 ESP hack', ro: 'Hack ESP Destiny 2', sv: 'Destiny 2 ESP Hack' },
 	'pve-cheats': { en: 'Destiny 2 Unlock All', es: 'Unlock all Destiny 2', fr: 'Unlock all Destiny 2', de: 'Destiny 2 Unlock All', pt: 'Unlock all Destiny 2', it: 'Unlock all Destiny 2', nl: 'Destiny 2 Unlock All', pl: 'Unlock all Destiny 2', ru: 'Unlock all Destiny 2', tr: 'Destiny 2 Unlock All', ar: 'Unlock all Destiny 2', ja: 'Destiny 2 Unlock All', ko: 'Destiny 2 Unlock All', zh: 'Destiny 2 Unlock All', hi: 'Destiny 2 Unlock All', id: 'Unlock all Destiny 2', th: 'Destiny 2 Unlock All', vi: 'Unlock all Destiny 2', uk: 'Unlock all Destiny 2', cs: 'Destiny 2 Unlock All', ro: 'Unlock all Destiny 2', sv: 'Destiny 2 Unlock All' },
+	'cheats-review': { en: 'Destiny 2 Cheats Review', es: 'Reseña Destiny 2 Cheats', fr: 'Avis Destiny 2 Cheats', de: 'Destiny 2 Cheats Review', pt: 'Avaliação Destiny 2 Cheats', it: 'Recensione Destiny 2 Cheats', nl: 'Destiny 2 Cheats Review', pl: 'Recenzja Destiny 2 Cheats', ru: 'Обзор Destiny 2 Cheats', tr: 'Destiny 2 Cheats İnceleme', ar: 'مراجعة Destiny 2 Cheats', ja: 'Destiny 2 Cheats Review', ko: 'Destiny 2 Cheats Review', zh: 'Destiny 2 Cheats Review', hi: 'Destiny 2 Cheats Review', id: 'Ulasan Destiny 2 Cheats', th: 'Destiny 2 Cheats Review', vi: 'Đánh giá Destiny 2 Cheats', uk: 'Огляд Destiny 2 Cheats', cs: 'Destiny 2 Cheats Review', ro: 'Recenzie Destiny 2 Cheats', sv: 'Destiny 2 Cheats Review' },
+	'cloud-dma': { en: 'Cloud DMA', es: 'Cloud DMA', fr: 'Cloud DMA', de: 'Cloud DMA', pt: 'Cloud DMA', it: 'Cloud DMA', nl: 'Cloud DMA', pl: 'Cloud DMA', ru: 'Cloud DMA', tr: 'Cloud DMA', ar: 'Cloud DMA', ja: 'Cloud DMA', ko: 'Cloud DMA', zh: 'Cloud DMA', hi: 'Cloud DMA', id: 'Cloud DMA', th: 'Cloud DMA', vi: 'Cloud DMA', uk: 'Cloud DMA', cs: 'Cloud DMA', ro: 'Cloud DMA', sv: 'Cloud DMA' },
+	'hwid-spoofer': { en: 'HWID Spoofer', es: 'HWID Spoofer', fr: 'HWID Spoofer', de: 'HWID Spoofer', pt: 'HWID Spoofer', it: 'HWID Spoofer', nl: 'HWID Spoofer', pl: 'HWID Spoofer', ru: 'HWID Spoofer', tr: 'HWID Spoofer', ar: 'HWID Spoofer', ja: 'HWID Spoofer', ko: 'HWID Spoofer', zh: 'HWID Spoofer', hi: 'HWID Spoofer', id: 'HWID Spoofer', th: 'HWID Spoofer', vi: 'HWID Spoofer', uk: 'HWID Spoofer', cs: 'HWID Spoofer', ro: 'HWID Spoofer', sv: 'HWID Spoofer' },
 };
 
 const CTA2_HREF = {
 	'destiny-2-esp': '/d2-cheats/',
 	'destiny-2-aimbot': '/destiny-2-esp/',
-	features: '/pricing/',
-	pricing: '/setup/',
+	features: '/destiny-2-cheats-price/',
+	pricing: '/destiny-2-cheats-setup/',
 	setup: '/support/',
 	updates: '/d2-cheats/',
 	faq: '/support/',
-	support: '/setup/',
+	support: '/destiny-2-cheats-setup/',
 	undetected: '/d2-cheats/',
 	wallhack: '/destiny-2-esp/',
 	radar: '/destiny-2-esp/',
 	anticheat: '/status/',
 	'cheats-2026': '/d2-cheats/',
 	hacks: '/features/',
-	'cheat-download': '/setup/',
+	'cheat-download': '/destiny-2-cheats-setup/',
 	'crucible-cheats': '/features/',
 	'aim-assist': '/destiny-2-aimbot/',
-	'best-cheats': '/pricing/',
+	'best-cheats': '/destiny-2-cheats-price/',
 	'aimbot-hack': '/destiny-2-aimbot/',
 	'esp-hack': '/destiny-2-esp/',
 	'pve-cheats': '/features/',
+	'cheats-review': '/destiny-2-cheats-price/',
+	'cloud-dma': '/destiny-2-cheats-price/',
+	'hwid-spoofer': '/destiny-2-cheats-price/',
 };
 
 function buildLegal(locale, pageKey, kind) {
@@ -318,17 +324,10 @@ function buildLegal(locale, pageKey, kind) {
 		privacy: { es: 'Política de privacidad', fr: 'Politique de confidentialité', de: 'Datenschutz', pt: 'Política de privacidade', it: 'Informativa privacy', nl: 'Privacybeleid', pl: 'Polityka prywatności', ru: 'Политика конфиденциальности', tr: 'Gizlilik politikası', ar: 'سياسة الخصوصية', ja: 'プライバシーポリシー', ko: '개인정보 처리방침', zh: '隐私政策', hi: 'गोपनीयता नीति', id: 'Kebijakan privasi', th: 'นโยบายความเป็นส่วนตัว', vi: 'Chính sách bảo mật', uk: 'Політика конфіденційності', cs: 'Zásady ochrany soukromí', ro: 'Politica de confidențialitate', sv: 'Integritetspolicy' },
 		refund: { es: 'Política de reembolso', fr: 'Politique de remboursement', de: 'Rückerstattung', pt: 'Política de reembolso', it: 'Politica di rimborso', nl: 'Restitutiebeleid', pl: 'Polityka zwrotów', ru: 'Политика возврата', tr: 'İade politikası', ar: 'سياسة الاسترداد', ja: '返金ポリシー', ko: '환불 정책', zh: '退款政策', hi: 'रिफंड नीति', id: 'Kebijakan refund', th: 'นโยบายการคืนเงิน', vi: 'Chính sách hoàn tiền', uk: 'Політика повернення', cs: 'Zásady vrácení peněz', ro: 'Politica de rambursare', sv: 'Återbetalningspolicy' },
 		terms: { es: 'Términos de uso', fr: 'Conditions d\'utilisation', de: 'Nutzungsbedingungen', pt: 'Termos de uso', it: 'Termini di utilizzo', nl: 'Gebruiksvoorwaarden', pl: 'Warunki użytkowania', ru: 'Условия использования', tr: 'Kullanım şartları', ar: 'شروط الاستخدام', ja: '利用規約', ko: '이용 약관', zh: '使用条款', hi: 'उपयोग की शर्तें', id: 'Syarat penggunaan', th: 'ข้อกำหนดการใช้งาน', vi: 'Điều khoản sử dụng', uk: 'Умови використання', cs: 'Podmínky použití', ro: 'Termeni de utilizare', sv: 'Användarvillkor' },
-		'affiliate-disclosure': { es: 'Divulgación de afiliados', fr: 'Divulgation d’affiliation', de: 'Affiliate-Hinweis', pt: 'Divulgação de afiliados', it: 'Informativa affiliati', nl: 'Affiliate-disclaimer', pl: 'Informacja partnerska', ru: 'Раскрытие партнёрских ссылок', tr: 'Satış ortaklığı açıklaması', ar: 'إفصاح الروابط التابعة', ja: 'アフィリエイト開示', ko: '제휴 고지', zh: '联盟披露', hi: 'सहबद्ध प्रकटीकरण', id: 'Pengungkapan afiliasi', th: 'การเปิดเผยพันธมิตร', vi: 'Công bố liên kết tiếp thị', uk: 'Розкриття партнерських посилань', cs: 'Affiliate prohlášení', ro: 'Dezvăluire afiliere', sv: 'Affiliate-information' },
 	};
 	const h1 =
 		titles[kind]?.[locale] ??
-		(kind === 'privacy'
-			? 'Privacy Policy'
-			: kind === 'refund'
-				? 'Refund Policy'
-				: kind === 'affiliate-disclosure'
-					? 'Affiliate Disclosure'
-					: 'Terms of Use');
+		(kind === 'privacy' ? 'Privacy Policy' : kind === 'refund' ? 'Refund Policy' : 'Terms of Use');
 	return {
 		title: clampTitle(stripZadeyoFromMeta(`${h1} | Destiny 2 Cheats`)),
 		description: clampDesc(stripZadeyoFromMeta(`${h1} for Destiny 2 Cheats — ESP wallhack, Aimbot, ${p.win}.`)),
@@ -372,7 +371,7 @@ export function buildPagesForLocale(locale) {
 	for (const [pageKey, names] of Object.entries(TOPIC_NAMES)) {
 		pages[pageKey] = productPage(locale, pageKey, names[locale], CTA2_HREF[pageKey]);
 	}
-	for (const kind of ['privacy', 'refund', 'terms', 'affiliate-disclosure']) {
+	for (const kind of ['privacy', 'refund', 'terms']) {
 		pages[kind] = buildLegal(locale, kind, kind);
 	}
 	return pages;

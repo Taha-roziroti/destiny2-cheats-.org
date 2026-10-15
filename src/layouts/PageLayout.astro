@@ -9,8 +9,6 @@ import {
 	heroPreloadSrc,
 	heroSizes,
 	heroSrcSet,
-	heroWidth,
-	heroHeight,
 	contentSrcSet,
 	galleryTileSizes,
 } from '../lib/responsive-images';
@@ -18,6 +16,8 @@ import { defaultLocale } from '../data/i18n/locales';
 import { siteConfig } from '../data/site';
 import { getT } from '../i18n/server';
 import { linkRelForHref } from '../data/affiliate';
+import HeroLcpPicture from '../components/HeroLcpPicture.astro';
+import { socialPreviewImageForPage } from '../data/seo-external';
 
 type GalleryInput = string | { src: string; alt: string };
 
@@ -63,20 +63,23 @@ const {
 	extraGraph = [],
 } = Astro.props;
 
-const heroVideo = siteConfig.heroVideo?.trim() || '';
 
 const t = getT(locale);
 const resolvedHeroAlt =
 	(heroAlt && heroAlt.trim()) ||
 	t('images.hero') ||
 	`${siteConfig.name} — Destiny 2 ESP and aimbot`;
-const resolvedGalleryTitle = galleryTitle ?? t('common.inGameLook');
+const resolvedGalleryTitle =
+	galleryTitle && galleryTitle.trim().toLowerCase() !== heading.trim().toLowerCase()
+		? galleryTitle
+		: t('common.inGameLook');
 
 function resolvePageId(path: string): PageId | undefined {
 	return resolvePageContextFromPath(path).pageId;
 }
 
 const pageId = pageIdProp ?? resolvePageId(canonicalPath);
+const socialOgImage = socialPreviewImageForPage(pageId, heroImage);
 const ui = getUi(locale);
 const homeHref = getLocalizedPath('home', locale);
 const resolvedEyebrow = eyebrow ?? ui.product.title;
@@ -104,54 +107,25 @@ const breadcrumbs = [
 	title={title}
 	description={description}
 	canonicalPath={canonicalPath}
-	ogImage={heroImage}
+	ogImage={socialOgImage}
 	ogImageAlt={resolvedHeroAlt}
 	breadcrumbs={breadcrumbs}
 	locale={locale}
 	pageId={pageId}
 	extraGraph={extraGraph}
-	lcpImage={showBanner && !heroVideo ? heroPreloadSrc : undefined}
-	lcpImageSrcSet={showBanner && !heroVideo ? heroSrcSet : undefined}
-	lcpImageSizes={showBanner && !heroVideo ? heroSizes : undefined}
-	lcpVideo={showBanner && heroVideo ? heroVideo : undefined}
+	lcpImage={showBanner ? heroPreloadSrc : undefined}
+	lcpImageSrcSet={showBanner ? heroSrcSet : undefined}
+	lcpImageSizes={showBanner ? heroSizes : undefined}
 >
-	<Navbar locale={locale} pageId={pageId} />
-	<main id="main-content" class="page">
-		{
-			showBanner ? (
-				<section class="banner">
-					<div class="banner__media">
-						{heroVideo ? (
-							<video
-								class="banner__img banner__video"
-								src={heroVideo}
-								autoplay
-								muted
-								loop
-								playsinline
-								preload="auto"
-								width={heroWidth}
-								height={heroHeight}
-								aria-hidden="true"
-							/>
-						) : (
-							<img
-								src={heroPreloadSrc}
-								srcset={heroSrcSet}
-								sizes={heroSizes}
-								alt={resolvedHeroAlt}
-								width={heroWidth}
-								height={heroHeight}
-								class="banner__img"
-								fetchpriority="high"
-								loading="eager"
-								decoding="async"
-							/>
-						)}
-						<div class="banner__scrim" aria-hidden="true" />
+	{
+		showBanner && (
+			<section class="hero hero--page" aria-label={heading}>
+					<div class="hero__media">
+						<HeroLcpPicture class="hero__poster" decorative={false} alt={resolvedHeroAlt} />
 					</div>
+					<div class="hero__veil" aria-hidden="true"></div>
 
-					<div class="shell banner__shell">
+					<div class="shell hero__content">
 						<div class="banner__content">
 							<nav class="banner__crumbs" aria-label={t('common.breadcrumb')}>
 								<a href={homeHref}>{ui.nav.home}</a>
@@ -188,7 +162,12 @@ const breadcrumbs = [
 						</div>
 					</div>
 				</section>
-			) : (
+		)
+	}
+	<Navbar locale={locale} pageId={pageId} />
+	<main id="main-content" class="page">
+		{
+			!showBanner && (
 				<div class="shell page__head">
 					<nav class="page__crumbs" aria-label={t('common.breadcrumb')}>
 						<a href={homeHref}>{ui.nav.home}</a>
@@ -249,6 +228,7 @@ const breadcrumbs = [
 										height="500"
 										loading="lazy"
 										decoding="async"
+										fetchpriority="low"
 									/>
 								</figure>
 							))}
@@ -261,69 +241,10 @@ const breadcrumbs = [
 	<SiteFooter locale={locale} />
 </Layout>
 
-{heroVideo && showBanner ? <script is:inline src="/hero-video.js"></script> : null}
-
 <style>
 	.page {
 		overflow-x: clip;
 		padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
-	}
-
-	.banner {
-		position: relative;
-		isolation: isolate;
-		display: grid;
-		align-items: end;
-		overflow: hidden;
-		border-bottom: 1px solid var(--line-soft);
-		background: #0D0A14;
-		aspect-ratio: 3.15 / 1;
-		min-height: clamp(14rem, 28vw, 20rem);
-		width: 100%;
-	}
-
-	.banner__media {
-		position: absolute;
-		inset: 0;
-		z-index: 0;
-		overflow: hidden;
-	}
-
-	.banner__media picture,
-	.banner__img,
-	.banner__video {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: right 28%;
-	}
-
-	.banner__video {
-		background: #0D0A14;
-		opacity: 0;
-		transition: opacity 0.45s ease;
-	}
-
-	.banner__video.is-ready {
-		opacity: 1;
-	}
-
-	.banner__scrim {
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(
-			90deg,
-			rgba(8, 9, 10, 0.94) 0%,
-			rgba(8, 9, 10, 0.72) 42%,
-			rgba(8, 9, 10, 0.25) 100%
-		);
-	}
-
-	.banner__shell {
-		position: relative;
-		z-index: 1;
-		padding-block: clamp(2.25rem, 4.5vw, 3.25rem) clamp(1.5rem, 3vw, 2.25rem);
 	}
 
 	.banner__content {
@@ -360,7 +281,7 @@ const breadcrumbs = [
 
 	.banner__title {
 		margin: 0;
-		font-family: var(--font-display);
+		font-family: var(--font-sans);
 		font-size: clamp(1.75rem, 3.6vw, 2.4rem);
 		font-weight: 800;
 		letter-spacing: -0.035em;
@@ -470,6 +391,8 @@ const breadcrumbs = [
 		display: grid;
 		gap: 2rem;
 		padding-block: clamp(1.5rem, 3vw, 2.25rem) 3rem;
+		content-visibility: auto;
+		contain-intrinsic-size: 1px 800px;
 	}
 
 	.article {
@@ -651,27 +574,6 @@ const breadcrumbs = [
 	}
 
 	@media (max-width: 760px) {
-		.banner {
-			min-height: min(52svh, 22rem);
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-		}
-
-		.banner__shell {
-			padding-block: 1.75rem 1.35rem;
-			padding-bottom: max(1.35rem, var(--safe-bottom, env(safe-area-inset-bottom, 0px)));
-		}
-
-		.banner__scrim {
-			background: linear-gradient(
-				180deg,
-				rgba(8, 9, 10, 0.35) 0%,
-				rgba(8, 9, 10, 0.82) 62%,
-				rgba(8, 9, 10, 0.96) 100%
-			);
-		}
-
 		.banner__content {
 			width: 100%;
 			max-width: 100%;

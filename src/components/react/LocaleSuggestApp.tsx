@@ -1,5 +1,6 @@
 import I18nProvider from './I18nProvider';
 import LocaleSuggest from './LocaleSuggest';
+import type { TranslationCatalog } from '../../i18n/build-catalog';
 
 type LocaleMeta = {
 	code: string;
@@ -10,6 +11,7 @@ type LocaleMeta = {
 
 type Props = {
 	locale: string;
+	catalog: TranslationCatalog;
 	locales: LocaleMeta[];
 	pageSlugs: Record<string, string>;
 	defaultLocale?: string;
@@ -17,7 +19,7 @@ type Props = {
 
 export default function LocaleSuggestApp(props: Props) {
 	return (
-		<I18nProvider locale={props.locale}>
+		<I18nProvider locale={props.locale} catalog={props.catalog}>
 			<LocaleSuggest
 				currentLocale={props.locale}
 				locales={props.locales}

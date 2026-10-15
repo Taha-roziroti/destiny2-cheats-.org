@@ -1,3 +1,5 @@
+import { withCacheHeaders } from './lib/asset-cache';
+
 /**
  * Cloudflare Worker — host canonicalization before static assets.
  * Canonical site: https://destiny2cheats.org (matches brand.url)
@@ -44,6 +46,8 @@ export default {
 			return Response.redirect(target.toString(), 301);
 		}
 
-		return env.ASSETS.fetch(request);
+		const url = new URL(request.url);
+		const response = await env.ASSETS.fetch(request);
+		return withCacheHeaders(response, url.pathname);
 	},
 };

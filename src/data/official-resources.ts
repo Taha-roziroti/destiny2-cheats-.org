@@ -9,7 +9,17 @@ export const destiny2OfficialResources: OfficialResource[] = [
 	{
 		id: 'bungie',
 		label: 'Bungie.net',
-		href: 'https://www.bungie.net/7/en/destiny',
+		href: 'https://www.bungie.net/7/en/Destiny/New',
+	},
+	{
+		id: 'bungie-help',
+		label: 'Bungie Help',
+		href: 'https://help.bungie.net/',
+	},
+	{
+		id: 'battleye',
+		label: 'BattlEye Anti-Cheat',
+		href: 'https://www.battleye.com/',
 	},
 	{
 		id: 'steam',

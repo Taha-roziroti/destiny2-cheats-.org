@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import I18nProvider from './I18nProvider';
 import LanguageSwitcher, { type LocaleMeta } from './LanguageSwitcher';
 import { affiliateLinkRel } from '../../data/affiliate';
+import type { TranslationCatalog } from '../../i18n/build-catalog';
 
 type NavLink = {
 	id: string;
@@ -13,6 +14,7 @@ type NavLink = {
 
 type Props = {
 	locale: string;
+	catalog: TranslationCatalog;
 	siteName?: string;
 	checkoutUrl: string;
 	currentPath: string;
@@ -21,7 +23,6 @@ type Props = {
 	locales: LocaleMeta[];
 	hrefForLocale: Record<string, string>;
 	links: NavLink[];
-	affiliateShortLabel: string;
 };
 
 function NavbarInner({
@@ -34,7 +35,6 @@ function NavbarInner({
 	locales,
 	hrefForLocale,
 	links,
-	affiliateShortLabel,
 }: Props) {
 	const { t } = useTranslation();
 	const [scrolled, setScrolled] = useState(false);
@@ -96,7 +96,7 @@ function NavbarInner({
 						href={checkoutUrl}
 						className="site-tools__buy"
 						rel={affiliateLinkRel}
-						aria-label={`${t('cta.buyShort')} (${affiliateShortLabel})`}
+						aria-label={t('cta.buyShort')}
 					>
 						<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
 							<path
@@ -144,7 +144,6 @@ function NavbarInner({
 				id="site-mobile-nav"
 				className="site-nav site-nav--mobile"
 				aria-label={t('nav.mobileAria')}
-				aria-hidden={true}
 				inert=""
 			>
 				{navLinks.map((item) => renderNavLink(item))}
@@ -158,7 +157,7 @@ function NavbarInner({
 						href={checkoutUrl}
 						className="site-nav--mobile__buy"
 						rel={affiliateLinkRel}
-						aria-label={`${t('cta.buyShort')} (${affiliateShortLabel})`}
+						aria-label={t('cta.buyShort')}
 					>
 						{t('cta.buyShort')}
 					</a>
@@ -170,7 +169,7 @@ function NavbarInner({
 
 export default function NavbarApp(props: Props) {
 	return (
-		<I18nProvider locale={props.locale}>
+		<I18nProvider locale={props.locale} catalog={props.catalog}>
 			<NavbarInner {...props} />
 		</I18nProvider>
 	);

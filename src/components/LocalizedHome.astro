@@ -10,6 +10,7 @@ import { getLocaleContent, getPageContent } from '../data/i18n';
 import { getLocalizedPath } from '../data/i18n/routing';
 import type { LocaleCode } from '../data/i18n/locales';
 import { homeSeo, siteConfig } from '../data/site';
+import OfficialResources from './OfficialResources.astro';
 import { heroPreloadSrc, heroSizes, heroSrcSet } from '../lib/responsive-images';
 
 interface Props {
@@ -25,7 +26,6 @@ const title = locale === 'en' ? enHome.title : home.title;
 const description = locale === 'en' ? enHome.description : home.description;
 const canonicalPath = getLocalizedPath('home', locale);
 const heroVideo = siteConfig.heroVideo?.trim() || '';
-/** Product schema lives on /d2-cheats/ only — home stays a brand landing without duplicate Product markup. */
 const extraGraph: Record<string, unknown>[] = [];
 ---
 
@@ -43,22 +43,25 @@ const extraGraph: Record<string, unknown>[] = [];
 	pageId="home"
 	breadcrumbs={[{ label: ui.nav.home }]}
 	extraGraph={extraGraph}
-	lcpImage={heroVideo ? undefined : heroPreloadSrc}
-	lcpImageSrcSet={heroVideo ? undefined : heroSrcSet}
-	lcpImageSizes={heroVideo ? undefined : heroSizes}
-	lcpVideo={heroVideo || undefined}
+	lcpImage={heroPreloadSrc}
+	lcpImageSrcSet={heroSrcSet}
+	lcpImageSizes={heroSizes}
 >
+	<Hero locale={locale} />
 	<Navbar locale={locale} pageId="home" />
 	<main id="main-content" class="home">
-		<Hero locale={locale} />
 		<HomeReviews locale={locale} />
+		{locale === 'en' && (
+			<div class="shell home__official">
+				<OfficialResources locale={locale} compact />
+			</div>
+		)}
 		<div class="home__seo">
 			<>
 				<HomeAbout locale={locale} />
 				<div class="shell home__prose">
 					<header class="home__prose-head">
 						<p class="home__prose-eyebrow">{ui.nav.hacks}</p>
-						<h2>{home.h1}</h2>
 						<p class="home__prose-lede">{home.intro}</p>
 					</header>
 					{
@@ -84,14 +87,18 @@ const extraGraph: Record<string, unknown>[] = [];
 				<HomeSeo locale={locale} />
 			</>
 		</div>
-		<SiteFooter locale={locale} />
 	</main>
+	<SiteFooter locale={locale} />
 </Layout>
 
 <style>
 	.home {
 		width: 100%;
 		overflow-x: clip;
+	}
+
+	.home__official {
+		padding-block: 1.25rem 0.5rem;
 	}
 
 	.home__seo {
@@ -121,7 +128,7 @@ const extraGraph: Record<string, unknown>[] = [];
 		font-weight: 600;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		color: var(--accent);
+		color: var(--ink);
 	}
 
 	.home__prose-lede {

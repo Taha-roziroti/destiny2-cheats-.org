@@ -104,6 +104,8 @@ export const siteConfig = {
 	logoRasterHeight: brand.logoRasterHeight,
 	logoAlt: brand.logoAlt,
 	checkoutUrl: brand.checkoutUrl,
+	cloudDmaCheckoutUrl: brand.cloudDmaCheckoutUrl,
+	hwidSpooferCheckoutUrl: brand.hwidSpooferCheckoutUrl,
 	defaultOgImage: brand.defaultOgImage,
 	heroImage: brand.heroImage,
 	heroVideo: brandMedia.heroVideo ?? '',

@@ -10,6 +10,11 @@
 		if (!(video instanceof HTMLVideoElement) || video.dataset.heroBound === '1') return;
 		video.dataset.heroBound = '1';
 
+		var deferredSrc = video.getAttribute('data-src');
+		if (deferredSrc && !video.getAttribute('src')) {
+			video.setAttribute('src', deferredSrc);
+		}
+
 		video.muted = true;
 		video.defaultMuted = true;
 		video.playsInline = true;
@@ -50,9 +55,15 @@
 		document.querySelectorAll('.hero__video, .banner__video').forEach(initVideo);
 	}
 
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', scan);
+	function scheduleScan() {
+		/** Mobile: poster only (faster LCP). Desktop: defer MP4 until after paint. */
+		if (window.matchMedia('(max-width: 900px)').matches) return;
+		window.setTimeout(scan, 2000);
+	}
+
+	if (document.readyState === 'complete') {
+		scheduleScan();
 	} else {
-		scan();
+		window.addEventListener('load', scheduleScan, { once: true });
 	}
 })();

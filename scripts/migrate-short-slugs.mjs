@@ -12,8 +12,7 @@ const PAGES = path.join(ROOT, 'src/pages');
 /** Core englishPaths OLD → NEW */
 export const CORE_PATH_MAP = {
 	'/destiny-2-cheats-features/': '/features/',
-	'/destiny-2-cheats-pricing/': '/pricing/',
-	'/destiny-2-cheats-setup/': '/setup/',
+	'/destiny-2-cheats-pricing/': '/destiny-2-cheats-price/',
 	'/destiny-2-cheats-status/': '/status/',
 	'/destiny-2-cheats-faq/': '/faq/',
 	'/destiny-2-cheats-support/': '/support/',
@@ -29,7 +28,7 @@ export const CORE_PATH_MAP = {
 	'/destiny-2-radar-hack/': '/d2-radar/',
 	'/destiny-2-battleye-bypass/': '/status/',
 	'/destiny-2-cheats-2026/': '/d2-cheats/',
-	'/destiny-2-cheat-download/': '/setup/',
+	'/destiny-2-cheat-download/': '/destiny-2-cheats-setup/',
 	'/destiny-2-crucible-cheats/': '/d2-cheats/',
 	'/destiny-2-aim-assist/': '/destiny-2-aimbot/',
 	'/best-destiny-2-cheats/': '/d2-cheats/',

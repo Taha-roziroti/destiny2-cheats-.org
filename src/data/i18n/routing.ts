@@ -1,4 +1,4 @@
-import { siteConfig } from '../site';
+import { siteConfig } from '../site-core';
 import { getBlogBasePath } from '../blog/helpers';
 import {
 	defaultLocale,
@@ -37,7 +37,9 @@ export type PageId =
 	| 'privacy'
 	| 'refund'
 	| 'terms'
-	| 'affiliate-disclosure';
+	| 'cheats-review'
+	| 'cloud-dma'
+	| 'hwid-spoofer';
 
 /** English (official) paths — served at site root without /en/ prefix. */
 export const englishPaths: Record<PageId, string> = {
@@ -45,8 +47,11 @@ export const englishPaths: Record<PageId, string> = {
 	'destiny-2-esp': '/destiny-2-esp/',
 	'destiny-2-aimbot': '/destiny-2-aimbot/',
 	features: '/features/',
-	pricing: '/pricing/',
-	setup: '/setup/',
+	pricing: '/destiny-2-cheats-price/',
+	setup: '/destiny-2-cheats-setup/',
+	'cheats-review': '/destiny-2-cheats-review/',
+	'cloud-dma': '/cloud-dma/',
+	'hwid-spoofer': '/hwid-spoofer/',
 	updates: '/status/',
 	faq: '/faq/',
 	support: '/support/',
@@ -66,7 +71,6 @@ export const englishPaths: Record<PageId, string> = {
 	privacy: '/privacy/',
 	refund: '/refund/',
 	terms: '/terms/',
-	'affiliate-disclosure': '/affiliate-disclosure/',
 };
 
 /**
@@ -674,29 +678,77 @@ export const localizedSlugs: Record<PageId, Record<LocaleCode, string>> = {
 		ro: 'termeni-utilizare',
 		sv: 'anvandarvillkor',
 	},
-	'affiliate-disclosure': {
-		en: 'affiliate-disclosure',
-		es: 'divulgacion-afiliados',
-		fr: 'divulgation-affiliation',
-		de: 'affiliate-hinweis',
-		pt: 'divulgacao-afiliados',
-		it: 'informativa-affiliati',
-		nl: 'affiliate-disclaimer',
-		pl: 'informacja-partnerska',
-		ru: 'raskrytie-partnerskih-ssylok',
-		tr: 'ortaklik-aciklamasi',
-		ar: 'affiliate-disclosure',
-		ja: 'affiliate-disclosure',
-		ko: 'affiliate-disclosure',
-		zh: 'affiliate-disclosure',
-		hi: 'affiliate-disclosure',
-		id: 'affiliate-disclosure',
-		th: 'affiliate-disclosure',
-		vi: 'affiliate-disclosure',
-		uk: 'partnerstvo-rozkryttya',
-		cs: 'affiliate-prohlaseni',
-		ro: 'dezvaluire-afiliere',
-		sv: 'affiliate-information',
+	'cheats-review': {
+		en: 'destiny-2-cheats-review',
+		es: 'destiny-2-cheats-review',
+		fr: 'destiny-2-cheats-review',
+		de: 'destiny-2-cheats-review',
+		pt: 'destiny-2-cheats-review',
+		it: 'destiny-2-cheats-review',
+		nl: 'destiny-2-cheats-review',
+		pl: 'destiny-2-cheats-review',
+		ru: 'destiny-2-cheats-review',
+		tr: 'destiny-2-cheats-review',
+		ar: 'destiny-2-cheats-review',
+		ja: 'destiny-2-cheats-review',
+		ko: 'destiny-2-cheats-review',
+		zh: 'destiny-2-cheats-review',
+		hi: 'destiny-2-cheats-review',
+		id: 'destiny-2-cheats-review',
+		th: 'destiny-2-cheats-review',
+		vi: 'destiny-2-cheats-review',
+		uk: 'destiny-2-cheats-review',
+		cs: 'destiny-2-cheats-review',
+		ro: 'destiny-2-cheats-review',
+		sv: 'destiny-2-cheats-review',
+	},
+	'cloud-dma': {
+		en: 'cloud-dma',
+		es: 'cloud-dma',
+		fr: 'cloud-dma',
+		de: 'cloud-dma',
+		pt: 'cloud-dma',
+		it: 'cloud-dma',
+		nl: 'cloud-dma',
+		pl: 'cloud-dma',
+		ru: 'cloud-dma',
+		tr: 'cloud-dma',
+		ar: 'cloud-dma',
+		ja: 'cloud-dma',
+		ko: 'cloud-dma',
+		zh: 'cloud-dma',
+		hi: 'cloud-dma',
+		id: 'cloud-dma',
+		th: 'cloud-dma',
+		vi: 'cloud-dma',
+		uk: 'cloud-dma',
+		cs: 'cloud-dma',
+		ro: 'cloud-dma',
+		sv: 'cloud-dma',
+	},
+	'hwid-spoofer': {
+		en: 'hwid-spoofer',
+		es: 'hwid-spoofer',
+		fr: 'hwid-spoofer',
+		de: 'hwid-spoofer',
+		pt: 'hwid-spoofer',
+		it: 'hwid-spoofer',
+		nl: 'hwid-spoofer',
+		pl: 'hwid-spoofer',
+		ru: 'hwid-spoofer',
+		tr: 'hwid-spoofer',
+		ar: 'hwid-spoofer',
+		ja: 'hwid-spoofer',
+		ko: 'hwid-spoofer',
+		zh: 'hwid-spoofer',
+		hi: 'hwid-spoofer',
+		id: 'hwid-spoofer',
+		th: 'hwid-spoofer',
+		vi: 'hwid-spoofer',
+		uk: 'hwid-spoofer',
+		cs: 'hwid-spoofer',
+		ro: 'hwid-spoofer',
+		sv: 'hwid-spoofer',
 	},
 };
 

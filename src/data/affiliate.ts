@@ -1,16 +1,20 @@
-import { siteConfig } from './site';
+import { siteConfig } from './site-core';
 
 /** rel value for outbound affiliate / checkout links (section 6). */
 export const affiliateLinkRel = 'sponsored nofollow noopener noreferrer';
-
-export const affiliateDisclosurePath = '/affiliate-disclosure/';
 
 const AFFILIATE_HOST = 'zadeyo.com';
 
 /** True when href points at the configured checkout / affiliate destination. */
 export function isAffiliateHref(href: string | undefined | null): boolean {
 	if (!href) return false;
-	if (href === siteConfig.checkoutUrl) return true;
+	if (
+		href === siteConfig.checkoutUrl ||
+		href === siteConfig.cloudDmaCheckoutUrl ||
+		href === siteConfig.hwidSpooferCheckoutUrl
+	) {
+		return true;
+	}
 	try {
 		const url = new URL(href, siteConfig.url);
 		return url.hostname.toLowerCase().includes(AFFILIATE_HOST);

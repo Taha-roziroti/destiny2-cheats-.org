@@ -135,6 +135,14 @@
 /guides/setup/ /setup/ 301
 /guides /forums/ 301
 /guides/ /forums/ 301
+# Retired affiliate disclosure
+/affiliate-disclosure /terms/ 301
+/affiliate-disclosure/ /terms/ 301
+# US SEO canonical paths
+/pricing /destiny-2-cheats-price/ 301
+/pricing/ /destiny-2-cheats-price/ 301
+/setup /destiny-2-cheats-setup/ 301
+/setup/ /destiny-2-cheats-setup/ 301
 # EN cannibal stub pages → pillar pages
 /destiny-2-aimbot-hack /destiny-2-aimbot/ 301
 /destiny-2-aimbot-hack/ /destiny-2-aimbot/ 301
@@ -167,22 +175,20 @@
 /destiny-2-battleye-bypass/ /status/ 301
 /destiny-2-crucible-cheats /d2-cheats/ 301
 /destiny-2-crucible-cheats/ /d2-cheats/ 301
-/destiny-2-cheats-pricing /pricing/ 301
-/destiny-2-cheats-pricing/ /pricing/ 301
+/destiny-2-cheats-pricing /destiny-2-cheats-price/ 301
+/destiny-2-cheats-pricing/ /destiny-2-cheats-price/ 301
 /destiny-2-cheats-support /support/ 301
 /destiny-2-cheats-support/ /support/ 301
 /destiny-2-cheats-privacy /privacy/ 301
 /destiny-2-cheats-privacy/ /privacy/ 301
 /destiny-2-cheats-reviews /reviews/ 301
 /destiny-2-cheats-reviews/ /reviews/ 301
-/destiny-2-cheat-download /setup/ 301
-/destiny-2-cheat-download/ /setup/ 301
+/destiny-2-cheat-download /destiny-2-cheats-setup/ 301
+/destiny-2-cheat-download/ /destiny-2-cheats-setup/ 301
 /destiny-2-cheats-status /status/ 301
 /destiny-2-cheats-status/ /status/ 301
 /destiny-2-cheats-refund /refund/ 301
 /destiny-2-cheats-refund/ /refund/ 301
-/destiny-2-cheats-setup /setup/ 301
-/destiny-2-cheats-setup/ /setup/ 301
 /destiny-2-cheats-terms /terms/ 301
 /destiny-2-cheats-terms/ /terms/ 301
 /destiny-2-cheats-blog /blog/ 301

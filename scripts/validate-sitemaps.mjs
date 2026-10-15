@@ -57,11 +57,11 @@ const EN_BLOG_REDIRECT_PAGES = 18; // EN /blog/* stubs 301 → /forums/
 const REVIEW_PAGES = 11; // /reviews/ index + 10 review detail pages
 const FAQ_PAGES = 11; // FAQ answer pages (index is in the product pages)
 /** Product pages in sitemap — excludes cannibal EN URLs that 301 to stronger pillars */
-const ENGLISH_PRODUCT_PAGES = 15;
+const ENGLISH_PRODUCT_PAGES = 17;
 const ENGLISH_PAGES = ENGLISH_PRODUCT_PAGES + FORUM_PAGES + REVIEW_PAGES + FAQ_PAGES;
 const I18N_LOCALES = 21;
 /** Locale product pages also exclude the same cannibal pageIds */
-const PRODUCT_PAGES_PER_LOCALE = 15;
+const PRODUCT_PAGES_PER_LOCALE = 17;
 const BLOG_PAGES_PER_LOCALE = 0; // Locale blog URLs 301 to EN; not in sitemaps
 const PAGES_PER_LOCALE = PRODUCT_PAGES_PER_LOCALE + BLOG_PAGES_PER_LOCALE;
 const I18N_URLS = I18N_LOCALES * PAGES_PER_LOCALE;
@@ -97,8 +97,11 @@ const ENGLISH_PATHS = [
 	'/destiny-2-esp/',
 	'/destiny-2-aimbot/',
 	'/features/',
-	'/pricing/',
-	'/setup/',
+	'/destiny-2-cheats-price/',
+	'/destiny-2-cheats-setup/',
+	'/destiny-2-cheats-review/',
+	'/cloud-dma/',
+	'/hwid-spoofer/',
 	'/status/',
 	'/faq/',
 	'/support/',
@@ -107,7 +110,6 @@ const ENGLISH_PATHS = [
 	'/privacy/',
 	'/refund/',
 	'/terms/',
-	'/affiliate-disclosure/',
 	'/forums/',
 	'/forums/aimbot-settings-ban-risk/',
 	'/forums/how-to-use-destiny-2-cheats/',
@@ -276,17 +278,25 @@ async function main() {
 		bump();
 	} else ok('sitemap-images.xml has unique page <loc> hosts (no duplicates)');
 
-	for (const required of [`${SITE}/features/`, `${SITE}/pricing/`, `${SITE}/status/`]) {
+	for (const required of [
+		`${SITE}/features/`,
+		`${SITE}/destiny-2-cheats-price/`,
+		`${SITE}/status/`,
+	]) {
 		if (!enLocs.includes(required)) {
 			fail(`Missing core page in sitemap-en.xml: ${required}`);
 			bump();
 		}
 	}
 	if (errors === 0) {
-		ok('Core pages present in sitemap-en.xml: /features/ /pricing/ /status/');
+		ok('Core pages present in sitemap-en.xml: /features/ /destiny-2-cheats-price/ /status/');
 	}
 
-	for (const required of [`${SITE}/features/`, `${SITE}/pricing/`, `${SITE}/status/`]) {
+	for (const required of [
+		`${SITE}/features/`,
+		`${SITE}/destiny-2-cheats-price/`,
+		`${SITE}/status/`,
+	]) {
 		if (!imageLocs.includes(required)) {
 			fail(`Missing core host in sitemap-images.xml: ${required}`);
 			bump();

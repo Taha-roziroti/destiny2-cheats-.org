@@ -445,7 +445,7 @@ const sources = [
 			{
 				h2: 'How to buy and set up without wasting a night',
 				paragraphs: [
-					'Compare monthly and lifetime on <a href="/pricing/">Pricing</a>, then follow <a href="/setup/">Setup</a> after delivery. Keep your order ID ready for <a href="/support/">Support</a>. If you are still shopping, the <a href="/blog/buyers-guide/">buyers guide</a> lists the checklist we wish every shopper used.',
+					'Compare monthly and lifetime on <a href="/destiny-2-cheats-price/">Pricing</a>, then follow <a href="/destiny-2-cheats-setup/">Setup</a> after delivery. Keep your order ID ready for <a href="/support/">Support</a>. If you are still shopping, the <a href="/blog/buyers-guide/">buyers guide</a> lists the checklist we wish every shopper used.',
 					'Destiny 2 Cheats is built for Windows PC Crucible and PvE play. It will not replace map knowledge — it amplifies the reads you already practice in raids.',
 				],
 			},
@@ -492,7 +492,7 @@ const sources = [
 				h2: 'Price, delivery, and support questions worth asking',
 				paragraphs: [
 					'Know whether you are paying monthly or lifetime, how the license arrives, and how fast support replies with an order ID. Read the <a href="/refund/">refund policy</a> before you pay — digital tools often have narrow windows.',
-					'Our plans live on <a href="/pricing/">Pricing</a>. Setup steps are on <a href="/setup/">Setup</a>. If something fails after a patch, <a href="/support/">Support</a> needs your order details, Windows version, and what you already tried.',
+					'Our plans live on <a href="/destiny-2-cheats-price/">Pricing</a>. Setup steps are on <a href="/destiny-2-cheats-setup/">Setup</a>. If something fails after a patch, <a href="/support/">Support</a> needs your order details, Windows version, and what you already tried.',
 				],
 			},
 		],
@@ -538,7 +538,7 @@ const sources = [
 				h2: 'What we recommend you do differently this year',
 				paragraphs: [
 					'Check status before patch-day queues. Keep soft aim conservative. Use loot ESP filters so your screen stays clean. Read the <a href="/blog/cheats-guide-2026/">complete 2026 guide</a> if you are new to the category.',
-					'Pricing remains monthly and lifetime on <a href="/pricing/">Pricing</a> with digital delivery after payment.',
+					'Pricing remains monthly and lifetime on <a href="/destiny-2-cheats-price/">Pricing</a> with digital delivery after payment.',
 				],
 			},
 		],
@@ -673,7 +673,7 @@ const sources = [
 			{
 				h2: 'Where to go next',
 				paragraphs: [
-					'Read <a href="/d2-undetected/">undetected Destiny 2 cheats</a>, the <a href="/blog/cheats-guide-2026/">2026 complete guide</a>, and <a href="/pricing/">Pricing</a> if you want the maintained stack. Undetected status is a process you check — not a sticker on the box.',
+					'Read <a href="/d2-undetected/">undetected Destiny 2 cheats</a>, the <a href="/blog/cheats-guide-2026/">2026 complete guide</a>, and <a href="/destiny-2-cheats-price/">Pricing</a> if you want the maintained stack. Undetected status is a process you check — not a sticker on the box.',
 				],
 			},
 		],
@@ -712,7 +712,7 @@ const sources = [
 				h2: 'Price versus what you touch every raid',
 				paragraphs: [
 					'If you only want basic player boxes in casual raids, a cheaper shop might feel enough. If you hold objectives, run loot routes, and hate dying to unseen flanks, radar and clean filters pay for themselves quickly.',
-					'Our monthly and lifetime options are on <a href="/pricing/">Pricing</a>. Read the <a href="/blog/buyers-guide/">buyers guide</a> before you compare three storefronts at once.',
+					'Our monthly and lifetime options are on <a href="/destiny-2-cheats-price/">Pricing</a>. Read the <a href="/blog/buyers-guide/">buyers guide</a> before you compare three storefronts at once.',
 				],
 			},
 			{
@@ -771,8 +771,8 @@ const sources = [
 			{
 				h2: 'After switching — what improved for my raids',
 				paragraphs: [
-					'Independent loot and player toggles cleaned late-raid screens. Radar helped boss phases. Support replies with order ID were fast enough during setup week. Pricing math favored a single full stack over stacking weekly subs — see <a href="/pricing/">Pricing</a>.',
-					'If you run your own test, measure patch downtime hours, not just day-one vibes. Then read <a href="/setup/">Setup</a> before you buy anything.',
+					'Independent loot and player toggles cleaned late-raid screens. Radar helped boss phases. Support replies with order ID were fast enough during setup week. Pricing math favored a single full stack over stacking weekly subs — see <a href="/destiny-2-cheats-price/">Pricing</a>.',
+					'If you run your own test, measure patch downtime hours, not just day-one vibes. Then read <a href="/destiny-2-cheats-setup/">Setup</a> before you buy anything.',
 				],
 			},
 		],
@@ -811,7 +811,7 @@ const sources = [
 				h2: 'Feature and pricing reality check',
 				paragraphs: [
 					'Destiny 2 Cheats monthly is $35 and lifetime is $150 for ESP, radar, and soft aim together. Slimmer competitors often undercut sticker price while charging extra for modules you assumed were included. Always read the feature list, not the banner.',
-					'Our public comparison points live on <a href="/features/">Features</a>, <a href="/destiny-2-esp/">ESP</a>, <a href="/d2-radar/">radar</a>, and <a href="/pricing/">Pricing</a>.',
+					'Our public comparison points live on <a href="/features/">Features</a>, <a href="/destiny-2-esp/">ESP</a>, <a href="/d2-radar/">radar</a>, and <a href="/destiny-2-cheats-price/">Pricing</a>.',
 				],
 			},
 			{

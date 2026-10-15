@@ -9,7 +9,7 @@ export const prerender = true;
 
 /**
  * Primary sitemap index for Google Search Console — EN + 21 locale + image sitemaps.
- * Page URLs live in sitemap-en.xml (Features=/features/, Store=/pricing/, Status=/updates/).
+ * Page URLs live in sitemap-en.xml (Features=/features/, Store=/destiny-2-cheats-price/, Status=/status/).
  */
 export const GET: APIRoute = () => {
 	const pageLastmod = latestPageLastmod();

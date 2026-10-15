@@ -5,8 +5,8 @@ import { getLocalizedPath, localizeInternalHref } from '../data/i18n/routing';
 import type { LocaleCode } from '../data/i18n/locales';
 import { productInfo, seoFaqs, siteConfig, customerReviewStats } from '../data/site';
 import { absoluteFaqUrl, getFaqPath } from '../data/faq';
-import { destinyImages } from '../data/destiny';
 import { simplePageCopy } from '../data/i18n/simple-pages';
+import { enUsSimplePages } from '../data/en-us-simple-pages';
 import { getT } from '../i18n/server';
 import { getPageCrawlImage } from '../data/page-images';
 import PageRelatedLinks from './PageRelatedLinks.astro';
@@ -14,6 +14,8 @@ import OfficialResources from './OfficialResources.astro';
 import { getRelatedPageLinks } from '../data/page-related-links';
 import { productPageUrl, productSchemaId } from '../data/product-schema';
 import { affiliateLinkRel } from '../data/affiliate';
+import { uniquifyPageHeadings } from '../lib/unique-copy';
+import { buildPageGallery, galleryAltForSrc } from '../lib/page-gallery';
 
 interface Props {
 	locale: LocaleCode;
@@ -25,7 +27,10 @@ const page = getPageContent(locale, pageId);
 const ui = getUi(locale);
 const t = getT(locale);
 const crawl = getPageCrawlImage(pageId);
-const simple = locale === 'en' ? simplePageCopy[pageId] : undefined;
+const simple =
+	locale === 'en'
+		? (enUsSimplePages[pageId as keyof typeof enUsSimplePages] ?? simplePageCopy[pageId])
+		: undefined;
 
 function localizeParagraphHtml(html: string): string {
 	return html
@@ -35,11 +40,18 @@ function localizeParagraphHtml(html: string): string {
 
 const heading = simple?.h1 ?? page.h1;
 const intro = simple?.intro ?? page.intro;
-const sections = simple?.sections ?? page.sections;
+const rawSections = simple?.sections ?? page.sections;
+const rawGalleryTitle = simple?.galleryTitle ?? page.galleryTitle ?? t('common.inGameLook');
+const { galleryTitle: uniqueGalleryTitle, sections } = uniquifyPageHeadings(
+	heading,
+	rawGalleryTitle,
+	rawSections,
+	t('common.inGameLook'),
+);
 const ctaPrimaryLabel = simple?.ctaPrimary ?? page.ctaPrimary;
 const ctaSecondaryLabel = simple?.ctaSecondary ?? page.ctaSecondary;
 const ctaSecondaryPath = simple?.ctaSecondaryHref ?? page.ctaSecondaryHref;
-const galleryTitle = simple?.galleryTitle ?? page.galleryTitle ?? t('common.inGameLook');
+const galleryTitle = uniqueGalleryTitle;
 
 const introEditByPage: Partial<Record<PageId, string>> = {
 	features: 'featuresIntro',
@@ -51,28 +63,59 @@ const introEditByPage: Partial<Record<PageId, string>> = {
 	faq: 'faqIntro',
 };
 const introEdit = locale === 'en' ? introEditByPage[pageId] : undefined;
-const gallery = [
-	{ src: crawl.src, alt: page.imageAlt || crawl.caption },
-	...destinyImages.product.slice(0, 2).map((img) => ({
-		src: img.src,
-		alt: img.alt,
-	})),
-];
+const gallery = buildPageGallery(
+	pageId,
+	crawl.src,
+	page.imageAlt || crawl.caption,
+).map((item) => ({
+	src: item.src,
+	alt: galleryAltForSrc(item.src, item.alt),
+}));
 
 const pageUrl = new URL(getLocalizedPath(pageId, locale), siteConfig.url).href;
 const priceValidUntil = '2027-12-31';
+const articleSchema =
+	(pageId === 'cheats-review' || pageId === 'setup') && locale === 'en'
+		? {
+				'@type': 'Article',
+				'@id': `${pageUrl}#article`,
+				headline: simple?.h1 ?? page.h1,
+				description: simple?.description ?? page.description,
+				dateModified: '2026-10-15',
+				author: { '@id': `${siteConfig.url}/#organization` },
+				publisher: { '@id': `${siteConfig.url}/#organization` },
+			}
+		: null;
+
+const pricingListSchema =
+	pageId === 'pricing' && locale === 'en'
+		? {
+				'@type': 'ItemList',
+				'@id': `${pageUrl}#plans`,
+				name: 'Destiny 2 cheat plans',
+				itemListElement: productInfo.plans.map((plan, index) => ({
+					'@type': 'ListItem',
+					position: index + 1,
+					name: `${plan.label} — $${plan.price}`,
+					url: pageUrl,
+				})),
+			}
+		: null;
 
 const faqSchema =
 	pageId === 'faq' && locale === 'en'
 		? {
-				'@type': 'ItemList',
-				'@id': `${pageUrl}#faq-list`,
-				name: 'Destiny 2 Cheats FAQ',
-				itemListElement: seoFaqs.map((item, index) => ({
-					'@type': 'ListItem',
-					position: index + 1,
+				'@type': 'FAQPage',
+				'@id': `${pageUrl}#faq`,
+				url: pageUrl,
+				mainEntity: seoFaqs.map((item) => ({
+					'@type': 'Question',
 					name: item.question,
 					url: absoluteFaqUrl(item.slug),
+					acceptedAnswer: {
+						'@type': 'Answer',
+						text: item.answer,
+					},
 				})),
 			}
 		: null;
@@ -100,23 +143,16 @@ const storeSchema =
 					highPrice: Math.max(...productInfo.plans.map((p) => p.price)).toFixed(2),
 					priceCurrency: productInfo.currency,
 					offerCount: productInfo.plans.length,
+					priceValidUntil,
 					availability: 'https://schema.org/InStock',
 					url: siteConfig.checkoutUrl,
-					offers: productInfo.plans.map((plan) => ({
-						'@type': 'Offer',
-						name: `${productInfo.name} ${plan.label}`,
-						price: plan.price.toFixed(2),
-						priceCurrency: productInfo.currency,
-						priceValidUntil,
-						availability: 'https://schema.org/InStock',
-						url: siteConfig.checkoutUrl,
-						seller: { '@id': `${siteConfig.url}/#organization` },
-					})),
 				},
 			}
 		: null;
 
-const extraGraph = [faqSchema, storeSchema].filter(Boolean) as Record<string, unknown>[];
+const extraGraph = [faqSchema, storeSchema, articleSchema, pricingListSchema].filter(
+	Boolean,
+) as Record<string, unknown>[];
 
 const ctaSecondaryHref = ctaSecondaryPath
 	? localizeInternalHref(ctaSecondaryPath, locale)
@@ -138,12 +174,30 @@ const eyebrowByPage: Partial<Record<PageId, string>> = {
 	radar: 'Radar',
 	setup: ui.nav.setup,
 	faq: ui.nav.faq,
+	'cheats-review': 'Review',
+	'cloud-dma': 'Cloud DMA',
+	'hwid-spoofer': 'HWID Spoofer',
 };
 
 const showRelatedLinks = getRelatedPageLinks(pageId).length > 0;
+const ctaPrimaryHref =
+	simple?.ctaPrimaryHref ??
+	(pageId === 'cloud-dma'
+		? siteConfig.cloudDmaCheckoutUrl
+		: pageId === 'hwid-spoofer'
+			? siteConfig.hwidSpooferCheckoutUrl
+			: pageId === 'cheats-review'
+				? getLocalizedPath('pricing', locale)
+				: siteConfig.checkoutUrl);
 const showOfficialResources =
 	locale === 'en' &&
-	(pageId === 'hacks' || pageId === 'setup' || pageId === 'updates' || pageId === 'faq');
+	(pageId === 'hacks' ||
+		pageId === 'setup' ||
+		pageId === 'updates' ||
+		pageId === 'faq' ||
+		pageId === 'cheats-review' ||
+		pageId === 'cloud-dma' ||
+		pageId === 'hwid-spoofer');
 ---
 
 <PageLayout
@@ -161,7 +215,11 @@ const showOfficialResources =
 	locale={locale}
 	pageId={pageId}
 	extraGraph={extraGraph}
-	ctaPrimary={{ href: siteConfig.checkoutUrl, label: ctaPrimaryLabel, edit: 'ctaBuy' }}
+	ctaPrimary={{
+		href: ctaPrimaryHref,
+		label: ctaPrimaryLabel,
+		edit: ctaPrimaryHref === siteConfig.checkoutUrl ? 'ctaBuy' : undefined,
+	}}
 	ctaSecondary={
 		ctaSecondaryLabel
 			? { href: ctaSecondaryHref, label: ctaSecondaryLabel }

@@ -1,7 +1,7 @@
 ---
-import LocaleSuggestApp from './react/LocaleSuggestApp';
 import { locales, defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { localizedSlugs, type PageId } from '../data/i18n/routing';
+import { getT } from '../i18n/server';
 
 interface Props {
 	currentLocale: LocaleCode;
@@ -14,24 +14,34 @@ if (currentLocale !== defaultLocale) {
 	return null;
 }
 
+const t = getT(currentLocale);
 const localeMetas = locales.map((l) => ({
 	code: l.code,
 	name: l.name,
 	nativeName: l.nativeName,
 	region: l.region,
 }));
-
 const pageSlugs = localizedSlugs[pageId] ?? {};
+const strings = {
+	regionAria: t('common.languageSuggestion'),
+	dismiss: t('common.dismiss'),
+	lead: t('common.localeSuggestLead', { nativeName: '{{nativeName}}', region: '{{region}}' }),
+	version: t('common.localeVersion', { name: '{{name}}' }),
+};
 ---
 
-<LocaleSuggestApp
-	client:idle
-	locale={currentLocale}
-	locales={localeMetas}
-	pageSlugs={pageSlugs}
-	defaultLocale={defaultLocale}
-/>
-
+<div
+	id="locale-suggest-mount"
+	hidden
+	data-current-locale={currentLocale}
+	data-default-locale={defaultLocale}
+	data-locales={JSON.stringify(localeMetas)}
+	data-page-slugs={JSON.stringify(pageSlugs)}
+	data-strings={JSON.stringify(strings)}
+></div>
+<script is:inline>
+	{`(function(){function l(){var s=document.createElement('script');s.src='/locale-suggest.js';s.defer=true;document.body.appendChild(s)}if('requestIdleCallback'in window)requestIdleCallback(l,{timeout:2500});else window.addEventListener('load',l,{once:true})})();`}
+</script>
 <style is:global>
 	.locale-suggest {
 		display: flex;

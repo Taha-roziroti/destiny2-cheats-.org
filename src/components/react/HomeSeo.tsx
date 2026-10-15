@@ -1,18 +1,20 @@
 import { useTranslation } from 'react-i18next';
 import I18nProvider from './I18nProvider';
 import { sitePaths as p } from '../../data/site-paths';
+import type { TranslationCatalog } from '../../i18n/build-catalog';
 
 type FaqItem = { slug: string; question: string; answer: string; href: string };
 
 type Props = {
 	locale: string;
+	catalog: TranslationCatalog;
 	faqs: FaqItem[];
 };
 
 function HomeSeoInner({ faqs }: Props) {
 	const { t } = useTranslation();
 
-	const categories = [
+	const rawCategories = [
 		{
 			titleKey: 'homeSeo.catFeatures',
 			hintKey: 'homeSeo.catFeaturesHint',
@@ -40,7 +42,6 @@ function HomeSeoInner({ faqs }: Props) {
 				{ href: p.pricing, labelKey: 'homeSeo.linkPlans' },
 				{ href: p.reviews, labelKey: 'homeSeo.linkReviews' },
 				{ href: p.cheats, labelKey: 'homeSeo.linkDestiny2Cheats' },
-				{ href: p.features, labelKey: 'homeSeo.linkAllFeatures' },
 			],
 		},
 		{
@@ -50,10 +51,22 @@ function HomeSeoInner({ faqs }: Props) {
 				{ href: p.support, labelKey: 'homeSeo.linkSupport' },
 				{ href: p.setup, labelKey: 'homeSeo.linkSetupGuide' },
 				{ href: p.forums, labelKey: 'homeSeo.linkForums' },
-				{ href: p.reviews, labelKey: 'homeSeo.linkReviews' },
 			],
 		},
 	];
+
+	const seenHref = new Set<string>();
+	const seenLabel = new Set<string>();
+	const categories = rawCategories.map((cat) => ({
+		...cat,
+		links: cat.links.filter((link) => {
+			const label = t(link.labelKey).trim().toLowerCase();
+			if (seenHref.has(link.href) || seenLabel.has(label)) return false;
+			seenHref.add(link.href);
+			seenLabel.add(label);
+			return true;
+		}),
+	}));
 
 	return (
 		<section className="home-seo shell" aria-labelledby="home-seo-title">
@@ -111,7 +124,7 @@ function HomeSeoInner({ faqs }: Props) {
 							<div className="home-seo__item-body">
 								<p>{item.answer}</p>
 								<a className="home-seo__item-link" href={item.href}>
-									{t('homeSeo.openFullPage')}
+									{item.question}
 								</a>
 							</div>
 						</details>
@@ -124,7 +137,7 @@ function HomeSeoInner({ faqs }: Props) {
 
 export default function HomeSeoApp(props: Props) {
 	return (
-		<I18nProvider locale={props.locale}>
+		<I18nProvider locale={props.locale} catalog={props.catalog}>
 			<HomeSeoInner {...props} />
 		</I18nProvider>
 	);

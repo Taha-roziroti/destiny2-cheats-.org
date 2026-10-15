@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import I18nProvider from './I18nProvider';
+import type { TranslationCatalog } from '../../i18n/build-catalog';
 
 type Review = {
 	slug: string;
@@ -13,6 +14,7 @@ type Review = {
 
 type Props = {
 	locale: string;
+	catalog: TranslationCatalog;
 	reviews: Review[];
 	averageRating: number;
 	totalCount: number;
@@ -118,7 +120,7 @@ function HomeReviewsInner({
 
 export default function HomeReviewsApp(props: Props) {
 	return (
-		<I18nProvider locale={props.locale}>
+		<I18nProvider locale={props.locale} catalog={props.catalog}>
 			<HomeReviewsInner {...props} />
 		</I18nProvider>
 	);

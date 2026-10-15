@@ -36,7 +36,6 @@
 		backdrop.classList.toggle('is-visible', open);
 		mobileNav.classList.toggle('is-open', open);
 		header.classList.toggle('is-menu-open', open);
-		mobileNav.setAttribute('aria-hidden', open ? 'false' : 'true');
 		backdrop.tabIndex = open ? 0 : -1;
 
 		if (open) {

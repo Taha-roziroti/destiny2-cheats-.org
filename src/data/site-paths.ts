@@ -1,7 +1,9 @@
 import { englishPaths } from './i18n/routing';
-import { reviewsBasePath } from './reviews';
-import { faqBasePath } from './faq';
-import { forumsBasePath } from './forums/helpers';
+
+/** Keep in sync with reviews.ts / faq.ts / forums/helpers base paths (no import — avoids site.ts cycle). */
+const reviewsBasePath = '/reviews/';
+const faqBasePath = '/faq/';
+const forumsBasePath = '/forums/';
 
 /** Canonical EN paths for internal linking — keep in sync with englishPaths + module base paths. */
 export const sitePaths = {
@@ -18,7 +20,12 @@ export const sitePaths = {
 	radar: englishPaths.radar,
 	reviews: reviewsBasePath,
 	forums: forumsBasePath,
+	/** /guides/ 301s to forums — use forums in nav/links */
+	guides: forumsBasePath,
 	privacy: englishPaths.privacy,
 	refund: englishPaths.refund,
 	terms: englishPaths.terms,
+	cheatsReview: englishPaths['cheats-review'],
+	cloudDma: englishPaths['cloud-dma'],
+	hwidSpoofer: englishPaths['hwid-spoofer'],
 } as const;

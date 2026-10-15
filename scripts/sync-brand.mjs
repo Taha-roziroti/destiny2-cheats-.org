@@ -3,6 +3,7 @@
  * Syncs public SEO files from src/data/brand.ts (single source of truth).
  * Run: npm run sync:brand  (also runs before build)
  */
+import { spawnSync } from 'node:child_process';
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -52,12 +53,19 @@ writeFileSync(
 	`User-agent: *
 Allow: /
 Allow: /images/
+Allow: /sitemap.xml
+Allow: /videos/
+Allow: /llms.txt
+Allow: /security.txt
+Allow: /.well-known/security.txt
 Disallow: /brand-studio/
 Disallow: /brand-studio
 Disallow: /__brand/
 Disallow: /__brand
 
-# Primary sitemap for Google Search Console — index covers EN, locale, and image sitemaps.
+User-agent: Googlebot
+Allow: /
+
 Sitemap: ${brand.url}/sitemap.xml
 `,
 	'utf8',
@@ -94,4 +102,12 @@ if (nextAstro === astro && !astro.includes(`site: '${brand.url}'`)) {
 }
 writeFileSync(astroPath, nextAstro, 'utf8');
 
-console.log(`sync-brand: ${brand.name} → ${brand.url} (robots Sitemap + Astro site)`);
+const ext = spawnSync(process.execPath, ['scripts/generate-external-seo.mjs'], {
+	cwd: ROOT,
+	stdio: 'inherit',
+});
+if (ext.status !== 0) {
+	process.exit(ext.status ?? 1);
+}
+
+console.log(`sync-brand: ${brand.name} → ${brand.url} (robots Sitemap + Astro site + external SEO files)`);

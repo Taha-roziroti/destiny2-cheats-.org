@@ -55,16 +55,20 @@ function buildI18nContent() {
 			'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'anticheat',
 			'cheats-2026', 'hacks', 'cheat-download', 'crucible-cheats', 'aim-assist', 'best-cheats',
 			'aimbot-hack', 'esp-hack', 'pve-cheats', 'privacy', 'refund', 'terms',
+			'cheats-review', 'cloud-dma',
 		];
 		for (const pageId of requiredPages) {
 			if (!pages[pageId]) throw new Error(`Missing page "${pageId}" for locale "${locale}"`);
 			const p = pages[pageId];
 			if (p.title.length > 60) console.warn(`WARN [${locale}/${pageId}] title ${p.title.length} chars: ${p.title}`);
 			if (p.description.length > 160) console.warn(`WARN [${locale}/${pageId}] desc ${p.description.length} chars`);
-			if (!p.heroImage?.startsWith('/images/destiny-2') && !p.heroImage?.startsWith('/images/escape-from-destiny-2')) {
+			if (!p.heroImage?.startsWith('/images/') || p.heroImage.includes('..')) {
 				throw new Error(`Invalid heroImage for ${locale}/${pageId}: ${p.heroImage}`);
 			}
-			if (pageId === 'home' && p.sections.length !== 2) {
+			if (pageId === 'home' && locale === 'en' && p.sections.length !== 5) {
+				throw new Error(`EN home must have 5 sections, got ${p.sections.length}`);
+			}
+			if (pageId === 'home' && locale !== 'en' && p.sections.length !== 2) {
 				throw new Error(`Home must have 2 sections for ${locale}, got ${p.sections.length}`);
 			}
 			if (['privacy', 'refund', 'terms'].includes(pageId) && p.sections.length !== 3) {

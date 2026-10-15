@@ -12,20 +12,8 @@ const DIST = path.join(ROOT, 'dist');
 const REDIRECTS_FILE = path.join(ROOT, 'public', '_redirects');
 const SRC_DIR = path.join(ROOT, 'src');
 
-const OLD_PATH_PREFIXES = [
-	'/features/',
-	'/pricing/',
-	'/setup/',
-	'/updates/',
-	'/faq/',
-	'/support/',
-	'/reviews/',
-	'/blog/',
-	'/privacy-policy/',
-	'/refund-policy/',
-	'/terms/',
-	'/hacks/',
-];
+/** Legacy URLs that must not appear in new internal links (canonical paths changed). */
+const OLD_PATH_PREFIXES = ['/pricing/', '/setup/'];
 
 /** href="/..." — exclude http(s), mailto, # */
 const HREF_RE = /\bhref\s*=\s*(["'])(\/(?!\/)[^"'#]*)\1/gi;
@@ -120,12 +108,14 @@ function applyRedirect(urlPath, rules) {
 function resolveRedirectChain(urlPath, rules, maxHops = 12) {
 	let current = normalizeUrlPath(urlPath);
 	const seen = new Set();
+	let hops = 0;
 	for (let i = 0; i < maxHops; i++) {
-		if (seen.has(current)) return { final: current, hasRedirect: true, loop: true };
+		if (seen.has(current)) return { final: current, hasRedirect: hops > 0, loop: true };
 		seen.add(current);
 		const next = applyRedirect(current, rules);
-		if (!next) return { final: current, hasRedirect: i > 0 };
+		if (!next) return { final: current, hasRedirect: hops > 0, loop: false };
 		current = normalizeUrlPath(next);
+		hops++;
 	}
 	return { final: current, hasRedirect: true, loop: true };
 }

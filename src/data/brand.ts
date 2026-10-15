@@ -13,7 +13,13 @@ export const brand = {
 	locale: 'en',
 	market: 'Worldwide',
 	supportEmail: 'support@destiny2cheats.org',
+	/** Optional profile / storefront URLs for Organization.sameAs JSON-LD. */
+	sameAs: [] as const,
 	checkoutUrl: 'https://zadeyo.com/go/TAHA?to=%2Fproducts%2Fdestiny-2',
+	/** Zadeyo affiliate — Cloud DMA product checkout */
+	cloudDmaCheckoutUrl: 'https://zadeyo.com/go/TAHA?to=%2Fproducts%2Fcloud-dma',
+	/** Zadeyo affiliate — HWID Spoofer product checkout */
+	hwidSpooferCheckoutUrl: 'https://zadeyo.com/go/TAHA?to=%2Fproducts%2Fhwid-spoofer',
 
 	/** Game this template instance targets */
 	game: 'Destiny 2',
@@ -25,11 +31,11 @@ export const brand = {
 	logoRasterWidth: 512,
 	logoRasterHeight: 512,
 	logoAlt: 'Destiny 2 Cheats logo',
-	defaultOgImage: '/images/destiny-2-hero-poster.webp',
+	defaultOgImage: '/og/home.jpg',
 	heroImage: '/images/destiny-2-hero-poster.webp',
-	/** Hero background clip — uploaded at public/videos/destiny-2-hero.mp4 */
-	heroVideo: '/videos/destiny-2-hero.mp4',
-	heroVideoPoster: '/images/destiny-2-hero-poster.webp',
+	/** Optional MP4 behind poster — leave empty to use hero poster only */
+	heroVideo: '',
+	heroVideoPoster: '/images/destiny-2-hero-poster-480w.webp',
 
 	plans: [
 		{ id: 'monthly', label: 'Monthly', price: 35, duration: 'P30D' },
@@ -65,24 +71,24 @@ export const brand = {
 	},
 
 	seo: {
-		homeTitle: 'Destiny 2 Cheats — ESP, Aimbot & Wallhack',
+		homeTitle: 'Destiny 2 Cheats for PC | Features & Pricing',
 		homeDescription:
-			'Destiny 2 cheats with ESP, aimbot, wallhack, and radar for Windows PC. One license covers Crucible, Trials, and raids — compare monthly and lifetime plans with instant delivery.',
+			'Explore Destiny 2 cheat software features, compatibility, plans, and setup details. Compare the available options before you choose.',
+		storeTitle: 'Destiny 2 Cheats Price: Plans & Costs',
+		storeDescription:
+			'Compare Destiny 2 cheat plans, subscription lengths, included features, and checkout details. Check current pricing before you buy.',
 		featuresTitle: 'Destiny 2 Cheat Features — ESP, Aimbot & Radar',
 		featuresDescription:
 			'Full feature list for Destiny 2 cheats on Windows PC — ESP wallhack, soft aim, 2D radar, recoil control, triggerbot, and stream-safe overlays in one license.',
-		storeTitle: 'Destiny 2 Cheats Pricing — Monthly & Lifetime',
-		storeDescription:
-			'Destiny 2 cheats pricing for Windows PC. Monthly ($35) and lifetime ($150) plans include ESP, aimbot, wallhack, and radar with instant digital delivery after checkout.',
 		statusTitle: 'Destiny 2 Cheat Status — Live Updates',
 		statusDescription:
 			'Live Destiny 2 cheat status after {game} and {antiCheat} patches. Check maintenance notes before Crucible, Trials, or raids on Windows PC — updated after every major update.',
 		previewTitle: 'Buy Destiny 2 Cheats — ESP, Aimbot & Radar',
 		previewDescription:
 			'Buy Destiny 2 cheats for Windows PC — ESP wallhack, soft aim, 2D radar, and BattlEye rebuilds after patches. Monthly and lifetime plans with instant delivery.',
-		setupTitle: '{game} Cheat Setup | {brand}',
+		setupTitle: 'Destiny 2 Cheat Setup & System Requirements',
 		setupDescription:
-			'Install and launch {brand} on Windows PC after checkout. Short setup steps for Crucible, Trials, and PvE — follow each step before your first match.',
+			'Check published Windows requirements, setup prerequisites, and common pre-purchase questions for Destiny 2 cheat software. Review the details first.',
 		supportTitle: '{game} Cheat Support | {brand}',
 		supportDescription:
 			'Get help with {brand} on Windows PC. Email {email} with your order ID for setup, delivery, or billing help after you buy.',

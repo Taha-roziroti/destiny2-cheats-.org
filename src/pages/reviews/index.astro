@@ -53,6 +53,20 @@ const extraGraph: Record<string, unknown>[] = [
 			name: review.seoTitle,
 		})),
 	},
+	...sortedReviews.map((review) => ({
+		'@type': 'Review',
+		'@id': `${new URL(getReviewPath(review.slug), siteConfig.url).href}#review`,
+		author: { '@type': 'Person', name: review.handle },
+		datePublished: review.date,
+		reviewRating: {
+			'@type': 'Rating',
+			ratingValue: String(review.rating),
+			bestRating: '5',
+			worstRating: '1',
+		},
+		reviewBody: review.text,
+		itemReviewed: { '@id': productSchemaId },
+	})),
 	{
 		'@type': 'Product',
 		'@id': productSchemaId,
@@ -73,7 +87,7 @@ const extraGraph: Record<string, unknown>[] = [
 	description={description}
 	canonicalPath={reviewsBasePath}
 	hreflangAlternates={hreflangAlternates}
-	ogImage={defaultCrawlImageSrc}
+	ogImage="/og/reviews.jpg"
 	ogImageAlt={fillBrandTokens('{brand} customer reviews')}
 	locale="en"
 	breadcrumbs={[
@@ -122,7 +136,7 @@ const extraGraph: Record<string, unknown>[] = [
 							{review.tag ? <p class="reviews-index__tag">{review.tag}</p> : null}
 							<p class="reviews-index__text">{review.text}</p>
 							<a class="reviews-index__more" href={getReviewPath(review.slug)}>
-								{t('reviews.readFullReview')}
+								{review.seoTitle}
 								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
 									<path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 								</svg>

@@ -1,0 +1,47 @@
+---
+import {
+	heroPreloadSrc,
+	heroMobileSrc,
+	heroSrcSet,
+	heroSizes,
+	heroWidth,
+	heroHeight,
+} from '../lib/responsive-images';
+
+interface Props {
+	alt?: string;
+	class?: string;
+	decorative?: boolean;
+}
+
+const {
+	alt = '',
+	class: className = 'hero__poster',
+	decorative = true,
+} = Astro.props;
+---
+
+<picture>
+	<source
+		media="(max-width: 900px)"
+		srcset={heroMobileSrc}
+		type="image/webp"
+	/>
+	<source
+		media="(min-width: 901px)"
+		srcset={heroSrcSet}
+		sizes={heroSizes}
+		type="image/webp"
+	/>
+	<img
+		class={className}
+		src={heroPreloadSrc}
+		alt={decorative ? 'Decorative background' : alt}
+		width={heroWidth}
+		height={heroHeight}
+		fetchpriority="high"
+		loading="eager"
+		decoding="sync"
+		aria-hidden={decorative ? 'true' : undefined}
+	/>
+</picture>
