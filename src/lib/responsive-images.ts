@@ -79,7 +79,8 @@ export const heroMimeType = 'image/webp';
 export const heroWidth = 1920;
 export const heroHeight = 610;
 
-export const contentWidths = [480, 960, 1920, 3840] as const;
+/** Only widths we ship for content screenshots — larger tags 404 and break gallery tiles. */
+export const contentWidths = [480, 960] as const;
 
 export const galleryFeaturedSizes = '(max-width: 560px) 100vw, (max-width: 900px) 90vw, 640px';
 export const galleryTileSizes = '(max-width: 560px) 100vw, (max-width: 900px) 45vw, 320px';
