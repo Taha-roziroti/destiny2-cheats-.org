@@ -139,7 +139,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Windows Requirements and Compatibility",
 							paragraphs: [
 								"Windows 10 or 11 is required. Some bundles reference virtualization products such as <a href=\"/cloud-dma/\">Cloud DMA</a> — only purchase them if your listing says they are required.",
-								"Destiny 2 itself is maintained by Bungie (<a href=\"https://www.bungie.net/7/en/Destiny/New\" target=\"_blank\" rel=\"noopener noreferrer\">Destiny 2</a>). BattlEye updates (<a href=\"https://www.battleye.com/\" target=\"_blank\" rel=\"noopener noreferrer\">BattlEye Anti-Cheat</a>) can break third-party tools; check <a href=\"/status/\">status</a> after patches.",
+								"Destiny 2 itself is maintained by Bungie (<a href=\"https://www.bungie.net/7/en/Destiny/New\" target=\"_blank\" rel=\"noopener noreferrer\">Destiny 2 on Bungie.net</a>). BattlEye updates (<a href=\"https://www.battleye.com/\" target=\"_blank\" rel=\"noopener noreferrer\">BattlEye documentation</a>) can break third-party tools; check <a href=\"/status/\">live status</a> after patches.",
 							],
 						},
 						{

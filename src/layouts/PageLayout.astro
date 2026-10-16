@@ -96,9 +96,25 @@ const normalizedGallery = gallery
 	})
 	.filter((item) => Boolean(item.src));
 
+const breadcrumbNavLabel: Partial<Record<PageId, string>> = {
+	hacks: locale === 'en' ? t('nav.preview') : ui.nav.hacks,
+	features: ui.nav.features,
+	pricing: ui.nav.pricing,
+	updates: ui.nav.updates,
+	faq: ui.nav.faq,
+	'destiny-2-esp': ui.nav.esp,
+	'destiny-2-aimbot': ui.nav.aimbot,
+	setup: ui.nav.setup,
+	support: ui.nav.support,
+};
+
+const breadcrumbCurrent =
+	(pageId && breadcrumbNavLabel[pageId]) ||
+	(resolvedEyebrow && resolvedEyebrow !== heading ? resolvedEyebrow : heading);
+
 const breadcrumbs = [
 	{ label: ui.nav.home, href: homeHref },
-	{ label: heading },
+	{ label: breadcrumbCurrent },
 ];
 
 ---
@@ -132,7 +148,7 @@ const breadcrumbs = [
 							<nav class="banner__crumbs" aria-label={t('common.breadcrumb')}>
 								<a href={homeHref}>{ui.nav.home}</a>
 								<span aria-hidden="true">/</span>
-								<span aria-current="page">{heading}</span>
+								<span class="crumb-current" aria-current="page">{breadcrumbCurrent}</span>
 							</nav>
 							{showEyebrow && <p class="banner__eyebrow">{resolvedEyebrow}</p>}
 							<h1 class="banner__title">{heading}</h1>
@@ -174,7 +190,7 @@ const breadcrumbs = [
 					<nav class="page__crumbs" aria-label={t('common.breadcrumb')}>
 						<a href={homeHref}>{ui.nav.home}</a>
 						<span aria-hidden="true">/</span>
-						<span aria-current="page">{heading}</span>
+						<span class="crumb-current" aria-current="page">{breadcrumbCurrent}</span>
 					</nav>
 					<h1 class="page__title">{heading}</h1>
 					<p class="page__intro" data-edit={introEdit || undefined}>
@@ -264,12 +280,19 @@ const breadcrumbs = [
 	}
 
 	.banner__crumbs a {
-		color: color-mix(in srgb, #fff 82%, transparent);
-		font-weight: 600;
+		color: color-mix(in srgb, #fff 58%, transparent);
+		font-weight: 500;
+		text-decoration: none;
 	}
 
 	.banner__crumbs a:hover {
-		color: #fff;
+		color: color-mix(in srgb, #fff 78%, transparent);
+	}
+
+	.banner__crumbs .crumb-current,
+	.page__crumbs .crumb-current {
+		color: var(--accent);
+		font-weight: 600;
 	}
 
 	.banner__eyebrow {
@@ -327,12 +350,13 @@ const breadcrumbs = [
 	}
 
 	.page__crumbs a {
-		color: var(--ink-muted);
-		font-weight: 600;
+		color: var(--ink-faint);
+		font-weight: 500;
+		text-decoration: none;
 	}
 
 	.page__crumbs a:hover {
-		color: var(--magenta-soft);
+		color: var(--ink-muted);
 	}
 
 	.page__title {

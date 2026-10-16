@@ -18,7 +18,7 @@ export const destiny2OfficialResources: OfficialResource[] = [
 	},
 	{
 		id: 'battleye',
-		label: 'BattlEye Anti-Cheat',
+		label: 'BattlEye.com',
 		href: 'https://www.battleye.com/',
 	},
 	{

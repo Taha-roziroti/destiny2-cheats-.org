@@ -10,7 +10,6 @@ import { getLocaleContent, getPageContent } from '../data/i18n';
 import { getLocalizedPath } from '../data/i18n/routing';
 import type { LocaleCode } from '../data/i18n/locales';
 import { homeSeo, siteConfig } from '../data/site';
-import OfficialResources from './OfficialResources.astro';
 import { heroPreloadSrc, heroSizes, heroSrcSet } from '../lib/responsive-images';
 
 interface Props {
@@ -53,11 +52,6 @@ const extraGraph: Record<string, unknown>[] = [];
 	</div>
 	<main id="main-content" class="home">
 		<HomeReviews locale={locale} />
-		{locale === 'en' && (
-			<div class="shell home__official">
-				<OfficialResources locale={locale} compact />
-			</div>
-		)}
 		<div class="home__seo">
 			<>
 				<HomeAbout locale={locale} />
@@ -97,10 +91,6 @@ const extraGraph: Record<string, unknown>[] = [];
 	.home {
 		width: 100%;
 		overflow-x: clip;
-	}
-
-	.home__official {
-		padding-block: 1.25rem 0.5rem;
 	}
 
 	.home__seo {
