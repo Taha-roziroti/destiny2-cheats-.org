@@ -26,6 +26,9 @@ export const brand = {
 	/** Anti-cheat name used in Status / FAQ copy */
 	antiCheat: 'BattlEye',
 
+	/** Bump when favicon files change — busts browser/CDN cache in <link rel="icon"> URLs */
+	faviconVersion: 3,
+
 	logo: '/images/destiny-2-cheats-logo.webp',
 	logoRaster: '/images/destiny-2-cheats-logo.png',
 	logoRasterWidth: 512,

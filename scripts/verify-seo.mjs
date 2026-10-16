@@ -158,6 +158,14 @@ async function main() {
 		errors.push('public/og/home.jpg missing — run npm run generate:seo-assets');
 	}
 
+	for (const favicon of ['favicon.ico', 'favicon-32x32.png', 'favicon-16x16.png']) {
+		try {
+			await access(path.join(dist, favicon));
+		} catch {
+			errors.push(`dist/${favicon} missing — run npm run generate:brand`);
+		}
+	}
+
 	const boosterSrc = await readFile(path.join(ROOT, 'src/data/seo-booster.ts'), 'utf8');
 	const aboutBlock = boosterSrc.match(
 		/export const SITE_ABOUT = \{[\s\S]*?knowsAbout:\s*\[([\s\S]*?)\]\s*,?\s*\}/,
@@ -216,6 +224,9 @@ async function main() {
 	}
 
 	const homeHtml = await loadHtml(dist, '/');
+	if (!homeHtml.includes('rel="icon"') || !homeHtml.includes('/favicon.ico')) {
+		errors.push('home: missing favicon <link rel="icon"> tags');
+	}
 	if (!homeHtml.includes('og:image:width" content="1200"')) {
 		errors.push('home: booster OG width 1200 missing (use /og/home.jpg for social preview)');
 	}

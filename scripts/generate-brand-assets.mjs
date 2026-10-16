@@ -12,9 +12,21 @@ const sourcePath =
 /** Brand canvas — matches theme-color / manifest. */
 const BG = { r: 13, g: 10, b: 20, alpha: 1 };
 
+/** Lightweight vector favicon (no embedded raster — reliable in browser tabs). */
+const TRICORN_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Destiny tricorn">
+  <rect width="32" height="32" fill="#0d0a14"/>
+  <g fill="none" stroke="#f5f3ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 6.5c-2.8 3.2-5.2 6.8-6.8 11.2 2.4 1.2 5 1.8 7.8 1.8s5.4-.6 7.8-1.8C23.2 13.3 20.8 9.7 18 6.5"/>
+    <path d="M16 6.5v19.5"/>
+    <ellipse cx="16" cy="9.2" rx="1.35" ry="2.6"/>
+  </g>
+</svg>
+`;
+
 async function tricornMarkBuffer(size) {
-	const base = await sharp(sourcePath)
-		.resize(Math.round(size * 0.72), Math.round(size * 0.72), {
+	const markSize = Math.round(size * 0.7);
+	const mark = await sharp(sourcePath)
+		.resize(markSize, markSize, {
 			fit: 'contain',
 			background: { r: 255, g: 255, b: 255, alpha: 1 },
 		})
@@ -22,17 +34,20 @@ async function tricornMarkBuffer(size) {
 		.png()
 		.toBuffer();
 
-	return sharp({
+	let pipeline = sharp({
 		create: {
 			width: size,
 			height: size,
 			channels: 4,
 			background: BG,
 		},
-	})
-		.composite([{ input: base, gravity: 'centre' }])
-		.png()
-		.toBuffer();
+	}).composite([{ input: mark, gravity: 'centre' }]);
+
+	if (size <= 32) {
+		pipeline = pipeline.sharpen({ sigma: 0.6 });
+	}
+
+	return pipeline.png().toBuffer();
 }
 
 async function generateSiteLogo() {
@@ -46,7 +61,7 @@ async function generateSiteLogo() {
 	return logoPng;
 }
 
-async function generateFavicons(logoBuffer) {
+async function generateFavicons() {
 	const sizes = [
 		{ name: 'favicon-16x16.png', size: 16 },
 		{ name: 'favicon-32x32.png', size: 32 },
@@ -60,13 +75,12 @@ async function generateFavicons(logoBuffer) {
 		console.log(`Wrote public/${name}`);
 	}
 
-	await writeFile(path.join(publicDir, 'favicon.ico'), await tricornMarkBuffer(32));
-	console.log('Wrote public/favicon.ico (32×32 PNG)');
+	const ico = await tricornMarkBuffer(32);
+	await writeFile(path.join(publicDir, 'favicon.ico'), ico);
+	console.log('Wrote public/favicon.ico');
 
-	const svgBase64 = (await tricornMarkBuffer(512)).toString('base64');
-	const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"><rect width="512" height="512" fill="#0d0a14"/><image width="512" height="512" href="data:image/png;base64,${svgBase64}"/></svg>`;
-	await writeFile(path.join(publicDir, 'favicon.svg'), faviconSvg);
-	console.log('Wrote public/favicon.svg (embedded PNG)');
+	await writeFile(path.join(publicDir, 'favicon.svg'), TRICORN_SVG);
+	console.log('Wrote public/favicon.svg (vector)');
 }
 
 async function generateWebManifest() {
@@ -89,6 +103,6 @@ async function generateWebManifest() {
 }
 
 await mkdir(imagesDir, { recursive: true });
-const logoBuffer = await generateSiteLogo();
-await generateFavicons(logoBuffer);
+await generateSiteLogo();
+await generateFavicons();
 await generateWebManifest();

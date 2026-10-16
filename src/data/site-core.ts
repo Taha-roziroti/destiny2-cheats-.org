@@ -106,6 +106,7 @@ export const siteConfig = {
 	checkoutUrl: brand.checkoutUrl,
 	cloudDmaCheckoutUrl: brand.cloudDmaCheckoutUrl,
 	hwidSpooferCheckoutUrl: brand.hwidSpooferCheckoutUrl,
+	faviconVersion: brand.faviconVersion,
 	defaultOgImage: brand.defaultOgImage,
 	heroImage: brand.heroImage,
 	heroVideo: brandMedia.heroVideo ?? '',

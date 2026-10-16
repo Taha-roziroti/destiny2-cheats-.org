@@ -12,7 +12,13 @@ export function cacheControlForPath(pathname: string): string | null {
 	if (pathname.startsWith('/videos/')) return SHORT;
 	if (pathname.endsWith('.webmanifest') || pathname.endsWith('/site.webmanifest')) return SHORT;
 	if (pathname === '/llms.txt' || pathname.endsWith('/security.txt')) return SHORT;
-	if (pathname.endsWith('.ico') || pathname.match(/\/favicon[^/]*\.(png|ico)$/)) return IMMUTABLE;
+	if (
+		pathname.endsWith('.ico') ||
+		pathname.endsWith('.svg') ||
+		pathname.match(/\/favicon[^/]*\.(png|ico|svg)$/)
+	) {
+		return IMMUTABLE;
+	}
 	if (pathname.endsWith('.xml') && pathname.includes('sitemap')) return SHORT;
 	if (pathname.endsWith('.html') || pathname.endsWith('/')) return HTML;
 	return null;
