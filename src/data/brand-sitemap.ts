@@ -18,7 +18,7 @@ const defaultImages: BrandSitemapImage[] = [
 		caption: 'Destiny 2 cheats esp wallhack',
 	},
 	{
-		src: '/images/destiny-2-cheats-wallhack.webp',
+		src: '/images/destiny-2-cheats-wallhack-skeleton.webp',
 		title: 'Destiny 2 cheats wallhack',
 		caption: 'Destiny 2 cheats wallhack esp',
 	},
@@ -28,9 +28,9 @@ const defaultImages: BrandSitemapImage[] = [
 		caption: 'Destiny 2 cheats aimbot soft aim',
 	},
 	{
-		src: '/images/destiny-2-cheats-aimbot-view.webp',
+		src: '/images/destiny-2-cheats-crucible.webp',
 		title: 'Destiny 2 cheats aimbot',
-		caption: 'Destiny 2 cheats aimbot view',
+		caption: 'Destiny 2 cheats aimbot in Crucible',
 	},
 	{
 		src: '/images/destiny-2-cheats-radar.webp',
@@ -38,9 +38,9 @@ const defaultImages: BrandSitemapImage[] = [
 		caption: 'Destiny 2 cheats radar hack',
 	},
 	{
-		src: '/images/destiny-2-cheats-raid.webp',
+		src: '/images/destiny-2-cheats-pve.webp',
 		title: 'Destiny 2 cheats',
-		caption: 'Destiny 2 cheats in raid',
+		caption: 'Destiny 2 cheats in a raid',
 	},
 ];
 

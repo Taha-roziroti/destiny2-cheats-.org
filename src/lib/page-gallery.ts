@@ -11,60 +11,53 @@ function hashPage(pageId: string): number {
 	return h;
 }
 
-function familiesDifferEnough(a: ImageFamily, b: ImageFamily): boolean {
-	return a !== b;
-}
-
 /**
- * Build a 3-image gallery: hero/banner shot + two supplements from different visual families.
- * Never repeats the primary src; avoids placing similar families back-to-back.
+ * Build a 2-image gallery from Destiny 2 shots.
+ * Prefers images that are not the page banner; never places the same family back-to-back.
  */
 export function buildPageGallery(
 	pageId: PageId,
 	primarySrc: string,
 	primaryAlt: string,
-	count = 3,
+	count = 2,
 ): GalleryImage[] {
-	const primary: GalleryImage = { src: primarySrc, alt: primaryAlt };
-	if (count <= 1) return [primary];
+	if (count <= 0) return [];
 
-	const used = new Set<string>([primarySrc]);
-	const primaryFam = imageFamily(primarySrc);
-	const picked: GalleryImage[] = [primary];
-	let lastFam = primaryFam;
+	const used = new Set<string>();
+	const picked: GalleryImage[] = [];
+	let lastFam: ImageFamily | null = null;
 
 	const start = hashPage(pageId) % screenshotPool.length;
 	const rotated = [...screenshotPool.slice(start), ...screenshotPool.slice(0, start)];
 
-	for (const item of rotated) {
+	// Prefer supplements that are not the banner image.
+	const preferNonPrimary = rotated.filter((item) => item.src !== primarySrc);
+	const candidates = [...preferNonPrimary, ...rotated.filter((item) => item.src === primarySrc)];
+
+	for (const item of candidates) {
 		if (picked.length >= count) break;
 		if (used.has(item.src)) continue;
-		if (!familiesDifferEnough(item.family, lastFam)) continue;
-		picked.push({ src: item.src, alt: item.alt });
+		if (lastFam && item.family === lastFam) continue;
+		picked.push({
+			src: item.src,
+			alt: item.src === primarySrc ? primaryAlt : item.alt,
+		});
 		used.add(item.src);
 		lastFam = item.family;
 	}
 
-	// Fill remaining slots — still avoid duplicates and back-to-back same family.
 	if (picked.length < count) {
 		for (const item of screenshotPool) {
 			if (picked.length >= count) break;
 			if (used.has(item.src)) continue;
-			if (!familiesDifferEnough(item.family, lastFam)) continue;
 			picked.push({ src: item.src, alt: item.alt });
 			used.add(item.src);
-			lastFam = item.family;
 		}
 	}
 
-	// Last resort: any unused shot (rare with our pool size).
-	if (picked.length < count) {
-		for (const item of screenshotPool) {
-			if (picked.length >= count) break;
-			if (used.has(item.src)) continue;
-			picked.push({ src: item.src, alt: item.alt });
-			used.add(item.src);
-		}
+	// Absolute fallback if pool were empty.
+	if (picked.length === 0) {
+		return [{ src: primarySrc, alt: primaryAlt }];
 	}
 
 	return picked;

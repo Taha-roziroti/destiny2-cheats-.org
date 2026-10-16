@@ -71,34 +71,34 @@ const SITEMAP_TEXT_KEYS = [
 
 const DEFAULT_SITEMAP_IMAGES = [
 	{
-		src: '/images/destiny-2-esp-player-tags.webp',
+		src: '/images/destiny-2-cheats-esp-crucible.webp',
 		title: '{primaryKeyword} ESP',
 		caption: 'See players with {primaryKeyword}',
 	},
 	{
-		src: '/images/destiny-2-wallhack-skeleton.webp',
+		src: '/images/destiny-2-cheats-wallhack-skeleton.webp',
 		title: '{primaryKeyword} wallhack',
 		caption: 'See through walls with {primaryKeyword}',
 	},
 	{
-		src: '/images/destiny-2-aimbot-sniper.webp',
+		src: '/images/destiny-2-cheats-aimbot.webp',
 		title: '{primaryKeyword} aimbot',
 		caption: 'Aimbot in {primaryKeyword}',
 	},
 	{
-		src: '/images/destiny-2-aimbot-skeleton.webp',
+		src: '/images/destiny-2-cheats-aimbot-esp.webp',
 		title: '{primaryKeyword} aimbot view',
-		caption: 'Aimbot bone view in {primaryKeyword}',
+		caption: 'Aimbot and ESP view in {primaryKeyword}',
 	},
 	{
-		src: '/images/destiny-2-esp-radar.webp',
+		src: '/images/destiny-2-cheats-radar.webp',
 		title: '{primaryKeyword} radar',
 		caption: 'Radar map in {primaryKeyword}',
 	},
 	{
-		src: '/images/destiny-2-cheats-combat.webp',
-		title: '{primaryKeyword} in a fight',
-		caption: 'Fight view with {primaryKeyword}',
+		src: '/images/destiny-2-cheats-pve.webp',
+		title: '{primaryKeyword} in a raid',
+		caption: 'Raid view with {primaryKeyword}',
 	},
 ];
 

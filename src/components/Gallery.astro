@@ -21,7 +21,7 @@ const galleryAlts = [
 	ui.images.squadFight,
 ] as const;
 
-const galleryImages = destinyImages.gallery.slice(0, 4).map((image, index) => ({
+const galleryImages = destinyImages.gallery.slice(0, 2).map((image, index) => ({
 	src: image.src,
 	alt: galleryAlts[index] ?? image.alt,
 }));
