@@ -14,9 +14,11 @@ import { isBlogPath } from '../data/blog/helpers';
 interface Props {
 	locale?: LocaleCode;
 	pageId?: PageId;
+	/** Sits over hero media with a transparent bar until scroll / menu open. */
+	overlay?: boolean;
 }
 
-const { locale = defaultLocale, pageId: pageIdProp } = Astro.props;
+const { locale = defaultLocale, pageId: pageIdProp, overlay = false } = Astro.props;
 const t = getT(locale);
 const homeHref = getLocalizedPath('home', locale);
 const pathContext = resolvePageContextFromPath(Astro.url.pathname);
@@ -59,10 +61,8 @@ const navLinks = links.map((item) => ({
 }));
 ---
 
-<header class="site-header" data-nav>
+<header class:list={['site-header', overlay && 'site-header--overlay']} data-nav>
 	<div class="shell site-header__bar">
-		<a href={homeHref} class="site-header__brand">{siteConfig.name}</a>
-
 		<nav class="site-nav site-nav--desktop" aria-label={t('nav.primaryAria')}>
 			{
 				navLinks.map((item) => (
@@ -265,23 +265,38 @@ const navLinks = links.map((item) => ({
 		color: var(--ink-faint);
 	}
 
+	.hero-stack {
+		position: relative;
+	}
+
 	.site-header {
 		position: sticky;
 		top: 0;
 		z-index: 100;
 		padding-top: var(--safe-top, env(safe-area-inset-top, 0px));
-		background: color-mix(in srgb, var(--bg) 72%, transparent);
-		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(8px);
+		background: transparent;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
 		border-bottom: 1px solid transparent;
 		transition:
 			background 0.2s ease,
 			border-color 0.2s ease,
-			box-shadow 0.2s ease;
+			box-shadow 0.2s ease,
+			backdrop-filter 0.2s ease;
 	}
 
-	.site-header.is-scrolled {
+	.site-header--overlay {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+
+	.site-header.is-scrolled,
+	.site-header.is-menu-open {
 		background: color-mix(in srgb, var(--bg) 92%, transparent);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 		border-bottom-color: var(--line-soft);
 		box-shadow: 0 8px 24px color-mix(in srgb, var(--ink) 8%, transparent);
 	}
@@ -293,28 +308,10 @@ const navLinks = links.map((item) => ({
 	.site-header__bar {
 		position: relative;
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) auto auto;
+		grid-template-columns: minmax(0, 1fr) auto;
 		align-items: center;
 		gap: 0.65rem;
 		min-height: var(--header-h);
-	}
-
-	.site-header__brand {
-		display: none;
-		min-width: 0;
-		font-family: var(--font-display);
-		font-size: 0.9375rem;
-		font-weight: 700;
-		letter-spacing: -0.02em;
-		color: var(--ink);
-		text-decoration: none;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
-	.site-header__brand:hover {
-		color: var(--accent);
 	}
 
 	.site-nav {
@@ -384,6 +381,8 @@ const navLinks = links.map((item) => ({
 		color: var(--ink);
 		cursor: pointer;
 		flex-shrink: 0;
+		position: relative;
+		z-index: 102;
 		touch-action: manipulation;
 		-webkit-tap-highlight-color: transparent;
 		transition:
@@ -572,10 +571,6 @@ const navLinks = links.map((item) => ({
 			justify-content: center;
 		}
 
-		.site-header__brand {
-			display: none;
-		}
-
 		.site-tools {
 			position: absolute;
 			top: 50%;
@@ -586,11 +581,8 @@ const navLinks = links.map((item) => ({
 
 	@media (max-width: 900px) {
 		.site-header__bar {
-			grid-template-columns: minmax(0, 1fr) auto;
-		}
-
-		.site-header__brand {
-			display: block;
+			grid-template-columns: 1fr auto;
+			justify-items: end;
 		}
 
 		.site-nav--desktop {
@@ -620,10 +612,6 @@ const navLinks = links.map((item) => ({
 	@media (max-width: 480px) {
 		.site-header__bar {
 			gap: 0.45rem;
-		}
-
-		.site-header__brand {
-			font-size: 0.875rem;
 		}
 
 		.site-tools {

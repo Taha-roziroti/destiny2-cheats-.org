@@ -117,7 +117,8 @@ const breadcrumbs = [
 	lcpImageSrcSet={showBanner ? heroSrcSet : undefined}
 	lcpImageSizes={showBanner ? heroSizes : undefined}
 >
-	<Navbar locale={locale} pageId={pageId} />
+	<div class:list={['hero-stack', !showBanner && 'hero-stack--plain']}>
+		<Navbar locale={locale} pageId={pageId} overlay={showBanner} />
 	{
 		showBanner && (
 			<section class="hero hero--page" aria-label={heading}>
@@ -165,6 +166,7 @@ const breadcrumbs = [
 				</section>
 		)
 	}
+	</div>
 	<main id="main-content" class="page">
 		{
 			!showBanner && (

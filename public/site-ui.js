@@ -23,7 +23,6 @@
 
 	/* --- desktop header scroll state --- */
 	function bindScroll() {
-		if (window.matchMedia('(max-width: 900px)').matches) return;
 		document.querySelectorAll('[data-nav]').forEach(function (header) {
 			if (header.dataset.scrollBound === '1') return;
 			header.dataset.scrollBound = '1';

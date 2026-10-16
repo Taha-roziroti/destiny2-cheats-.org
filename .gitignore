@@ -12,6 +12,7 @@ tools/realsr-ncnn-extract/
 tools/realsr-ncnn-vulkan-windows.zip
 tools/realesrgan-models/
 .tmp-upscale/
+.tmp-hero-upscale/
 .lh-*.json
 .lighthouse-*.json
 lh*.json

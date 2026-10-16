@@ -1,6 +1,8 @@
 ---
 import {
 	heroMobileSrc,
+	heroMobileSrcSet,
+	heroMobileSizes,
 	heroSrcSet,
 	heroSizes,
 	heroWidth,
@@ -23,7 +25,8 @@ const {
 <picture>
 	<source
 		media="(max-width: 900px)"
-		srcset={heroMobileSrc}
+		srcset={heroMobileSrcSet}
+		sizes={heroMobileSizes}
 		type="image/webp"
 	/>
 	<source

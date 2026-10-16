@@ -47,8 +47,10 @@ const extraGraph: Record<string, unknown>[] = [];
 	lcpImageSrcSet={heroSrcSet}
 	lcpImageSizes={heroSizes}
 >
-	<Navbar locale={locale} pageId="home" />
-	<Hero locale={locale} />
+	<div class="hero-stack">
+		<Navbar locale={locale} pageId="home" overlay />
+		<Hero locale={locale} />
+	</div>
 	<main id="main-content" class="home">
 		<HomeReviews locale={locale} />
 		{locale === 'en' && (

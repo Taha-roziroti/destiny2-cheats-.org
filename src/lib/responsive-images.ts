@@ -64,8 +64,11 @@ export const heroSrcSet = buildSrcSet(heroResponsive);
 export const heroSizes = '(max-width: 900px) 100vw, min(100vw, 1920px)';
 
 /** Lighthouse / phone slot — smallest hero poster (see HeroLcpPicture mobile source). */
-/** 640×203 crop — sharp on phones without the old 360px / q58 asset. */
-export const heroMobileSrc = '/images/destiny-2-hero-poster-mobile.webp';
+export const heroMobileSrcSet =
+	'/images/destiny-2-hero-poster-640w.webp 640w, /images/destiny-2-hero-poster-960w.webp 960w';
+export const heroMobileSizes = '100vw';
+/** Default mobile fallback (960w). */
+export const heroMobileSrc = '/images/destiny-2-hero-poster-960w.webp';
 
 /** Default img `src` + mobile fallback. */
 export const heroPreloadSrc = '/images/destiny-2-hero-poster-480w.webp';

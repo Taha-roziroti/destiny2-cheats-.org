@@ -47,7 +47,7 @@ const heroChips = ['chipEsp', 'chipAim', 'chipRadar', 'chipUpdates'] as const;
 	<div class="hero__veil" aria-hidden="true"></div>
 	<div class="shell hero__content">
 		<div class="hero__copy">
-			<h1 class="hero__brand">{t('hero.accent')}</h1>
+			<h1 class="hero__brand">{siteConfig.name}</h1>
 			<p class="hero__lede">{t('hero.subtitle')}</p>
 			<ul class="hero__features">
 				{
@@ -91,8 +91,8 @@ const heroChips = ['chipEsp', 'chipAim', 'chipRadar', 'chipUpdates'] as const;
 		letter-spacing: -0.02em;
 		color: #fff;
 		width: 100%;
-		text-transform: uppercase;
-		white-space: nowrap;
+		text-transform: none;
+		white-space: normal;
 	}
 
 	.hero__lede {
