@@ -20,6 +20,16 @@
 	border-bottom: 1px solid var(--line-soft);
 }
 
+/* Inner pages with a 2-shot gallery: text banner only (no third screenshot). */
+.hero--page.hero--text {
+	aspect-ratio: auto;
+	min-height: clamp(12rem, 28vw, 16rem);
+	background:
+		radial-gradient(ellipse 70% 80% at 15% 20%, color-mix(in srgb, var(--accent, #b10ff6) 28%, transparent), transparent 55%),
+		radial-gradient(ellipse 60% 70% at 90% 80%, color-mix(in srgb, #4c1d95 35%, transparent), transparent 50%),
+		linear-gradient(165deg, #160f22 0%, #0d0a14 55%, #0a0810 100%);
+}
+
 .hero__content {
 	position: relative;
 	z-index: 2;

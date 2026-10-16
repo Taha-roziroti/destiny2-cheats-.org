@@ -67,6 +67,7 @@ const gallery = buildPageGallery(
 	pageId,
 	crawl.src,
 	page.imageAlt || crawl.caption,
+	2,
 ).map((item) => ({
 	src: item.src,
 	alt: galleryAltForSrc(item.src, item.alt),

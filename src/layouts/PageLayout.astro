@@ -94,7 +94,11 @@ const normalizedGallery = gallery
 		}
 		return { src: item, alt: resolvedHeroAlt };
 	})
-	.filter((item) => Boolean(item.src));
+	.filter((item) => Boolean(item.src))
+	.slice(0, 2);
+
+/** Product pages: exactly 2 screenshots in the gallery — no third hero photo. */
+const usePhotoBanner = showBanner && normalizedGallery.length === 0;
 
 const breadcrumbNavLabel: Partial<Record<PageId, string>> = {
 	hacks: locale === 'en' ? t('nav.preview') : ui.nav.hacks,
@@ -129,19 +133,28 @@ const breadcrumbs = [
 	locale={locale}
 	pageId={pageId}
 	extraGraph={extraGraph}
-	lcpImage={showBanner ? heroPreloadSrc : undefined}
-	lcpImageSrcSet={showBanner ? heroSrcSet : undefined}
-	lcpImageSizes={showBanner ? heroSizes : undefined}
+	lcpImage={usePhotoBanner ? heroPreloadSrc : undefined}
+	lcpImageSrcSet={usePhotoBanner ? heroSrcSet : undefined}
+	lcpImageSizes={usePhotoBanner ? heroSizes : undefined}
 >
 	<div class:list={['hero-stack', !showBanner && 'hero-stack--plain']}>
 		<Navbar locale={locale} pageId={pageId} overlay={showBanner} />
 	{
 		showBanner && (
-			<section class="hero hero--page" aria-label={heading}>
-					<div class="hero__media">
-						<HeroLcpPicture class="hero__poster" decorative={false} alt={resolvedHeroAlt} />
-					</div>
-					<div class="hero__veil" aria-hidden="true"></div>
+			<section
+				class:list={['hero', 'hero--page', !usePhotoBanner && 'hero--text']}
+				aria-label={heading}
+			>
+					{
+						usePhotoBanner && (
+							<>
+								<div class="hero__media">
+									<HeroLcpPicture class="hero__poster" decorative={false} alt={resolvedHeroAlt} />
+								</div>
+								<div class="hero__veil" aria-hidden="true"></div>
+							</>
+						)
+					}
 
 					<div class="shell hero__content">
 						<div class="banner__content">

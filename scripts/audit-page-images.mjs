@@ -47,12 +47,17 @@ async function main() {
 			issues.push({ rel, type: 'duplicate-src', dupes });
 		}
 
-		// Gallery block: consecutive images with same family
-		const galleryBlock = html.match(/gallery-block__grid[\s\S]*?<\/div>\s*<\/section>/i)?.[0] ?? '';
+		// Gallery block: exactly 2 tiles, no adjacent same family
+		const galleryIdx = html.indexOf('id="page-gallery-title"');
+		const galleryBlock =
+			galleryIdx >= 0 ? html.slice(galleryIdx, galleryIdx + 5000).match(/[\s\S]*?<\/section>/i)?.[0] ?? '' : '';
 		if (galleryBlock) {
 			const gallerySrcs = [];
 			for (const m of galleryBlock.matchAll(/\bsrc\s*=\s*(["'])(\/images\/[^"']+)\1/gi)) {
 				gallerySrcs.push(m[2]);
+			}
+			if (gallerySrcs.length !== 2) {
+				issues.push({ rel, type: 'gallery-count', count: gallerySrcs.length });
 			}
 			for (let i = 1; i < gallerySrcs.length; i += 1) {
 				if (familiesTooSimilar(gallerySrcs[i - 1], gallerySrcs[i])) {
@@ -62,6 +67,10 @@ async function main() {
 						pair: [gallerySrcs[i - 1], gallerySrcs[i]],
 					});
 				}
+			}
+			// Product pages: gallery is the only screenshots (no third hero photo)
+			if (html.includes('hero__media') && gallerySrcs.length > 0) {
+				issues.push({ rel, type: 'hero-plus-gallery', note: 'expected text banner when gallery is present' });
 			}
 		}
 	}
